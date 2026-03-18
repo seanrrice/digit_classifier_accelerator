@@ -1,0 +1,13 @@
+{
+  "name": "knn_accelerator",
+  "type": "HLS",
+  "configuration": {
+    "componentType": "HLS",
+    "configFiles": [
+      "hls_config.cfg"
+    ],
+    "work_dir": "knn_accelerator"
+  },
+  "useSysrootToolchain": false,
+  "template": "empty_hls_component"
+}

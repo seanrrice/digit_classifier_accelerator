@@ -1,0 +1,53 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "1 2",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "knn.cpp",
+    "fileloc": 133,
+    "instructions": 24,
+    "memory_accesses": 0,
+    "name": "knn_accelerator",
+    "stores": {
+      "T": 1
+    },
+    "total_instructions": 190
+  },
+  "1": {
+    "basicblocks": 25,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "knn.cpp",
+    "fileloc": 9,
+    "instructions": 118,
+    "loads": {
+      "L": 10
+    },
+    "memory_accesses": 16,
+    "name": "knn_distance_and_sort",
+    "stores": {
+      "L": 8
+    },
+    "total_instructions": 118
+  },
+  "2": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 4,
+    "file": "knn.cpp",
+    "fileloc": 86,
+    "instructions": 48,
+    "loads": {
+      "L": 4
+    },
+    "memory_accesses": 6,
+    "name": "knn_majority_vote",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 48
+  }
+}

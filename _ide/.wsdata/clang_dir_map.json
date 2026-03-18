@@ -1,0 +1,7 @@
+{
+  "workspaceRoot": "C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel",
+  "mapping": {
+    "knn_accelerator\\..\\test\\knn_test.cpp": "knn_accelerator",
+    "knn_accelerator\\..\\src\\knn.cpp": "knn_accelerator"
+  }
+}

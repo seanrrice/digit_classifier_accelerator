@@ -1,5 +1,7 @@
 #include <ap_int.h>
-#include "knn.h"
+#include "../include/knn.h"
+#include <hls_math.h> 
+#include <stdlib.h>
 
 // =========================================================
 // PART 1: Distance Calculation & Top-K Sorter
@@ -10,7 +12,12 @@ void knn_distance_and_sort(
     label_t *y_train,
     label_t top_k_labels[K_NEIGHBORS]
 ) {
+#pragma HLS INLINE off
+
+    dist_t distances[NUM_TRAIN_SAMPLES];
+    label_t labels[NUM_TRAIN_SAMPLES];
     dist_t top_k_dist[K_NEIGHBORS];
+
 
     // --------------------------------------------------------
     // TODO: Initialize Top-K buffers
@@ -18,6 +25,11 @@ void knn_distance_and_sort(
     // Initialize top_k_dist with the maximum possible 
     // distance (e.g., 0xFFFFFFFF) and top_k_labels to 0.
     /* YOUR CODE HERE */
+    init_top_k: for (int i = 0; i < K_NEIGHBORS; i++){
+        top_k_dist[i] = 0xFFFFFFFF;
+        top_k_labels[i] = 0;
+    }
+    
 
 
     // --------------------------------------------------------
@@ -25,28 +37,54 @@ void knn_distance_and_sort(
     // --------------------------------------------------------
     // Iterates NUM_TRAIN_SAMPLES times.    
     /* YOUR CODE HERE */
+    train_loop: for( int i = 0; i < NUM_TRAIN_SAMPLES; i++){
+      
 
-        
     // --------------------------------------------------------
     // TODO: Calculate Euclidean distance
     // --------------------------------------------------------
     // Calculate the distance between the 'test_point' and the current 'X_train' row.   
     /* YOUR CODE HERE */
+        dist_t sum = 0.0;
 
+        feature_loop: for (int j = 0; j < NUM_FEATURES; j++){
+            pixel_t diff = test_point[j] - X_train[i * NUM_FEATURES + j];
+            sum += diff * diff;
+        }
+        distances[i] = hls::sqrt(sum);
+        labels[i] = y_train[i];
 
+    }
     // --------------------------------------------------------
     // TODO: Sort
     // --------------------------------------------------------
     // Sort the distances from smallest to largest, pick the labels corresponding to 
     // the top K shortest distances and store them into the top_k_labels array.        
     /* YOUR CODE HERE */
+    sort_loop_i: for (int i = 0; i < NUM_TRAIN_SAMPLES -1; i++) {
+        sort_loop_j: for (int j = 0; j < NUM_TRAIN_SAMPLES - i - 1; j++) {
+            if (distances[j] > distances[j + 1]) {
+                dist_t temp_dist = distances[j];
+                distances[j] = distances[j + 1];
+                distances[j + 1] = temp_dist;
 
+                label_t temp_label = labels[j];
+                labels[j] = labels[j + 1];
+                labels[j + 1] = temp_label;
+            }
+        }
+    }
+    copy_top_k: for (int i = 0; i < K_NEIGHBORS; i++) {
+        top_k_dist[i] = distances[i];
+        top_k_labels[i] = labels[i];
+    }
 }
 
 // =========================================================
 // KERNEL 2: Majority Vote
 // =========================================================
 label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {    
+#pragma HLS INLINE off
     int counts[NUM_CLASSES];
     
     // --------------------------------------------------------
@@ -54,6 +92,9 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     // --------------------------------------------------------
     // Initialize all elements in the 'counts' array to 0.    
     /* YOUR CODE HERE */
+    for (int i = 0; i < NUM_CLASSES; i++) {
+        counts[i] = 0;
+    }
 
 
     // --------------------------------------------------------
@@ -62,7 +103,10 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     // Loop through the 'top_k_labels' array and increment the 
     // corresponding index in your 'counts' array.
     /* YOUR CODE HERE */
-
+    for (int i = 0; i < K_NEIGHBORS; i++) {
+        int idx = top_k_labels[i];
+        counts[idx] ++;
+    }
 
     // --------------------------------------------------------
     // TODO: Find the maximum (Argmax)
@@ -70,8 +114,17 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     // Loop through the 'counts' array to find which label has the 
     // highest vote. Store this label in a variable and return it.
     /* YOUR CODE HERE */
+    int max = 0;
+    label_t max_label;
+    for (int i = 0; i < NUM_CLASSES; i++) {
+        if (counts[i] > max) {
+            max = counts[i];
+            max_label = i;
+        }
+        
+    }
 
-    return 0; // Replace with your actual majority label
+    return max_label; // Replace with your actual majority label
 }
 
 // =========================================================

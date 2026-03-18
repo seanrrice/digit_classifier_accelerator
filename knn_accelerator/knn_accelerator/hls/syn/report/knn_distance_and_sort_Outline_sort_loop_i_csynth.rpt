@@ -1,0 +1,166 @@
+
+
+================================================================
+== Vitis HLS Report for 'knn_distance_and_sort_Outline_sort_loop_i'
+================================================================
+* Date:           Tue Mar 17 18:06:09 2026
+
+* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Project:        knn_accelerator
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.508 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+----------+----------+-----------+-------+----------+---------+
+    |  Latency (cycles)  |  Latency (absolute)  |     Interval     | Pipeline|
+    |   min   |    max   |    min   |    max    |  min  |    max   |   Type  |
+    +---------+----------+----------+-----------+-------+----------+---------+
+    |    13492|  11241002|  0.135 ms|  0.112 sec|  13492|  11241002|       no|
+    +---------+----------+----------+-----------+-------+----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+------+------------------------------------------------+
+        |                                                      |                                            |  Latency (cycles) |   Latency (absolute)  |  Interval  |                    Pipeline                    |
+        |                       Instance                       |                   Module                   |   min   |   max   |    min    |    max    | min |  max |                      Type                      |
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+------+------------------------------------------------+
+        |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32  |knn_distance_and_sort_Pipeline_sort_loop_j  |        7|     7497|  70.000 ns|  74.970 us|    6|  7496|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+------+------------------------------------------------+
+
+        * Loop: 
+        +---------------+---------+----------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles)  | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |    max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+----------+----------+-----------+-----------+------+----------+
+        |- sort_loop_i  |    13491|  11241001|  9 ~ 7499|          -|          -|  1499|        no|
+        +---------------+---------+----------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     36|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|     224|    288|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     38|    -|
+|Register         |        -|    -|      37|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|     261|    362|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+    |                       Instance                       |                   Module                   | BRAM_18K| DSP|  FF | LUT | URAM|
+    +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+    |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32  |knn_distance_and_sort_Pipeline_sort_loop_j  |        0|   0|  224|  288|    0|
+    +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+    |Total                                                 |                                            |        0|   0|  224|  288|    0|
+    +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------+----------+----+---+----+------------+------------+
+    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------+----------+----+---+----+------------+------------+
+    |add_ln64_fu_70_p2   |         +|   0|  0|  12|          11|           2|
+    |i_6_fu_60_p2        |         +|   0|  0|  12|          11|           1|
+    |icmp_ln64_fu_54_p2  |      icmp|   0|  0|  12|          11|          11|
+    +--------------------+----------+----+---+----+------------+------------+
+    |Total               |          |   0|  0|  36|          33|          14|
+    +--------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+----+-----------+-----+-----------+
+    |        Name        | LUT| Input Size| Bits| Total Bits|
+    +--------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm           |  20|          4|    1|          4|
+    |i_4_fu_24           |   9|          2|   11|         22|
+    |indvars_iv14_fu_28  |   9|          2|   11|         22|
+    +--------------------+----+-----------+-----+-----------+
+    |Total               |  38|          8|   23|         48|
+    +--------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |                                Name                               | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                          |   3|   0|    3|          0|
+    |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg  |   1|   0|    1|          0|
+    |i_4_fu_24                                                          |  11|   0|   11|          0|
+    |indvars_iv14_fu_28                                                 |  11|   0|   11|          0|
+    |indvars_iv14_load_reg_103                                          |  11|   0|   11|          0|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                              |  37|   0|   37|          0|
+    +-------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+-------------------------------------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  |               Source Object               |    C Type    |
++--------------------+-----+-----+------------+-------------------------------------------+--------------+
+|ap_clk              |   in|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
+|ap_rst              |   in|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
+|ap_start            |   in|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
+|ap_done             |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
+|ap_idle             |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
+|ap_ready            |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
+|distances_address0  |  out|   11|   ap_memory|                                  distances|         array|
+|distances_ce0       |  out|    1|   ap_memory|                                  distances|         array|
+|distances_we0       |  out|    1|   ap_memory|                                  distances|         array|
+|distances_d0        |  out|   64|   ap_memory|                                  distances|         array|
+|distances_q0        |   in|   64|   ap_memory|                                  distances|         array|
+|distances_address1  |  out|   11|   ap_memory|                                  distances|         array|
+|distances_ce1       |  out|    1|   ap_memory|                                  distances|         array|
+|distances_we1       |  out|    1|   ap_memory|                                  distances|         array|
+|distances_d1        |  out|   64|   ap_memory|                                  distances|         array|
+|distances_q1        |   in|   64|   ap_memory|                                  distances|         array|
+|labels_address0     |  out|   11|   ap_memory|                                     labels|         array|
+|labels_ce0          |  out|    1|   ap_memory|                                     labels|         array|
+|labels_we0          |  out|    1|   ap_memory|                                     labels|         array|
+|labels_d0           |  out|    4|   ap_memory|                                     labels|         array|
+|labels_q0           |   in|    4|   ap_memory|                                     labels|         array|
+|labels_address1     |  out|   11|   ap_memory|                                     labels|         array|
+|labels_ce1          |  out|    1|   ap_memory|                                     labels|         array|
+|labels_we1          |  out|    1|   ap_memory|                                     labels|         array|
+|labels_d1           |  out|    4|   ap_memory|                                     labels|         array|
+|labels_q1           |   in|    4|   ap_memory|                                     labels|         array|
++--------------------+-----+-----+------------+-------------------------------------------+--------------+
+

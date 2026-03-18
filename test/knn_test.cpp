@@ -3,7 +3,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include "knn.h"
+#include "../include/knn.h"
 
 void loadDataset(string filename, pixel_t *X, label_t *y) {
     std::ifstream file(filename);
