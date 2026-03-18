@@ -16,23 +16,23 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    indvars_iv14 : IN STD_LOGIC_VECTOR (10 downto 0);
-    distances_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    indvars_iv14 : IN STD_LOGIC_VECTOR (3 downto 0);
+    distances_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
     distances_ce0 : OUT STD_LOGIC;
     distances_we0 : OUT STD_LOGIC;
     distances_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
     distances_q0 : IN STD_LOGIC_VECTOR (63 downto 0);
-    distances_address1 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    distances_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
     distances_ce1 : OUT STD_LOGIC;
     distances_we1 : OUT STD_LOGIC;
     distances_d1 : OUT STD_LOGIC_VECTOR (63 downto 0);
     distances_q1 : IN STD_LOGIC_VECTOR (63 downto 0);
-    labels_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    labels_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
     labels_ce0 : OUT STD_LOGIC;
     labels_we0 : OUT STD_LOGIC;
     labels_d0 : OUT STD_LOGIC_VECTOR (3 downto 0);
     labels_q0 : IN STD_LOGIC_VECTOR (3 downto 0);
-    labels_address1 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    labels_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
     labels_ce1 : OUT STD_LOGIC;
     labels_we1 : OUT STD_LOGIC;
     labels_d1 : OUT STD_LOGIC_VECTOR (3 downto 0);
@@ -56,9 +56,9 @@ architecture behav of knn_accelerator_knn_distance_and_sort_Pipeline_sort_loop_j
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_3 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000011";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
-    constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
+    constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
-    constant ap_const_lv11_1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
+    constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
     constant ap_const_lv32_34 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000110100";
     constant ap_const_lv32_3E : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000111110";
     constant ap_const_lv11_7FF : STD_LOGIC_VECTOR (10 downto 0) := "11111111111";
@@ -79,14 +79,14 @@ attribute shreg_extract : string;
     signal ap_CS_fsm_state5 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
     signal icmp_ln65_reg_235 : STD_LOGIC_VECTOR (0 downto 0);
-    signal add_ln66_fu_126_p2 : STD_LOGIC_VECTOR (10 downto 0);
-    signal add_ln66_reg_239 : STD_LOGIC_VECTOR (10 downto 0);
+    signal add_ln66_fu_126_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal add_ln66_reg_239 : STD_LOGIC_VECTOR (3 downto 0);
     signal zext_ln65_fu_132_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal zext_ln65_reg_244 : STD_LOGIC_VECTOR (63 downto 0);
-    signal distances_addr_reg_249 : STD_LOGIC_VECTOR (10 downto 0);
+    signal distances_addr_reg_249 : STD_LOGIC_VECTOR (3 downto 0);
     signal zext_ln66_fu_137_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal zext_ln66_reg_254 : STD_LOGIC_VECTOR (63 downto 0);
-    signal distances_addr_1_reg_259 : STD_LOGIC_VECTOR (10 downto 0);
+    signal distances_addr_1_reg_259 : STD_LOGIC_VECTOR (3 downto 0);
     signal temp_dist_reg_264 : STD_LOGIC_VECTOR (63 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
@@ -95,21 +95,21 @@ attribute shreg_extract : string;
     signal and_ln66_1_reg_278 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
-    signal labels_addr_reg_282 : STD_LOGIC_VECTOR (10 downto 0);
-    signal labels_addr_1_reg_287 : STD_LOGIC_VECTOR (10 downto 0);
-    signal j_fu_46 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
+    signal labels_addr_reg_282 : STD_LOGIC_VECTOR (3 downto 0);
+    signal labels_addr_1_reg_287 : STD_LOGIC_VECTOR (3 downto 0);
+    signal j_fu_46 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     signal ap_loop_init : STD_LOGIC;
-    signal ap_sig_allocacmp_j_1 : STD_LOGIC_VECTOR (10 downto 0);
+    signal ap_sig_allocacmp_j_1 : STD_LOGIC_VECTOR (3 downto 0);
     signal distances_ce1_local : STD_LOGIC;
-    signal distances_address1_local : STD_LOGIC_VECTOR (10 downto 0);
+    signal distances_address1_local : STD_LOGIC_VECTOR (3 downto 0);
     signal distances_ce0_local : STD_LOGIC;
-    signal distances_address0_local : STD_LOGIC_VECTOR (10 downto 0);
+    signal distances_address0_local : STD_LOGIC_VECTOR (3 downto 0);
     signal distances_we1_local : STD_LOGIC;
     signal distances_we0_local : STD_LOGIC;
     signal labels_ce1_local : STD_LOGIC;
-    signal labels_address1_local : STD_LOGIC_VECTOR (10 downto 0);
+    signal labels_address1_local : STD_LOGIC_VECTOR (3 downto 0);
     signal labels_ce0_local : STD_LOGIC;
-    signal labels_address0_local : STD_LOGIC_VECTOR (10 downto 0);
+    signal labels_address0_local : STD_LOGIC_VECTOR (3 downto 0);
     signal labels_we1_local : STD_LOGIC;
     signal labels_we0_local : STD_LOGIC;
     signal ap_CS_fsm_state3 : STD_LOGIC;
@@ -246,7 +246,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_state1_pp0_stage0_iter0) and (ap_const_logic_1 = ap_CS_fsm_state1) and (ap_loop_init = ap_const_logic_1))) then 
-                j_fu_46 <= ap_const_lv11_0;
+                j_fu_46 <= ap_const_lv4_0;
             elsif (((icmp_ln65_reg_235 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
                 j_fu_46 <= add_ln66_reg_239;
             end if; 
@@ -257,11 +257,11 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_boolean_0 = ap_block_state1_pp0_stage0_iter0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                 add_ln66_reg_239 <= add_ln66_fu_126_p2;
-                distances_addr_1_reg_259 <= zext_ln66_fu_137_p1(11 - 1 downto 0);
-                distances_addr_reg_249 <= zext_ln65_fu_132_p1(11 - 1 downto 0);
+                distances_addr_1_reg_259 <= zext_ln66_fu_137_p1(4 - 1 downto 0);
+                distances_addr_reg_249 <= zext_ln65_fu_132_p1(4 - 1 downto 0);
                 icmp_ln65_reg_235 <= icmp_ln65_fu_120_p2;
-                    zext_ln65_reg_244(10 downto 0) <= zext_ln65_fu_132_p1(10 downto 0);
-                    zext_ln66_reg_254(10 downto 0) <= zext_ln66_fu_137_p1(10 downto 0);
+                    zext_ln65_reg_244(3 downto 0) <= zext_ln65_fu_132_p1(3 downto 0);
+                    zext_ln66_reg_254(3 downto 0) <= zext_ln66_fu_137_p1(3 downto 0);
             end if;
         end if;
     end process;
@@ -270,8 +270,8 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
                 and_ln66_1_reg_278 <= and_ln66_1_fu_218_p2;
-                labels_addr_1_reg_287 <= zext_ln66_reg_254(11 - 1 downto 0);
-                labels_addr_reg_282 <= zext_ln65_reg_244(11 - 1 downto 0);
+                labels_addr_1_reg_287 <= zext_ln66_reg_254(4 - 1 downto 0);
+                labels_addr_reg_282 <= zext_ln65_reg_244(4 - 1 downto 0);
             end if;
         end if;
     end process;
@@ -284,8 +284,8 @@ begin
             end if;
         end if;
     end process;
-    zext_ln65_reg_244(63 downto 11) <= "00000000000000000000000000000000000000000000000000000";
-    zext_ln66_reg_254(63 downto 11) <= "00000000000000000000000000000000000000000000000000000";
+    zext_ln65_reg_244(63 downto 4) <= "000000000000000000000000000000000000000000000000000000000000";
+    zext_ln66_reg_254(63 downto 4) <= "000000000000000000000000000000000000000000000000000000000000";
 
     ap_NS_fsm_assign_proc : process (ap_CS_fsm, ap_CS_fsm_state1, ap_block_state1_pp0_stage0_iter0, icmp_ln65_fu_120_p2)
     begin
@@ -310,7 +310,7 @@ begin
                 ap_NS_fsm <= "XXXXX";
         end case;
     end process;
-    add_ln66_fu_126_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_j_1) + unsigned(ap_const_lv11_1));
+    add_ln66_fu_126_p2 <= std_logic_vector(unsigned(ap_sig_allocacmp_j_1) + unsigned(ap_const_lv4_1));
     and_ln66_1_fu_218_p2 <= (grp_fu_108_p2 and and_ln66_fu_212_p2);
     and_ln66_fu_212_p2 <= (or_ln66_fu_188_p2 and or_ln66_1_fu_206_p2);
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
@@ -385,7 +385,7 @@ begin
     ap_sig_allocacmp_j_1_assign_proc : process(ap_CS_fsm_state1, j_fu_46, ap_loop_init)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_loop_init = ap_const_logic_1))) then 
-            ap_sig_allocacmp_j_1 <= ap_const_lv11_0;
+            ap_sig_allocacmp_j_1 <= ap_const_lv4_0;
         else 
             ap_sig_allocacmp_j_1 <= j_fu_46;
         end if; 
@@ -400,9 +400,9 @@ begin
         if (((icmp_ln65_reg_235 = ap_const_lv1_0) and (ap_const_lv1_1 = and_ln66_1_reg_278) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
             distances_address0_local <= distances_addr_1_reg_259;
         elsif (((icmp_ln65_fu_120_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            distances_address0_local <= zext_ln66_fu_137_p1(11 - 1 downto 0);
+            distances_address0_local <= zext_ln66_fu_137_p1(4 - 1 downto 0);
         else 
-            distances_address0_local <= "XXXXXXXXXXX";
+            distances_address0_local <= "XXXX";
         end if; 
     end process;
 
@@ -413,9 +413,9 @@ begin
         if (((icmp_ln65_reg_235 = ap_const_lv1_0) and (ap_const_lv1_1 = and_ln66_1_reg_278) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
             distances_address1_local <= distances_addr_reg_249;
         elsif (((icmp_ln65_fu_120_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            distances_address1_local <= zext_ln65_fu_132_p1(11 - 1 downto 0);
+            distances_address1_local <= zext_ln65_fu_132_p1(4 - 1 downto 0);
         else 
-            distances_address1_local <= "XXXXXXXXXXX";
+            distances_address1_local <= "XXXX";
         end if; 
     end process;
 
@@ -477,9 +477,9 @@ begin
         if (((icmp_ln65_reg_235 = ap_const_lv1_0) and (ap_const_lv1_1 = and_ln66_1_reg_278) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
             labels_address0_local <= labels_addr_1_reg_287;
         elsif (((ap_const_lv1_1 = and_ln66_1_fu_218_p2) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            labels_address0_local <= zext_ln66_reg_254(11 - 1 downto 0);
+            labels_address0_local <= zext_ln66_reg_254(4 - 1 downto 0);
         else 
-            labels_address0_local <= "XXXXXXXXXXX";
+            labels_address0_local <= "XXXX";
         end if; 
     end process;
 
@@ -490,9 +490,9 @@ begin
         if (((icmp_ln65_reg_235 = ap_const_lv1_0) and (ap_const_lv1_1 = and_ln66_1_reg_278) and (ap_const_logic_1 = ap_CS_fsm_state5))) then 
             labels_address1_local <= labels_addr_reg_282;
         elsif (((ap_const_lv1_1 = and_ln66_1_fu_218_p2) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            labels_address1_local <= zext_ln65_reg_244(11 - 1 downto 0);
+            labels_address1_local <= zext_ln65_reg_244(4 - 1 downto 0);
         else 
-            labels_address1_local <= "XXXXXXXXXXX";
+            labels_address1_local <= "XXXX";
         end if; 
     end process;
 

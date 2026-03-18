@@ -252,7 +252,7 @@ entry:15 %gmem_x_train_addr = getelementptr i64 %gmem_x_train, i64 %sext_ln40
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -312,7 +312,7 @@ entry:19 %gmem_y_train_addr = getelementptr i32 %gmem_y_train, i64 %sext_ln40_1
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -330,7 +330,7 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -345,7 +345,7 @@ entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -363,7 +363,7 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -378,7 +378,7 @@ entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -396,7 +396,7 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -411,7 +411,7 @@ entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -429,7 +429,7 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -444,7 +444,7 @@ entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -462,7 +462,7 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -477,7 +477,7 @@ entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -495,7 +495,7 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -510,7 +510,7 @@ entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -528,7 +528,7 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 
 <Node id="27" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="64">
 <![CDATA[
-entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500
+entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490
 
 ]]></Node>
 <StgValue><ssdm name="empty"/></StgValue>
@@ -543,7 +543,7 @@ entry:16 %empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_ad
 
 <Node id="31" bw="1" op_0_bw="1" op_1_bw="32" op_2_bw="64">
 <![CDATA[
-entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500
+entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10
 
 ]]></Node>
 <StgValue><ssdm name="empty_30"/></StgValue>
@@ -559,9 +559,9 @@ entry:20 %empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="16" op_0_bw="16" op_1_bw="16">
+<Node id="11" bw="9" op_0_bw="9" op_1_bw="9">
 <![CDATA[
-entry:0 %idx_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %idx
+entry:0 %idx_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %idx
 
 ]]></Node>
 <StgValue><ssdm name="idx_read"/></StgValue>
@@ -589,9 +589,9 @@ entry:3 %test_point_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %test_point
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="21" bw="19" op_0_bw="19" op_1_bw="16" op_2_bw="3">
+<Node id="21" bw="12" op_0_bw="12" op_1_bw="9" op_2_bw="3">
 <![CDATA[
-entry:10 %shl_ln = bitconcatenate i19 @_ssdm_op_BitConcatenate.i19.i16.i3, i16 %idx_read, i3 0
+entry:10 %shl_ln = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i9.i3, i9 %idx_read, i3 0
 
 ]]></Node>
 <StgValue><ssdm name="shl_ln"/></StgValue>
@@ -604,9 +604,9 @@ entry:10 %shl_ln = bitconcatenate i19 @_ssdm_op_BitConcatenate.i19.i16.i3, i16 %
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="22" bw="64" op_0_bw="19">
+<Node id="22" bw="64" op_0_bw="12">
 <![CDATA[
-entry:11 %zext_ln40 = zext i19 %shl_ln
+entry:11 %zext_ln40 = zext i12 %shl_ln
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln40"/></StgValue>
@@ -741,7 +741,7 @@ entry:24 %call_ln0 = call void @knn_distance_and_sort_Pipeline_copy_top_k, i4 %t
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
 <![CDATA[
-entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_y_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1500, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_y_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 10, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -756,7 +756,7 @@ entry:4 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gm
 
 <Node id="16" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
 <![CDATA[
-entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 73500, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 490, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -771,7 +771,7 @@ entry:5 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gm
 
 <Node id="17" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0" op_17_bw="32" op_18_bw="32" op_19_bw="32">
 <![CDATA[
-entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_test, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 49000, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
+entry:6 %specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_test, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 490, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0
 
 ]]></Node>
 <StgValue><ssdm name="specinterface_ln0"/></StgValue>
@@ -1000,7 +1000,7 @@ entry:25 %ret_ln81 = ret
 </dataflow>
 <dataflow id="173" from="StgValue_130" to="empty_30" fromId="130" toId="44">
 </dataflow>
-<dataflow id="175" from="_ssdm_op_Read.ap_auto.i16" to="idx_read" fromId="174" toId="45">
+<dataflow id="175" from="_ssdm_op_Read.ap_auto.i9" to="idx_read" fromId="174" toId="45">
 </dataflow>
 <dataflow id="176" from="idx" to="idx_read" fromId="85" toId="45">
 </dataflow>
@@ -1008,7 +1008,7 @@ entry:25 %ret_ln81 = ret
 </dataflow>
 <dataflow id="178" from="test_point" to="test_point_read" fromId="77" toId="46">
 </dataflow>
-<dataflow id="180" from="_ssdm_op_BitConcatenate.i19.i16.i3" to="shl_ln" fromId="179" toId="47">
+<dataflow id="180" from="_ssdm_op_BitConcatenate.i12.i9.i3" to="shl_ln" fromId="179" toId="47">
 </dataflow>
 <dataflow id="181" from="idx_read" to="shl_ln" fromId="45" toId="47">
 </dataflow>
@@ -1180,13 +1180,15 @@ entry:25 %ret_ln81 = ret
 </dataflow>
 <dataflow id="280" from="StgValue_228" to="specinterface_ln0" fromId="228" toId="58">
 </dataflow>
-<dataflow id="282" from="StgValue_281" to="specinterface_ln0" fromId="281" toId="58">
+<dataflow id="281" from="StgValue_259" to="specinterface_ln0" fromId="259" toId="58">
 </dataflow>
-<dataflow id="284" from="empty_1" to="specinterface_ln0" fromId="283" toId="58">
+<dataflow id="283" from="empty_1" to="specinterface_ln0" fromId="282" toId="58">
 </dataflow>
-<dataflow id="285" from="empty_2" to="specinterface_ln0" fromId="238" toId="58">
+<dataflow id="284" from="empty_2" to="specinterface_ln0" fromId="238" toId="58">
 </dataflow>
-<dataflow id="286" from="empty_0" to="specinterface_ln0" fromId="231" toId="58">
+<dataflow id="285" from="empty_0" to="specinterface_ln0" fromId="231" toId="58">
+</dataflow>
+<dataflow id="286" from="StgValue_241" to="specinterface_ln0" fromId="241" toId="58">
 </dataflow>
 <dataflow id="287" from="StgValue_241" to="specinterface_ln0" fromId="241" toId="58">
 </dataflow>
@@ -1194,27 +1196,25 @@ entry:25 %ret_ln81 = ret
 </dataflow>
 <dataflow id="289" from="StgValue_241" to="specinterface_ln0" fromId="241" toId="58">
 </dataflow>
-<dataflow id="290" from="StgValue_241" to="specinterface_ln0" fromId="241" toId="58">
+<dataflow id="290" from="empty_0" to="specinterface_ln0" fromId="231" toId="58">
 </dataflow>
 <dataflow id="291" from="empty_0" to="specinterface_ln0" fromId="231" toId="58">
 </dataflow>
-<dataflow id="292" from="empty_0" to="specinterface_ln0" fromId="231" toId="58">
+<dataflow id="292" from="StgValue_248" to="specinterface_ln0" fromId="248" toId="58">
 </dataflow>
-<dataflow id="293" from="StgValue_248" to="specinterface_ln0" fromId="248" toId="58">
+<dataflow id="293" from="StgValue_228" to="specinterface_ln0" fromId="228" toId="58">
 </dataflow>
 <dataflow id="294" from="StgValue_228" to="specinterface_ln0" fromId="228" toId="58">
 </dataflow>
-<dataflow id="295" from="StgValue_228" to="specinterface_ln0" fromId="228" toId="58">
+<dataflow id="295" from="knn_distance_and_sort_Pipeline_copy_top_k" to="call_ln0" fromId="217" toId="59">
 </dataflow>
-<dataflow id="296" from="knn_distance_and_sort_Pipeline_copy_top_k" to="call_ln0" fromId="217" toId="59">
+<dataflow id="296" from="top_k_labels_0" to="call_ln0" fromId="82" toId="59">
 </dataflow>
-<dataflow id="297" from="top_k_labels_0" to="call_ln0" fromId="82" toId="59">
+<dataflow id="297" from="top_k_labels_2" to="call_ln0" fromId="84" toId="59">
 </dataflow>
-<dataflow id="298" from="top_k_labels_2" to="call_ln0" fromId="84" toId="59">
+<dataflow id="298" from="top_k_labels_1" to="call_ln0" fromId="83" toId="59">
 </dataflow>
-<dataflow id="299" from="top_k_labels_1" to="call_ln0" fromId="83" toId="59">
-</dataflow>
-<dataflow id="300" from="labels" to="call_ln0" fromId="18" toId="59">
+<dataflow id="299" from="labels" to="call_ln0" fromId="18" toId="59">
 </dataflow>
 </dataflows>
 

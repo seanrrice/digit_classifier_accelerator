@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_distance_and_sort_Pipeline_train_loop'" level="0">
-<item name = "Date">Tue Mar 17 18:06:00 2026
+<item name = "Date">Tue Mar 17 19:32:41 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">knn_accelerator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">73883, 73883, 0.739 ms, 0.739 ms, 73549, 73549, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="">873, 873, 8.730 us, 8.730 us, 539, 539, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- train_loop">73881, 73881, 431, 49, 1, 1500, yes</column>
+<column name="- train_loop">871, 871, 431, 49, 1, 10, yes</column>
 </table>
 </item>
 </section>

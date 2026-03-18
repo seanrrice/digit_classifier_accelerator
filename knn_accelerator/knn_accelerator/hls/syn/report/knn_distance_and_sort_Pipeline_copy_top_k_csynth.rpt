@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort_Pipeline_copy_top_k'
 ================================================================
-* Date:           Tue Mar 17 18:06:10 2026
+* Date:           Tue Mar 17 19:32:51 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        knn_accelerator
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  4.842 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  4.741 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -138,7 +138,7 @@
 |top_k_labels_2_ap_vld  |  out|    1|      ap_vld|                             top_k_labels_2|       pointer|
 |top_k_labels_1         |  out|    4|      ap_vld|                             top_k_labels_1|       pointer|
 |top_k_labels_1_ap_vld  |  out|    1|      ap_vld|                             top_k_labels_1|       pointer|
-|labels_address0        |  out|   11|   ap_memory|                                     labels|         array|
+|labels_address0        |  out|    4|   ap_memory|                                     labels|         array|
 |labels_ce0             |  out|    1|   ap_memory|                                     labels|         array|
 |labels_q0              |   in|    4|   ap_memory|                                     labels|         array|
 +-----------------------+-----+-----+------------+-------------------------------------------+--------------+

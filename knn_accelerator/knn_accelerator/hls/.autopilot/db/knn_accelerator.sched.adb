@@ -329,7 +329,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -385,7 +385,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>10</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>1</count>
@@ -1167,13 +1167,13 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>10</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>104</item>
-					<item>466</item>
+					<item>464</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1281,7 +1281,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>10</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1396,13 +1396,13 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>114</item>
-					<item>469</item>
+					<item>467</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1453,7 +1453,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -1466,7 +1466,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>2.07</m_delay>
+				<m_delay>1.82</m_delay>
 				<m_topoIndex>23</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -1582,7 +1582,7 @@
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>130</item>
-					<item>462</item>
+					<item>460</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1639,7 +1639,7 @@
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>131</item>
-					<item>463</item>
+					<item>461</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1696,7 +1696,7 @@
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>132</item>
-					<item>464</item>
+					<item>462</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1815,7 +1815,7 @@
 					<item>140</item>
 					<item>141</item>
 					<item>143</item>
-					<item>467</item>
+					<item>465</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -1873,8 +1873,8 @@
 					<item_version>0</item_version>
 					<item>144</item>
 					<item>145</item>
-					<item>468</item>
-					<item>471</item>
+					<item>466</item>
+					<item>469</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1932,8 +1932,8 @@
 					<item_version>0</item_version>
 					<item>146</item>
 					<item>147</item>
-					<item>465</item>
-					<item>470</item>
+					<item>463</item>
+					<item>468</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -2269,7 +2269,7 @@
 					<bitwidth>64</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1000</content>
+				<content>10</content>
 			</item>
 			<item class_id_reference="16" object_id="_47">
 				<Value>
@@ -2297,7 +2297,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>10</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -2328,7 +2328,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>0</content>
@@ -2359,10 +2359,10 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>10</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1000</content>
+				<content>10</content>
 			</item>
 			<item class_id_reference="16" object_id="_50">
 				<Value>
@@ -2390,7 +2390,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>10</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>1</content>
@@ -2421,7 +2421,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<const_type>0</const_type>
 				<content>49</content>
@@ -3101,98 +3101,98 @@
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_119">
-				<id>458</id>
+				<id>456</id>
 				<edge_type>2</edge_type>
 				<source_obj>43</source_obj>
 				<sink_obj>48</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_120">
-				<id>459</id>
+				<id>457</id>
 				<edge_type>2</edge_type>
 				<source_obj>48</source_obj>
 				<sink_obj>65</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_121">
-				<id>460</id>
+				<id>458</id>
 				<edge_type>2</edge_type>
 				<source_obj>48</source_obj>
 				<sink_obj>62</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_122">
-				<id>461</id>
+				<id>459</id>
 				<edge_type>2</edge_type>
 				<source_obj>62</source_obj>
 				<sink_obj>48</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_123">
-				<id>462</id>
+				<id>460</id>
 				<edge_type>4</edge_type>
 				<source_obj>53</source_obj>
 				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_124">
-				<id>463</id>
+				<id>461</id>
 				<edge_type>4</edge_type>
 				<source_obj>53</source_obj>
 				<sink_obj>55</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_125">
-				<id>464</id>
+				<id>462</id>
 				<edge_type>4</edge_type>
 				<source_obj>53</source_obj>
 				<sink_obj>56</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_126">
-				<id>465</id>
+				<id>463</id>
 				<edge_type>4</edge_type>
 				<source_obj>49</source_obj>
 				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_127">
-				<id>466</id>
+				<id>464</id>
 				<edge_type>4</edge_type>
 				<source_obj>40</source_obj>
 				<sink_obj>44</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_128">
-				<id>467</id>
+				<id>465</id>
 				<edge_type>4</edge_type>
 				<source_obj>39</source_obj>
 				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_129">
-				<id>468</id>
+				<id>466</id>
 				<edge_type>4</edge_type>
 				<source_obj>40</source_obj>
 				<sink_obj>59</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_130">
-				<id>469</id>
+				<id>467</id>
 				<edge_type>4</edge_type>
 				<source_obj>41</source_obj>
 				<sink_obj>49</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_131">
-				<id>470</id>
+				<id>468</id>
 				<edge_type>4</edge_type>
 				<source_obj>41</source_obj>
 				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_132">
-				<id>471</id>
+				<id>469</id>
 				<edge_type>4</edge_type>
 				<source_obj>44</source_obj>
 				<sink_obj>59</sink_obj>
@@ -3223,8 +3223,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>87443007</mMinLatency>
-			<mMaxLatency>-1569948881</mMaxLatency>
+			<mMinLatency>10237</mMinLatency>
+			<mMaxLatency>13837</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -3268,10 +3268,10 @@
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
-			<mMinTripCount>1000</mMinTripCount>
-			<mMaxTripCount>1000</mMaxTripCount>
-			<mMinLatency>87443000</mMinLatency>
-			<mMaxLatency>-1569948888</mMaxLatency>
+			<mMinTripCount>10</mMinTripCount>
+			<mMaxTripCount>10</mMaxTripCount>
+			<mMinLatency>10230</mMinLatency>
+			<mMaxLatency>13830</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>

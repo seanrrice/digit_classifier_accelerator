@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_distance_and_sort_Outline_sort_loop_i'" level="0">
-<item name = "Date">Tue Mar 17 18:06:02 2026
+<item name = "Date">Tue Mar 17 19:32:43 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">knn_accelerator</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 6.508 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 6.438 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">13492, 11241002, 0.135 ms, 0.112 sec, 13492, 11241002, no</column>
+<column name="">82, 442, 0.820 us, 4.420 us, 82, 442, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- sort_loop_i">13491, 11241001, 9 ~ 7499, -, -, 1499, no</column>
+<column name="- sort_loop_i">81, 441, 9 ~ 49, -, -, 9, no</column>
 </table>
 </item>
 </section>

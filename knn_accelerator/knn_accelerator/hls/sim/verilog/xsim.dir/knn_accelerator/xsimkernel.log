@@ -1,0 +1,7 @@
+Running: xsim.dir/knn_accelerator/xsimk.exe -simmode gui -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=knn_accelerator_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -wdb knn_accelerator.wdb -simrunnum 0 -socket 50794
+Design successfully loaded
+Design Loading Memory Usage: 32228 KB (Peak: 32228 KB)
+Design Loading CPU Usage: 139 ms
+Simulation completed
+Simulation Memory Usage: 330016 KB (Peak: 330016 KB)
+Simulation CPU Usage: 23156 ms

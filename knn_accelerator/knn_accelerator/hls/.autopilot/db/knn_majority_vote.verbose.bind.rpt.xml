@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_majority_vote'" level="0">
-<item name = "Date">Tue Mar 17 18:06:06 2026
+<item name = "Date">Tue Mar 17 19:32:47 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">knn_accelerator</item>

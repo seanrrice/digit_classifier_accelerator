@@ -18,12 +18,12 @@ set cdfgNum 13
 set C_modelName {knn_distance_and_sort_Pipeline_copy_top_k}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
-dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 1500 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 10 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 set C_modelArgList {
 	{ top_k_labels_0 int 4 regular {pointer 1}  }
 	{ top_k_labels_2 int 4 regular {pointer 1}  }
 	{ top_k_labels_1 int 4 regular {pointer 1}  }
-	{ labels int 4 regular {array 1500 { 1 3 } 1 1 }  }
+	{ labels int 4 regular {array 10 { 1 3 } 1 1 }  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
@@ -48,7 +48,7 @@ set portList {
 	{ top_k_labels_2_ap_vld sc_out sc_logic 1 outvld 1 } 
 	{ top_k_labels_1 sc_out sc_lv 4 signal 2 } 
 	{ top_k_labels_1_ap_vld sc_out sc_logic 1 outvld 2 } 
-	{ labels_address0 sc_out sc_lv 11 signal 3 } 
+	{ labels_address0 sc_out sc_lv 4 signal 3 } 
 	{ labels_ce0 sc_out sc_logic 1 signal 3 } 
 	{ labels_q0 sc_in sc_lv 4 signal 3 } 
 }
@@ -65,7 +65,7 @@ set NewPortList {[
  	{ "name": "top_k_labels_2_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "top_k_labels_2", "role": "ap_vld" }} , 
  	{ "name": "top_k_labels_1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "top_k_labels_1", "role": "default" }} , 
  	{ "name": "top_k_labels_1_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "top_k_labels_1", "role": "ap_vld" }} , 
- 	{ "name": "labels_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "labels", "role": "address0" }} , 
+ 	{ "name": "labels_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "address0" }} , 
  	{ "name": "labels_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "labels", "role": "ce0" }} , 
  	{ "name": "labels_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "q0" }}  ]}
 
@@ -91,5 +91,5 @@ set Spec2ImplPortList {
 	top_k_labels_0 { ap_vld {  { top_k_labels_0 out_data 1 4 }  { top_k_labels_0_ap_vld out_vld 1 1 } } }
 	top_k_labels_2 { ap_vld {  { top_k_labels_2 out_data 1 4 }  { top_k_labels_2_ap_vld out_vld 1 1 } } }
 	top_k_labels_1 { ap_vld {  { top_k_labels_1 out_data 1 4 }  { top_k_labels_1_ap_vld out_vld 1 1 } } }
-	labels { ap_memory {  { labels_address0 mem_address 1 11 }  { labels_ce0 mem_ce 1 1 }  { labels_q0 mem_dout 0 4 } } }
+	labels { ap_memory {  { labels_address0 mem_address 1 4 }  { labels_ce0 mem_ce 1 1 }  { labels_q0 mem_dout 0 4 } } }
 }

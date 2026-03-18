@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_accelerator'" level="0">
-<item name = "Date">Tue Mar 17 18:06:06 2026
+<item name = "Date">Tue Mar 17 19:32:47 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">knn_accelerator</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">87443007, 11314953007, 0.874 sec, 113.150 sec, 87443008, 11314953008, no</column>
+<column name="">10237, 13837, 0.102 ms, 0.138 ms, 10238, 13838, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- test_data">87443000, 11314953000, 87443 ~ 11314953, -, -, 1000, no</column>
+<column name="- test_data">10230, 13830, 1023 ~ 1383, -, -, 10, no</column>
 </table>
 </item>
 </section>

@@ -1307,7 +1307,7 @@ Diagnostics:
     FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\src\knn.cpp'
     Replacements:    
       - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1672409
+        Offset:          1672399
         Length:          0
         ReplacementText: 'VITIS_LOOP_95_1: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1316,7 +1316,7 @@ Diagnostics:
     FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\src\knn.cpp'
     Replacements:    
       - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1672496
+        Offset:          1672486
         Length:          0
         ReplacementText: 'VITIS_LOOP_106_2: '
   - DiagnosticName:  xilinx-label-all-loops
@@ -1325,7 +1325,7 @@ Diagnostics:
     FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\src\knn.cpp'
     Replacements:    
       - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1672642
+        Offset:          1672632
         Length:          0
         ReplacementText: 'VITIS_LOOP_119_3: '
 ...

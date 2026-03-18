@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'knn_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Tue Mar 17 18:06:13 2026
+    * Date:           Tue Mar 17 19:32:54 2026
     * Version:        2025.1 (Build 6135595 on May 21 2025)
     * Project:        knn_accelerator
     * Solution:       hls (Vivado IP Flow Target)
@@ -15,31 +15,31 @@
 + Performance & Resource Estimates: 
     
     PS: '+' for module; 'o' for loop; '*' for dataflow
-    +---------------------------------------------------+---------+-------+-------------+-----------+----------+-------------+------+----------+---------+---------+-------------+-------------+-----+
-    |                      Modules                      |  Issue  |       |         Latency         | Iteration|             | Trip |          |         |         |             |             |     |
-    |                      & Loops                      |   Type  | Slack |   (cycles)  |    (ns)   |  Latency |   Interval  | Count| Pipelined|  BRAM   |   DSP   |      FF     |     LUT     | URAM|
-    +---------------------------------------------------+---------+-------+-------------+-----------+----------+-------------+------+----------+---------+---------+-------------+-------------+-----+
-    |+ knn_accelerator                                  |   Timing|  -1.24|  11314953007|  1.131e+11|         -|  11314953008|     -|        no|  19 (6%)|  17 (7%)|  13956 (13%)|  10937 (20%)|    -|
-    | o test_data                                       |        -|   7.30|  11314953000|  1.131e+11|  11314953|            -|  1000|        no|        -|        -|            -|            -|    -|
-    |  + knn_distance_and_sort                          |   Timing|  -1.24|     11314910|  1.131e+08|         -|     11314910|     -|        no|   9 (3%)|  17 (7%)|   10258 (9%)|   6530 (12%)|    -|
-    |   + knn_distance_and_sort_Pipeline_init_top_k     |        -|   2.56|            5|     50.000|         -|            4|     -|    rewind|        -|        -|      4 (~0%)|     47 (~0%)|    -|
-    |    o init_top_k                                   |        -|   7.30|            3|     30.000|         1|            1|     3|       yes|        -|        -|            -|            -|    -|
-    |   + knn_distance_and_sort_Pipeline_train_loop     |   Timing|  -1.24|        73883|  7.388e+05|         -|        73549|     -|    rewind|        -|  17 (7%)|    9770 (9%)|   5356 (10%)|    -|
-    |    o train_loop                                   |       II|   7.30|        73881|  7.388e+05|       431|           49|  1500|       yes|        -|        -|            -|            -|    -|
-    |   + knn_distance_and_sort_Outline_sort_loop_i     |        -|   0.79|     11241002|  1.124e+08|         -|     11241002|     -|        no|        -|        -|    261 (~0%)|    362 (~0%)|    -|
-    |    o sort_loop_i                                  |        -|   7.30|     11241001|  1.124e+08|      7499|            -|  1499|        no|        -|        -|            -|            -|    -|
-    |     + knn_distance_and_sort_Pipeline_sort_loop_j  |        -|   0.79|         7497|  7.497e+04|         -|         7496|     -|    rewind|        -|        -|    224 (~0%)|    288 (~0%)|    -|
-    |      o sort_loop_j                                |       II|   7.30|         7495|  7.495e+04|         5|            5|  1499|       yes|        -|        -|            -|            -|    -|
-    |   + knn_distance_and_sort_Pipeline_copy_top_k     |        -|   2.46|            5|     50.000|         -|            4|     -|    rewind|        -|        -|      7 (~0%)|     58 (~0%)|    -|
-    |    o copy_top_k                                   |        -|   7.30|            3|     30.000|         2|            1|     3|       yes|        -|        -|            -|            -|    -|
-    |  + knn_majority_vote                              |        -|   0.14|           38|    380.000|         -|           38|     -|        no|        -|        -|    296 (~0%)|     594 (1%)|    -|
-    |   + knn_majority_vote_Pipeline_VITIS_LOOP_95_1    |        -|   1.66|           12|    120.000|         -|           11|     -|    rewind|        -|        -|      6 (~0%)|     53 (~0%)|    -|
-    |    o VITIS_LOOP_95_1                              |        -|   7.30|           10|    100.000|         1|            1|    10|       yes|        -|        -|            -|            -|    -|
-    |   + knn_majority_vote_Pipeline_VITIS_LOOP_106_2   |        -|   0.14|            8|     80.000|         -|            7|     -|    rewind|        -|        -|    141 (~0%)|    241 (~0%)|    -|
-    |    o VITIS_LOOP_106_2                             |       II|   7.30|            6|     60.000|         3|            2|     3|       yes|        -|        -|            -|            -|    -|
-    |   + knn_majority_vote_Pipeline_VITIS_LOOP_119_3   |        -|   0.14|           12|    120.000|         -|           11|     -|    rewind|        -|        -|     75 (~0%)|    176 (~0%)|    -|
-    |    o VITIS_LOOP_119_3                             |        -|   7.30|           10|    100.000|         2|            1|    10|       yes|        -|        -|            -|            -|    -|
-    +---------------------------------------------------+---------+-------+-------------+-----------+----------+-------------+------+----------+---------+---------+-------------+-------------+-----+
+    +---------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-------------+-------------+-----+
+    |                      Modules                      |  Issue  |       |       Latency       | Iteration|         | Trip |          |         |         |             |             |     |
+    |                      & Loops                      |   Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |      FF     |     LUT     | URAM|
+    +---------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-------------+-------------+-----+
+    |+ knn_accelerator                                  |   Timing|  -1.24|    13837|  1.384e+05|         -|    13838|     -|        no|  10 (3%)|  17 (7%)|  13974 (13%)|  10946 (20%)|    -|
+    | o test_data                                       |        -|   7.30|    13830|  1.383e+05|      1383|        -|    10|        no|        -|        -|            -|            -|    -|
+    |  + knn_distance_and_sort                          |   Timing|  -1.24|     1340|  1.340e+04|         -|     1340|     -|        no|        -|  17 (7%)|   10296 (9%)|   6548 (12%)|    -|
+    |   + knn_distance_and_sort_Pipeline_init_top_k     |        -|   2.56|        5|     50.000|         -|        4|     -|    rewind|        -|        -|      4 (~0%)|     47 (~0%)|    -|
+    |    o init_top_k                                   |        -|   7.30|        3|     30.000|         1|        1|     3|       yes|        -|        -|            -|            -|    -|
+    |   + knn_distance_and_sort_Pipeline_train_loop     |   Timing|  -1.24|      873|  8.730e+03|         -|      539|     -|    rewind|        -|  17 (7%)|    9749 (9%)|   5358 (10%)|    -|
+    |    o train_loop                                   |       II|   7.30|      871|  8.710e+03|       431|       49|    10|       yes|        -|        -|            -|            -|    -|
+    |   + knn_distance_and_sort_Outline_sort_loop_i     |        -|   0.86|      442|  4.420e+03|         -|      442|     -|        no|        -|        -|    184 (~0%)|    367 (~0%)|    -|
+    |    o sort_loop_i                                  |        -|   7.30|      441|  4.410e+03|        49|        -|     9|        no|        -|        -|            -|            -|    -|
+    |     + knn_distance_and_sort_Pipeline_sort_loop_j  |        -|   0.86|       47|    470.000|         -|       46|     -|    rewind|        -|        -|    168 (~0%)|    290 (~0%)|    -|
+    |      o sort_loop_j                                |       II|   7.30|       45|    450.000|         5|        5|     9|       yes|        -|        -|            -|            -|    -|
+    |   + knn_distance_and_sort_Pipeline_copy_top_k     |        -|   2.56|        5|     50.000|         -|        4|     -|    rewind|        -|        -|      7 (~0%)|     58 (~0%)|    -|
+    |    o copy_top_k                                   |        -|   7.30|        3|     30.000|         2|        1|     3|       yes|        -|        -|            -|            -|    -|
+    |  + knn_majority_vote                              |        -|   0.14|       38|    380.000|         -|       38|     -|        no|        -|        -|    296 (~0%)|     594 (1%)|    -|
+    |   + knn_majority_vote_Pipeline_VITIS_LOOP_95_1    |        -|   1.66|       12|    120.000|         -|       11|     -|    rewind|        -|        -|      6 (~0%)|     53 (~0%)|    -|
+    |    o VITIS_LOOP_95_1                              |        -|   7.30|       10|    100.000|         1|        1|    10|       yes|        -|        -|            -|            -|    -|
+    |   + knn_majority_vote_Pipeline_VITIS_LOOP_106_2   |        -|   0.14|        8|     80.000|         -|        7|     -|    rewind|        -|        -|    141 (~0%)|    241 (~0%)|    -|
+    |    o VITIS_LOOP_106_2                             |       II|   7.30|        6|     60.000|         3|        2|     3|       yes|        -|        -|            -|            -|    -|
+    |   + knn_majority_vote_Pipeline_VITIS_LOOP_119_3   |        -|   0.14|       12|    120.000|         -|       11|     -|    rewind|        -|        -|     75 (~0%)|    176 (~0%)|    -|
+    |    o VITIS_LOOP_119_3                             |        -|   7.30|       10|    100.000|         2|        1|    10|       yes|        -|        -|            -|            -|    -|
+    +---------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-------------+-------------+-----+
 
 
 ================================================================
@@ -135,9 +135,9 @@
 | HW Interface       | Direction | Length | Width | Loop       | Loop Location         |
 +--------------------+-----------+--------+-------+------------+-----------------------+
 | m_axi_gmem_x_test  | read      | 49     | 64    |            |                       |
-| m_axi_gmem_x_train | read      | 73500  | 64    | train_loop | ../src/knn.cpp:40:17  |
-| m_axi_gmem_y_test  | write     | 1000   | 32    | test_data  | ../src/knn.cpp:151:16 |
-| m_axi_gmem_y_train | read      | 1500   | 32    | train_loop | ../src/knn.cpp:40:17  |
+| m_axi_gmem_x_train | read      | 490    | 64    | train_loop | ../src/knn.cpp:40:17  |
+| m_axi_gmem_y_test  | write     | 10     | 32    | test_data  | ../src/knn.cpp:151:16 |
+| m_axi_gmem_y_train | read      | 10     | 32    | train_loop | ../src/knn.cpp:40:17  |
 +--------------------+-----------+--------+-------+------------+-----------------------+
 
 * All M_AXI Variable Accesses
@@ -148,11 +148,11 @@
 | m_axi_gmem_x_test  | test_point | ../src/knn.cpp:51:28  | read      | Fail         |        | train_loop   | ../src/knn.cpp:40:17  | 214-229    | Could not analyze pattern                                                                                |
 | m_axi_gmem_x_test  | test_point | ../src/knn.cpp:51:28  | read      | Inferred     | 49     | feature_loop | ../src/knn.cpp:50:23  |            |                                                                                                          |
 | m_axi_gmem_x_train | X_train    | ../src/knn.cpp:51:44  | read      | Widen Fail   |        | feature_loop | ../src/knn.cpp:50:23  | 214-353    | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:51:44  | read      | Inferred     | 73500  | train_loop   | ../src/knn.cpp:40:17  |            |                                                                                                          |
+| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:51:44  | read      | Inferred     | 490    | train_loop   | ../src/knn.cpp:40:17  |            |                                                                                                          |
 | m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:156:19 | write     | Widen Fail   |        | test_data    | ../src/knn.cpp:151:16 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
-| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:156:19 | write     | Inferred     | 1000   | test_data    | ../src/knn.cpp:151:16 |            |                                                                                                          |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:156:19 | write     | Inferred     | 10     | test_data    | ../src/knn.cpp:151:16 |            |                                                                                                          |
 | m_axi_gmem_y_train | y_train    | ../src/knn.cpp:55:21  | read      | Widen Fail   |        | train_loop   | ../src/knn.cpp:40:17  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
-| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:55:21  | read      | Inferred     | 1500   | train_loop   | ../src/knn.cpp:40:17  |            |                                                                                                          |
+| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:55:21  | read      | Inferred     | 10     | train_loop   | ../src/knn.cpp:40:17  |            |                                                                                                          |
 +--------------------+------------+-----------------------+-----------+--------------+--------+--------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
 
     * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
@@ -164,17 +164,17 @@
 | Name                                            | DSP | Pragma | Variable     | Op        | Impl                   | Latency |
 +-------------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
 | + knn_accelerator                               | 17  |        |              |           |                        |         |
-|   icmp_ln151_fu_234_p2                          |     |        | icmp_ln151   | seteq     | auto                   | 0       |
-|   add_ln151_fu_240_p2                           |     |        | add_ln151    | add       | fabric                 | 0       |
-|   add_ln153_fu_255_p2                           |     |        | add_ln153    | add       | fabric                 | 0       |
+|   icmp_ln151_fu_230_p2                          |     |        | icmp_ln151   | seteq     | auto                   | 0       |
+|   add_ln151_fu_236_p2                           |     |        | add_ln151    | add       | fabric                 | 0       |
+|   add_ln153_fu_251_p2                           |     |        | add_ln153    | add       | fabric                 | 0       |
 |  + knn_distance_and_sort                        | 17  |        |              |           |                        |         |
-|    add_ln40_fu_224_p2                           |     |        | add_ln40     | add       | fabric                 | 0       |
+|    add_ln40_fu_222_p2                           |     |        | add_ln40     | add       | fabric                 | 0       |
 |   + knn_distance_and_sort_Pipeline_init_top_k   | 0   |        |              |           |                        |         |
 |     icmp_ln28_fu_70_p2                          |     |        | icmp_ln28    | seteq     | auto                   | 0       |
 |     add_ln28_fu_76_p2                           |     |        | add_ln28     | add       | fabric                 | 0       |
 |   + knn_distance_and_sort_Pipeline_train_loop   | 17  |        |              |           |                        |         |
-|     icmp_ln40_fu_333_p2                         |     |        | icmp_ln40    | seteq     | auto                   | 0       |
-|     add_ln40_fu_339_p2                          |     |        | add_ln40     | add       | fabric                 | 0       |
+|     icmp_ln40_fu_331_p2                         |     |        | icmp_ln40    | seteq     | auto                   | 0       |
+|     add_ln40_fu_337_p2                          |     |        | add_ln40     | add       | fabric                 | 0       |
 |     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff         | dsub      | fulldsp                | 6       |
 |     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul          | dmul      | maxdsp                 | 6       |
 |     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | sum          | dsub      | fulldsp                | 6       |
@@ -369,16 +369,16 @@
 | Name                     | Usage         | Type      | BRAM | URAM | Pragma | Variable  | Impl | Latency | Bitwidth, Depth, |
 |                          |               |           |      |      |        |           |      |         | Banks            |
 +--------------------------+---------------+-----------+------+------+--------+-----------+------+---------+------------------+
-| + knn_accelerator        |               |           | 19   | 0    |        |           |      |         |                  |
+| + knn_accelerator        |               |           | 10   | 0    |        |           |      |         |                  |
 |   control_s_axi_U        | interface     | s_axilite |      |      |        |           |      |         |                  |
 |   control_r_s_axi_U      | interface     | s_axilite |      |      |        |           |      |         |                  |
 |   gmem_x_test_m_axi_U    | interface     | m_axi     | 4    |      |        |           |      |         |                  |
 |   gmem_x_train_m_axi_U   | interface     | m_axi     | 4    |      |        |           |      |         |                  |
 |   gmem_y_test_m_axi_U    | interface     | m_axi     |      |      |        |           |      |         |                  |
 |   gmem_y_train_m_axi_U   | interface     | m_axi     | 2    |      |        |           |      |         |                  |
-|  + knn_distance_and_sort |               |           | 9    | 0    |        |           |      |         |                  |
-|    distances_U           | ram_t2p array |           | 8    |      |        | distances | auto | 1       | 64, 1500, 1      |
-|    labels_U              | ram_t2p array |           | 1    |      |        | labels    | auto | 1       | 4, 1500, 1       |
+|  + knn_distance_and_sort |               |           | 0    | 0    |        |           |      |         |                  |
+|    distances_U           | ram_t2p array |           |      |      |        | distances | auto | 1       | 64, 10, 1        |
+|    labels_U              | ram_t2p array |           |      |      |        | labels    | auto | 1       | 4, 10, 1         |
 |  + knn_majority_vote     |               |           | 0    | 0    |        |           |      |         |                  |
 |    counts_U              | ram_2p array  |           |      |      |        | counts    | auto | 1       | 32, 10, 1        |
 +--------------------------+---------------+-----------+------+------+--------+-----------+------+---------+------------------+
@@ -395,16 +395,16 @@
 +--------------+---------+------------------------------------------------------------------------------------+-------------------------------+
 
 * Valid Pragma Syntax
-+-----------+-------------------------------------------------------------------+------------------------------------------------+
-| Type      | Options                                                           | Location                                       |
-+-----------+-------------------------------------------------------------------+------------------------------------------------+
-| INLINE    | off                                                               | ../src/knn.cpp:15 in knn_distance_and_sort     |
-| INLINE    | off                                                               | ../src/knn.cpp:87 in knn_majority_vote         |
-| INTERFACE | m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*1500 | ../src/knn.cpp:140 in knn_accelerator, X_train |
-| INTERFACE | m_axi port=y_train offset=slave bundle=gmem_y_train depth=1500    | ../src/knn.cpp:141 in knn_accelerator, y_train |
-| INTERFACE | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*1000   | ../src/knn.cpp:142 in knn_accelerator, X_test  |
-| INTERFACE | m_axi port=y_test offset=slave bundle=gmem_y_test depth=1000      | ../src/knn.cpp:143 in knn_accelerator, y_test  |
-| INTERFACE | s_axilite port=return bundle=control                              | ../src/knn.cpp:146 in knn_accelerator, return  |
-+-----------+-------------------------------------------------------------------+------------------------------------------------+
++-----------+-----------------------------------------------------------------+------------------------------------------------+
+| Type      | Options                                                         | Location                                       |
++-----------+-----------------------------------------------------------------+------------------------------------------------+
+| INLINE    | off                                                             | ../src/knn.cpp:15 in knn_distance_and_sort     |
+| INLINE    | off                                                             | ../src/knn.cpp:87 in knn_majority_vote         |
+| INTERFACE | m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10 | ../src/knn.cpp:140 in knn_accelerator, X_train |
+| INTERFACE | m_axi port=y_train offset=slave bundle=gmem_y_train depth=10    | ../src/knn.cpp:141 in knn_accelerator, y_train |
+| INTERFACE | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10   | ../src/knn.cpp:142 in knn_accelerator, X_test  |
+| INTERFACE | m_axi port=y_test offset=slave bundle=gmem_y_test depth=10      | ../src/knn.cpp:143 in knn_accelerator, y_test  |
+| INTERFACE | s_axilite port=return bundle=control                            | ../src/knn.cpp:146 in knn_accelerator, return  |
++-----------+-----------------------------------------------------------------+------------------------------------------------+
 
 

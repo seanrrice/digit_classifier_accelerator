@@ -36,7 +36,7 @@
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="3" bw="11" op_0_bw="32">
+<Node id="3" bw="4" op_0_bw="32">
 <![CDATA[
 newFuncRoot:0 %i_4 = alloca i32 1
 
@@ -51,7 +51,7 @@ newFuncRoot:0 %i_4 = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="4" bw="11" op_0_bw="32">
+<Node id="4" bw="4" op_0_bw="32">
 <![CDATA[
 newFuncRoot:1 %indvars_iv14 = alloca i32 1
 
@@ -66,9 +66,9 @@ newFuncRoot:1 %indvars_iv14 = alloca i32 1
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="5" bw="0" op_0_bw="11" op_1_bw="11">
+<Node id="5" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:2 %store_ln0 = store i11 1499, i11 %indvars_iv14
+newFuncRoot:2 %store_ln0 = store i4 9, i4 %indvars_iv14
 
 ]]></Node>
 <StgValue><ssdm name="store_ln0"/></StgValue>
@@ -81,9 +81,9 @@ newFuncRoot:2 %store_ln0 = store i11 1499, i11 %indvars_iv14
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="6" bw="0" op_0_bw="11" op_1_bw="11">
+<Node id="6" bw="0" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-newFuncRoot:3 %store_ln64 = store i11 0, i11 %i_4
+newFuncRoot:3 %store_ln64 = store i4 0, i4 %i_4
 
 ]]></Node>
 <StgValue><ssdm name="store_ln64"/></StgValue>
@@ -114,9 +114,9 @@ newFuncRoot:4 %br_ln0 = br void %sort_loop_j
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="9" bw="11" op_0_bw="11" op_1_bw="0">
+<Node id="9" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-sort_loop_j:0 %i = load i11 %i_4
+sort_loop_j:0 %i = load i4 %i_4
 
 ]]></Node>
 <StgValue><ssdm name="i"/></StgValue>
@@ -129,9 +129,9 @@ sort_loop_j:0 %i = load i11 %i_4
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="10" bw="1" op_0_bw="11" op_1_bw="11">
+<Node id="10" bw="1" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-sort_loop_j:1 %icmp_ln64 = icmp_eq  i11 %i, i11 1499
+sort_loop_j:1 %icmp_ln64 = icmp_eq  i4 %i, i4 9
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln64"/></StgValue>
@@ -144,9 +144,9 @@ sort_loop_j:1 %icmp_ln64 = icmp_eq  i11 %i, i11 1499
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="11" bw="11" op_0_bw="11" op_1_bw="11">
+<Node id="11" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-sort_loop_j:2 %i_6 = add i11 %i, i11 1
+sort_loop_j:2 %i_6 = add i4 %i, i4 1
 
 ]]></Node>
 <StgValue><ssdm name="i_6"/></StgValue>
@@ -175,9 +175,9 @@ sort_loop_j:3 %br_ln64 = br i1 %icmp_ln64, void %sort_loop_j.split, void %for.in
 </and_exp></or_exp>
 </condition>
 
-<Node id="14" bw="11" op_0_bw="11" op_1_bw="0">
+<Node id="14" bw="4" op_0_bw="4" op_1_bw="0">
 <![CDATA[
-sort_loop_j.split:0 %indvars_iv14_load = load i11 %indvars_iv14
+sort_loop_j.split:0 %indvars_iv14_load = load i4 %indvars_iv14
 
 ]]></Node>
 <StgValue><ssdm name="indvars_iv14_load"/></StgValue>
@@ -191,9 +191,9 @@ sort_loop_j.split:0 %indvars_iv14_load = load i11 %indvars_iv14
 </and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="0" op_0_bw="0" op_1_bw="11" op_2_bw="64" op_3_bw="4">
+<Node id="17" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="64" op_3_bw="4">
 <![CDATA[
-sort_loop_j.split:3 %call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i11 %indvars_iv14_load, i64 %distances, i4 %labels
+sort_loop_j.split:3 %call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i4 %indvars_iv14_load, i64 %distances, i4 %labels
 
 ]]></Node>
 <StgValue><ssdm name="call_ln64"/></StgValue>
@@ -207,9 +207,9 @@ sort_loop_j.split:3 %call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_
 </and_exp></or_exp>
 </condition>
 
-<Node id="18" bw="11" op_0_bw="11" op_1_bw="11">
+<Node id="18" bw="4" op_0_bw="4" op_1_bw="4">
 <![CDATA[
-sort_loop_j.split:4 %add_ln64 = add i11 %indvars_iv14_load, i11 2047
+sort_loop_j.split:4 %add_ln64 = add i4 %indvars_iv14_load, i4 15
 
 ]]></Node>
 <StgValue><ssdm name="add_ln64"/></StgValue>
@@ -223,9 +223,9 @@ sort_loop_j.split:4 %add_ln64 = add i11 %indvars_iv14_load, i11 2047
 </and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="0" op_0_bw="11" op_1_bw="11" op_2_bw="0" op_3_bw="0">
+<Node id="19" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-sort_loop_j.split:5 %store_ln64 = store i11 %add_ln64, i11 %indvars_iv14
+sort_loop_j.split:5 %store_ln64 = store i4 %add_ln64, i4 %indvars_iv14
 
 ]]></Node>
 <StgValue><ssdm name="store_ln64"/></StgValue>
@@ -239,9 +239,9 @@ sort_loop_j.split:5 %store_ln64 = store i11 %add_ln64, i11 %indvars_iv14
 </and_exp></or_exp>
 </condition>
 
-<Node id="20" bw="0" op_0_bw="11" op_1_bw="11" op_2_bw="0" op_3_bw="0">
+<Node id="20" bw="0" op_0_bw="4" op_1_bw="4" op_2_bw="0" op_3_bw="0">
 <![CDATA[
-sort_loop_j.split:6 %store_ln64 = store i11 %i_6, i11 %i_4
+sort_loop_j.split:6 %store_ln64 = store i4 %i_6, i4 %i_4
 
 ]]></Node>
 <StgValue><ssdm name="store_ln64"/></StgValue>
@@ -275,7 +275,7 @@ for.inc87.preheader.exitStub:0 %ret_ln0 = ret
 
 <Node id="15" bw="0" op_0_bw="0" op_1_bw="64" op_2_bw="64" op_3_bw="64">
 <![CDATA[
-sort_loop_j.split:1 %speclooptripcount_ln64 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1499, i64 1499, i64 1499
+sort_loop_j.split:1 %speclooptripcount_ln64 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9
 
 ]]></Node>
 <StgValue><ssdm name="speclooptripcount_ln64"/></StgValue>
@@ -303,9 +303,9 @@ sort_loop_j.split:2 %specloopname_ln64 = specloopname void @_ssdm_op_SpecLoopNam
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="17" bw="0" op_0_bw="0" op_1_bw="11" op_2_bw="64" op_3_bw="4">
+<Node id="17" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="64" op_3_bw="4">
 <![CDATA[
-sort_loop_j.split:3 %call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i11 %indvars_iv14_load, i64 %distances, i4 %labels
+sort_loop_j.split:3 %call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i4 %indvars_iv14_load, i64 %distances, i4 %labels
 
 ]]></Node>
 <StgValue><ssdm name="call_ln64"/></StgValue>

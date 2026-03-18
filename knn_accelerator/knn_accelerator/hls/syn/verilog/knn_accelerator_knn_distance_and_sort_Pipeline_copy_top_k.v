@@ -38,7 +38,7 @@ output  [3:0] top_k_labels_2;
 output   top_k_labels_2_ap_vld;
 output  [3:0] top_k_labels_1;
 output   top_k_labels_1_ap_vld;
-output  [10:0] labels_address0;
+output  [3:0] labels_address0;
 output   labels_ce0;
 input  [3:0] labels_q0;
 

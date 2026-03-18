@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_distance_and_sort'" level="0">
-<item name = "Date">Tue Mar 17 18:06:10 2026
+<item name = "Date">Tue Mar 17 19:32:52 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">knn_accelerator</item>
@@ -24,17 +24,17 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">87400, 11314910, 0.874 ms, 0.113 sec, 87400, 11314910, no</column>
+<column name="">980, 1340, 9.800 us, 13.400 us, 980, 1340, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_128">knn_distance_and_sort_Pipeline_init_top_k, 5, 5, 50.000 ns, 50.000 ns, 4, 4, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_138">knn_distance_and_sort_Pipeline_train_loop, 73883, 73883, 0.739 ms, 0.739 ms, 73549, 73549, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_153">knn_distance_and_sort_Outline_sort_loop_i, 13492, 11241002, 0.135 ms, 0.112 sec, 13492, 11241002, no</column>
-<column name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_159">knn_distance_and_sort_Pipeline_copy_top_k, 5, 5, 50.000 ns, 50.000 ns, 4, 4, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126">knn_distance_and_sort_Pipeline_init_top_k, 5, 5, 50.000 ns, 50.000 ns, 4, 4, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_136">knn_distance_and_sort_Pipeline_train_loop, 873, 873, 8.730 us, 8.730 us, 539, 539, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151">knn_distance_and_sort_Outline_sort_loop_i, 82, 442, 0.820 us, 4.420 us, 82, 442, no</column>
+<column name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157">knn_distance_and_sort_Pipeline_copy_top_k, 5, 5, 50.000 ns, 50.000 ns, 4, 4, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -53,22 +53,22 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 73, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, 17, 10042, 5823, -</column>
-<column name="Memory">9, -, 0, 0, 0</column>
+<column name="Instance">-, 17, 9944, 5830, -</column>
+<column name="Memory">0, -, 136, 11, 0</column>
 <column name="Multiplexer">-, -, 0, 634, -</column>
 <column name="Register">-, -, 216, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">3, 7, 9, 12, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 7, 9, 12, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_153">knn_distance_and_sort_Outline_sort_loop_i, 0, 0, 261, 362, 0</column>
-<column name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_159">knn_distance_and_sort_Pipeline_copy_top_k, 0, 0, 7, 58, 0</column>
-<column name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_128">knn_distance_and_sort_Pipeline_init_top_k, 0, 0, 4, 47, 0</column>
-<column name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_138">knn_distance_and_sort_Pipeline_train_loop, 0, 17, 9770, 5356, 0</column>
+<column name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151">knn_distance_and_sort_Outline_sort_loop_i, 0, 0, 184, 367, 0</column>
+<column name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157">knn_distance_and_sort_Pipeline_copy_top_k, 0, 0, 7, 58, 0</column>
+<column name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126">knn_distance_and_sort_Pipeline_init_top_k, 0, 0, 4, 47, 0</column>
+<column name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_136">knn_distance_and_sort_Pipeline_train_loop, 0, 17, 9749, 5358, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -77,8 +77,8 @@
 </item>
 <item name = "Memory"><table name="" hasTotal="1">
 <keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
-<column name="distances_U">knn_distance_and_sort_distances_RAM_AUTO_1R1W, 8, 0, 0, 0, 1500, 64, 1, 96000</column>
-<column name="labels_U">knn_distance_and_sort_labels_RAM_AUTO_1R1W, 1, 0, 0, 0, 1500, 4, 1, 6000</column>
+<column name="distances_U">knn_distance_and_sort_distances_RAM_AUTO_1R1W, 0, 128, 10, 0, 10, 64, 1, 640</column>
+<column name="labels_U">knn_distance_and_sort_labels_RAM_AUTO_1R1W, 0, 8, 1, 0, 10, 4, 1, 40</column>
 </table>
 </item>
 <item name = "FIFO"><table name="" hasTotal="1">
@@ -87,14 +87,14 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln40_fu_224_p2">+, 0, 0, 71, 64, 64</column>
+<column name="add_ln40_fu_222_p2">+, 0, 0, 71, 64, 64</column>
 <column name="ap_block_state3_io">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">81, 17, 1, 17</column>
-<column name="distances_address0">14, 3, 11, 33</column>
+<column name="distances_address0">14, 3, 4, 12</column>
 <column name="distances_ce0">14, 3, 1, 3</column>
 <column name="distances_ce1">9, 2, 1, 2</column>
 <column name="distances_d0">14, 3, 64, 192</column>
@@ -102,7 +102,7 @@
 <column name="distances_we1">9, 2, 1, 2</column>
 <column name="gmem_x_train_blk_n_AR">9, 2, 1, 2</column>
 <column name="gmem_y_train_blk_n_AR">9, 2, 1, 2</column>
-<column name="labels_address0">20, 4, 11, 44</column>
+<column name="labels_address0">20, 4, 4, 16</column>
 <column name="labels_ce0">20, 4, 1, 4</column>
 <column name="labels_ce1">9, 2, 1, 2</column>
 <column name="labels_d0">14, 3, 4, 12</column>
@@ -148,16 +148,16 @@
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
 <column name="ap_CS_fsm">16, 0, 16, 0</column>
-<column name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_153_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_159_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_128_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_138_ap_start_reg">1, 0, 1, 0</column>
-<column name="p_cast_reg_261">61, 0, 61, 0</column>
+<column name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_ap_start_reg">1, 0, 1, 0</column>
+<column name="p_cast_reg_259">61, 0, 61, 0</column>
 <column name="top_k_labels_0_reg">4, 0, 4, 0</column>
 <column name="top_k_labels_1_reg">4, 0, 4, 0</column>
 <column name="top_k_labels_2_reg">4, 0, 4, 0</column>
-<column name="trunc_ln40_1_reg_251">62, 0, 62, 0</column>
-<column name="trunc_ln_reg_241">61, 0, 61, 0</column>
+<column name="trunc_ln40_1_reg_249">62, 0, 62, 0</column>
+<column name="trunc_ln_reg_239">61, 0, 61, 0</column>
 </table>
 </item>
 </section>
@@ -320,7 +320,7 @@
 <column name="top_k_labels_1_ap_vld">out, 1, ap_vld, top_k_labels_1, pointer</column>
 <column name="top_k_labels_2">out, 4, ap_vld, top_k_labels_2, pointer</column>
 <column name="top_k_labels_2_ap_vld">out, 1, ap_vld, top_k_labels_2, pointer</column>
-<column name="idx">in, 16, ap_none, idx, scalar</column>
+<column name="idx">in, 9, ap_none, idx, scalar</column>
 </table>
 </item>
 </section>

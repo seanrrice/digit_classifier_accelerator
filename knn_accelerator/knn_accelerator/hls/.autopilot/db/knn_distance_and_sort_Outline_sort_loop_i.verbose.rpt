@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort_Outline_sort_loop_i'
 ================================================================
-* Date:           Tue Mar 17 18:06:09 2026
+* Date:           Tue Mar 17 19:32:51 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        knn_accelerator
@@ -20,34 +20,34 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.508 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  6.438 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+----------+----------+-----------+-------+----------+---------+
-    |  Latency (cycles)  |  Latency (absolute)  |     Interval     | Pipeline|
-    |   min   |    max   |    min   |    max    |  min  |    max   |   Type  |
-    +---------+----------+----------+-----------+-------+----------+---------+
-    |    13492|  11241002|  0.135 ms|  0.112 sec|  13492|  11241002|       no|
-    +---------+----------+----------+-----------+-------+----------+---------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       82|      442|  0.820 us|  4.420 us|   82|  442|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
-        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+------+------------------------------------------------+
-        |                                                      |                                            |  Latency (cycles) |   Latency (absolute)  |  Interval  |                    Pipeline                    |
-        |                       Instance                       |                   Module                   |   min   |   max   |    min    |    max    | min |  max |                      Type                      |
-        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+------+------------------------------------------------+
-        |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32  |knn_distance_and_sort_Pipeline_sort_loop_j  |        7|     7497|  70.000 ns|  74.970 us|    6|  7496|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+-----------+-----+------+------------------------------------------------+
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+        |                                                      |                                            |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+        |                       Instance                       |                   Module                   |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+        |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32  |knn_distance_and_sort_Pipeline_sort_loop_j  |        7|       47|  70.000 ns|  0.470 us|    6|   46|  loop auto-rewind stp (delay=0 clock cycles(s))|
+        +------------------------------------------------------+--------------------------------------------+---------+---------+-----------+----------+-----+-----+------------------------------------------------+
 
         * Loop: 
-        +---------------+---------+----------+----------+-----------+-----------+------+----------+
-        |               |  Latency (cycles)  | Iteration|  Initiation Interval  | Trip |          |
-        |   Loop Name   |   min   |    max   |  Latency |  achieved |   target  | Count| Pipelined|
-        +---------------+---------+----------+----------+-----------+-----------+------+----------+
-        |- sort_loop_i  |    13491|  11241001|  9 ~ 7499|          -|          -|  1499|        no|
-        +---------------+---------+----------+----------+-----------+-----------+------+----------+
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- sort_loop_i  |       81|      441|    9 ~ 49|          -|          -|     9|        no|
+        +---------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
 
@@ -59,14 +59,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|     36|    -|
+|Expression       |        -|    -|       0|     39|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|    -|     224|    288|    -|
+|Instance         |        -|    -|     168|    290|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       0|     38|    -|
-|Register         |        -|    -|      37|      -|    -|
+|Register         |        -|    -|      16|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     261|    362|    0|
+|Total            |        0|    0|     184|    367|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -78,9 +78,9 @@
     +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
     |                       Instance                       |                   Module                   | BRAM_18K| DSP|  FF | LUT | URAM|
     +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
-    |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32  |knn_distance_and_sort_Pipeline_sort_loop_j  |        0|   0|  224|  288|    0|
+    |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32  |knn_distance_and_sort_Pipeline_sort_loop_j  |        0|   0|  168|  290|    0|
     +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
-    |Total                                                 |                                            |        0|   0|  224|  288|    0|
+    |Total                                                 |                                            |        0|   0|  168|  290|    0|
     +------------------------------------------------------+--------------------------------------------+---------+----+-----+-----+-----+
 
     * DSP: 
@@ -96,11 +96,11 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln64_fu_70_p2   |         +|   0|  0|  12|          11|           2|
-    |i_6_fu_60_p2        |         +|   0|  0|  12|          11|           1|
-    |icmp_ln64_fu_54_p2  |      icmp|   0|  0|  12|          11|          11|
+    |add_ln64_fu_70_p2   |         +|   0|  0|  13|           4|           2|
+    |i_6_fu_60_p2        |         +|   0|  0|  13|           4|           1|
+    |icmp_ln64_fu_54_p2  |      icmp|   0|  0|  13|           4|           4|
     +--------------------+----------+----+---+----+------------+------------+
-    |Total               |          |   0|  0|  36|          33|          14|
+    |Total               |          |   0|  0|  39|          12|           7|
     +--------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -108,24 +108,24 @@
     |        Name        | LUT| Input Size| Bits| Total Bits|
     +--------------------+----+-----------+-----+-----------+
     |ap_NS_fsm           |  20|          4|    1|          4|
-    |i_4_fu_24           |   9|          2|   11|         22|
-    |indvars_iv14_fu_28  |   9|          2|   11|         22|
+    |i_4_fu_24           |   9|          2|    4|          8|
+    |indvars_iv14_fu_28  |   9|          2|    4|          8|
     +--------------------+----+-----------+-----+-----------+
-    |Total               |  38|          8|   23|         48|
+    |Total               |  38|          8|    9|         20|
     +--------------------+----+-----------+-----+-----------+
 
     * Register: 
-    +-------------------------------------------------------------------+----+----+-----+-----------+
-    |                                Name                               | FF | LUT| Bits| Const Bits|
-    +-------------------------------------------------------------------+----+----+-----+-----------+
-    |ap_CS_fsm                                                          |   3|   0|    3|          0|
-    |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg  |   1|   0|    1|          0|
-    |i_4_fu_24                                                          |  11|   0|   11|          0|
-    |indvars_iv14_fu_28                                                 |  11|   0|   11|          0|
-    |indvars_iv14_load_reg_103                                          |  11|   0|   11|          0|
-    +-------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                              |  37|   0|   37|          0|
-    +-------------------------------------------------------------------+----+----+-----+-----------+
+    +-------------------------------------------------------------------+---+----+-----+-----------+
+    |                                Name                               | FF| LUT| Bits| Const Bits|
+    +-------------------------------------------------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                                                          |  3|   0|    3|          0|
+    |grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg  |  1|   0|    1|          0|
+    |i_4_fu_24                                                          |  4|   0|    4|          0|
+    |indvars_iv14_fu_28                                                 |  4|   0|    4|          0|
+    |indvars_iv14_load_reg_103                                          |  4|   0|    4|          0|
+    +-------------------------------------------------------------------+---+----+-----+-----------+
+    |Total                                                              | 16|   0|   16|          0|
+    +-------------------------------------------------------------------+---+----+-----+-----------+
 
 
 
@@ -142,22 +142,22 @@
 |ap_done             |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
 |ap_idle             |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
 |ap_ready            |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Outline_sort_loop_i|  return value|
-|distances_address0  |  out|   11|   ap_memory|                                  distances|         array|
+|distances_address0  |  out|    4|   ap_memory|                                  distances|         array|
 |distances_ce0       |  out|    1|   ap_memory|                                  distances|         array|
 |distances_we0       |  out|    1|   ap_memory|                                  distances|         array|
 |distances_d0        |  out|   64|   ap_memory|                                  distances|         array|
 |distances_q0        |   in|   64|   ap_memory|                                  distances|         array|
-|distances_address1  |  out|   11|   ap_memory|                                  distances|         array|
+|distances_address1  |  out|    4|   ap_memory|                                  distances|         array|
 |distances_ce1       |  out|    1|   ap_memory|                                  distances|         array|
 |distances_we1       |  out|    1|   ap_memory|                                  distances|         array|
 |distances_d1        |  out|   64|   ap_memory|                                  distances|         array|
 |distances_q1        |   in|   64|   ap_memory|                                  distances|         array|
-|labels_address0     |  out|   11|   ap_memory|                                     labels|         array|
+|labels_address0     |  out|    4|   ap_memory|                                     labels|         array|
 |labels_ce0          |  out|    1|   ap_memory|                                     labels|         array|
 |labels_we0          |  out|    1|   ap_memory|                                     labels|         array|
 |labels_d0           |  out|    4|   ap_memory|                                     labels|         array|
 |labels_q0           |   in|    4|   ap_memory|                                     labels|         array|
-|labels_address1     |  out|   11|   ap_memory|                                     labels|         array|
+|labels_address1     |  out|    4|   ap_memory|                                     labels|         array|
 |labels_ce1          |  out|    1|   ap_memory|                                     labels|         array|
 |labels_we1          |  out|    1|   ap_memory|                                     labels|         array|
 |labels_d1           |  out|    4|   ap_memory|                                     labels|         array|
@@ -204,26 +204,26 @@ IsGatedGlobalClock: 0
 State 1 <SV = 0> <Delay = 1.58>
 ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%i_4 = alloca i32 1" [../src/knn.cpp:64]   --->   Operation 4 'alloca' 'i_4' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%indvars_iv14 = alloca i32 1"   --->   Operation 5 'alloca' 'indvars_iv14' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 6 [1/1] (1.58ns)   --->   "%store_ln0 = store i11 1499, i11 %indvars_iv14"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
-ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln64 = store i11 0, i11 %i_4" [../src/knn.cpp:64]   --->   Operation 7 'store' 'store_ln64' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 6 [1/1] (1.58ns)   --->   "%store_ln0 = store i4 9, i4 %indvars_iv14"   --->   Operation 6 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
+ST_1 : Operation 7 [1/1] (1.58ns)   --->   "%store_ln64 = store i4 0, i4 %i_4" [../src/knn.cpp:64]   --->   Operation 7 'store' 'store_ln64' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %sort_loop_j"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
 
-State 2 <SV = 1> <Delay = 4.86>
-ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i = load i11 %i_4" [../src/knn.cpp:64]   --->   Operation 9 'load' 'i' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 10 [1/1] (1.63ns)   --->   "%icmp_ln64 = icmp_eq  i11 %i, i11 1499" [../src/knn.cpp:64]   --->   Operation 10 'icmp' 'icmp_ln64' <Predicate = true> <Delay = 1.63> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 11 [1/1] (1.63ns)   --->   "%i_6 = add i11 %i, i11 1" [../src/knn.cpp:64]   --->   Operation 11 'add' 'i_6' <Predicate = true> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+State 2 <SV = 1> <Delay = 5.05>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%i = load i4 %i_4" [../src/knn.cpp:64]   --->   Operation 9 'load' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (1.73ns)   --->   "%icmp_ln64 = icmp_eq  i4 %i, i4 9" [../src/knn.cpp:64]   --->   Operation 10 'icmp' 'icmp_ln64' <Predicate = true> <Delay = 1.73> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 11 [1/1] (1.73ns)   --->   "%i_6 = add i4 %i, i4 1" [../src/knn.cpp:64]   --->   Operation 11 'add' 'i_6' <Predicate = true> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln64 = br i1 %icmp_ln64, void %sort_loop_j.split, void %for.inc87.preheader.exitStub" [../src/knn.cpp:64]   --->   Operation 12 'br' 'br_ln64' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%indvars_iv14_load = load i11 %indvars_iv14" [../src/knn.cpp:64]   --->   Operation 13 'load' 'indvars_iv14_load' <Predicate = (!icmp_ln64)> <Delay = 0.00>
-ST_2 : Operation 14 [2/2] (3.22ns)   --->   "%call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i11 %indvars_iv14_load, i64 %distances, i4 %labels" [../src/knn.cpp:64]   --->   Operation 14 'call' 'call_ln64' <Predicate = (!icmp_ln64)> <Delay = 3.22> <CoreType = "Generic">   --->   Generic Core
-ST_2 : Operation 15 [1/1] (1.63ns)   --->   "%add_ln64 = add i11 %indvars_iv14_load, i11 2047" [../src/knn.cpp:64]   --->   Operation 15 'add' 'add_ln64' <Predicate = (!icmp_ln64)> <Delay = 1.63> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.63> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln64 = store i11 %add_ln64, i11 %indvars_iv14" [../src/knn.cpp:64]   --->   Operation 16 'store' 'store_ln64' <Predicate = (!icmp_ln64)> <Delay = 1.58>
-ST_2 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln64 = store i11 %i_6, i11 %i_4" [../src/knn.cpp:64]   --->   Operation 17 'store' 'store_ln64' <Predicate = (!icmp_ln64)> <Delay = 1.58>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%indvars_iv14_load = load i4 %indvars_iv14" [../src/knn.cpp:64]   --->   Operation 13 'load' 'indvars_iv14_load' <Predicate = (!icmp_ln64)> <Delay = 0.00>
+ST_2 : Operation 14 [2/2] (3.32ns)   --->   "%call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i4 %indvars_iv14_load, i64 %distances, i4 %labels" [../src/knn.cpp:64]   --->   Operation 14 'call' 'call_ln64' <Predicate = (!icmp_ln64)> <Delay = 3.32> <CoreType = "Generic">   --->   Generic Core
+ST_2 : Operation 15 [1/1] (1.73ns)   --->   "%add_ln64 = add i4 %indvars_iv14_load, i4 15" [../src/knn.cpp:64]   --->   Operation 15 'add' 'add_ln64' <Predicate = (!icmp_ln64)> <Delay = 1.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln64 = store i4 %add_ln64, i4 %indvars_iv14" [../src/knn.cpp:64]   --->   Operation 16 'store' 'store_ln64' <Predicate = (!icmp_ln64)> <Delay = 1.58>
+ST_2 : Operation 17 [1/1] (1.58ns)   --->   "%store_ln64 = store i4 %i_6, i4 %i_4" [../src/knn.cpp:64]   --->   Operation 17 'store' 'store_ln64' <Predicate = (!icmp_ln64)> <Delay = 1.58>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 18 'ret' 'ret_ln0' <Predicate = (icmp_ln64)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 4.81>
-ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%speclooptripcount_ln64 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 1499, i64 1499, i64 1499" [../src/knn.cpp:64]   --->   Operation 19 'speclooptripcount' 'speclooptripcount_ln64' <Predicate = true> <Delay = 0.00>
+State 3 <SV = 2> <Delay = 4.91>
+ST_3 : Operation 19 [1/1] (0.00ns)   --->   "%speclooptripcount_ln64 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 9, i64 9, i64 9" [../src/knn.cpp:64]   --->   Operation 19 'speclooptripcount' 'speclooptripcount_ln64' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln64 = specloopname void @_ssdm_op_SpecLoopName, void @empty_22" [../src/knn.cpp:64]   --->   Operation 20 'specloopname' 'specloopname_ln64' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 21 [1/2] (4.81ns)   --->   "%call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i11 %indvars_iv14_load, i64 %distances, i4 %labels" [../src/knn.cpp:64]   --->   Operation 21 'call' 'call_ln64' <Predicate = true> <Delay = 4.81> <CoreType = "Generic">   --->   Generic Core
+ST_3 : Operation 21 [1/2] (4.91ns)   --->   "%call_ln64 = call void @knn_distance_and_sort_Pipeline_sort_loop_j, i4 %indvars_iv14_load, i64 %distances, i4 %labels" [../src/knn.cpp:64]   --->   Operation 21 'call' 'call_ln64' <Predicate = true> <Delay = 4.91> <CoreType = "Generic">   --->   Generic Core
 ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln64 = br void %sort_loop_j" [../src/knn.cpp:64]   --->   Operation 22 'br' 'br_ln64' <Predicate = true> <Delay = 0.00>
 
 
@@ -382,7 +382,7 @@ br_ln64                (br               ) [ 0000]
 <comp id="24" class="1004" name="i_4_fu_24">
 <pin_list>
 <pin id="25" dir="0" index="0" bw="1" slack="0"/>
-<pin id="26" dir="1" index="1" bw="11" slack="0"/>
+<pin id="26" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -393,7 +393,7 @@ br_ln64                (br               ) [ 0000]
 <comp id="28" class="1004" name="indvars_iv14_fu_28">
 <pin_list>
 <pin id="29" dir="0" index="0" bw="1" slack="0"/>
-<pin id="30" dir="1" index="1" bw="11" slack="0"/>
+<pin id="30" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="alloca(26) " fcode="alloca"/>
@@ -404,7 +404,7 @@ br_ln64                (br               ) [ 0000]
 <comp id="32" class="1004" name="grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32">
 <pin_list>
 <pin id="33" dir="0" index="0" bw="0" slack="0"/>
-<pin id="34" dir="0" index="1" bw="11" slack="0"/>
+<pin id="34" dir="0" index="1" bw="4" slack="0"/>
 <pin id="35" dir="0" index="2" bw="64" slack="0"/>
 <pin id="36" dir="0" index="3" bw="4" slack="0"/>
 <pin id="37" dir="1" index="4" bw="0" slack="2147483647"/>
@@ -417,8 +417,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="41" class="1004" name="store_ln0_store_fu_41">
 <pin_list>
-<pin id="42" dir="0" index="0" bw="11" slack="0"/>
-<pin id="43" dir="0" index="1" bw="11" slack="0"/>
+<pin id="42" dir="0" index="0" bw="4" slack="0"/>
+<pin id="43" dir="0" index="1" bw="4" slack="0"/>
 <pin id="44" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -430,7 +430,7 @@ br_ln64                (br               ) [ 0000]
 <comp id="46" class="1004" name="store_ln64_store_fu_46">
 <pin_list>
 <pin id="47" dir="0" index="0" bw="1" slack="0"/>
-<pin id="48" dir="0" index="1" bw="11" slack="0"/>
+<pin id="48" dir="0" index="1" bw="4" slack="0"/>
 <pin id="49" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -441,8 +441,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="51" class="1004" name="i_load_fu_51">
 <pin_list>
-<pin id="52" dir="0" index="0" bw="11" slack="1"/>
-<pin id="53" dir="1" index="1" bw="11" slack="0"/>
+<pin id="52" dir="0" index="0" bw="4" slack="1"/>
+<pin id="53" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -452,8 +452,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="54" class="1004" name="icmp_ln64_fu_54">
 <pin_list>
-<pin id="55" dir="0" index="0" bw="11" slack="0"/>
-<pin id="56" dir="0" index="1" bw="11" slack="0"/>
+<pin id="55" dir="0" index="0" bw="4" slack="0"/>
+<pin id="56" dir="0" index="1" bw="4" slack="0"/>
 <pin id="57" dir="1" index="2" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -464,9 +464,9 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="60" class="1004" name="i_6_fu_60">
 <pin_list>
-<pin id="61" dir="0" index="0" bw="11" slack="0"/>
+<pin id="61" dir="0" index="0" bw="4" slack="0"/>
 <pin id="62" dir="0" index="1" bw="1" slack="0"/>
-<pin id="63" dir="1" index="2" bw="11" slack="0"/>
+<pin id="63" dir="1" index="2" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -476,8 +476,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="66" class="1004" name="indvars_iv14_load_load_fu_66">
 <pin_list>
-<pin id="67" dir="0" index="0" bw="11" slack="1"/>
-<pin id="68" dir="1" index="1" bw="11" slack="0"/>
+<pin id="67" dir="0" index="0" bw="4" slack="1"/>
+<pin id="68" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="load(27) " fcode="load"/>
@@ -487,9 +487,9 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="70" class="1004" name="add_ln64_fu_70">
 <pin_list>
-<pin id="71" dir="0" index="0" bw="11" slack="0"/>
+<pin id="71" dir="0" index="0" bw="4" slack="0"/>
 <pin id="72" dir="0" index="1" bw="1" slack="0"/>
-<pin id="73" dir="1" index="2" bw="11" slack="0"/>
+<pin id="73" dir="1" index="2" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="add(8) " fcode="add"/>
@@ -499,8 +499,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="76" class="1004" name="store_ln64_store_fu_76">
 <pin_list>
-<pin id="77" dir="0" index="0" bw="11" slack="0"/>
-<pin id="78" dir="0" index="1" bw="11" slack="1"/>
+<pin id="77" dir="0" index="0" bw="4" slack="0"/>
+<pin id="78" dir="0" index="1" bw="4" slack="1"/>
 <pin id="79" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -511,8 +511,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="81" class="1004" name="store_ln64_store_fu_81">
 <pin_list>
-<pin id="82" dir="0" index="0" bw="11" slack="0"/>
-<pin id="83" dir="0" index="1" bw="11" slack="1"/>
+<pin id="82" dir="0" index="0" bw="4" slack="0"/>
+<pin id="83" dir="0" index="1" bw="4" slack="1"/>
 <pin id="84" dir="1" index="2" bw="0" slack="2147483647"/>
 </pin_list>
 <bind>
@@ -523,8 +523,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="86" class="1005" name="i_4_reg_86">
 <pin_list>
-<pin id="87" dir="0" index="0" bw="11" slack="0"/>
-<pin id="88" dir="1" index="1" bw="11" slack="0"/>
+<pin id="87" dir="0" index="0" bw="4" slack="0"/>
+<pin id="88" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opset="i_4 "/>
@@ -533,8 +533,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="93" class="1005" name="indvars_iv14_reg_93">
 <pin_list>
-<pin id="94" dir="0" index="0" bw="11" slack="0"/>
-<pin id="95" dir="1" index="1" bw="11" slack="0"/>
+<pin id="94" dir="0" index="0" bw="4" slack="0"/>
+<pin id="95" dir="1" index="1" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opset="indvars_iv14 "/>
@@ -543,8 +543,8 @@ br_ln64                (br               ) [ 0000]
 
 <comp id="103" class="1005" name="indvars_iv14_load_reg_103">
 <pin_list>
-<pin id="104" dir="0" index="0" bw="11" slack="1"/>
-<pin id="105" dir="1" index="1" bw="11" slack="1"/>
+<pin id="104" dir="0" index="0" bw="4" slack="1"/>
+<pin id="105" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
 <opset="indvars_iv14_load "/>
@@ -641,14 +641,14 @@ br_ln64                (br               ) [ 0000]
 |----------|------------------------------------------------------|---------|---------|---------|
 | Operation|                    Functional Unit                   |  Delay  |    FF   |   LUT   |
 |----------|------------------------------------------------------|---------|---------|---------|
-|   call   | grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32 |  6.352  |   324   |   210   |
+|   call   | grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32 |  6.352  |   282   |   212   |
 |----------|------------------------------------------------------|---------|---------|---------|
-|    add   |                       i_6_fu_60                      |    0    |    0    |    12   |
-|          |                    add_ln64_fu_70                    |    0    |    0    |    12   |
+|    add   |                       i_6_fu_60                      |    0    |    0    |    13   |
+|          |                    add_ln64_fu_70                    |    0    |    0    |    13   |
 |----------|------------------------------------------------------|---------|---------|---------|
-|   icmp   |                    icmp_ln64_fu_54                   |    0    |    0    |    12   |
+|   icmp   |                    icmp_ln64_fu_54                   |    0    |    0    |    13   |
 |----------|------------------------------------------------------|---------|---------|---------|
-|   Total  |                                                      |  6.352  |   324   |   246   |
+|   Total  |                                                      |  6.352  |   282   |   251   |
 |----------|------------------------------------------------------|---------|---------|---------|
 
 Memories:
@@ -658,20 +658,20 @@ N/A
 +-------------------------+--------+
 |                         |   FF   |
 +-------------------------+--------+
-|        i_4_reg_86       |   11   |
-|indvars_iv14_load_reg_103|   11   |
-|   indvars_iv14_reg_93   |   11   |
+|        i_4_reg_86       |    4   |
+|indvars_iv14_load_reg_103|    4   |
+|   indvars_iv14_reg_93   |    4   |
 +-------------------------+--------+
-|          Total          |   33   |
+|          Total          |   12   |
 +-------------------------+--------+
 
 * Multiplexer (MUX) list: 
 |------------------------------------------------------|------|------|------|--------||---------||---------||---------|
 |                         Comp                         |  Pin | Size |  BW  | S x BW ||  Delay  ||    FF   ||   LUT   |
 |------------------------------------------------------|------|------|------|--------||---------||---------||---------|
-| grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32 |  p1  |   2  |  11  |   22   ||    0    ||    9    |
+| grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32 |  p1  |   2  |   4  |    8   ||    0    ||    9    |
 |------------------------------------------------------|------|------|------|--------||---------||---------||---------|
-|                         Total                        |      |      |      |   22   ||  1.588  ||    0    ||    9    |
+|                         Total                        |      |      |      |    8   ||  1.588  ||    0    ||    9    |
 |------------------------------------------------------|------|------|------|--------||---------||---------||---------|
 
 
@@ -680,10 +680,10 @@ N/A
 +-----------+--------+--------+--------+
 |           |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+
-|  Function |    6   |   324  |   246  |
+|  Function |    6   |   282  |   251  |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    1   |    0   |    9   |
-|  Register |    -   |   33   |    -   |
+|  Register |    -   |   12   |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    7   |   357  |   255  |
+|   Total   |    7   |   294  |   260  |
 +-----------+--------+--------+--------+

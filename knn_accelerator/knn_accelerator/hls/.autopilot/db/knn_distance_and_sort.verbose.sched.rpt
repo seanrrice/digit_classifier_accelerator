@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort'
 ================================================================
-* Date:           Tue Mar 17 18:06:02 2026
+* Date:           Tue Mar 17 19:32:43 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        knn_accelerator
@@ -25,12 +25,12 @@
 
 + Latency: 
     * Summary: 
-    +---------+----------+----------+-----------+-------+----------+---------+
-    |  Latency (cycles)  |  Latency (absolute)  |     Interval     | Pipeline|
-    |   min   |    max   |    min   |    max    |  min  |    max   |   Type  |
-    +---------+----------+----------+-----------+-------+----------+---------+
-    |    87400|  11314910|  0.874 ms|  0.113 sec|  87400|  11314910|       no|
-    +---------+----------+----------+-----------+-------+----------+---------+
+    +---------+---------+----------+-----------+-----+------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
+    |   min   |   max   |    min   |    max    | min |  max |   Type  |
+    +---------+---------+----------+-----------+-----+------+---------+
+    |      980|     1340|  9.800 us|  13.400 us|  980|  1340|       no|
+    +---------+---------+----------+-----------+-----+------+---------+
 
     + Detail: 
         * Instance: 
@@ -103,45 +103,45 @@ ST_3 : Operation 22 [1/1] (0.00ns)   --->   "%X_train_read = read i64 @_ssdm_op_
 ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln = partselect i61 @_ssdm_op_PartSelect.i61.i64.i32.i32, i64 %X_train_read, i32 3, i32 63" [../src/knn.cpp:40]   --->   Operation 23 'partselect' 'trunc_ln' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%sext_ln40 = sext i61 %trunc_ln" [../src/knn.cpp:40]   --->   Operation 24 'sext' 'sext_ln40' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 25 [1/1] (0.00ns)   --->   "%gmem_x_train_addr = getelementptr i64 %gmem_x_train, i64 %sext_ln40" [../src/knn.cpp:40]   --->   Operation 25 'getelementptr' 'gmem_x_train_addr' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 26 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 26 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 26 [8/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 26 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 ST_3 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln40_1 = partselect i62 @_ssdm_op_PartSelect.i62.i64.i32.i32, i64 %y_train_read, i32 2, i32 63" [../src/knn.cpp:40]   --->   Operation 27 'partselect' 'trunc_ln40_1' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%sext_ln40_1 = sext i62 %trunc_ln40_1" [../src/knn.cpp:40]   --->   Operation 28 'sext' 'sext_ln40_1' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%gmem_y_train_addr = getelementptr i32 %gmem_y_train, i64 %sext_ln40_1" [../src/knn.cpp:40]   --->   Operation 29 'getelementptr' 'gmem_y_train_addr' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 30 [8/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 30 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_3 : Operation 30 [8/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 30 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 4 <SV = 3> <Delay = 7.30>
-ST_4 : Operation 31 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 31 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_4 : Operation 32 [7/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 32 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 31 [7/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 31 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 32 [7/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 32 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 5 <SV = 4> <Delay = 7.30>
-ST_5 : Operation 33 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 33 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_5 : Operation 34 [6/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 34 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 33 [6/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 33 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 34 [6/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 34 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 6 <SV = 5> <Delay = 7.30>
-ST_6 : Operation 35 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 35 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_6 : Operation 36 [5/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 36 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 35 [5/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 35 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 36 [5/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 36 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 7 <SV = 6> <Delay = 7.30>
-ST_7 : Operation 37 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 37 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_7 : Operation 38 [4/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 38 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 37 [4/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 37 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 38 [4/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 38 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 8 <SV = 7> <Delay = 7.30>
-ST_8 : Operation 39 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 39 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_8 : Operation 40 [3/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 40 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 39 [3/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 39 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 40 [3/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 40 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 9 <SV = 8> <Delay = 7.30>
-ST_9 : Operation 41 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 41 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_9 : Operation 42 [2/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 42 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 41 [2/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 41 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 42 [2/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 42 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 10 <SV = 9> <Delay = 7.30>
-ST_10 : Operation 43 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 73500" [../src/knn.cpp:40]   --->   Operation 43 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_10 : Operation 44 [1/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 1500" [../src/knn.cpp:40]   --->   Operation 44 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 43 [1/8] (7.30ns)   --->   "%empty = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i64, i64 %gmem_x_train_addr, i64 490" [../src/knn.cpp:40]   --->   Operation 43 'readreq' 'empty' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 44 [1/8] (7.30ns)   --->   "%empty_30 = readreq i1 @_ssdm_op_ReadReq.m_axi.p1i32, i32 %gmem_y_train_addr, i64 10" [../src/knn.cpp:40]   --->   Operation 44 'readreq' 'empty_30' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 111 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
 
 State 11 <SV = 10> <Delay = 3.52>
-ST_11 : Operation 45 [1/1] (0.00ns)   --->   "%idx_read = read i16 @_ssdm_op_Read.ap_auto.i16, i16 %idx"   --->   Operation 45 'read' 'idx_read' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 45 [1/1] (0.00ns)   --->   "%idx_read = read i9 @_ssdm_op_Read.ap_auto.i9, i9 %idx"   --->   Operation 45 'read' 'idx_read' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 46 [1/1] (0.00ns)   --->   "%test_point_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %test_point"   --->   Operation 46 'read' 'test_point_read' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 47 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i19 @_ssdm_op_BitConcatenate.i19.i16.i3, i16 %idx_read, i3 0" [../src/knn.cpp:40]   --->   Operation 47 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
-ST_11 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln40 = zext i19 %shl_ln" [../src/knn.cpp:40]   --->   Operation 48 'zext' 'zext_ln40' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 47 [1/1] (0.00ns)   --->   "%shl_ln = bitconcatenate i12 @_ssdm_op_BitConcatenate.i12.i9.i3, i9 %idx_read, i3 0" [../src/knn.cpp:40]   --->   Operation 47 'bitconcatenate' 'shl_ln' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 48 [1/1] (0.00ns)   --->   "%zext_ln40 = zext i12 %shl_ln" [../src/knn.cpp:40]   --->   Operation 48 'zext' 'zext_ln40' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 49 [1/1] (3.52ns)   --->   "%add_ln40 = add i64 %zext_ln40, i64 %test_point_read" [../src/knn.cpp:40]   --->   Operation 49 'add' 'add_ln40' <Predicate = true> <Delay = 3.52> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 3.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
 ST_11 : Operation 50 [1/1] (0.00ns)   --->   "%p_cast = partselect i61 @_ssdm_op_PartSelect.i61.i64.i32.i32, i64 %add_ln40, i32 3, i32 63" [../src/knn.cpp:40]   --->   Operation 50 'partselect' 'p_cast' <Predicate = true> <Delay = 0.00>
 ST_11 : Operation 51 [2/2] (0.00ns)   --->   "%call_ln40 = call void @knn_distance_and_sort_Pipeline_train_loop, i64 %gmem_x_test, i61 %p_cast, i64 %gmem_x_train, i61 %trunc_ln, i32 %gmem_y_train, i62 %trunc_ln40_1, i64 %distances, i4 %labels" [../src/knn.cpp:40]   --->   Operation 51 'call' 'call_ln40' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
@@ -152,16 +152,16 @@ ST_12 : Operation 52 [1/2] (0.00ns)   --->   "%call_ln40 = call void @knn_distan
 State 13 <SV = 12> <Delay = 0.00>
 ST_13 : Operation 53 [2/2] (0.00ns)   --->   "%call_ln0 = call void @knn_distance_and_sort_Outline_sort_loop_i, i64 %distances, i4 %labels"   --->   Operation 53 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
-State 14 <SV = 13> <Delay = 1.63>
-ST_14 : Operation 54 [1/2] (1.63ns)   --->   "%call_ln0 = call void @knn_distance_and_sort_Outline_sort_loop_i, i64 %distances, i4 %labels"   --->   Operation 54 'call' 'call_ln0' <Predicate = true> <Delay = 1.63> <CoreType = "Generic">   --->   Generic Core
+State 14 <SV = 13> <Delay = 1.73>
+ST_14 : Operation 54 [1/2] (1.73ns)   --->   "%call_ln0 = call void @knn_distance_and_sort_Outline_sort_loop_i, i64 %distances, i4 %labels"   --->   Operation 54 'call' 'call_ln0' <Predicate = true> <Delay = 1.73> <CoreType = "Generic">   --->   Generic Core
 
 State 15 <SV = 14> <Delay = 0.00>
 ST_15 : Operation 55 [2/2] (0.00ns)   --->   "%call_ln0 = call void @knn_distance_and_sort_Pipeline_copy_top_k, i4 %top_k_labels_0, i4 %top_k_labels_2, i4 %top_k_labels_1, i4 %labels"   --->   Operation 55 'call' 'call_ln0' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
 
 State 16 <SV = 15> <Delay = 4.74>
-ST_16 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_y_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 1500, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_16 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 73500, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
-ST_16 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_test, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 49000, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 56 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem_y_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 10, void @empty_4, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 56 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 57 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_train, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 490, void @empty_3, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 57 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_16 : Operation 58 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i64 %gmem_x_test, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 490, void @empty_1, void @empty_2, void @empty_0, i32 16, i32 16, i32 16, i32 16, void @empty_0, void @empty_0, i32 4294967295, i32 0, i32 0"   --->   Operation 58 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_16 : Operation 59 [1/2] (4.74ns)   --->   "%call_ln0 = call void @knn_distance_and_sort_Pipeline_copy_top_k, i4 %top_k_labels_0, i4 %top_k_labels_2, i4 %top_k_labels_1, i4 %labels"   --->   Operation 59 'call' 'call_ln0' <Predicate = true> <Delay = 4.74> <CoreType = "Generic">   --->   Generic Core
 ST_16 : Operation 60 [1/1] (0.00ns)   --->   "%ret_ln81 = ret" [../src/knn.cpp:81]   --->   Operation 60 'ret' 'ret_ln81' <Predicate = true> <Delay = 0.00>
 
@@ -223,9 +223,9 @@ The critical path consists of the following:
  <State 13>: 0.000ns
 The critical path consists of the following:
 
- <State 14>: 1.639ns
+ <State 14>: 1.735ns
 The critical path consists of the following:
-	'call' operation 0 bit ('call_ln0') to 'knn_distance_and_sort_Outline_sort_loop_i' [34]  (1.639 ns)
+	'call' operation 0 bit ('call_ln0') to 'knn_distance_and_sort_Outline_sort_loop_i' [34]  (1.735 ns)
 
  <State 15>: 0.000ns
 The critical path consists of the following:

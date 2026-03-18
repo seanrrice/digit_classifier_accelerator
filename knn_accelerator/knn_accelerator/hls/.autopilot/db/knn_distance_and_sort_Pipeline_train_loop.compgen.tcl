@@ -36,7 +36,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename distances \
     op interface \
-    ports { distances_address0 { O 11 vector } distances_ce0 { O 1 bit } distances_we0 { O 1 bit } distances_d0 { O 64 vector } } \
+    ports { distances_address0 { O 4 vector } distances_ce0 { O 1 bit } distances_we0 { O 1 bit } distances_d0 { O 64 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'distances'"
@@ -55,7 +55,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir O \
     corename labels \
     op interface \
-    ports { labels_address0 { O 11 vector } labels_ce0 { O 1 bit } labels_we0 { O 1 bit } labels_d0 { O 4 vector } } \
+    ports { labels_address0 { O 4 vector } labels_ce0 { O 1 bit } labels_we0 { O 1 bit } labels_d0 { O 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'labels'"

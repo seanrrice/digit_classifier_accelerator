@@ -361,7 +361,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<direction>0</direction>
 				<if_type>0</if_type>
@@ -401,7 +401,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>16</bitwidth>
+					<bitwidth>9</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>2</count>
@@ -744,7 +744,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>19</bitwidth>
+					<bitwidth>12</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -1448,8 +1448,8 @@
 					<item>104</item>
 					<item>105</item>
 					<item>106</item>
+					<item>191</item>
 					<item>192</item>
-					<item>193</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1494,7 +1494,7 @@
 					<item>108</item>
 					<item>109</item>
 					<item>110</item>
-					<item>191</item>
+					<item>190</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1541,9 +1541,9 @@
 					<item>114</item>
 					<item>115</item>
 					<item>116</item>
-					<item>190</item>
+					<item>189</item>
+					<item>193</item>
 					<item>194</item>
-					<item>195</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1797,7 +1797,7 @@
 					<bitwidth>64</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>73500</content>
+				<content>490</content>
 			</item>
 			<item class_id_reference="16" object_id="_40">
 				<Value>
@@ -1859,7 +1859,7 @@
 					<bitwidth>64</bitwidth>
 				</Value>
 				<const_type>0</const_type>
-				<content>1500</content>
+				<content>10</content>
 			</item>
 			<item class_id_reference="16" object_id="_42">
 				<Value>
@@ -2373,42 +2373,42 @@
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_97">
-				<id>190</id>
+				<id>189</id>
 				<edge_type>4</edge_type>
 				<source_obj>34</source_obj>
 				<sink_obj>35</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_98">
-				<id>191</id>
+				<id>190</id>
 				<edge_type>4</edge_type>
 				<source_obj>33</source_obj>
 				<sink_obj>34</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_99">
-				<id>192</id>
+				<id>191</id>
 				<edge_type>4</edge_type>
 				<source_obj>31</source_obj>
 				<sink_obj>33</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_100">
-				<id>193</id>
+				<id>192</id>
 				<edge_type>4</edge_type>
 				<source_obj>27</source_obj>
 				<sink_obj>33</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_101">
-				<id>194</id>
+				<id>193</id>
 				<edge_type>4</edge_type>
 				<source_obj>20</source_obj>
 				<sink_obj>35</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_102">
-				<id>195</id>
+				<id>194</id>
 				<edge_type>4</edge_type>
 				<source_obj>20</source_obj>
 				<sink_obj>35</sink_obj>
@@ -2437,8 +2437,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>87400</mMinLatency>
-			<mMaxLatency>11314910</mMaxLatency>
+			<mMinLatency>980</mMinLatency>
+			<mMaxLatency>1340</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -3195,7 +3195,7 @@
 		<count>22</count>
 		<item_version>0</item_version>
 		<item class_id="43" tracking_level="0" version="0">
-			<first>82</first>
+			<first>80</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3203,7 +3203,7 @@
 			</second>
 		</item>
 		<item>
-			<first>86</first>
+			<first>84</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3211,7 +3211,7 @@
 			</second>
 		</item>
 		<item>
-			<first>90</first>
+			<first>88</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3219,7 +3219,7 @@
 			</second>
 		</item>
 		<item>
-			<first>96</first>
+			<first>94</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3227,7 +3227,7 @@
 			</second>
 		</item>
 		<item>
-			<first>102</first>
+			<first>100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3235,7 +3235,7 @@
 			</second>
 		</item>
 		<item>
-			<first>108</first>
+			<first>106</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3243,7 +3243,7 @@
 			</second>
 		</item>
 		<item>
-			<first>114</first>
+			<first>112</first>
 			<second>
 				<count>8</count>
 				<item_version>0</item_version>
@@ -3258,7 +3258,7 @@
 			</second>
 		</item>
 		<item>
-			<first>121</first>
+			<first>119</first>
 			<second>
 				<count>8</count>
 				<item_version>0</item_version>
@@ -3273,7 +3273,7 @@
 			</second>
 		</item>
 		<item>
-			<first>128</first>
+			<first>126</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3282,7 +3282,7 @@
 			</second>
 		</item>
 		<item>
-			<first>138</first>
+			<first>136</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3291,7 +3291,7 @@
 			</second>
 		</item>
 		<item>
-			<first>153</first>
+			<first>151</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3300,7 +3300,7 @@
 			</second>
 		</item>
 		<item>
-			<first>159</first>
+			<first>157</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3309,7 +3309,7 @@
 			</second>
 		</item>
 		<item>
-			<first>170</first>
+			<first>168</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3317,7 +3317,7 @@
 			</second>
 		</item>
 		<item>
-			<first>180</first>
+			<first>178</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3325,7 +3325,7 @@
 			</second>
 		</item>
 		<item>
-			<first>184</first>
+			<first>182</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3333,7 +3333,7 @@
 			</second>
 		</item>
 		<item>
-			<first>191</first>
+			<first>189</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3341,7 +3341,7 @@
 			</second>
 		</item>
 		<item>
-			<first>201</first>
+			<first>199</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3349,7 +3349,7 @@
 			</second>
 		</item>
 		<item>
-			<first>205</first>
+			<first>203</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3357,7 +3357,7 @@
 			</second>
 		</item>
 		<item>
-			<first>212</first>
+			<first>210</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3365,7 +3365,7 @@
 			</second>
 		</item>
 		<item>
-			<first>220</first>
+			<first>218</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3373,7 +3373,7 @@
 			</second>
 		</item>
 		<item>
-			<first>224</first>
+			<first>222</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3381,7 +3381,7 @@
 			</second>
 		</item>
 		<item>
-			<first>230</first>
+			<first>228</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3393,7 +3393,7 @@
 		<count>12</count>
 		<item_version>0</item_version>
 		<item class_id="46" tracking_level="0" version="0">
-			<first>add_ln40_fu_224</first>
+			<first>add_ln40_fu_222</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3401,7 +3401,7 @@
 			</second>
 		</item>
 		<item>
-			<first>distances_alloca_fu_82</first>
+			<first>distances_alloca_fu_80</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3409,7 +3409,7 @@
 			</second>
 		</item>
 		<item>
-			<first>gmem_x_train_addr_fu_184</first>
+			<first>gmem_x_train_addr_fu_182</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3417,7 +3417,7 @@
 			</second>
 		</item>
 		<item>
-			<first>gmem_y_train_addr_fu_205</first>
+			<first>gmem_y_train_addr_fu_203</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3425,7 +3425,7 @@
 			</second>
 		</item>
 		<item>
-			<first>labels_alloca_fu_86</first>
+			<first>labels_alloca_fu_84</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3433,7 +3433,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_cast_fu_230</first>
+			<first>p_cast_fu_228</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3441,7 +3441,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln40_1_fu_201</first>
+			<first>sext_ln40_1_fu_199</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3449,7 +3449,7 @@
 			</second>
 		</item>
 		<item>
-			<first>sext_ln40_fu_180</first>
+			<first>sext_ln40_fu_178</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3457,7 +3457,7 @@
 			</second>
 		</item>
 		<item>
-			<first>shl_ln_fu_212</first>
+			<first>shl_ln_fu_210</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3465,7 +3465,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln40_1_fu_191</first>
+			<first>trunc_ln40_1_fu_189</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3473,7 +3473,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln_fu_170</first>
+			<first>trunc_ln_fu_168</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3481,7 +3481,7 @@
 			</second>
 		</item>
 		<item>
-			<first>zext_ln40_fu_220</first>
+			<first>zext_ln40_fu_218</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3493,7 +3493,7 @@
 		<count>4</count>
 		<item_version>0</item_version>
 		<item>
-			<first>grp_knn_distance_and_sort_Outline_sort_loop_i_fu_153</first>
+			<first>grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3502,7 +3502,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_159</first>
+			<first>grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3511,7 +3511,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_knn_distance_and_sort_Pipeline_init_top_k_fu_128</first>
+			<first>grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3520,7 +3520,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_knn_distance_and_sort_Pipeline_train_loop_fu_138</first>
+			<first>grp_knn_distance_and_sort_Pipeline_train_loop_fu_136</first>
 			<second>
 				<count>2</count>
 				<item_version>0</item_version>
@@ -3533,7 +3533,7 @@
 		<count>6</count>
 		<item_version>0</item_version>
 		<item>
-			<first>X_train_read_read_fu_96</first>
+			<first>X_train_read_read_fu_94</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3541,7 +3541,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_readreq_fu_114</first>
+			<first>grp_readreq_fu_112</first>
 			<second>
 				<count>8</count>
 				<item_version>0</item_version>
@@ -3556,7 +3556,7 @@
 			</second>
 		</item>
 		<item>
-			<first>grp_readreq_fu_121</first>
+			<first>grp_readreq_fu_119</first>
 			<second>
 				<count>8</count>
 				<item_version>0</item_version>
@@ -3571,7 +3571,7 @@
 			</second>
 		</item>
 		<item>
-			<first>idx_read_read_fu_102</first>
+			<first>idx_read_read_fu_100</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3579,7 +3579,7 @@
 			</second>
 		</item>
 		<item>
-			<first>test_point_read_read_fu_108</first>
+			<first>test_point_read_read_fu_106</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3587,7 +3587,7 @@
 			</second>
 		</item>
 		<item>
-			<first>y_train_read_read_fu_90</first>
+			<first>y_train_read_read_fu_88</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3607,7 +3607,7 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item>
-			<first>241</first>
+			<first>239</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3615,7 +3615,7 @@
 			</second>
 		</item>
 		<item>
-			<first>246</first>
+			<first>244</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3623,7 +3623,7 @@
 			</second>
 		</item>
 		<item>
-			<first>251</first>
+			<first>249</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3631,7 +3631,7 @@
 			</second>
 		</item>
 		<item>
-			<first>256</first>
+			<first>254</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3639,7 +3639,7 @@
 			</second>
 		</item>
 		<item>
-			<first>261</first>
+			<first>259</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3651,7 +3651,7 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item>
-			<first>gmem_x_train_addr_reg_246</first>
+			<first>gmem_x_train_addr_reg_244</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3659,7 +3659,7 @@
 			</second>
 		</item>
 		<item>
-			<first>gmem_y_train_addr_reg_256</first>
+			<first>gmem_y_train_addr_reg_254</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3667,7 +3667,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_cast_reg_261</first>
+			<first>p_cast_reg_259</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3675,7 +3675,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln40_1_reg_251</first>
+			<first>trunc_ln40_1_reg_249</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -3683,7 +3683,7 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln_reg_241</first>
+			<first>trunc_ln_reg_239</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

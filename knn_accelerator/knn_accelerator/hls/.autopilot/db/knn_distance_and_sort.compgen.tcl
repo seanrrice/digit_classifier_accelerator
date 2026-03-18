@@ -163,7 +163,7 @@ eval "cg_default_interface_gen_dc { \
     sync_rst true \
     corename dc_idx \
     op interface \
-    ports { idx { I 16 vector } } \
+    ports { idx { I 9 vector } } \
 } "
 }
 

@@ -28,7 +28,7 @@ set C_modelArgList {
 	{ top_k_labels_0 int 4 regular {pointer 1}  }
 	{ top_k_labels_1 int 4 regular {pointer 1}  }
 	{ top_k_labels_2 int 4 regular {pointer 1}  }
-	{ idx int 16 regular  }
+	{ idx int 9 regular  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
@@ -43,7 +43,7 @@ set C_modelArgMapList {[
  	{ "Name" : "top_k_labels_0", "interface" : "wire", "bitwidth" : 4, "direction" : "WRITEONLY"} , 
  	{ "Name" : "top_k_labels_1", "interface" : "wire", "bitwidth" : 4, "direction" : "WRITEONLY"} , 
  	{ "Name" : "top_k_labels_2", "interface" : "wire", "bitwidth" : 4, "direction" : "WRITEONLY"} , 
- 	{ "Name" : "idx", "interface" : "wire", "bitwidth" : 16, "direction" : "READONLY"} ]}
+ 	{ "Name" : "idx", "interface" : "wire", "bitwidth" : 9, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
 set portNum 154
 set portList { 
@@ -200,7 +200,7 @@ set portList {
 	{ top_k_labels_1_ap_vld sc_out sc_logic 1 outvld 7 } 
 	{ top_k_labels_2 sc_out sc_lv 4 signal 8 } 
 	{ top_k_labels_2_ap_vld sc_out sc_logic 1 outvld 8 } 
-	{ idx sc_in sc_lv 16 signal 9 } 
+	{ idx sc_in sc_lv 9 signal 9 } 
 }
 set NewPortList {[ 
 	{ "name": "ap_clk", "direction": "in", "datatype": "sc_logic", "bitwidth":1, "type": "clock", "bundle":{"name": "ap_clk", "role": "default" }} , 
@@ -356,7 +356,7 @@ set NewPortList {[
  	{ "name": "top_k_labels_1_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "top_k_labels_1", "role": "ap_vld" }} , 
  	{ "name": "top_k_labels_2", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "top_k_labels_2", "role": "default" }} , 
  	{ "name": "top_k_labels_2_ap_vld", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "outvld", "bundle":{"name": "top_k_labels_2", "role": "ap_vld" }} , 
- 	{ "name": "idx", "direction": "in", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "idx", "role": "default" }}  ]}
+ 	{ "name": "idx", "direction": "in", "datatype": "sc_lv", "bitwidth":9, "type": "signal", "bundle":{"name": "idx", "role": "default" }}  ]}
 
 set ArgLastReadFirstWriteLatency {
 	knn_distance_and_sort {
@@ -399,8 +399,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "87400", "Max" : "11314910"}
-	, {"Name" : "Interval", "Min" : "87400", "Max" : "11314910"}
+	{"Name" : "Latency", "Min" : "980", "Max" : "1340"}
+	, {"Name" : "Interval", "Min" : "980", "Max" : "1340"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -416,5 +416,5 @@ set Spec2ImplPortList {
 	top_k_labels_0 { ap_vld {  { top_k_labels_0 out_data 1 4 }  { top_k_labels_0_ap_vld out_vld 1 1 } } }
 	top_k_labels_1 { ap_vld {  { top_k_labels_1 out_data 1 4 }  { top_k_labels_1_ap_vld out_vld 1 1 } } }
 	top_k_labels_2 { ap_vld {  { top_k_labels_2 out_data 1 4 }  { top_k_labels_2_ap_vld out_vld 1 1 } } }
-	idx { ap_none {  { idx in_data 0 16 } } }
+	idx { ap_none {  { idx in_data 0 9 } } }
 }

@@ -26989,8 +26989,8 @@ void knn_distance_and_sort(
 ) {
 #pragma HLS INLINE off
 
- dist_t distances[1500];
-    label_t labels[1500];
+ dist_t distances[10];
+    label_t labels[10];
     dist_t top_k_dist[3];
 # 28 "../src/knn.cpp"
     init_top_k: for (int i = 0; i < 3; i++){
@@ -26998,7 +26998,7 @@ void knn_distance_and_sort(
         top_k_labels[i] = 0;
     }
 # 40 "../src/knn.cpp"
-    train_loop: for( int i = 0; i < 1500; i++){
+    train_loop: for( int i = 0; i < 10; i++){
 
 
 
@@ -27022,8 +27022,8 @@ void knn_distance_and_sort(
 
 
 
-    sort_loop_i: for (int i = 0; i < 1500 -1; i++) {
-        sort_loop_j: for (int j = 0; j < 1500 - i - 1; j++) {
+    sort_loop_i: for (int i = 0; i < 10 -1; i++) {
+        sort_loop_j: for (int j = 0; j < 10 - i - 1; j++) {
             if (distances[j] > distances[j + 1]) {
                 dist_t temp_dist = distances[j];
                 distances[j] = distances[j + 1];
@@ -27095,10 +27095,10 @@ __attribute__((sdx_kernel("knn_accelerator", 0))) void knn_accelerator(
 # 138 "../src/knn.cpp"
 
 
-#pragma HLS INTERFACE m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*1500
-#pragma HLS INTERFACE m_axi port=y_train offset=slave bundle=gmem_y_train depth=1500
-#pragma HLS INTERFACE m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*1000
-#pragma HLS INTERFACE m_axi port=y_test offset=slave bundle=gmem_y_test depth=1000
+#pragma HLS INTERFACE m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10
+#pragma HLS INTERFACE m_axi port=y_train offset=slave bundle=gmem_y_train depth=10
+#pragma HLS INTERFACE m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10
+#pragma HLS INTERFACE m_axi port=y_test offset=slave bundle=gmem_y_test depth=10
 
 
 #pragma HLS INTERFACE s_axilite port=return bundle=control
@@ -27106,7 +27106,7 @@ __attribute__((sdx_kernel("knn_accelerator", 0))) void knn_accelerator(
 
  label_t top_k_labels[3];
 
-    test_data: for (int i = 0; i < 1000; i++) {
+    test_data: for (int i = 0; i < 10; i++) {
 
         knn_distance_and_sort(X_test+i*49, X_train, y_train, top_k_labels);
 

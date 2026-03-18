@@ -50,3 +50,42 @@
 17:25:17 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr18144504077392636324 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
 17:25:18 INFO  : Embedded Template List generated successfully
 17:42:08 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator
+18:16:24 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+18:16:24 INFO  : updated workspace path: C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+18:16:27 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr5745847523281697627 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+18:16:30 INFO  : Embedded Template List generated successfully
+18:16:30 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr9344627791004490403 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+18:16:33 INFO  : Embedded Template List generated successfully
+18:25:36 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+18:25:37 INFO  : updated workspace path: C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+19:22:42 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr17248671885781566447 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+19:23:00 INFO  : Embedded Template List generated successfully
+19:23:01 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr17540251328680900652 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+19:23:08 INFO  : Embedded Template List generated successfully
+19:23:44 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr1432286510682529096 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+19:23:46 INFO  : Embedded Template List generated successfully
+19:23:46 INFO  : cmd.exe, /C, empyro.bat repo -st  C:\Xilinx\2025.1\Vitis\data\embeddedsw
+19:23:52 INFO  : [INFO]: Initializing repositories
+19:23:52 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.
+19:23:52 INFO  : Successfully created repository data at C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr10158048353843369001
+19:23:52 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr14866486779245010429 -r C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr10158048353843369001\.repo.yaml
+19:23:53 INFO  : Embedded Template List generated successfully
+19:25:11 INFO  : cmd.exe, /C, empyro.bat repo -st  C:\Xilinx\2025.1\Vitis\data\embeddedsw
+19:25:11 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+19:25:12 INFO  : updated workspace path: C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+19:25:17 INFO  : [INFO]: Initializing repositories
+19:25:17 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.
+19:25:17 INFO  : Successfully created repository data at C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr10156560027079713275
+19:25:17 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr15575352483071442080 -r C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr10156560027079713275\.repo.yaml
+19:25:18 INFO  : Embedded Template List generated successfully
+19:25:18 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr8348508478048812221 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+19:25:19 INFO  : Embedded Template List generated successfully
+19:26:53 INFO  : updated workspace path: C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+19:27:01 INFO  : [INFO]: Initializing repositories
+19:27:01 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.
+19:27:01 INFO  : Successfully created repository data at C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr11405076936629710639
+19:27:01 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr11263834321018734461 -r C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr11405076936629710639\.repo.yaml
+19:27:11 INFO  : Embedded Template List generated successfully
+19:27:11 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr3692835497756744920 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+19:27:13 INFO  : Embedded Template List generated successfully
+20:13:31 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel

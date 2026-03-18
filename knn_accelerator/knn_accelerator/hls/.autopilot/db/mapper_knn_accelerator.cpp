@@ -248,34 +248,34 @@ extern "C" void apatb_knn_accelerator_hw(volatile void * __xlx_apatb_param_X_tes
 using hls::sim::createStream;
   // Collect __xlx_X_test__tmp_vec
 std::vector<Byte<8>> __xlx_X_test__tmp_vec;
-for (size_t i = 0; i < 49000; ++i){
+for (size_t i = 0; i < 490; ++i){
 __xlx_X_test__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_X_test)[i]);
 }
-  int __xlx_size_param_X_test = 49000;
+  int __xlx_size_param_X_test = 490;
   int __xlx_offset_param_X_test = 0;
   int __xlx_offset_byte_param_X_test = 0*8;
   // Collect __xlx_X_train__tmp_vec
 std::vector<Byte<8>> __xlx_X_train__tmp_vec;
-for (size_t i = 0; i < 73500; ++i){
+for (size_t i = 0; i < 490; ++i){
 __xlx_X_train__tmp_vec.push_back(((Byte<8>*)__xlx_apatb_param_X_train)[i]);
 }
-  int __xlx_size_param_X_train = 73500;
+  int __xlx_size_param_X_train = 490;
   int __xlx_offset_param_X_train = 0;
   int __xlx_offset_byte_param_X_train = 0*8;
   // Collect __xlx_y_train__tmp_vec
 std::vector<Byte<4>> __xlx_y_train__tmp_vec;
-for (size_t i = 0; i < 1500; ++i){
+for (size_t i = 0; i < 10; ++i){
 __xlx_y_train__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_y_train)[i]);
 }
-  int __xlx_size_param_y_train = 1500;
+  int __xlx_size_param_y_train = 10;
   int __xlx_offset_param_y_train = 0;
   int __xlx_offset_byte_param_y_train = 0*4;
   // Collect __xlx_y_test__tmp_vec
 std::vector<Byte<4>> __xlx_y_test__tmp_vec;
-for (size_t i = 0; i < 1000; ++i){
+for (size_t i = 0; i < 10; ++i){
 __xlx_y_test__tmp_vec.push_back(((Byte<4>*)__xlx_apatb_param_y_test)[i]);
 }
-  int __xlx_size_param_y_test = 1000;
+  int __xlx_size_param_y_test = 10;
   int __xlx_offset_param_y_test = 0;
   int __xlx_offset_byte_param_y_test = 0*4;
   // DUT call

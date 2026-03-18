@@ -149,7 +149,7 @@
 				</Value>
 				<direction>0</direction>
 				<if_type>1</if_type>
-				<array_size>1500</array_size>
+				<array_size>10</array_size>
 				<bit_vecs>
 					<count>0</count>
 					<item_version>0</item_version>
@@ -639,7 +639,7 @@
 						<coreId>4294967295</coreId>
 						<rtlModuleName></rtlModuleName>
 					</Obj>
-					<bitwidth>11</bitwidth>
+					<bitwidth>4</bitwidth>
 				</Value>
 				<oprand_edges>
 					<count>3</count>
@@ -709,7 +709,7 @@
 				<m_isOnCriticalPath>0</m_isOnCriticalPath>
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>3.25</m_delay>
+				<m_delay>2.32</m_delay>
 				<m_topoIndex>10</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>

@@ -1,0 +1,1811 @@
+INFO: [COSIM-47] Using XSIM for RTL simulation.
+INFO: [COSIM-14] Instrumenting C test bench ...
+   Build using "C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/clang++"
+   Compiling knn_test.cpp_pre.cpp.tb.cpp
+   Compiling knn.cpp_pre.cpp.tb.cpp
+   Compiling apatb_knn_accelerator.cpp
+   Compiling apatb_knn_accelerator_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM-302] Starting C TB testing ... 
+INFO: [COSIM-333] Generating C post check test bench ...
+INFO: [COSIM-12] Generating RTL test bench ...
+INFO: [COSIM-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM-323] Starting verilog simulation. 
+INFO: [COSIM-15] Starting XSIM ...
+INFO: [COSIM-316] Starting C post checking ...
+Loading data from file...
+	Loaded 1500 samples.
+	Loaded 1000 samples.
+
+Starting KNN hardware simulation...
+	Processed 10/1000 samples. Current Accuracy: 70%
+	Processed 20/1000 samples. Current Accuracy: 70%
+	Processed 30/1000 samples. Current Accuracy: 76.6667%
+	Processed 40/1000 samples. Current Accuracy: 77.5%
+	Processed 50/1000 samples. Current Accuracy: 80%
+	Processed 60/1000 samples. Current Accuracy: 83.3333%
+	Processed 70/1000 samples. Current Accuracy: 82.8571%
+	Processed 80/1000 samples. Current Accuracy: 83.75%
+	Processed 90/1000 samples. Current Accuracy: 83.3333%
+	Processed 100/1000 samples. Current Accuracy: 85%
+	Processed 110/1000 samples. Current Accuracy: 85.4545%
+	Processed 120/1000 samples. Current Accuracy: 84.1667%
+	Processed 130/1000 samples. Current Accuracy: 84.6154%
+	Processed 140/1000 samples. Current Accuracy: 85%
+	Processed 150/1000 samples. Current Accuracy: 86%
+	Processed 160/1000 samples. Current Accuracy: 85.625%
+	Processed 170/1000 samples. Current Accuracy: 85.8824%
+	Processed 180/1000 samples. Current Accuracy: 85.5556%
+	Processed 190/1000 samples. Current Accuracy: 86.3158%
+	Processed 200/1000 samples. Current Accuracy: 86.5%
+	Processed 210/1000 samples. Current Accuracy: 86.1905%
+	Processed 220/1000 samples. Current Accuracy: 86.8182%
+	Processed 230/1000 samples. Current Accuracy: 86.087%
+	Processed 240/1000 samples. Current Accuracy: 86.25%
+	Processed 250/1000 samples. Current Accuracy: 85.6%
+	Processed 260/1000 samples. Current Accuracy: 85.7692%
+	Processed 270/1000 samples. Current Accuracy: 86.2963%
+	Processed 280/1000 samples. Current Accuracy: 85.7143%
+	Processed 290/1000 samples. Current Accuracy: 85.8621%
+	Processed 300/1000 samples. Current Accuracy: 85%
+	Processed 310/1000 samples. Current Accuracy: 85.1613%
+	Processed 320/1000 samples. Current Accuracy: 84.6875%
+	Processed 330/1000 samples. Current Accuracy: 84.5455%
+	Processed 340/1000 samples. Current Accuracy: 83.8235%
+	Processed 350/1000 samples. Current Accuracy: 83.7143%
+	Processed 360/1000 samples. Current Accuracy: 83.6111%
+	Processed 370/1000 samples. Current Accuracy: 83.7838%
+	Processed 380/1000 samples. Current Accuracy: 83.9474%
+	Processed 390/1000 samples. Current Accuracy: 84.1026%
+	Processed 400/1000 samples. Current Accuracy: 84.5%
+	Processed 410/1000 samples. Current Accuracy: 84.3902%
+	Processed 420/1000 samples. Current Accuracy: 84.5238%
+	Processed 430/1000 samples. Current Accuracy: 84.6512%
+	Processed 440/1000 samples. Current Accuracy: 84.3182%
+	Processed 450/1000 samples. Current Accuracy: 84%
+	Processed 460/1000 samples. Current Accuracy: 84.3478%
+	Processed 470/1000 samples. Current Accuracy: 84.6808%
+	Processed 480/1000 samples. Current Accuracy: 84.7917%
+	Processed 490/1000 samples. Current Accuracy: 84.898%
+	Processed 500/1000 samples. Current Accuracy: 85%
+	Processed 510/1000 samples. Current Accuracy: 85.098%
+	Processed 520/1000 samples. Current Accuracy: 85%
+	Processed 530/1000 samples. Current Accuracy: 85.283%
+	Processed 540/1000 samples. Current Accuracy: 85.1852%
+	Processed 550/1000 samples. Current Accuracy: 85.4545%
+	Processed 560/1000 samples. Current Accuracy: 85.3571%
+	Processed 570/1000 samples. Current Accuracy: 85.2632%
+	Processed 580/1000 samples. Current Accuracy: 85%
+	Processed 590/1000 samples. Current Accuracy: 85.2542%
+	Processed 600/1000 samples. Current Accuracy: 85.5%
+	Processed 610/1000 samples. Current Accuracy: 85.7377%
+	Processed 620/1000 samples. Current Accuracy: 85.8065%
+	Processed 630/1000 samples. Current Accuracy: 86.0317%
+	Processed 640/1000 samples. Current Accuracy: 85.9375%
+	Processed 650/1000 samples. Current Accuracy: 86%
+	Processed 660/1000 samples. Current Accuracy: 85.7576%
+	Processed 670/1000 samples. Current Accuracy: 85.8209%
+	Processed 680/1000 samples. Current Accuracy: 86.0294%
+	Processed 690/1000 samples. Current Accuracy: 86.2319%
+	Processed 700/1000 samples. Current Accuracy: 86.1429%
+	Processed 710/1000 samples. Current Accuracy: 86.338%
+	Processed 720/1000 samples. Current Accuracy: 86.3889%
+	Processed 730/1000 samples. Current Accuracy: 86.3014%
+	Processed 740/1000 samples. Current Accuracy: 86.2162%
+	Processed 750/1000 samples. Current Accuracy: 86.1333%
+	Processed 760/1000 samples. Current Accuracy: 86.3158%
+	Processed 770/1000 samples. Current Accuracy: 86.3636%
+	Processed 780/1000 samples. Current Accuracy: 86.5385%
+	Processed 790/1000 samples. Current Accuracy: 86.5823%
+	Processed 800/1000 samples. Current Accuracy: 86.625%
+	Processed 810/1000 samples. Current Accuracy: 86.6667%
+	Processed 820/1000 samples. Current Accuracy: 86.8293%
+	Processed 830/1000 samples. Current Accuracy: 86.8675%
+	Processed 840/1000 samples. Current Accuracy: 86.9048%
+	Processed 850/1000 samples. Current Accuracy: 86.8235%
+	Processed 860/1000 samples. Current Accuracy: 86.7442%
+	Processed 870/1000 samples. Current Accuracy: 86.6667%
+	Processed 880/1000 samples. Current Accuracy: 86.7045%
+	Processed 890/1000 samples. Current Accuracy: 86.8539%
+	Processed 900/1000 samples. Current Accuracy: 86.8889%
+	Processed 910/1000 samples. Current Accuracy: 86.9231%
+	Processed 920/1000 samples. Current Accuracy: 86.9565%
+	Processed 930/1000 samples. Current Accuracy: 87.0968%
+	Processed 940/1000 samples. Current Accuracy: 87.1277%
+	Processed 950/1000 samples. Current Accuracy: 87.1579%
+	Processed 960/1000 samples. Current Accuracy: 87.0833%
+	Processed 970/1000 samples. Current Accuracy: 87.2165%
+	Processed 980/1000 samples. Current Accuracy: 87.3469%
+	Processed 990/1000 samples. Current Accuracy: 87.3737%
+	Processed 1000/1000 samples. Current Accuracy: 87.5%
+
+=================================================
+               Simulation Complete               
+=================================================
+Total Test Samples : 1000
+Correct Predictions: 875
+Final HW Accuracy  : 87.5%
+=================================================
+Loading data from file...
+	Loaded 10 samples.
+	Loaded 10 samples.
+
+Starting KNN hardware simulation...
+	Processed 10/10 samples. Current Accuracy: 30%
+
+=================================================
+               Simulation Complete               
+=================================================
+Total Test Samples : 10
+Correct Predictions: 3
+Final HW Accuracy  : 30%
+=================================================
+
+C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\sim\verilog>set PATH= 
+
+C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\sim\verilog>call C:/Xilinx/2025.1/Vivado/bin/xelab xil_defaultlib.apatb_knn_accelerator_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj knn_accelerator.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm  -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib "ieee_proposed=./ieee_proposed" -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./knn_accelerator_subsystem  -s knn_accelerator  
+Vivado Simulator v2025.1.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/2025.1/Vivado/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_knn_accelerator_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj knn_accelerator.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_20 -L floating_point_v7_0_25 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./axivip -i ./svtb -i ./file_agent -i ./knn_accelerator_subsystem -s knn_accelerator 
+Multi-threading is on. Using 2 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_knn_accelerator_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_control_r_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_control_r_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_dadddsub_64ns_64ns_64_7_full_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_dadddsub_64ns_64ns_64_7_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_dsqrt_64ns_64ns_64_57_no_dsp_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_dsqrt_64ns_64ns_64_57_no_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_gmem_x_test_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_load
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_read
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_srl
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_test_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_gmem_x_train_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_load
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_read
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_srl
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_x_train_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_gmem_y_test_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_store
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_write
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_throttle
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_srl
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_test_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_gmem_y_train_m_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_load
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_read
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_burst_converter
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_burst_interleave
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_burst_sequential
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_reg_slice
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_fifo
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_srl
+INFO: [VRFC 10-311] analyzing module knn_accelerator_gmem_y_train_m_axi_mem
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort_distances_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort_distances_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort_labels_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort_labels_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort_Outline_sort_loop_i.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort_Outline_sort_loop_i
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort_Pipeline_copy_top_k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort_Pipeline_copy_top_k
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort_Pipeline_init_top_k.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort_Pipeline_init_top_k
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort_Pipeline_sort_loop_j.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort_Pipeline_sort_loop_j
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_distance_and_sort_Pipeline_train_loop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_distance_and_sort_Pipeline_train_loop
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_majority_vote.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_majority_vote
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_majority_vote_counts_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_majority_vote_counts_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_majority_vote_Pipeline_VITIS_LOOP_106_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_majority_vote_Pipeline_VITIS_LOOP_106_2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_majority_vote_Pipeline_VITIS_LOOP_119_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_majority_vote_Pipeline_VITIS_LOOP_119_3
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_knn_majority_vote_Pipeline_VITIS_LOOP_95_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_knn_majority_vote_Pipeline_VITIS_LOOP_95_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_sparsemux_7_2_4_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module knn_accelerator_sparsemux_7_2_4_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/axivip/axi_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/axivip/axi_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/knn_accelerator_subsystem/knn_accelerator_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/ip/xil_defaultlib/knn_accelerator_dadddsub_64ns_64ns_64_7_full_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'knn_accelerator_dadddsub_64ns_64ns_64_7_full_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/ip/xil_defaultlib/knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/ip/xil_defaultlib/knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/sim/verilog/ip/xil_defaultlib/knn_accelerator_dsqrt_64ns_64ns_64_57_no_dsp_1_ip.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'knn_accelerator_dsqrt_64ns_64ns_64_57_no_dsp_1_ip'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 4356. Module uvm_pkg doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4468] File : /proj/primebuilds/9999.0_PRIME_0428_0031/installs/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv, Line : 25994, RANDC variable size more than 8 bits. This will be treated as a RAND variable instead.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_viv_comp
+Compiling package xbip_utils_v3_0_14.xbip_utils_v3_0_14_pkg
+Compiling package axi_utils_v2_0_10.axi_utils_v2_0_10_pkg
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_consts
+Compiling package ieee.math_real
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_exp_table...
+Compiling package mult_gen_v12_0_23.mult_gen_v12_0_23_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package floating_point_v7_1_20.floating_point_v7_1_20_pkg
+Compiling package floating_point_v7_1_20.flt_utils
+Compiling package xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv_comp
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.axi_pkg
+Compiling package xil_defaultlib.knn_accelerator_subsystem_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling module xil_defaultlib.knn_accelerator_flow_control_loo...
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=52)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [delay_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=14,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=54,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=0,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=16,length=0)\]
+Compiling architecture muxf7_v of entity unisim.MUXF7 [muxf7_default]
+Compiling architecture muxf8_v of entity unisim.MUXF8 [muxf8_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=16)\]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.zero_det_sel [\zero_det_sel(c_xdevicefamily="z...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=55,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=55)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.shift_msb_first [\shift_msb_first(a_width=54,regi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.alignment [\alignment(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(fast_input=true)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=47,length=0)\]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=7,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=30,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=18,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=25,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=48,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=30,b_wi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=9)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=9,length=0)\]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=56,length=0)\]
+Compiling architecture synth of entity floating_point_v7_1_20.addsub_dsp [\addsub_dsp(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_20.addsub [\addsub(c_xdevicefamily="zynq",c...]
+Compiling architecture rtl of entity floating_point_v7_1_20.align_add [\align_add(c_xdevicefamily="zynq...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
+Compiling architecture rtl of entity floating_point_v7_1_20.mux4 [\mux4(c_xdevicefamily="zynq",wid...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture fde_v of entity unisim.FDE [fde_default]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,length=0,fast_inp...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_20.lead_zero_encode [\lead_zero_encode(c_xdevicefamil...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=56)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.shift_msb_first [\shift_msb_first(a_width=56,resu...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=2)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(b_width=18,c_wi...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=19,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=28,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=29,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_20.norm_and_round_logic [\norm_and_round_logic(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=3)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,length=0,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,length=3)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=2)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq [\compare_eq(c_xdevicefamily="zyn...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare [\compare(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=3,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=3,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add_exp [\flt_add_exp(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add_logic [\flt_add_logic(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_add [\flt_add(c_xdevicefamily="zynq",...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=64,length=0)\]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture knn_accelerator_dadddsub_64ns_64ns_64_7_full_dsp_1_ip_arch of entity xil_defaultlib.knn_accelerator_dadddsub_64ns_64ns_64_7_full_dsp_1_ip [knn_accelerator_dadddsub_64ns_64...]
+Compiling module xil_defaultlib.knn_accelerator_dadddsub_64ns_64...
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=19,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=17,length=0)\]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=17,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=17,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=17,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,b_...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=17,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=19,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,ca...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=19,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(adreg=0,alumodereg=0,a_...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=19,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=2,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=19,b_wi...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(acascreg=0,adreg=0,alum...]
+Compiling architecture rtl of entity floating_point_v7_1_20.dsp48e1_wrapper [\dsp48e1_wrapper(a_width=19,b_wi...]
+Compiling architecture struct of entity floating_point_v7_1_20.fix_mult_dsp48e1_dbl [\fix_mult_dsp48e1_dbl(mult_usage...]
+Compiling architecture rtl of entity floating_point_v7_1_20.fix_mult [\fix_mult(c_xdevicefamily="zynq"...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=4,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=4,fast_input=true)...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4,length=4,fast_inp...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11,length=3)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3,length=0,fast_inp...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult_exp [\flt_mult_exp(c_xdevicefamily="z...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=28)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=29)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=54,fast_input=true)...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_round_bit [\flt_round_bit(c_xdevicefamily="...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult_round [\flt_mult_round(c_xdevicefamily=...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op_lat [\flt_dec_op_lat(c_xdevicefamily=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_mult [\flt_mult(c_xdevicefamily="zynq"...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip_arch of entity xil_defaultlib.knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip [knn_accelerator_dmul_64ns_64ns_6...]
+Compiling module xil_defaultlib.knn_accelerator_dmul_64ns_64ns_6...
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,fast_input=true)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=53)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,fast_input=true)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=3)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=51)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=7,fast_input=true)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=4)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=49)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8,fast_input=true)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=5)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=47)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=9,fast_input=true)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=6)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=45)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=10,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=7)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=43)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=10,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=8)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=41)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=12,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=39)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=10)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=37)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=14,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=35)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=15,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=33)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=15,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=16,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=13)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=31)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=17,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=14)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=18,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=15)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=27)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=19,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=25)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=20,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=17)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=23)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=20,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=21,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=18)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=21)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=21,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=22,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=19)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=22,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=23,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=20)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=23,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=24,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=24,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=25,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=22)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=26,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=26,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=27,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=24)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=27,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=28,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=29,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=26)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=30,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=31,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=31,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=32,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=32,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=33,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=30)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=33,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=34,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=34,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=35,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=32)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=35,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=36,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=36,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=37,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=34)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=37,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=38,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=38,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=39,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=36)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=39,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=40,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=40,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=41,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=38)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=41,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=42,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=42,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=43,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=40)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=43,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=44,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=44,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=45,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=42)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=45,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=46,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=46,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=47,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=44)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=48,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=49,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=46)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=49,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=50,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=50,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=51,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=48)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=51,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=52,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=52,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=53,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=50)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=53,length=0)\]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=55,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=56,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=57,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=54)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=57,length=0)\]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=58,fast_input=true)...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant_addsub [\flt_sqrt_mant_addsub(c_xdevicef...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_sqrt_mant [\flt_sqrt_mant(c_xdevicefamily="...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=11,length=54,fast_i...]
+Compiling architecture rtl of entity floating_point_v7_1_20.special_detect [\special_detect(c_xdevicefamily=...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=2,length=54,fast_in...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(length=54,fast_input=true...]
+Compiling architecture rtl of entity floating_point_v7_1_20.flt_sqrt_exp [\flt_sqrt_exp(c_xdevicefamily="n...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=26,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=27,length=0,fast_in...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_has_ce=...]
+Compiling architecture rtl of entity floating_point_v7_1_20.delay [\delay(width=54,length=0,fast_in...]
+Compiling architecture rtl of entity floating_point_v7_1_20.renorm_and_round_logic [\renorm_and_round_logic(c_xdevic...]
+Compiling architecture synth of entity floating_point_v7_1_20.flt_dec_op [\flt_dec_op(c_xdevicefamily="zyn...]
+Compiling architecture virtex of entity floating_point_v7_1_20.flt_sqrt [\flt_sqrt(c_xdevicefamily="zynq"...]
+Compiling architecture synth of entity xbip_pipe_v3_0_10.xbip_pipe_v3_0_10_viv [\xbip_pipe_v3_0_10_viv(c_latency...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture knn_accelerator_dsqrt_64ns_64ns_64_57_no_dsp_1_ip_arch of entity xil_defaultlib.knn_accelerator_dsqrt_64ns_64ns_64_57_no_dsp_1_ip [knn_accelerator_dsqrt_64ns_64ns_...]
+Compiling module xil_defaultlib.knn_accelerator_dsqrt_64ns_64ns_...
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_ne_im [\compare_ne_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq_im [\compare_eq_im(c_xdevicefamily="...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_eq [\compare_eq(c_xdevicefamily="zyn...]
+Compiling architecture struct of entity floating_point_v7_1_20.carry_chain [\carry_chain(c_xdevicefamily="zy...]
+Compiling architecture synth of entity floating_point_v7_1_20.compare_gt [\compare_gt(c_xdevicefamily="zyn...]
+Compiling architecture rtl of entity floating_point_v7_1_20.fp_cmp [\fp_cmp(c_xdevicefamily="zynq",c...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20_viv [\floating_point_v7_1_20_viv(c_xd...]
+Compiling architecture xilinx of entity floating_point_v7_1_20.floating_point_v7_1_20 [\floating_point_v7_1_20(c_xdevic...]
+Compiling architecture knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch of entity xil_defaultlib.knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip [knn_accelerator_dcmp_64ns_64ns_1...]
+Compiling module xil_defaultlib.knn_accelerator_dcmp_64ns_64ns_1...
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling module xil_defaultlib.knn_accelerator_knn_distance_and...
+Compiling module xil_defaultlib.knn_accelerator_knn_majority_vot...
+Compiling module xil_defaultlib.knn_accelerator_knn_majority_vot...
+Compiling module xil_defaultlib.knn_accelerator_sparsemux_7_2_4_...
+Compiling module xil_defaultlib.knn_accelerator_knn_majority_vot...
+Compiling module xil_defaultlib.knn_accelerator_knn_majority_vot...
+Compiling module xil_defaultlib.knn_accelerator_knn_majority_vot...
+Compiling module xil_defaultlib.knn_accelerator_control_s_axi
+Compiling module xil_defaultlib.knn_accelerator_control_r_s_axi
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_x_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_test_m_ax...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator_gmem_y_train_m_a...
+Compiling module xil_defaultlib.knn_accelerator
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,LEN_WIDTH=8...
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=64,STRB_WIDTH=...
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=6,STRB_WIDTH=4...
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=4,STRB_WIDTH=4...
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=12)
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=3)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=49)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=5)
+Compiling module xil_defaultlib.upc_loop_intf_default
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_knn_accelerator_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot knn_accelerator
+
+****** xsim v2025.1 (64-bit)
+  **** SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Tue Mar 17 19:39:54 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/knn_accelerator/xsim_script.tcl
+# xsim {knn_accelerator} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=knn_accelerator_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -autoloadwcfg -tclbatch {knn_accelerator.tcl}
+Time resolution is 1 ps
+source knn_accelerator.tcl
+## run all
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+-----------------------------------------------------------------------------------------------
+Name                             Type                                   Size  Value            
+-----------------------------------------------------------------------------------------------
+uvm_test_top                     knn_accelerator_test_lib               -     @378             
+  top_env                        knn_accelerator_env                    -     @389             
+    axi_lite_control             uvm_env                                -     @570             
+      item_rtr_port              uvm_analysis_port                      -     @589             
+      item_wtr_port              uvm_analysis_port                      -     @579             
+      master                     uvm_agent                              -     @1062            
+        ardrv                    uvm_driver #(REQ,RSP)                  -     @1737            
+          item_read_imp          uvm_analysis_port                      -     @1766            
+          rsp_port               uvm_analysis_port                      -     @1756            
+          seq_item_port          uvm_seq_item_pull_port                 -     @1746            
+          m_num_sent             integral                               32    'h0              
+        arsqr                    axi_sequencer                          -     @1776            
+          rsp_export             uvm_analysis_export                    -     @1785            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @1903            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        awdrv                    uvm_driver #(REQ,RSP)                  -     @1209            
+          item_read_imp          uvm_analysis_port                      -     @1238            
+          rsp_port               uvm_analysis_port                      -     @1228            
+          seq_item_port          uvm_seq_item_pull_port                 -     @1218            
+          m_num_sent             integral                               32    'h0              
+        awsqr                    axi_sequencer                          -     @1248            
+          rsp_export             uvm_analysis_export                    -     @1257            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @1375            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        bdrv                     uvm_driver #(REQ,RSP)                  -     @1561            
+          item_read_imp          uvm_analysis_port                      -     @1590            
+          rsp_port               uvm_analysis_port                      -     @1580            
+          seq_item_port          uvm_seq_item_pull_port                 -     @1570            
+          m_num_sent             integral                               32    'h0              
+        bsqr                     axi_sequencer                          -     @1600            
+          rsp_export             uvm_analysis_export                    -     @1609            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @1727            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        rdrv                     uvm_driver #(REQ,RSP)                  -     @1913            
+          item_read_imp          uvm_analysis_port                      -     @1942            
+          rsp_port               uvm_analysis_port                      -     @1932            
+          seq_item_port          uvm_seq_item_pull_port                 -     @1922            
+          m_num_sent             integral                               32    'h0              
+        rsqr                     axi_sequencer                          -     @1952            
+          rsp_export             uvm_analysis_export                    -     @1961            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @2079            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        wdrv                     uvm_driver #(REQ,RSP)                  -     @1385            
+          item_read_imp          uvm_analysis_port                      -     @1414            
+          rsp_port               uvm_analysis_port                      -     @1404            
+          seq_item_port          uvm_seq_item_pull_port                 -     @1394            
+          m_num_sent             integral                               32    'h0              
+        wsqr                     axi_sequencer                          -     @1424            
+          rsp_export             uvm_analysis_export                    -     @1433            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @1551            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+      monitor                    uvm_monitor                            -     @884             
+        item_ar2r_port           uvm_analysis_port                      -     @953             
+        item_ar_port             uvm_analysis_port                      -     @923             
+        item_aw2b_port           uvm_analysis_port                      -     @943             
+        item_aw_port             uvm_analysis_port                      -     @893             
+        item_b_port              uvm_analysis_port                      -     @913             
+        item_r_port              uvm_analysis_port                      -     @933             
+        item_w_port              uvm_analysis_port                      -     @903             
+        checks_enable            integral                               1     'h1              
+        coverage_enable          integral                               1     'h1              
+      state                      axi_state                              -     @963             
+        ar2r_imp                 uvm_analysis_imp_ar2r                  -     @1032            
+        ar_imp                   uvm_analysis_imp_ar                    -     @1002            
+        aw2b_imp                 uvm_analysis_imp_aw2b                  -     @1022            
+        aw_imp                   uvm_analysis_imp_aw                    -     @972             
+        b_imp                    uvm_analysis_imp_b                     -     @992             
+        item_rtr_port            uvm_analysis_port                      -     @1052            
+        item_wtr_port            uvm_analysis_port                      -     @1042            
+        r_imp                    uvm_analysis_imp_r                     -     @1012            
+        w_imp                    uvm_analysis_imp_w                     -     @982             
+        avg_rate                 integral                               32    'h0              
+        exp_rate                 integral                               32    'h0              
+        win_size                 integral                               32    'h0              
+        bqnum_for_slaseq         integral                               32    'h0              
+        rq_from_model_num        integral                               32    'h0              
+      vsqr                       axi_virtual_sequencer                  -     @1071            
+        rsp_export               uvm_analysis_export                    -     @1080            
+        seq_item_export          uvm_seq_item_pull_imp                  -     @1198            
+        arbitration_queue        array                                  0     -                
+        lock_queue               array                                  0     -                
+        num_last_reqs            integral                               32    'd1              
+        num_last_rsps            integral                               32    'd1              
+      cfg                        axi_cfg                                -     @409             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    MASTER           
+        write_latency_mode       latency_mode_enum                      32    CHANNEL_FIRST    
+        read_latency_mode        latency_mode_enum                      32    CHANNEL_FIRST    
+        clatency                 axi_latency                            -     @568             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+    axi_lite_control_r           uvm_env                                -     @539             
+      item_rtr_port              uvm_analysis_port                      -     @558             
+      item_wtr_port              uvm_analysis_port                      -     @548             
+      master                     uvm_agent                              -     @2340            
+        ardrv                    uvm_driver #(REQ,RSP)                  -     @3015            
+          item_read_imp          uvm_analysis_port                      -     @3044            
+          rsp_port               uvm_analysis_port                      -     @3034            
+          seq_item_port          uvm_seq_item_pull_port                 -     @3024            
+          m_num_sent             integral                               32    'h0              
+        arsqr                    axi_sequencer                          -     @3054            
+          rsp_export             uvm_analysis_export                    -     @3063            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @3181            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        awdrv                    uvm_driver #(REQ,RSP)                  -     @2487            
+          item_read_imp          uvm_analysis_port                      -     @2516            
+          rsp_port               uvm_analysis_port                      -     @2506            
+          seq_item_port          uvm_seq_item_pull_port                 -     @2496            
+          m_num_sent             integral                               32    'h0              
+        awsqr                    axi_sequencer                          -     @2526            
+          rsp_export             uvm_analysis_export                    -     @2535            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @2653            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        bdrv                     uvm_driver #(REQ,RSP)                  -     @2839            
+          item_read_imp          uvm_analysis_port                      -     @2868            
+          rsp_port               uvm_analysis_port                      -     @2858            
+          seq_item_port          uvm_seq_item_pull_port                 -     @2848            
+          m_num_sent             integral                               32    'h0              
+        bsqr                     axi_sequencer                          -     @2878            
+          rsp_export             uvm_analysis_export                    -     @2887            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @3005            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        rdrv                     uvm_driver #(REQ,RSP)                  -     @3191            
+          item_read_imp          uvm_analysis_port                      -     @3220            
+          rsp_port               uvm_analysis_port                      -     @3210            
+          seq_item_port          uvm_seq_item_pull_port                 -     @3200            
+          m_num_sent             integral                               32    'h0              
+        rsqr                     axi_sequencer                          -     @3230            
+          rsp_export             uvm_analysis_export                    -     @3239            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @3357            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        wdrv                     uvm_driver #(REQ,RSP)                  -     @2663            
+          item_read_imp          uvm_analysis_port                      -     @2692            
+          rsp_port               uvm_analysis_port                      -     @2682            
+          seq_item_port          uvm_seq_item_pull_port                 -     @2672            
+          m_num_sent             integral                               32    'h0              
+        wsqr                     axi_sequencer                          -     @2702            
+          rsp_export             uvm_analysis_export                    -     @2711            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @2829            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+      monitor                    uvm_monitor                            -     @2162            
+        item_ar2r_port           uvm_analysis_port                      -     @2231            
+        item_ar_port             uvm_analysis_port                      -     @2201            
+        item_aw2b_port           uvm_analysis_port                      -     @2221            
+        item_aw_port             uvm_analysis_port                      -     @2171            
+        item_b_port              uvm_analysis_port                      -     @2191            
+        item_r_port              uvm_analysis_port                      -     @2211            
+        item_w_port              uvm_analysis_port                      -     @2181            
+        checks_enable            integral                               1     'h1              
+        coverage_enable          integral                               1     'h1              
+      state                      axi_state                              -     @2241            
+        ar2r_imp                 uvm_analysis_imp_ar2r                  -     @2310            
+        ar_imp                   uvm_analysis_imp_ar                    -     @2280            
+        aw2b_imp                 uvm_analysis_imp_aw2b                  -     @2300            
+        aw_imp                   uvm_analysis_imp_aw                    -     @2250            
+        b_imp                    uvm_analysis_imp_b                     -     @2270            
+        item_rtr_port            uvm_analysis_port                      -     @2330            
+        item_wtr_port            uvm_analysis_port                      -     @2320            
+        r_imp                    uvm_analysis_imp_r                     -     @2290            
+        w_imp                    uvm_analysis_imp_w                     -     @2260            
+        avg_rate                 integral                               32    'h0              
+        exp_rate                 integral                               32    'h0              
+        win_size                 integral                               32    'h0              
+        bqnum_for_slaseq         integral                               32    'h0              
+        rq_from_model_num        integral                               32    'h0              
+      vsqr                       axi_virtual_sequencer                  -     @2349            
+        rsp_export               uvm_analysis_export                    -     @2358            
+        seq_item_export          uvm_seq_item_pull_imp                  -     @2476            
+        arbitration_queue        array                                  0     -                
+        lock_queue               array                                  0     -                
+        num_last_reqs            integral                               32    'd1              
+        num_last_rsps            integral                               32    'd1              
+      cfg                        axi_cfg                                -     @409             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    MASTER           
+        write_latency_mode       latency_mode_enum                      32    CHANNEL_FIRST    
+        read_latency_mode        latency_mode_enum                      32    CHANNEL_FIRST    
+        clatency                 axi_latency                            -     @568             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+    axi_master_gmem_x_test       uvm_env                                -     @415             
+      item_rtr_port              uvm_analysis_port                      -     @434             
+      item_wtr_port              uvm_analysis_port                      -     @424             
+      monitor                    uvm_monitor                            -     @3440            
+        item_ar2r_port           uvm_analysis_port                      -     @3509            
+        item_ar_port             uvm_analysis_port                      -     @3479            
+        item_aw2b_port           uvm_analysis_port                      -     @3499            
+        item_aw_port             uvm_analysis_port                      -     @3449            
+        item_b_port              uvm_analysis_port                      -     @3469            
+        item_r_port              uvm_analysis_port                      -     @3489            
+        item_w_port              uvm_analysis_port                      -     @3459            
+        checks_enable            integral                               1     'h1              
+        coverage_enable          integral                               1     'h1              
+      slave                      uvm_agent                              -     @3618            
+        ardrv                    uvm_driver #(REQ,RSP)                  -     @4295            
+          item_read_imp          uvm_analysis_port                      -     @4324            
+          rsp_port               uvm_analysis_port                      -     @4314            
+          seq_item_port          uvm_seq_item_pull_port                 -     @4304            
+          m_num_sent             integral                               32    'h0              
+        arsqr                    axi_sequencer                          -     @4334            
+          rsp_export             uvm_analysis_export                    -     @4343            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @4461            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        awdrv                    uvm_driver #(REQ,RSP)                  -     @3767            
+          item_read_imp          uvm_analysis_port                      -     @3796            
+          rsp_port               uvm_analysis_port                      -     @3786            
+          seq_item_port          uvm_seq_item_pull_port                 -     @3776            
+          m_num_sent             integral                               32    'h0              
+        awsqr                    axi_sequencer                          -     @3806            
+          rsp_export             uvm_analysis_export                    -     @3815            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @3933            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        bdrv                     uvm_driver #(REQ,RSP)                  -     @4119            
+          item_read_imp          uvm_analysis_port                      -     @4148            
+          rsp_port               uvm_analysis_port                      -     @4138            
+          seq_item_port          uvm_seq_item_pull_port                 -     @4128            
+          m_num_sent             integral                               32    'h0              
+        bsqr                     axi_sequencer                          -     @4158            
+          rsp_export             uvm_analysis_export                    -     @4167            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @4285            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        rdrv                     uvm_driver #(REQ,RSP)                  -     @4471            
+          item_read_imp          uvm_analysis_port                      -     @4500            
+          rsp_port               uvm_analysis_port                      -     @4490            
+          seq_item_port          uvm_seq_item_pull_port                 -     @4480            
+          m_num_sent             integral                               32    'h0              
+        rsqr                     axi_sequencer                          -     @4510            
+          rsp_export             uvm_analysis_export                    -     @4519            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @4637            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        wdrv                     uvm_driver #(REQ,RSP)                  -     @3943            
+          item_read_imp          uvm_analysis_port                      -     @3972            
+          rsp_port               uvm_analysis_port                      -     @3962            
+          seq_item_port          uvm_seq_item_pull_port                 -     @3952            
+          m_num_sent             integral                               32    'h0              
+        wsqr                     axi_sequencer                          -     @3982            
+          rsp_export             uvm_analysis_export                    -     @3991            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @4109            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+      state                      axi_state                              -     @3519            
+        ar2r_imp                 uvm_analysis_imp_ar2r                  -     @3588            
+        ar_imp                   uvm_analysis_imp_ar                    -     @3558            
+        aw2b_imp                 uvm_analysis_imp_aw2b                  -     @3578            
+        aw_imp                   uvm_analysis_imp_aw                    -     @3528            
+        b_imp                    uvm_analysis_imp_b                     -     @3548            
+        item_rtr_port            uvm_analysis_port                      -     @3608            
+        item_wtr_port            uvm_analysis_port                      -     @3598            
+        r_imp                    uvm_analysis_imp_r                     -     @3568            
+        w_imp                    uvm_analysis_imp_w                     -     @3538            
+        avg_rate                 integral                               32    'h0              
+        exp_rate                 integral                               32    'h0              
+        win_size                 integral                               32    'h0              
+        bqnum_for_slaseq         integral                               32    'h0              
+        rq_from_model_num        integral                               32    'h0              
+      vsqr                       axi_virtual_sequencer                  -     @3627            
+        rsp_export               uvm_analysis_export                    -     @3636            
+        seq_item_export          uvm_seq_item_pull_imp                  -     @3754            
+        arbitration_queue        array                                  0     -                
+        lock_queue               array                                  0     -                
+        num_last_reqs            integral                               32    'd1              
+        num_last_rsps            integral                               32    'd1              
+      cfg                        axi_cfg                                -     @404             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @410             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+    axi_master_gmem_x_train      uvm_env                                -     @446             
+      item_rtr_port              uvm_analysis_port                      -     @465             
+      item_wtr_port              uvm_analysis_port                      -     @455             
+      monitor                    uvm_monitor                            -     @4718            
+        item_ar2r_port           uvm_analysis_port                      -     @4787            
+        item_ar_port             uvm_analysis_port                      -     @4757            
+        item_aw2b_port           uvm_analysis_port                      -     @4777            
+        item_aw_port             uvm_analysis_port                      -     @4727            
+        item_b_port              uvm_analysis_port                      -     @4747            
+        item_r_port              uvm_analysis_port                      -     @4767            
+        item_w_port              uvm_analysis_port                      -     @4737            
+        checks_enable            integral                               1     'h1              
+        coverage_enable          integral                               1     'h1              
+      slave                      uvm_agent                              -     @4896            
+        ardrv                    uvm_driver #(REQ,RSP)                  -     @5573            
+          item_read_imp          uvm_analysis_port                      -     @5602            
+          rsp_port               uvm_analysis_port                      -     @5592            
+          seq_item_port          uvm_seq_item_pull_port                 -     @5582            
+          m_num_sent             integral                               32    'h0              
+        arsqr                    axi_sequencer                          -     @5612            
+          rsp_export             uvm_analysis_export                    -     @5621            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @5739            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        awdrv                    uvm_driver #(REQ,RSP)                  -     @5045            
+          item_read_imp          uvm_analysis_port                      -     @5074            
+          rsp_port               uvm_analysis_port                      -     @5064            
+          seq_item_port          uvm_seq_item_pull_port                 -     @5054            
+          m_num_sent             integral                               32    'h0              
+        awsqr                    axi_sequencer                          -     @5084            
+          rsp_export             uvm_analysis_export                    -     @5093            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @5211            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        bdrv                     uvm_driver #(REQ,RSP)                  -     @5397            
+          item_read_imp          uvm_analysis_port                      -     @5426            
+          rsp_port               uvm_analysis_port                      -     @5416            
+          seq_item_port          uvm_seq_item_pull_port                 -     @5406            
+          m_num_sent             integral                               32    'h0              
+        bsqr                     axi_sequencer                          -     @5436            
+          rsp_export             uvm_analysis_export                    -     @5445            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @5563            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        rdrv                     uvm_driver #(REQ,RSP)                  -     @5749            
+          item_read_imp          uvm_analysis_port                      -     @5778            
+          rsp_port               uvm_analysis_port                      -     @5768            
+          seq_item_port          uvm_seq_item_pull_port                 -     @5758            
+          m_num_sent             integral                               32    'h0              
+        rsqr                     axi_sequencer                          -     @5788            
+          rsp_export             uvm_analysis_export                    -     @5797            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @5915            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        wdrv                     uvm_driver #(REQ,RSP)                  -     @5221            
+          item_read_imp          uvm_analysis_port                      -     @5250            
+          rsp_port               uvm_analysis_port                      -     @5240            
+          seq_item_port          uvm_seq_item_pull_port                 -     @5230            
+          m_num_sent             integral                               32    'h0              
+        wsqr                     axi_sequencer                          -     @5260            
+          rsp_export             uvm_analysis_export                    -     @5269            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @5387            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+      state                      axi_state                              -     @4797            
+        ar2r_imp                 uvm_analysis_imp_ar2r                  -     @4866            
+        ar_imp                   uvm_analysis_imp_ar                    -     @4836            
+        aw2b_imp                 uvm_analysis_imp_aw2b                  -     @4856            
+        aw_imp                   uvm_analysis_imp_aw                    -     @4806            
+        b_imp                    uvm_analysis_imp_b                     -     @4826            
+        item_rtr_port            uvm_analysis_port                      -     @4886            
+        item_wtr_port            uvm_analysis_port                      -     @4876            
+        r_imp                    uvm_analysis_imp_r                     -     @4846            
+        w_imp                    uvm_analysis_imp_w                     -     @4816            
+        avg_rate                 integral                               32    'h0              
+        exp_rate                 integral                               32    'h0              
+        win_size                 integral                               32    'h0              
+        bqnum_for_slaseq         integral                               32    'h0              
+        rq_from_model_num        integral                               32    'h0              
+      vsqr                       axi_virtual_sequencer                  -     @4905            
+        rsp_export               uvm_analysis_export                    -     @4914            
+        seq_item_export          uvm_seq_item_pull_imp                  -     @5032            
+        arbitration_queue        array                                  0     -                
+        lock_queue               array                                  0     -                
+        num_last_reqs            integral                               32    'd1              
+        num_last_rsps            integral                               32    'd1              
+      cfg                        axi_cfg                                -     @405             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @444             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+    axi_master_gmem_y_test       uvm_env                                -     @508             
+      item_rtr_port              uvm_analysis_port                      -     @527             
+      item_wtr_port              uvm_analysis_port                      -     @517             
+      monitor                    uvm_monitor                            -     @5996            
+        item_ar2r_port           uvm_analysis_port                      -     @6065            
+        item_ar_port             uvm_analysis_port                      -     @6035            
+        item_aw2b_port           uvm_analysis_port                      -     @6055            
+        item_aw_port             uvm_analysis_port                      -     @6005            
+        item_b_port              uvm_analysis_port                      -     @6025            
+        item_r_port              uvm_analysis_port                      -     @6045            
+        item_w_port              uvm_analysis_port                      -     @6015            
+        checks_enable            integral                               1     'h1              
+        coverage_enable          integral                               1     'h1              
+      slave                      uvm_agent                              -     @6174            
+        ardrv                    uvm_driver #(REQ,RSP)                  -     @6851            
+          item_read_imp          uvm_analysis_port                      -     @6880            
+          rsp_port               uvm_analysis_port                      -     @6870            
+          seq_item_port          uvm_seq_item_pull_port                 -     @6860            
+          m_num_sent             integral                               32    'h0              
+        arsqr                    axi_sequencer                          -     @6890            
+          rsp_export             uvm_analysis_export                    -     @6899            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @7017            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        awdrv                    uvm_driver #(REQ,RSP)                  -     @6323            
+          item_read_imp          uvm_analysis_port                      -     @6352            
+          rsp_port               uvm_analysis_port                      -     @6342            
+          seq_item_port          uvm_seq_item_pull_port                 -     @6332            
+          m_num_sent             integral                               32    'h0              
+        awsqr                    axi_sequencer                          -     @6362            
+          rsp_export             uvm_analysis_export                    -     @6371            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @6489            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        bdrv                     uvm_driver #(REQ,RSP)                  -     @6675            
+          item_read_imp          uvm_analysis_port                      -     @6704            
+          rsp_port               uvm_analysis_port                      -     @6694            
+          seq_item_port          uvm_seq_item_pull_port                 -     @6684            
+          m_num_sent             integral                               32    'h0              
+        bsqr                     axi_sequencer                          -     @6714            
+          rsp_export             uvm_analysis_export                    -     @6723            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @6841            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        rdrv                     uvm_driver #(REQ,RSP)                  -     @7027            
+          item_read_imp          uvm_analysis_port                      -     @7056            
+          rsp_port               uvm_analysis_port                      -     @7046            
+          seq_item_port          uvm_seq_item_pull_port                 -     @7036            
+          m_num_sent             integral                               32    'h0              
+        rsqr                     axi_sequencer                          -     @7066            
+          rsp_export             uvm_analysis_export                    -     @7075            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @7193            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        wdrv                     uvm_driver #(REQ,RSP)                  -     @6499            
+          item_read_imp          uvm_analysis_port                      -     @6528            
+          rsp_port               uvm_analysis_port                      -     @6518            
+          seq_item_port          uvm_seq_item_pull_port                 -     @6508            
+          m_num_sent             integral                               32    'h0              
+        wsqr                     axi_sequencer                          -     @6538            
+          rsp_export             uvm_analysis_export                    -     @6547            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @6665            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+      state                      axi_state                              -     @6075            
+        ar2r_imp                 uvm_analysis_imp_ar2r                  -     @6144            
+        ar_imp                   uvm_analysis_imp_ar                    -     @6114            
+        aw2b_imp                 uvm_analysis_imp_aw2b                  -     @6134            
+        aw_imp                   uvm_analysis_imp_aw                    -     @6084            
+        b_imp                    uvm_analysis_imp_b                     -     @6104            
+        item_rtr_port            uvm_analysis_port                      -     @6164            
+        item_wtr_port            uvm_analysis_port                      -     @6154            
+        r_imp                    uvm_analysis_imp_r                     -     @6124            
+        w_imp                    uvm_analysis_imp_w                     -     @6094            
+        avg_rate                 integral                               32    'h0              
+        exp_rate                 integral                               32    'h0              
+        win_size                 integral                               32    'h0              
+        bqnum_for_slaseq         integral                               32    'h0              
+        rq_from_model_num        integral                               32    'h0              
+      vsqr                       axi_virtual_sequencer                  -     @6183            
+        rsp_export               uvm_analysis_export                    -     @6192            
+        seq_item_export          uvm_seq_item_pull_imp                  -     @6310            
+        arbitration_queue        array                                  0     -                
+        lock_queue               array                                  0     -                
+        num_last_reqs            integral                               32    'd1              
+        num_last_rsps            integral                               32    'd1              
+      cfg                        axi_cfg                                -     @407             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @506             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+    axi_master_gmem_y_train      uvm_env                                -     @477             
+      item_rtr_port              uvm_analysis_port                      -     @496             
+      item_wtr_port              uvm_analysis_port                      -     @486             
+      monitor                    uvm_monitor                            -     @7274            
+        item_ar2r_port           uvm_analysis_port                      -     @7343            
+        item_ar_port             uvm_analysis_port                      -     @7313            
+        item_aw2b_port           uvm_analysis_port                      -     @7333            
+        item_aw_port             uvm_analysis_port                      -     @7283            
+        item_b_port              uvm_analysis_port                      -     @7303            
+        item_r_port              uvm_analysis_port                      -     @7323            
+        item_w_port              uvm_analysis_port                      -     @7293            
+        checks_enable            integral                               1     'h1              
+        coverage_enable          integral                               1     'h1              
+      slave                      uvm_agent                              -     @7452            
+        ardrv                    uvm_driver #(REQ,RSP)                  -     @8129            
+          item_read_imp          uvm_analysis_port                      -     @8158            
+          rsp_port               uvm_analysis_port                      -     @8148            
+          seq_item_port          uvm_seq_item_pull_port                 -     @8138            
+          m_num_sent             integral                               32    'h0              
+        arsqr                    axi_sequencer                          -     @8168            
+          rsp_export             uvm_analysis_export                    -     @8177            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @8295            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        awdrv                    uvm_driver #(REQ,RSP)                  -     @7601            
+          item_read_imp          uvm_analysis_port                      -     @7630            
+          rsp_port               uvm_analysis_port                      -     @7620            
+          seq_item_port          uvm_seq_item_pull_port                 -     @7610            
+          m_num_sent             integral                               32    'h0              
+        awsqr                    axi_sequencer                          -     @7640            
+          rsp_export             uvm_analysis_export                    -     @7649            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @7767            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        bdrv                     uvm_driver #(REQ,RSP)                  -     @7953            
+          item_read_imp          uvm_analysis_port                      -     @7982            
+          rsp_port               uvm_analysis_port                      -     @7972            
+          seq_item_port          uvm_seq_item_pull_port                 -     @7962            
+          m_num_sent             integral                               32    'h0              
+        bsqr                     axi_sequencer                          -     @7992            
+          rsp_export             uvm_analysis_export                    -     @8001            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @8119            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        rdrv                     uvm_driver #(REQ,RSP)                  -     @8305            
+          item_read_imp          uvm_analysis_port                      -     @8334            
+          rsp_port               uvm_analysis_port                      -     @8324            
+          seq_item_port          uvm_seq_item_pull_port                 -     @8314            
+          m_num_sent             integral                               32    'h0              
+        rsqr                     axi_sequencer                          -     @8344            
+          rsp_export             uvm_analysis_export                    -     @8353            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @8471            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+        wdrv                     uvm_driver #(REQ,RSP)                  -     @7777            
+          item_read_imp          uvm_analysis_port                      -     @7806            
+          rsp_port               uvm_analysis_port                      -     @7796            
+          seq_item_port          uvm_seq_item_pull_port                 -     @7786            
+          m_num_sent             integral                               32    'h0              
+        wsqr                     axi_sequencer                          -     @7816            
+          rsp_export             uvm_analysis_export                    -     @7825            
+          seq_item_export        uvm_seq_item_pull_imp                  -     @7943            
+          arbitration_queue      array                                  0     -                
+          lock_queue             array                                  0     -                
+          num_last_reqs          integral                               32    'd1              
+          num_last_rsps          integral                               32    'd1              
+      state                      axi_state                              -     @7353            
+        ar2r_imp                 uvm_analysis_imp_ar2r                  -     @7422            
+        ar_imp                   uvm_analysis_imp_ar                    -     @7392            
+        aw2b_imp                 uvm_analysis_imp_aw2b                  -     @7412            
+        aw_imp                   uvm_analysis_imp_aw                    -     @7362            
+        b_imp                    uvm_analysis_imp_b                     -     @7382            
+        item_rtr_port            uvm_analysis_port                      -     @7442            
+        item_wtr_port            uvm_analysis_port                      -     @7432            
+        r_imp                    uvm_analysis_imp_r                     -     @7402            
+        w_imp                    uvm_analysis_imp_w                     -     @7372            
+        avg_rate                 integral                               32    'h0              
+        exp_rate                 integral                               32    'h0              
+        win_size                 integral                               32    'h0              
+        bqnum_for_slaseq         integral                               32    'h0              
+        rq_from_model_num        integral                               32    'h0              
+      vsqr                       axi_virtual_sequencer                  -     @7461            
+        rsp_export               uvm_analysis_export                    -     @7470            
+        seq_item_export          uvm_seq_item_pull_imp                  -     @7588            
+        arbitration_queue        array                                  0     -                
+        lock_queue               array                                  0     -                
+        num_last_reqs            integral                               32    'd1              
+        num_last_rsps            integral                               32    'd1              
+      cfg                        axi_cfg                                -     @406             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @475             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+    knn_accelerator_virtual_sqr  knn_accelerator_virtual_sequencer      -     @741             
+      rsp_export                 uvm_analysis_export                    -     @750             
+      seq_item_export            uvm_seq_item_pull_imp                  -     @868             
+      arbitration_queue          array                                  0     -                
+      lock_queue                 array                                  0     -                
+      num_last_reqs              integral                               32    'd1              
+      num_last_rsps              integral                               32    'd1              
+    refm                         knn_accelerator_reference_model        -     @599             
+      trans_num_idx              integral                               32    'h0              
+    subsys_mon                   knn_accelerator_subsystem_monitor      -     @612             
+      control_r_rtr_imp          uvm_analysis_imp_axi_rtr_control_r     -     @711             
+      control_r_wtr_imp          uvm_analysis_imp_axi_wtr_control_r     -     @701             
+      control_rtr_imp            uvm_analysis_imp_axi_rtr_control       -     @731             
+      control_wtr_imp            uvm_analysis_imp_axi_wtr_control       -     @721             
+      gmem_x_test_rtr_imp        uvm_analysis_imp_axi_rtr_gmem_x_test   -     @631             
+      gmem_x_test_wtr_imp        uvm_analysis_imp_axi_wtr_gmem_x_test   -     @621             
+      gmem_x_train_rtr_imp       uvm_analysis_imp_axi_rtr_gmem_x_train  -     @651             
+      gmem_x_train_wtr_imp       uvm_analysis_imp_axi_wtr_gmem_x_train  -     @641             
+      gmem_y_test_rtr_imp        uvm_analysis_imp_axi_rtr_gmem_y_test   -     @691             
+      gmem_y_test_wtr_imp        uvm_analysis_imp_axi_wtr_gmem_y_test   -     @681             
+      gmem_y_train_rtr_imp       uvm_analysis_imp_axi_rtr_gmem_y_train  -     @671             
+      gmem_y_train_wtr_imp       uvm_analysis_imp_axi_wtr_gmem_y_train  -     @661             
+      scbd                       knn_accelerator_scoreboard             -     @8560            
+        refm                     knn_accelerator_reference_model        -     @599             
+          trans_num_idx          integral                               32    'h0              
+    refm                         knn_accelerator_reference_model        -     @599             
+    knn_accelerator_virtual_sqr  knn_accelerator_virtual_sequencer      -     @741             
+    knn_accelerator_cfg          knn_accelerator_config                 -     @403             
+      gmem_x_test_cfg            axi_cfg                                -     @404             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @410             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+      gmem_x_train_cfg           axi_cfg                                -     @405             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @444             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+      gmem_y_train_cfg           axi_cfg                                -     @406             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @475             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+      gmem_y_test_cfg            axi_cfg                                -     @407             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    SLAVE            
+        write_latency_mode       latency_mode_enum                      32    TRANSACTION_FIRST
+        read_latency_mode        latency_mode_enum                      32    TRANSACTION_FIRST
+        clatency                 axi_latency                            -     @506             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+      control_r_cfg              axi_cfg                                -     @408             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    MASTER           
+        write_latency_mode       latency_mode_enum                      32    CHANNEL_FIRST    
+        read_latency_mode        latency_mode_enum                      32    CHANNEL_FIRST    
+        clatency                 axi_latency                            -     @537             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+      control_cfg                axi_cfg                                -     @409             
+        has_checker              integral                               1     'h1              
+        has_coverage             integral                               1     'h1              
+        id_num                   integral                               32    'h1              
+        reset_level              reset_level_enum                       32    RESET_LEVEL_LOW  
+        drv_type                 drv_type_enum                          32    MASTER           
+        write_latency_mode       latency_mode_enum                      32    CHANNEL_FIRST    
+        read_latency_mode        latency_mode_enum                      32    CHANNEL_FIRST    
+        clatency                 axi_latency                            -     @568             
+          wr_latency             integral                               32    'h0              
+          rd_latency             integral                               32    'h0              
+      check_ena                  integral                               32    'h0              
+      cover_ena                  integral                               32    'h0              
+-----------------------------------------------------------------------------------------------
+
+UVM_INFO C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "125000"
+// RTL Simulation : 1 / 1 [100.00%] @ "121145000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 121215 ns : File "C:/Xilinx/2025.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:27 . Memory (MB): peak = 196.414 ; gain = 0.000
+## quit
+INFO: xsimkernel Simulation Memory Usage: 330016 KB (Peak: 330016 KB), Simulation CPU Usage: 23156 ms
+INFO: [Common 17-206] Exiting xsim at Tue Mar 17 19:40:26 2026...
+Loading data from file...
+	Loaded 10 samples.
+	Loaded 10 samples.
+
+Starting KNN hardware simulation...
+	Processed 10/10 samples. Current Accuracy: 30%
+
+=================================================
+               Simulation Complete               
+=================================================
+Total Test Samples : 10
+Correct Predictions: 3
+Final HW Accuracy  : 30%
+=================================================
+INFO: [COSIM-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

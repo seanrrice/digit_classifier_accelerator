@@ -18,18 +18,18 @@
 <PipelineType>loop auto-rewind stp (delay=0 cycles)</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>6.508</EstimatedClockPeriod>
+<EstimatedClockPeriod>6.438</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
 <Best-caseLatency>7</Best-caseLatency>
-<Average-caseLatency>3752</Average-caseLatency>
-<Worst-caseLatency>7497</Worst-caseLatency>
+<Average-caseLatency>27</Average-caseLatency>
+<Worst-caseLatency>47</Worst-caseLatency>
 <Best-caseRealTimeLatency>70.000 ns</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>37.520 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>74.970 us</Worst-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.270 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.470 us</Worst-caseRealTimeLatency>
 <Interval-min>6</Interval-min>
-<Interval-max>7496</Interval-max>
+<Interval-max>46</Interval-max>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -38,20 +38,20 @@
 <TripCount>
 <range>
 <min>1</min>
-<max>1499</max>
+<max>9</max>
 </range>
 </TripCount>
 <isPerfectNested>0</isPerfectNested>
 <Latency>
 <range>
 <min>5</min>
-<max>7495</max>
+<max>45</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
 <min>50</min>
-<max>74950</max>
+<max>450</max>
 </range>
 </AbsoluteTimeLatency>
 <PipelineII>5</PipelineII>
@@ -79,8 +79,8 @@
 
 <AreaEstimates>
 <Resources>
-<FF>224</FF>
-<LUT>288</LUT>
+<FF>168</FF>
+<LUT>290</LUT>
 <BRAM_18K>0</BRAM_18K>
 <DSP>0</DSP>
 <URAM>0</URAM>
@@ -169,7 +169,7 @@
 <IOProtocol>ap_none</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>in</Dir>
-<Bits>11</Bits>
+<Bits>4</Bits>
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -180,7 +180,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>11</Bits>
+<Bits>4</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -235,7 +235,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>11</Bits>
+<Bits>4</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -290,7 +290,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>11</Bits>
+<Bits>4</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
@@ -345,7 +345,7 @@
 <IOProtocol>ap_memory</IOProtocol>
 <IOConfig></IOConfig>
 <Dir>out</Dir>
-<Bits>11</Bits>
+<Bits>4</Bits>
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>

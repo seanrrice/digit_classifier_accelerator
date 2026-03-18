@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_accelerator'" level="0">
-<item name = "Date">Tue Mar 17 18:06:12 2026
+<item name = "Date">Tue Mar 17 19:32:53 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">knn_accelerator</item>
@@ -24,20 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">87443007, 11314953007, 0.874 sec, 113.150 sec, 87443008, 11314953008, no</column>
+<column name="">10237, 13837, 0.102 ms, 0.138 ms, 10238, 13838, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_knn_distance_and_sort_fu_176">knn_distance_and_sort, 87400, 11314910, 0.874 ms, 0.113 sec, 87400, 11314910, no</column>
-<column name="grp_knn_majority_vote_fu_193">knn_majority_vote, 38, 38, 0.380 us, 0.380 us, 38, 38, no</column>
+<column name="grp_knn_distance_and_sort_fu_172">knn_distance_and_sort, 980, 1340, 9.800 us, 13.400 us, 980, 1340, no</column>
+<column name="grp_knn_majority_vote_fu_189">knn_majority_vote, 38, 38, 0.380 us, 0.380 us, 38, 38, no</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- test_data">87443000, 11314953000, 87443 ~ 11314953, -, -, 1000, no</column>
+<column name="- test_data">10230, 13830, 1023 ~ 1383, -, -, 10, no</column>
 </table>
 </item>
 </section>
@@ -50,14 +50,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 49, -</column>
+<column name="Expression">-, -, 0, 40, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">19, 17, 13632, 10724, 0</column>
+<column name="Instance">10, 17, 13670, 10742, 0</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, 0, 164, -</column>
-<column name="Register">-, -, 324, -, -</column>
+<column name="Register">-, -, 304, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">6, 7, 13, 20, 0</specialColumn>
+<specialColumn name="Utilization (%)">3, 7, 13, 20, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -70,8 +70,8 @@
 <column name="gmem_x_train_m_axi_U">gmem_x_train_m_axi, 4, 0, 725, 843, 0</column>
 <column name="gmem_y_test_m_axi_U">gmem_y_test_m_axi, 0, 0, 611, 665, 0</column>
 <column name="gmem_y_train_m_axi_U">gmem_y_train_m_axi, 2, 0, 671, 657, 0</column>
-<column name="grp_knn_distance_and_sort_fu_176">knn_distance_and_sort, 9, 17, 10258, 6530, 0</column>
-<column name="grp_knn_majority_vote_fu_193">knn_majority_vote, 0, 0, 296, 594, 0</column>
+<column name="grp_knn_distance_and_sort_fu_172">knn_distance_and_sort, 0, 17, 10296, 6548, 0</column>
+<column name="grp_knn_majority_vote_fu_189">knn_majority_vote, 0, 0, 296, 594, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -88,9 +88,9 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln151_fu_240_p2">+, 0, 0, 13, 10, 1</column>
-<column name="add_ln153_fu_255_p2">+, 0, 0, 23, 16, 6</column>
-<column name="icmp_ln151_fu_234_p2">icmp, 0, 0, 13, 10, 6</column>
+<column name="add_ln151_fu_236_p2">+, 0, 0, 13, 4, 1</column>
+<column name="add_ln153_fu_251_p2">+, 0, 0, 14, 9, 6</column>
+<column name="icmp_ln151_fu_230_p2">icmp, 0, 0, 13, 4, 4</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -105,25 +105,25 @@
 <column name="gmem_y_test_blk_n_W">9, 2, 1, 2</column>
 <column name="gmem_y_train_0_ARVALID">9, 2, 1, 2</column>
 <column name="gmem_y_train_0_RREADY">9, 2, 1, 2</column>
-<column name="i_fu_116">9, 2, 10, 20</column>
-<column name="phi_mul_fu_112">9, 2, 16, 32</column>
+<column name="i_fu_112">9, 2, 4, 8</column>
+<column name="phi_mul_fu_108">9, 2, 9, 18</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="X_test_read_reg_302">64, 0, 64, 0</column>
-<column name="X_train_read_reg_297">64, 0, 64, 0</column>
+<column name="X_test_read_reg_298">64, 0, 64, 0</column>
+<column name="X_train_read_reg_293">64, 0, 64, 0</column>
 <column name="ap_CS_fsm">12, 0, 12, 0</column>
-<column name="gmem_y_test_addr_reg_325">64, 0, 64, 0</column>
-<column name="grp_knn_distance_and_sort_fu_176_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_knn_majority_vote_fu_193_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_fu_116">10, 0, 10, 0</column>
-<column name="phi_mul_fu_112">16, 0, 16, 0</column>
-<column name="phi_mul_load_reg_335">16, 0, 16, 0</column>
-<column name="top_k_labels_1_fu_124">4, 0, 4, 0</column>
-<column name="top_k_labels_2_fu_128">4, 0, 4, 0</column>
-<column name="top_k_labels_fu_120">4, 0, 4, 0</column>
-<column name="y_train_read_reg_292">64, 0, 64, 0</column>
+<column name="gmem_y_test_addr_reg_321">64, 0, 64, 0</column>
+<column name="grp_knn_distance_and_sort_fu_172_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_knn_majority_vote_fu_189_ap_start_reg">1, 0, 1, 0</column>
+<column name="i_fu_112">4, 0, 4, 0</column>
+<column name="phi_mul_fu_108">9, 0, 9, 0</column>
+<column name="phi_mul_load_reg_331">9, 0, 9, 0</column>
+<column name="top_k_labels_1_fu_120">4, 0, 4, 0</column>
+<column name="top_k_labels_2_fu_124">4, 0, 4, 0</column>
+<column name="top_k_labels_fu_116">4, 0, 4, 0</column>
+<column name="y_train_read_reg_288">64, 0, 64, 0</column>
 </table>
 </item>
 </section>

@@ -45,22 +45,22 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-output  [10:0] distances_address0;
+output  [3:0] distances_address0;
 output   distances_ce0;
 output   distances_we0;
 output  [63:0] distances_d0;
 input  [63:0] distances_q0;
-output  [10:0] distances_address1;
+output  [3:0] distances_address1;
 output   distances_ce1;
 output   distances_we1;
 output  [63:0] distances_d1;
 input  [63:0] distances_q1;
-output  [10:0] labels_address0;
+output  [3:0] labels_address0;
 output   labels_ce0;
 output   labels_we0;
 output  [3:0] labels_d0;
 input  [3:0] labels_q0;
-output  [10:0] labels_address1;
+output  [3:0] labels_address1;
 output   labels_ce1;
 output   labels_we1;
 output  [3:0] labels_d1;
@@ -72,35 +72,35 @@ reg ap_ready;
 
 (* fsm_encoding = "none" *) reg   [2:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-reg   [10:0] indvars_iv14_load_reg_103;
+reg   [3:0] indvars_iv14_load_reg_103;
 wire    ap_CS_fsm_state2;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_done;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_idle;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_ready;
-wire   [10:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address0;
+wire   [3:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address0;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_ce0;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_we0;
 wire   [63:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_d0;
-wire   [10:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address1;
+wire   [3:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address1;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_ce1;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_we1;
 wire   [63:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_d1;
-wire   [10:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address0;
+wire   [3:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address0;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_ce0;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_we0;
 wire   [3:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_d0;
-wire   [10:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address1;
+wire   [3:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address1;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_ce1;
 wire    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_we1;
 wire   [3:0] grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_d1;
 reg    grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg;
 wire   [0:0] icmp_ln64_fu_54_p2;
 wire    ap_CS_fsm_state3;
-reg   [10:0] i_4_fu_24;
-wire   [10:0] i_6_fu_60_p2;
-reg   [10:0] indvars_iv14_fu_28;
-wire   [10:0] add_ln64_fu_70_p2;
+reg   [3:0] i_4_fu_24;
+wire   [3:0] i_6_fu_60_p2;
+reg   [3:0] indvars_iv14_fu_28;
+wire   [3:0] add_ln64_fu_70_p2;
 reg   [2:0] ap_NS_fsm;
 reg    ap_ST_fsm_state1_blk;
 wire    ap_ST_fsm_state2_blk;
@@ -111,8 +111,8 @@ wire    ap_ce_reg;
 initial begin
 #0 ap_CS_fsm = 3'd1;
 #0 grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg = 1'b0;
-#0 i_4_fu_24 = 11'd0;
-#0 indvars_iv14_fu_28 = 11'd0;
+#0 i_4_fu_24 = 4'd0;
+#0 indvars_iv14_fu_28 = 4'd0;
 end
 
 knn_accelerator_knn_distance_and_sort_Pipeline_sort_loop_j grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32(
@@ -167,7 +167,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        i_4_fu_24 <= 11'd0;
+        i_4_fu_24 <= 4'd0;
     end else if (((icmp_ln64_fu_54_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         i_4_fu_24 <= i_6_fu_60_p2;
     end
@@ -175,7 +175,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        indvars_iv14_fu_28 <= 11'd1499;
+        indvars_iv14_fu_28 <= 4'd9;
     end else if (((icmp_ln64_fu_54_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         indvars_iv14_fu_28 <= add_ln64_fu_70_p2;
     end
@@ -258,7 +258,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln64_fu_70_p2 = ($signed(indvars_iv14_fu_28) + $signed(11'd2047));
+assign add_ln64_fu_70_p2 = ($signed(indvars_iv14_fu_28) + $signed(4'd15));
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -284,9 +284,9 @@ assign distances_we1 = grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_dist
 
 assign grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start = grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg;
 
-assign i_6_fu_60_p2 = (i_4_fu_24 + 11'd1);
+assign i_6_fu_60_p2 = (i_4_fu_24 + 4'd1);
 
-assign icmp_ln64_fu_54_p2 = ((i_4_fu_24 == 11'd1499) ? 1'b1 : 1'b0);
+assign icmp_ln64_fu_54_p2 = ((i_4_fu_24 == 4'd9) ? 1'b1 : 1'b0);
 
 assign labels_address0 = grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address0;
 

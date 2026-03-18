@@ -16,22 +16,22 @@ port (
     ap_done : OUT STD_LOGIC;
     ap_idle : OUT STD_LOGIC;
     ap_ready : OUT STD_LOGIC;
-    distances_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    distances_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
     distances_ce0 : OUT STD_LOGIC;
     distances_we0 : OUT STD_LOGIC;
     distances_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
     distances_q0 : IN STD_LOGIC_VECTOR (63 downto 0);
-    distances_address1 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    distances_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
     distances_ce1 : OUT STD_LOGIC;
     distances_we1 : OUT STD_LOGIC;
     distances_d1 : OUT STD_LOGIC_VECTOR (63 downto 0);
     distances_q1 : IN STD_LOGIC_VECTOR (63 downto 0);
-    labels_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    labels_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
     labels_ce0 : OUT STD_LOGIC;
     labels_we0 : OUT STD_LOGIC;
     labels_d0 : OUT STD_LOGIC_VECTOR (3 downto 0);
     labels_q0 : IN STD_LOGIC_VECTOR (3 downto 0);
-    labels_address1 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    labels_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
     labels_ce1 : OUT STD_LOGIC;
     labels_we1 : OUT STD_LOGIC;
     labels_d1 : OUT STD_LOGIC_VECTOR (3 downto 0);
@@ -50,10 +50,10 @@ architecture behav of knn_accelerator_knn_distance_and_sort_Outline_sort_loop_i 
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
-    constant ap_const_lv11_0 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    constant ap_const_lv11_5DB : STD_LOGIC_VECTOR (10 downto 0) := "10111011011";
-    constant ap_const_lv11_1 : STD_LOGIC_VECTOR (10 downto 0) := "00000000001";
-    constant ap_const_lv11_7FF : STD_LOGIC_VECTOR (10 downto 0) := "11111111111";
+    constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    constant ap_const_lv4_9 : STD_LOGIC_VECTOR (3 downto 0) := "1001";
+    constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
+    constant ap_const_lv4_F : STD_LOGIC_VECTOR (3 downto 0) := "1111";
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
 
 attribute shreg_extract : string;
@@ -62,26 +62,26 @@ attribute shreg_extract : string;
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal indvars_iv14_load_reg_103 : STD_LOGIC_VECTOR (10 downto 0);
+    signal indvars_iv14_load_reg_103 : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_done : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_idle : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_ready : STD_LOGIC;
-    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address0 : STD_LOGIC_VECTOR (10 downto 0);
+    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address0 : STD_LOGIC_VECTOR (3 downto 0);
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_ce0 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_we0 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_d0 : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address1 : STD_LOGIC_VECTOR (10 downto 0);
+    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_address1 : STD_LOGIC_VECTOR (3 downto 0);
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_ce1 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_we1 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_d1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address0 : STD_LOGIC_VECTOR (10 downto 0);
+    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address0 : STD_LOGIC_VECTOR (3 downto 0);
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_ce0 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_we0 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_d0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address1 : STD_LOGIC_VECTOR (10 downto 0);
+    signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address1 : STD_LOGIC_VECTOR (3 downto 0);
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_ce1 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_we1 : STD_LOGIC;
     signal grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_d1 : STD_LOGIC_VECTOR (3 downto 0);
@@ -89,10 +89,10 @@ attribute shreg_extract : string;
     signal icmp_ln64_fu_54_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal i_4_fu_24 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    signal i_6_fu_60_p2 : STD_LOGIC_VECTOR (10 downto 0);
-    signal indvars_iv14_fu_28 : STD_LOGIC_VECTOR (10 downto 0) := "00000000000";
-    signal add_ln64_fu_70_p2 : STD_LOGIC_VECTOR (10 downto 0);
+    signal i_4_fu_24 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    signal i_6_fu_60_p2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal indvars_iv14_fu_28 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    signal add_ln64_fu_70_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (2 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -107,23 +107,23 @@ attribute shreg_extract : string;
         ap_done : OUT STD_LOGIC;
         ap_idle : OUT STD_LOGIC;
         ap_ready : OUT STD_LOGIC;
-        indvars_iv14 : IN STD_LOGIC_VECTOR (10 downto 0);
-        distances_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
+        indvars_iv14 : IN STD_LOGIC_VECTOR (3 downto 0);
+        distances_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         distances_ce0 : OUT STD_LOGIC;
         distances_we0 : OUT STD_LOGIC;
         distances_d0 : OUT STD_LOGIC_VECTOR (63 downto 0);
         distances_q0 : IN STD_LOGIC_VECTOR (63 downto 0);
-        distances_address1 : OUT STD_LOGIC_VECTOR (10 downto 0);
+        distances_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
         distances_ce1 : OUT STD_LOGIC;
         distances_we1 : OUT STD_LOGIC;
         distances_d1 : OUT STD_LOGIC_VECTOR (63 downto 0);
         distances_q1 : IN STD_LOGIC_VECTOR (63 downto 0);
-        labels_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
+        labels_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         labels_ce0 : OUT STD_LOGIC;
         labels_we0 : OUT STD_LOGIC;
         labels_d0 : OUT STD_LOGIC_VECTOR (3 downto 0);
         labels_q0 : IN STD_LOGIC_VECTOR (3 downto 0);
-        labels_address1 : OUT STD_LOGIC_VECTOR (10 downto 0);
+        labels_address1 : OUT STD_LOGIC_VECTOR (3 downto 0);
         labels_ce1 : OUT STD_LOGIC;
         labels_we1 : OUT STD_LOGIC;
         labels_d1 : OUT STD_LOGIC_VECTOR (3 downto 0);
@@ -199,7 +199,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                i_4_fu_24 <= ap_const_lv11_0;
+                i_4_fu_24 <= ap_const_lv4_0;
             elsif (((icmp_ln64_fu_54_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
                 i_4_fu_24 <= i_6_fu_60_p2;
             end if; 
@@ -210,7 +210,7 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                indvars_iv14_fu_28 <= ap_const_lv11_5DB;
+                indvars_iv14_fu_28 <= ap_const_lv4_9;
             elsif (((icmp_ln64_fu_54_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
                 indvars_iv14_fu_28 <= add_ln64_fu_70_p2;
             end if; 
@@ -250,7 +250,7 @@ begin
                 ap_NS_fsm <= "XXX";
         end case;
     end process;
-    add_ln64_fu_70_p2 <= std_logic_vector(unsigned(indvars_iv14_fu_28) + unsigned(ap_const_lv11_7FF));
+    add_ln64_fu_70_p2 <= std_logic_vector(unsigned(indvars_iv14_fu_28) + unsigned(ap_const_lv4_F));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
     ap_CS_fsm_state3 <= ap_CS_fsm(2);
@@ -314,8 +314,8 @@ begin
     distances_we0 <= grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_we0;
     distances_we1 <= grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_distances_we1;
     grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start <= grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg;
-    i_6_fu_60_p2 <= std_logic_vector(unsigned(i_4_fu_24) + unsigned(ap_const_lv11_1));
-    icmp_ln64_fu_54_p2 <= "1" when (i_4_fu_24 = ap_const_lv11_5DB) else "0";
+    i_6_fu_60_p2 <= std_logic_vector(unsigned(i_4_fu_24) + unsigned(ap_const_lv4_1));
+    icmp_ln64_fu_54_p2 <= "1" when (i_4_fu_24 = ap_const_lv4_9) else "0";
     labels_address0 <= grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address0;
     labels_address1 <= grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_address1;
     labels_ce0 <= grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_labels_ce0;

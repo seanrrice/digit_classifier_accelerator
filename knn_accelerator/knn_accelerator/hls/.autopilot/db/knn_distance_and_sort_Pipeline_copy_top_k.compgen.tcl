@@ -18,7 +18,7 @@ eval "::AESL_LIB_XILADAPTER::xil_bram_gen { \
     dir I \
     corename labels \
     op interface \
-    ports { labels_address0 { O 11 vector } labels_ce0 { O 1 bit } labels_q0 { I 4 vector } } \
+    ports { labels_address0 { O 4 vector } labels_ce0 { O 1 bit } labels_q0 { I 4 vector } } \
 } "
 } else {
 puts "@W \[IMPL-110\] Cannot find bus interface model in the library. Ignored generation of bus interface for 'labels'"

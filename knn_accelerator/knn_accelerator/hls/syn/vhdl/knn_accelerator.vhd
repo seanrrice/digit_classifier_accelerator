@@ -282,7 +282,7 @@ end;
 architecture behav of knn_accelerator is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "knn_accelerator_knn_accelerator,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.536120,HLS_SYN_LAT=1406230711,HLS_SYN_TPT=none,HLS_SYN_MEM=19,HLS_SYN_DSP=0,HLS_SYN_FF=13956,HLS_SYN_LUT=10937,HLS_VERSION=2025_1}";
+    "knn_accelerator_knn_accelerator,hls_ip_2025_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=8.536120,HLS_SYN_LAT=12037,HLS_SYN_TPT=none,HLS_SYN_MEM=10,HLS_SYN_DSP=0,HLS_SYN_FF=13974,HLS_SYN_LUT=10946,HLS_VERSION=2025_1}";
     constant ap_const_logic_1 : STD_LOGIC := '1';
     constant ap_const_logic_0 : STD_LOGIC := '0';
     constant ap_ST_fsm_state1 : STD_LOGIC_VECTOR (11 downto 0) := "000000000001";
@@ -307,18 +307,17 @@ architecture behav of knn_accelerator is
     constant C_M_AXI_DATA_WIDTH : INTEGER := 32;
     constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
-    constant ap_const_lv64_3E8 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000001111101000";
+    constant ap_const_lv64_A : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000001010";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
     constant ap_const_lv2_0 : STD_LOGIC_VECTOR (1 downto 0) := "00";
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv4_F : STD_LOGIC_VECTOR (3 downto 0) := "1111";
-    constant ap_const_lv16_0 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    constant ap_const_lv10_0 : STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
+    constant ap_const_lv9_0 : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
     constant ap_const_lv32_2 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000010";
     constant ap_const_lv32_3F : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000111111";
-    constant ap_const_lv10_3E8 : STD_LOGIC_VECTOR (9 downto 0) := "1111101000";
-    constant ap_const_lv10_1 : STD_LOGIC_VECTOR (9 downto 0) := "0000000001";
-    constant ap_const_lv16_31 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000110001";
+    constant ap_const_lv4_A : STD_LOGIC_VECTOR (3 downto 0) := "1010";
+    constant ap_const_lv4_1 : STD_LOGIC_VECTOR (3 downto 0) := "0001";
+    constant ap_const_lv9_31 : STD_LOGIC_VECTOR (8 downto 0) := "000110001";
     constant ap_const_lv1_1 : STD_LOGIC_VECTOR (0 downto 0) := "1";
     constant ap_const_lv64_0 : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
     constant ap_const_lv8_0 : STD_LOGIC_VECTOR (7 downto 0) := "00000000";
@@ -346,124 +345,124 @@ architecture behav of knn_accelerator is
     signal gmem_y_test_blk_n_B : STD_LOGIC;
     signal ap_CS_fsm_state12 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state12 : signal is "none";
-    signal y_train_read_reg_292 : STD_LOGIC_VECTOR (63 downto 0);
-    signal X_train_read_reg_297 : STD_LOGIC_VECTOR (63 downto 0);
-    signal X_test_read_reg_302 : STD_LOGIC_VECTOR (63 downto 0);
-    signal gmem_y_test_addr_reg_325 : STD_LOGIC_VECTOR (63 downto 0);
-    signal phi_mul_load_reg_335 : STD_LOGIC_VECTOR (15 downto 0);
+    signal y_train_read_reg_288 : STD_LOGIC_VECTOR (63 downto 0);
+    signal X_train_read_reg_293 : STD_LOGIC_VECTOR (63 downto 0);
+    signal X_test_read_reg_298 : STD_LOGIC_VECTOR (63 downto 0);
+    signal gmem_y_test_addr_reg_321 : STD_LOGIC_VECTOR (63 downto 0);
+    signal phi_mul_load_reg_331 : STD_LOGIC_VECTOR (8 downto 0);
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
-    signal grp_knn_distance_and_sort_fu_176_ap_start : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_ap_done : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_ap_idle : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_ap_ready : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WLAST : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_RREADY : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_BREADY : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WDATA : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WSTRB : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WLAST : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_RREADY : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_BREADY : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WDATA : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WSTRB : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WLAST : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARID : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_RREADY : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_BREADY : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_top_k_labels_0 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_top_k_labels_0_ap_vld : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_top_k_labels_1 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_top_k_labels_1_ap_vld : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_top_k_labels_2 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_distance_and_sort_fu_176_top_k_labels_2_ap_vld : STD_LOGIC;
-    signal grp_knn_majority_vote_fu_193_ap_start : STD_LOGIC;
-    signal grp_knn_majority_vote_fu_193_ap_done : STD_LOGIC;
-    signal grp_knn_majority_vote_fu_193_ap_idle : STD_LOGIC;
-    signal grp_knn_majority_vote_fu_193_ap_ready : STD_LOGIC;
-    signal grp_knn_majority_vote_fu_193_ap_return : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_ap_start : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_ap_done : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_ap_idle : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_ap_ready : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WLAST : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_RREADY : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_BREADY : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WDATA : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WSTRB : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WLAST : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_RREADY : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_BREADY : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WDATA : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WSTRB : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WLAST : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARVALID : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARADDR : STD_LOGIC_VECTOR (63 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARID : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARLEN : STD_LOGIC_VECTOR (31 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARSIZE : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARBURST : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARLOCK : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARCACHE : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARPROT : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARQOS : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARREGION : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARUSER : STD_LOGIC_VECTOR (0 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_RREADY : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_BREADY : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_top_k_labels_0 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_top_k_labels_0_ap_vld : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_top_k_labels_1 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_top_k_labels_1_ap_vld : STD_LOGIC;
+    signal grp_knn_distance_and_sort_fu_172_top_k_labels_2 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_distance_and_sort_fu_172_top_k_labels_2_ap_vld : STD_LOGIC;
+    signal grp_knn_majority_vote_fu_189_ap_start : STD_LOGIC;
+    signal grp_knn_majority_vote_fu_189_ap_done : STD_LOGIC;
+    signal grp_knn_majority_vote_fu_189_ap_idle : STD_LOGIC;
+    signal grp_knn_majority_vote_fu_189_ap_ready : STD_LOGIC;
+    signal grp_knn_majority_vote_fu_189_ap_return : STD_LOGIC_VECTOR (31 downto 0);
     signal gmem_x_test_0_AWREADY : STD_LOGIC;
     signal gmem_x_test_0_WREADY : STD_LOGIC;
     signal gmem_x_test_0_ARVALID : STD_LOGIC;
@@ -502,24 +501,24 @@ architecture behav of knn_accelerator is
     signal gmem_y_train_0_RDATA : STD_LOGIC_VECTOR (31 downto 0);
     signal gmem_y_train_0_RFIFONUM : STD_LOGIC_VECTOR (8 downto 0);
     signal gmem_y_train_0_BVALID : STD_LOGIC;
-    signal grp_knn_distance_and_sort_fu_176_ap_start_reg : STD_LOGIC := '0';
+    signal grp_knn_distance_and_sort_fu_172_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state5 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
-    signal top_k_labels_fu_120 : STD_LOGIC_VECTOR (3 downto 0);
-    signal top_k_labels_1_fu_124 : STD_LOGIC_VECTOR (3 downto 0);
-    signal top_k_labels_2_fu_128 : STD_LOGIC_VECTOR (3 downto 0);
-    signal grp_knn_majority_vote_fu_193_ap_start_reg : STD_LOGIC := '0';
+    signal top_k_labels_fu_116 : STD_LOGIC_VECTOR (3 downto 0);
+    signal top_k_labels_1_fu_120 : STD_LOGIC_VECTOR (3 downto 0);
+    signal top_k_labels_2_fu_124 : STD_LOGIC_VECTOR (3 downto 0);
+    signal grp_knn_majority_vote_fu_189_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state6 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state6 : signal is "none";
-    signal sext_ln151_fu_211_p1 : STD_LOGIC_VECTOR (63 downto 0);
-    signal phi_mul_fu_112 : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
-    signal add_ln153_fu_255_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal i_fu_116 : STD_LOGIC_VECTOR (9 downto 0) := "0000000000";
-    signal add_ln151_fu_240_p2 : STD_LOGIC_VECTOR (9 downto 0);
+    signal sext_ln151_fu_207_p1 : STD_LOGIC_VECTOR (63 downto 0);
+    signal phi_mul_fu_108 : STD_LOGIC_VECTOR (8 downto 0) := "000000000";
+    signal add_ln153_fu_251_p2 : STD_LOGIC_VECTOR (8 downto 0);
+    signal i_fu_112 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    signal add_ln151_fu_236_p2 : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
-    signal icmp_ln151_fu_234_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal trunc_ln_fu_201_p4 : STD_LOGIC_VECTOR (61 downto 0);
+    signal icmp_ln151_fu_230_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal trunc_ln_fu_197_p4 : STD_LOGIC_VECTOR (61 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (11 downto 0);
     signal ap_ST_fsm_state1_blk : STD_LOGIC;
     signal ap_ST_fsm_state2_blk : STD_LOGIC;
@@ -690,7 +689,7 @@ architecture behav of knn_accelerator is
         top_k_labels_1_ap_vld : OUT STD_LOGIC;
         top_k_labels_2 : OUT STD_LOGIC_VECTOR (3 downto 0);
         top_k_labels_2_ap_vld : OUT STD_LOGIC;
-        idx : IN STD_LOGIC_VECTOR (15 downto 0) );
+        idx : IN STD_LOGIC_VECTOR (8 downto 0) );
     end component;
 
 
@@ -1152,49 +1151,49 @@ architecture behav of knn_accelerator is
 
 
 begin
-    grp_knn_distance_and_sort_fu_176 : component knn_accelerator_knn_distance_and_sort
+    grp_knn_distance_and_sort_fu_172 : component knn_accelerator_knn_distance_and_sort
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_knn_distance_and_sort_fu_176_ap_start,
-        ap_done => grp_knn_distance_and_sort_fu_176_ap_done,
-        ap_idle => grp_knn_distance_and_sort_fu_176_ap_idle,
-        ap_ready => grp_knn_distance_and_sort_fu_176_ap_ready,
-        m_axi_gmem_x_test_0_AWVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWVALID,
+        ap_start => grp_knn_distance_and_sort_fu_172_ap_start,
+        ap_done => grp_knn_distance_and_sort_fu_172_ap_done,
+        ap_idle => grp_knn_distance_and_sort_fu_172_ap_idle,
+        ap_ready => grp_knn_distance_and_sort_fu_172_ap_ready,
+        m_axi_gmem_x_test_0_AWVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWVALID,
         m_axi_gmem_x_test_0_AWREADY => ap_const_logic_0,
-        m_axi_gmem_x_test_0_AWADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWADDR,
-        m_axi_gmem_x_test_0_AWID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWID,
-        m_axi_gmem_x_test_0_AWLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWLEN,
-        m_axi_gmem_x_test_0_AWSIZE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWSIZE,
-        m_axi_gmem_x_test_0_AWBURST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWBURST,
-        m_axi_gmem_x_test_0_AWLOCK => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWLOCK,
-        m_axi_gmem_x_test_0_AWCACHE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWCACHE,
-        m_axi_gmem_x_test_0_AWPROT => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWPROT,
-        m_axi_gmem_x_test_0_AWQOS => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWQOS,
-        m_axi_gmem_x_test_0_AWREGION => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWREGION,
-        m_axi_gmem_x_test_0_AWUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_AWUSER,
-        m_axi_gmem_x_test_0_WVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WVALID,
+        m_axi_gmem_x_test_0_AWADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWADDR,
+        m_axi_gmem_x_test_0_AWID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWID,
+        m_axi_gmem_x_test_0_AWLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWLEN,
+        m_axi_gmem_x_test_0_AWSIZE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWSIZE,
+        m_axi_gmem_x_test_0_AWBURST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWBURST,
+        m_axi_gmem_x_test_0_AWLOCK => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWLOCK,
+        m_axi_gmem_x_test_0_AWCACHE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWCACHE,
+        m_axi_gmem_x_test_0_AWPROT => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWPROT,
+        m_axi_gmem_x_test_0_AWQOS => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWQOS,
+        m_axi_gmem_x_test_0_AWREGION => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWREGION,
+        m_axi_gmem_x_test_0_AWUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_AWUSER,
+        m_axi_gmem_x_test_0_WVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WVALID,
         m_axi_gmem_x_test_0_WREADY => ap_const_logic_0,
-        m_axi_gmem_x_test_0_WDATA => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WDATA,
-        m_axi_gmem_x_test_0_WSTRB => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WSTRB,
-        m_axi_gmem_x_test_0_WLAST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WLAST,
-        m_axi_gmem_x_test_0_WID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WID,
-        m_axi_gmem_x_test_0_WUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_WUSER,
-        m_axi_gmem_x_test_0_ARVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARVALID,
+        m_axi_gmem_x_test_0_WDATA => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WDATA,
+        m_axi_gmem_x_test_0_WSTRB => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WSTRB,
+        m_axi_gmem_x_test_0_WLAST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WLAST,
+        m_axi_gmem_x_test_0_WID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WID,
+        m_axi_gmem_x_test_0_WUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_WUSER,
+        m_axi_gmem_x_test_0_ARVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARVALID,
         m_axi_gmem_x_test_0_ARREADY => gmem_x_test_0_ARREADY,
-        m_axi_gmem_x_test_0_ARADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARADDR,
-        m_axi_gmem_x_test_0_ARID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARID,
-        m_axi_gmem_x_test_0_ARLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARLEN,
-        m_axi_gmem_x_test_0_ARSIZE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARSIZE,
-        m_axi_gmem_x_test_0_ARBURST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARBURST,
-        m_axi_gmem_x_test_0_ARLOCK => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARLOCK,
-        m_axi_gmem_x_test_0_ARCACHE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARCACHE,
-        m_axi_gmem_x_test_0_ARPROT => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARPROT,
-        m_axi_gmem_x_test_0_ARQOS => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARQOS,
-        m_axi_gmem_x_test_0_ARREGION => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARREGION,
-        m_axi_gmem_x_test_0_ARUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARUSER,
+        m_axi_gmem_x_test_0_ARADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARADDR,
+        m_axi_gmem_x_test_0_ARID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARID,
+        m_axi_gmem_x_test_0_ARLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARLEN,
+        m_axi_gmem_x_test_0_ARSIZE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARSIZE,
+        m_axi_gmem_x_test_0_ARBURST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARBURST,
+        m_axi_gmem_x_test_0_ARLOCK => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARLOCK,
+        m_axi_gmem_x_test_0_ARCACHE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARCACHE,
+        m_axi_gmem_x_test_0_ARPROT => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARPROT,
+        m_axi_gmem_x_test_0_ARQOS => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARQOS,
+        m_axi_gmem_x_test_0_ARREGION => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARREGION,
+        m_axi_gmem_x_test_0_ARUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARUSER,
         m_axi_gmem_x_test_0_RVALID => gmem_x_test_0_RVALID,
-        m_axi_gmem_x_test_0_RREADY => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_RREADY,
+        m_axi_gmem_x_test_0_RREADY => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_RREADY,
         m_axi_gmem_x_test_0_RDATA => gmem_x_test_0_RDATA,
         m_axi_gmem_x_test_0_RLAST => ap_const_logic_0,
         m_axi_gmem_x_test_0_RID => ap_const_lv1_0,
@@ -1202,46 +1201,46 @@ begin
         m_axi_gmem_x_test_0_RUSER => ap_const_lv1_0,
         m_axi_gmem_x_test_0_RRESP => ap_const_lv2_0,
         m_axi_gmem_x_test_0_BVALID => ap_const_logic_0,
-        m_axi_gmem_x_test_0_BREADY => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_BREADY,
+        m_axi_gmem_x_test_0_BREADY => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_BREADY,
         m_axi_gmem_x_test_0_BRESP => ap_const_lv2_0,
         m_axi_gmem_x_test_0_BID => ap_const_lv1_0,
         m_axi_gmem_x_test_0_BUSER => ap_const_lv1_0,
-        test_point => X_test_read_reg_302,
-        m_axi_gmem_x_train_0_AWVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWVALID,
+        test_point => X_test_read_reg_298,
+        m_axi_gmem_x_train_0_AWVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWVALID,
         m_axi_gmem_x_train_0_AWREADY => ap_const_logic_0,
-        m_axi_gmem_x_train_0_AWADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWADDR,
-        m_axi_gmem_x_train_0_AWID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWID,
-        m_axi_gmem_x_train_0_AWLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWLEN,
-        m_axi_gmem_x_train_0_AWSIZE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWSIZE,
-        m_axi_gmem_x_train_0_AWBURST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWBURST,
-        m_axi_gmem_x_train_0_AWLOCK => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWLOCK,
-        m_axi_gmem_x_train_0_AWCACHE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWCACHE,
-        m_axi_gmem_x_train_0_AWPROT => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWPROT,
-        m_axi_gmem_x_train_0_AWQOS => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWQOS,
-        m_axi_gmem_x_train_0_AWREGION => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWREGION,
-        m_axi_gmem_x_train_0_AWUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_AWUSER,
-        m_axi_gmem_x_train_0_WVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WVALID,
+        m_axi_gmem_x_train_0_AWADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWADDR,
+        m_axi_gmem_x_train_0_AWID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWID,
+        m_axi_gmem_x_train_0_AWLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWLEN,
+        m_axi_gmem_x_train_0_AWSIZE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWSIZE,
+        m_axi_gmem_x_train_0_AWBURST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWBURST,
+        m_axi_gmem_x_train_0_AWLOCK => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWLOCK,
+        m_axi_gmem_x_train_0_AWCACHE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWCACHE,
+        m_axi_gmem_x_train_0_AWPROT => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWPROT,
+        m_axi_gmem_x_train_0_AWQOS => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWQOS,
+        m_axi_gmem_x_train_0_AWREGION => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWREGION,
+        m_axi_gmem_x_train_0_AWUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_AWUSER,
+        m_axi_gmem_x_train_0_WVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WVALID,
         m_axi_gmem_x_train_0_WREADY => ap_const_logic_0,
-        m_axi_gmem_x_train_0_WDATA => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WDATA,
-        m_axi_gmem_x_train_0_WSTRB => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WSTRB,
-        m_axi_gmem_x_train_0_WLAST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WLAST,
-        m_axi_gmem_x_train_0_WID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WID,
-        m_axi_gmem_x_train_0_WUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_WUSER,
-        m_axi_gmem_x_train_0_ARVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARVALID,
+        m_axi_gmem_x_train_0_WDATA => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WDATA,
+        m_axi_gmem_x_train_0_WSTRB => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WSTRB,
+        m_axi_gmem_x_train_0_WLAST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WLAST,
+        m_axi_gmem_x_train_0_WID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WID,
+        m_axi_gmem_x_train_0_WUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_WUSER,
+        m_axi_gmem_x_train_0_ARVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARVALID,
         m_axi_gmem_x_train_0_ARREADY => gmem_x_train_0_ARREADY,
-        m_axi_gmem_x_train_0_ARADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARADDR,
-        m_axi_gmem_x_train_0_ARID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARID,
-        m_axi_gmem_x_train_0_ARLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARLEN,
-        m_axi_gmem_x_train_0_ARSIZE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARSIZE,
-        m_axi_gmem_x_train_0_ARBURST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARBURST,
-        m_axi_gmem_x_train_0_ARLOCK => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARLOCK,
-        m_axi_gmem_x_train_0_ARCACHE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARCACHE,
-        m_axi_gmem_x_train_0_ARPROT => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARPROT,
-        m_axi_gmem_x_train_0_ARQOS => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARQOS,
-        m_axi_gmem_x_train_0_ARREGION => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARREGION,
-        m_axi_gmem_x_train_0_ARUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARUSER,
+        m_axi_gmem_x_train_0_ARADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARADDR,
+        m_axi_gmem_x_train_0_ARID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARID,
+        m_axi_gmem_x_train_0_ARLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARLEN,
+        m_axi_gmem_x_train_0_ARSIZE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARSIZE,
+        m_axi_gmem_x_train_0_ARBURST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARBURST,
+        m_axi_gmem_x_train_0_ARLOCK => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARLOCK,
+        m_axi_gmem_x_train_0_ARCACHE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARCACHE,
+        m_axi_gmem_x_train_0_ARPROT => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARPROT,
+        m_axi_gmem_x_train_0_ARQOS => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARQOS,
+        m_axi_gmem_x_train_0_ARREGION => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARREGION,
+        m_axi_gmem_x_train_0_ARUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARUSER,
         m_axi_gmem_x_train_0_RVALID => gmem_x_train_0_RVALID,
-        m_axi_gmem_x_train_0_RREADY => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_RREADY,
+        m_axi_gmem_x_train_0_RREADY => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_RREADY,
         m_axi_gmem_x_train_0_RDATA => gmem_x_train_0_RDATA,
         m_axi_gmem_x_train_0_RLAST => ap_const_logic_0,
         m_axi_gmem_x_train_0_RID => ap_const_lv1_0,
@@ -1249,46 +1248,46 @@ begin
         m_axi_gmem_x_train_0_RUSER => ap_const_lv1_0,
         m_axi_gmem_x_train_0_RRESP => ap_const_lv2_0,
         m_axi_gmem_x_train_0_BVALID => ap_const_logic_0,
-        m_axi_gmem_x_train_0_BREADY => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_BREADY,
+        m_axi_gmem_x_train_0_BREADY => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_BREADY,
         m_axi_gmem_x_train_0_BRESP => ap_const_lv2_0,
         m_axi_gmem_x_train_0_BID => ap_const_lv1_0,
         m_axi_gmem_x_train_0_BUSER => ap_const_lv1_0,
-        X_train => X_train_read_reg_297,
-        m_axi_gmem_y_train_0_AWVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWVALID,
+        X_train => X_train_read_reg_293,
+        m_axi_gmem_y_train_0_AWVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWVALID,
         m_axi_gmem_y_train_0_AWREADY => ap_const_logic_0,
-        m_axi_gmem_y_train_0_AWADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWADDR,
-        m_axi_gmem_y_train_0_AWID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWID,
-        m_axi_gmem_y_train_0_AWLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWLEN,
-        m_axi_gmem_y_train_0_AWSIZE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWSIZE,
-        m_axi_gmem_y_train_0_AWBURST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWBURST,
-        m_axi_gmem_y_train_0_AWLOCK => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWLOCK,
-        m_axi_gmem_y_train_0_AWCACHE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWCACHE,
-        m_axi_gmem_y_train_0_AWPROT => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWPROT,
-        m_axi_gmem_y_train_0_AWQOS => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWQOS,
-        m_axi_gmem_y_train_0_AWREGION => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWREGION,
-        m_axi_gmem_y_train_0_AWUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_AWUSER,
-        m_axi_gmem_y_train_0_WVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WVALID,
+        m_axi_gmem_y_train_0_AWADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWADDR,
+        m_axi_gmem_y_train_0_AWID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWID,
+        m_axi_gmem_y_train_0_AWLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWLEN,
+        m_axi_gmem_y_train_0_AWSIZE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWSIZE,
+        m_axi_gmem_y_train_0_AWBURST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWBURST,
+        m_axi_gmem_y_train_0_AWLOCK => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWLOCK,
+        m_axi_gmem_y_train_0_AWCACHE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWCACHE,
+        m_axi_gmem_y_train_0_AWPROT => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWPROT,
+        m_axi_gmem_y_train_0_AWQOS => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWQOS,
+        m_axi_gmem_y_train_0_AWREGION => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWREGION,
+        m_axi_gmem_y_train_0_AWUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_AWUSER,
+        m_axi_gmem_y_train_0_WVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WVALID,
         m_axi_gmem_y_train_0_WREADY => ap_const_logic_0,
-        m_axi_gmem_y_train_0_WDATA => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WDATA,
-        m_axi_gmem_y_train_0_WSTRB => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WSTRB,
-        m_axi_gmem_y_train_0_WLAST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WLAST,
-        m_axi_gmem_y_train_0_WID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WID,
-        m_axi_gmem_y_train_0_WUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_WUSER,
-        m_axi_gmem_y_train_0_ARVALID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARVALID,
+        m_axi_gmem_y_train_0_WDATA => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WDATA,
+        m_axi_gmem_y_train_0_WSTRB => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WSTRB,
+        m_axi_gmem_y_train_0_WLAST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WLAST,
+        m_axi_gmem_y_train_0_WID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WID,
+        m_axi_gmem_y_train_0_WUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_WUSER,
+        m_axi_gmem_y_train_0_ARVALID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARVALID,
         m_axi_gmem_y_train_0_ARREADY => gmem_y_train_0_ARREADY,
-        m_axi_gmem_y_train_0_ARADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARADDR,
-        m_axi_gmem_y_train_0_ARID => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARID,
-        m_axi_gmem_y_train_0_ARLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARLEN,
-        m_axi_gmem_y_train_0_ARSIZE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARSIZE,
-        m_axi_gmem_y_train_0_ARBURST => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARBURST,
-        m_axi_gmem_y_train_0_ARLOCK => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARLOCK,
-        m_axi_gmem_y_train_0_ARCACHE => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARCACHE,
-        m_axi_gmem_y_train_0_ARPROT => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARPROT,
-        m_axi_gmem_y_train_0_ARQOS => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARQOS,
-        m_axi_gmem_y_train_0_ARREGION => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARREGION,
-        m_axi_gmem_y_train_0_ARUSER => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARUSER,
+        m_axi_gmem_y_train_0_ARADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARADDR,
+        m_axi_gmem_y_train_0_ARID => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARID,
+        m_axi_gmem_y_train_0_ARLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARLEN,
+        m_axi_gmem_y_train_0_ARSIZE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARSIZE,
+        m_axi_gmem_y_train_0_ARBURST => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARBURST,
+        m_axi_gmem_y_train_0_ARLOCK => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARLOCK,
+        m_axi_gmem_y_train_0_ARCACHE => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARCACHE,
+        m_axi_gmem_y_train_0_ARPROT => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARPROT,
+        m_axi_gmem_y_train_0_ARQOS => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARQOS,
+        m_axi_gmem_y_train_0_ARREGION => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARREGION,
+        m_axi_gmem_y_train_0_ARUSER => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARUSER,
         m_axi_gmem_y_train_0_RVALID => gmem_y_train_0_RVALID,
-        m_axi_gmem_y_train_0_RREADY => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_RREADY,
+        m_axi_gmem_y_train_0_RREADY => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_RREADY,
         m_axi_gmem_y_train_0_RDATA => gmem_y_train_0_RDATA,
         m_axi_gmem_y_train_0_RLAST => ap_const_logic_0,
         m_axi_gmem_y_train_0_RID => ap_const_lv1_0,
@@ -1296,31 +1295,31 @@ begin
         m_axi_gmem_y_train_0_RUSER => ap_const_lv1_0,
         m_axi_gmem_y_train_0_RRESP => ap_const_lv2_0,
         m_axi_gmem_y_train_0_BVALID => ap_const_logic_0,
-        m_axi_gmem_y_train_0_BREADY => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_BREADY,
+        m_axi_gmem_y_train_0_BREADY => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_BREADY,
         m_axi_gmem_y_train_0_BRESP => ap_const_lv2_0,
         m_axi_gmem_y_train_0_BID => ap_const_lv1_0,
         m_axi_gmem_y_train_0_BUSER => ap_const_lv1_0,
-        y_train => y_train_read_reg_292,
-        top_k_labels_0 => grp_knn_distance_and_sort_fu_176_top_k_labels_0,
-        top_k_labels_0_ap_vld => grp_knn_distance_and_sort_fu_176_top_k_labels_0_ap_vld,
-        top_k_labels_1 => grp_knn_distance_and_sort_fu_176_top_k_labels_1,
-        top_k_labels_1_ap_vld => grp_knn_distance_and_sort_fu_176_top_k_labels_1_ap_vld,
-        top_k_labels_2 => grp_knn_distance_and_sort_fu_176_top_k_labels_2,
-        top_k_labels_2_ap_vld => grp_knn_distance_and_sort_fu_176_top_k_labels_2_ap_vld,
-        idx => phi_mul_load_reg_335);
+        y_train => y_train_read_reg_288,
+        top_k_labels_0 => grp_knn_distance_and_sort_fu_172_top_k_labels_0,
+        top_k_labels_0_ap_vld => grp_knn_distance_and_sort_fu_172_top_k_labels_0_ap_vld,
+        top_k_labels_1 => grp_knn_distance_and_sort_fu_172_top_k_labels_1,
+        top_k_labels_1_ap_vld => grp_knn_distance_and_sort_fu_172_top_k_labels_1_ap_vld,
+        top_k_labels_2 => grp_knn_distance_and_sort_fu_172_top_k_labels_2,
+        top_k_labels_2_ap_vld => grp_knn_distance_and_sort_fu_172_top_k_labels_2_ap_vld,
+        idx => phi_mul_load_reg_331);
 
-    grp_knn_majority_vote_fu_193 : component knn_accelerator_knn_majority_vote
+    grp_knn_majority_vote_fu_189 : component knn_accelerator_knn_majority_vote
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => grp_knn_majority_vote_fu_193_ap_start,
-        ap_done => grp_knn_majority_vote_fu_193_ap_done,
-        ap_idle => grp_knn_majority_vote_fu_193_ap_idle,
-        ap_ready => grp_knn_majority_vote_fu_193_ap_ready,
-        top_k_labels_read => top_k_labels_fu_120,
-        top_k_labels_read_10 => top_k_labels_1_fu_124,
-        top_k_labels_read_11 => top_k_labels_2_fu_128,
-        ap_return => grp_knn_majority_vote_fu_193_ap_return);
+        ap_start => grp_knn_majority_vote_fu_189_ap_start,
+        ap_done => grp_knn_majority_vote_fu_189_ap_done,
+        ap_idle => grp_knn_majority_vote_fu_189_ap_idle,
+        ap_ready => grp_knn_majority_vote_fu_189_ap_ready,
+        top_k_labels_read => top_k_labels_fu_116,
+        top_k_labels_read_10 => top_k_labels_1_fu_120,
+        top_k_labels_read_11 => top_k_labels_2_fu_124,
+        ap_return => grp_knn_majority_vote_fu_189_ap_return);
 
     control_s_axi_U : component knn_accelerator_control_s_axi
     generic map (
@@ -1458,8 +1457,8 @@ begin
         ACLK_EN => ap_const_logic_1,
         I_CH0_ARVALID => gmem_x_test_0_ARVALID,
         I_CH0_ARREADY => gmem_x_test_0_ARREADY,
-        I_CH0_ARADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARADDR,
-        I_CH0_ARLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARLEN,
+        I_CH0_ARADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARADDR,
+        I_CH0_ARLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARLEN,
         I_CH0_RVALID => gmem_x_test_0_RVALID,
         I_CH0_RREADY => gmem_x_test_0_RREADY,
         I_CH0_RDATA => gmem_x_test_0_RDATA,
@@ -1550,8 +1549,8 @@ begin
         ACLK_EN => ap_const_logic_1,
         I_CH0_ARVALID => gmem_x_train_0_ARVALID,
         I_CH0_ARREADY => gmem_x_train_0_ARREADY,
-        I_CH0_ARADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARADDR,
-        I_CH0_ARLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARLEN,
+        I_CH0_ARADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARADDR,
+        I_CH0_ARLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARLEN,
         I_CH0_RVALID => gmem_x_train_0_RVALID,
         I_CH0_RREADY => gmem_x_train_0_RREADY,
         I_CH0_RDATA => gmem_x_train_0_RDATA,
@@ -1650,11 +1649,11 @@ begin
         I_CH0_RFIFONUM => gmem_y_test_0_RFIFONUM,
         I_CH0_AWVALID => gmem_y_test_0_AWVALID,
         I_CH0_AWREADY => gmem_y_test_0_AWREADY,
-        I_CH0_AWADDR => gmem_y_test_addr_reg_325,
+        I_CH0_AWADDR => gmem_y_test_addr_reg_321,
         I_CH0_AWLEN => gmem_y_test_0_AWLEN,
         I_CH0_WVALID => gmem_y_test_0_WVALID,
         I_CH0_WREADY => gmem_y_test_0_WREADY,
-        I_CH0_WDATA => grp_knn_majority_vote_fu_193_ap_return,
+        I_CH0_WDATA => grp_knn_majority_vote_fu_189_ap_return,
         I_CH0_WSTRB => ap_const_lv4_F,
         I_CH0_BVALID => gmem_y_test_0_BVALID,
         I_CH0_BREADY => gmem_y_test_0_BREADY);
@@ -1734,8 +1733,8 @@ begin
         ACLK_EN => ap_const_logic_1,
         I_CH0_ARVALID => gmem_y_train_0_ARVALID,
         I_CH0_ARREADY => gmem_y_train_0_ARREADY,
-        I_CH0_ARADDR => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARADDR,
-        I_CH0_ARLEN => grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARLEN,
+        I_CH0_ARADDR => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARADDR,
+        I_CH0_ARLEN => grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARLEN,
         I_CH0_RVALID => gmem_y_train_0_RVALID,
         I_CH0_RREADY => gmem_y_train_0_RREADY,
         I_CH0_RDATA => gmem_y_train_0_RDATA,
@@ -1767,56 +1766,56 @@ begin
     end process;
 
 
-    grp_knn_distance_and_sort_fu_176_ap_start_reg_assign_proc : process(ap_clk)
+    grp_knn_distance_and_sort_fu_172_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_knn_distance_and_sort_fu_176_ap_start_reg <= ap_const_logic_0;
+                grp_knn_distance_and_sort_fu_172_ap_start_reg <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
-                    grp_knn_distance_and_sort_fu_176_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_knn_distance_and_sort_fu_176_ap_ready = ap_const_logic_1)) then 
-                    grp_knn_distance_and_sort_fu_176_ap_start_reg <= ap_const_logic_0;
+                    grp_knn_distance_and_sort_fu_172_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_knn_distance_and_sort_fu_172_ap_ready = ap_const_logic_1)) then 
+                    grp_knn_distance_and_sort_fu_172_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    grp_knn_majority_vote_fu_193_ap_start_reg_assign_proc : process(ap_clk)
+    grp_knn_majority_vote_fu_189_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst_n_inv = '1') then
-                grp_knn_majority_vote_fu_193_ap_start_reg <= ap_const_logic_0;
+                grp_knn_majority_vote_fu_189_ap_start_reg <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
-                    grp_knn_majority_vote_fu_193_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_knn_majority_vote_fu_193_ap_ready = ap_const_logic_1)) then 
-                    grp_knn_majority_vote_fu_193_ap_start_reg <= ap_const_logic_0;
+                    grp_knn_majority_vote_fu_189_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_knn_majority_vote_fu_189_ap_ready = ap_const_logic_1)) then 
+                    grp_knn_majority_vote_fu_189_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    i_fu_116_assign_proc : process (ap_clk)
+    i_fu_112_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start = ap_const_logic_1))) then 
-                i_fu_116 <= ap_const_lv10_0;
-            elsif (((icmp_ln151_fu_234_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
-                i_fu_116 <= add_ln151_fu_240_p2;
+                i_fu_112 <= ap_const_lv4_0;
+            elsif (((icmp_ln151_fu_230_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+                i_fu_112 <= add_ln151_fu_236_p2;
             end if; 
         end if;
     end process;
 
-    phi_mul_fu_112_assign_proc : process (ap_clk)
+    phi_mul_fu_108_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
             if (((ap_const_logic_1 = ap_CS_fsm_state1) and (ap_start = ap_const_logic_1))) then 
-                phi_mul_fu_112 <= ap_const_lv16_0;
+                phi_mul_fu_108 <= ap_const_lv9_0;
             elsif ((ap_const_logic_1 = ap_CS_fsm_state4)) then 
-                phi_mul_fu_112 <= add_ln153_fu_255_p2;
+                phi_mul_fu_108 <= add_ln153_fu_251_p2;
             end if; 
         end if;
     end process;
@@ -1824,10 +1823,10 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state1)) then
-                X_test_read_reg_302 <= X_test;
-                X_train_read_reg_297 <= X_train;
-                gmem_y_test_addr_reg_325 <= sext_ln151_fu_211_p1;
-                y_train_read_reg_292 <= y_train;
+                X_test_read_reg_298 <= X_test;
+                X_train_read_reg_293 <= X_train;
+                gmem_y_test_addr_reg_321 <= sext_ln151_fu_207_p1;
+                y_train_read_reg_288 <= y_train;
             end if;
         end if;
     end process;
@@ -1835,36 +1834,36 @@ begin
     begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state4)) then
-                phi_mul_load_reg_335 <= phi_mul_fu_112;
+                phi_mul_load_reg_331 <= phi_mul_fu_108;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((grp_knn_distance_and_sort_fu_176_top_k_labels_1_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
-                top_k_labels_1_fu_124 <= grp_knn_distance_and_sort_fu_176_top_k_labels_1;
+            if (((grp_knn_distance_and_sort_fu_172_top_k_labels_1_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
+                top_k_labels_1_fu_120 <= grp_knn_distance_and_sort_fu_172_top_k_labels_1;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((grp_knn_distance_and_sort_fu_176_top_k_labels_2_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
-                top_k_labels_2_fu_128 <= grp_knn_distance_and_sort_fu_176_top_k_labels_2;
+            if (((grp_knn_distance_and_sort_fu_172_top_k_labels_2_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
+                top_k_labels_2_fu_124 <= grp_knn_distance_and_sort_fu_172_top_k_labels_2;
             end if;
         end if;
     end process;
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((grp_knn_distance_and_sort_fu_176_top_k_labels_0_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
-                top_k_labels_fu_120 <= grp_knn_distance_and_sort_fu_176_top_k_labels_0;
+            if (((grp_knn_distance_and_sort_fu_172_top_k_labels_0_ap_vld = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
+                top_k_labels_fu_116 <= grp_knn_distance_and_sort_fu_172_top_k_labels_0;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state2, ap_CS_fsm_state7, ap_CS_fsm_state12, grp_knn_distance_and_sort_fu_176_ap_done, grp_knn_majority_vote_fu_193_ap_done, gmem_y_test_0_AWREADY, gmem_y_test_0_WREADY, gmem_y_test_0_BVALID, ap_CS_fsm_state5, ap_CS_fsm_state3, icmp_ln151_fu_234_p2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state2, ap_CS_fsm_state7, ap_CS_fsm_state12, grp_knn_distance_and_sort_fu_172_ap_done, grp_knn_majority_vote_fu_189_ap_done, gmem_y_test_0_AWREADY, gmem_y_test_0_WREADY, gmem_y_test_0_BVALID, ap_CS_fsm_state5, ap_CS_fsm_state3, icmp_ln151_fu_230_p2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -1880,7 +1879,7 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 end if;
             when ap_ST_fsm_state3 => 
-                if (((icmp_ln151_fu_234_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                if (((icmp_ln151_fu_230_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
                     ap_NS_fsm <= ap_ST_fsm_state8;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state4;
@@ -1888,7 +1887,7 @@ begin
             when ap_ST_fsm_state4 => 
                 ap_NS_fsm <= ap_ST_fsm_state5;
             when ap_ST_fsm_state5 => 
-                if (((grp_knn_distance_and_sort_fu_176_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
+                if (((grp_knn_distance_and_sort_fu_172_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state5))) then
                     ap_NS_fsm <= ap_ST_fsm_state6;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state5;
@@ -1896,7 +1895,7 @@ begin
             when ap_ST_fsm_state6 => 
                 ap_NS_fsm <= ap_ST_fsm_state7;
             when ap_ST_fsm_state7 => 
-                if ((not(((gmem_y_test_0_WREADY = ap_const_logic_0) or (grp_knn_majority_vote_fu_193_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state7))) then
+                if ((not(((gmem_y_test_0_WREADY = ap_const_logic_0) or (grp_knn_majority_vote_fu_189_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state7))) then
                     ap_NS_fsm <= ap_ST_fsm_state3;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state7;
@@ -1919,8 +1918,8 @@ begin
                 ap_NS_fsm <= "XXXXXXXXXXXX";
         end case;
     end process;
-    add_ln151_fu_240_p2 <= std_logic_vector(unsigned(i_fu_116) + unsigned(ap_const_lv10_1));
-    add_ln153_fu_255_p2 <= std_logic_vector(unsigned(phi_mul_fu_112) + unsigned(ap_const_lv16_31));
+    add_ln151_fu_236_p2 <= std_logic_vector(unsigned(i_fu_112) + unsigned(ap_const_lv4_1));
+    add_ln153_fu_251_p2 <= std_logic_vector(unsigned(phi_mul_fu_108) + unsigned(ap_const_lv9_31));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state12 <= ap_CS_fsm(11);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
@@ -1964,9 +1963,9 @@ begin
     ap_ST_fsm_state3_blk <= ap_const_logic_0;
     ap_ST_fsm_state4_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state5_blk_assign_proc : process(grp_knn_distance_and_sort_fu_176_ap_done)
+    ap_ST_fsm_state5_blk_assign_proc : process(grp_knn_distance_and_sort_fu_172_ap_done)
     begin
-        if ((grp_knn_distance_and_sort_fu_176_ap_done = ap_const_logic_0)) then 
+        if ((grp_knn_distance_and_sort_fu_172_ap_done = ap_const_logic_0)) then 
             ap_ST_fsm_state5_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state5_blk <= ap_const_logic_0;
@@ -1975,9 +1974,9 @@ begin
 
     ap_ST_fsm_state6_blk <= ap_const_logic_0;
 
-    ap_ST_fsm_state7_blk_assign_proc : process(grp_knn_majority_vote_fu_193_ap_done, gmem_y_test_0_WREADY)
+    ap_ST_fsm_state7_blk_assign_proc : process(grp_knn_majority_vote_fu_189_ap_done, gmem_y_test_0_WREADY)
     begin
-        if (((gmem_y_test_0_WREADY = ap_const_logic_0) or (grp_knn_majority_vote_fu_193_ap_done = ap_const_logic_0))) then 
+        if (((gmem_y_test_0_WREADY = ap_const_logic_0) or (grp_knn_majority_vote_fu_189_ap_done = ap_const_logic_0))) then 
             ap_ST_fsm_state7_blk <= ap_const_logic_1;
         else 
             ap_ST_fsm_state7_blk <= ap_const_logic_0;
@@ -2023,46 +2022,46 @@ begin
     end process;
 
 
-    gmem_x_test_0_ARVALID_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARVALID, ap_CS_fsm_state5)
+    gmem_x_test_0_ARVALID_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARVALID, ap_CS_fsm_state5)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            gmem_x_test_0_ARVALID <= grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_ARVALID;
+            gmem_x_test_0_ARVALID <= grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_ARVALID;
         else 
             gmem_x_test_0_ARVALID <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    gmem_x_test_0_RREADY_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_RREADY, ap_CS_fsm_state5)
+    gmem_x_test_0_RREADY_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_RREADY, ap_CS_fsm_state5)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            gmem_x_test_0_RREADY <= grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_test_0_RREADY;
+            gmem_x_test_0_RREADY <= grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_test_0_RREADY;
         else 
             gmem_x_test_0_RREADY <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    gmem_x_train_0_ARVALID_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARVALID, ap_CS_fsm_state5)
+    gmem_x_train_0_ARVALID_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARVALID, ap_CS_fsm_state5)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            gmem_x_train_0_ARVALID <= grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_ARVALID;
+            gmem_x_train_0_ARVALID <= grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_ARVALID;
         else 
             gmem_x_train_0_ARVALID <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    gmem_x_train_0_RREADY_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_RREADY, ap_CS_fsm_state5)
+    gmem_x_train_0_RREADY_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_RREADY, ap_CS_fsm_state5)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            gmem_x_train_0_RREADY <= grp_knn_distance_and_sort_fu_176_m_axi_gmem_x_train_0_RREADY;
+            gmem_x_train_0_RREADY <= grp_knn_distance_and_sort_fu_172_m_axi_gmem_x_train_0_RREADY;
         else 
             gmem_x_train_0_RREADY <= ap_const_logic_0;
         end if; 
     end process;
 
-    gmem_y_test_0_AWLEN <= ap_const_lv64_3E8(32 - 1 downto 0);
+    gmem_y_test_0_AWLEN <= ap_const_lv64_A(32 - 1 downto 0);
 
     gmem_y_test_0_AWVALID_assign_proc : process(ap_CS_fsm_state2, gmem_y_test_0_AWREADY)
     begin
@@ -2084,9 +2083,9 @@ begin
     end process;
 
 
-    gmem_y_test_0_WVALID_assign_proc : process(ap_CS_fsm_state7, grp_knn_majority_vote_fu_193_ap_done, gmem_y_test_0_WREADY)
+    gmem_y_test_0_WVALID_assign_proc : process(ap_CS_fsm_state7, grp_knn_majority_vote_fu_189_ap_done, gmem_y_test_0_WREADY)
     begin
-        if ((not(((gmem_y_test_0_WREADY = ap_const_logic_0) or (grp_knn_majority_vote_fu_193_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state7))) then 
+        if ((not(((gmem_y_test_0_WREADY = ap_const_logic_0) or (grp_knn_majority_vote_fu_189_ap_done = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state7))) then 
             gmem_y_test_0_WVALID <= ap_const_logic_1;
         else 
             gmem_y_test_0_WVALID <= ap_const_logic_0;
@@ -2124,29 +2123,29 @@ begin
     end process;
 
 
-    gmem_y_train_0_ARVALID_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARVALID, ap_CS_fsm_state5)
+    gmem_y_train_0_ARVALID_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARVALID, ap_CS_fsm_state5)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            gmem_y_train_0_ARVALID <= grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_ARVALID;
+            gmem_y_train_0_ARVALID <= grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_ARVALID;
         else 
             gmem_y_train_0_ARVALID <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    gmem_y_train_0_RREADY_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_RREADY, ap_CS_fsm_state5)
+    gmem_y_train_0_RREADY_assign_proc : process(ap_CS_fsm_state4, grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_RREADY, ap_CS_fsm_state5)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_state5) or (ap_const_logic_1 = ap_CS_fsm_state4))) then 
-            gmem_y_train_0_RREADY <= grp_knn_distance_and_sort_fu_176_m_axi_gmem_y_train_0_RREADY;
+            gmem_y_train_0_RREADY <= grp_knn_distance_and_sort_fu_172_m_axi_gmem_y_train_0_RREADY;
         else 
             gmem_y_train_0_RREADY <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_knn_distance_and_sort_fu_176_ap_start <= grp_knn_distance_and_sort_fu_176_ap_start_reg;
-    grp_knn_majority_vote_fu_193_ap_start <= grp_knn_majority_vote_fu_193_ap_start_reg;
-    icmp_ln151_fu_234_p2 <= "1" when (i_fu_116 = ap_const_lv10_3E8) else "0";
-        sext_ln151_fu_211_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_201_p4),64));
+    grp_knn_distance_and_sort_fu_172_ap_start <= grp_knn_distance_and_sort_fu_172_ap_start_reg;
+    grp_knn_majority_vote_fu_189_ap_start <= grp_knn_majority_vote_fu_189_ap_start_reg;
+    icmp_ln151_fu_230_p2 <= "1" when (i_fu_112 = ap_const_lv4_A) else "0";
+        sext_ln151_fu_207_p1 <= std_logic_vector(IEEE.numeric_std.resize(signed(trunc_ln_fu_197_p4),64));
 
-    trunc_ln_fu_201_p4 <= y_test(63 downto 2);
+    trunc_ln_fu_197_p4 <= y_test(63 downto 2);
 end behav;

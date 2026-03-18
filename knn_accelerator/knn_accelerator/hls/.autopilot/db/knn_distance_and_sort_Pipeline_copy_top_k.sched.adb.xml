@@ -145,7 +145,7 @@ for.inc87.split:0 %zext_ln77 = zext i2 %i_5
 </and_exp></or_exp>
 </condition>
 
-<Node id="18" bw="11" op_0_bw="4" op_1_bw="64" op_2_bw="64">
+<Node id="18" bw="4" op_0_bw="4" op_1_bw="64" op_2_bw="64">
 <![CDATA[
 for.inc87.split:4 %labels_addr_1 = getelementptr i4 %labels, i64 0, i64 %zext_ln77
 
@@ -161,9 +161,9 @@ for.inc87.split:4 %labels_addr_1 = getelementptr i4 %labels, i64 0, i64 %zext_ln
 </and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="4" op_0_bw="11">
+<Node id="19" bw="4" op_0_bw="4">
 <![CDATA[
-for.inc87.split:5 %labels_load = load i11 %labels_addr_1
+for.inc87.split:5 %labels_load = load i4 %labels_addr_1
 
 ]]></Node>
 <StgValue><ssdm name="labels_load"/></StgValue>
@@ -288,9 +288,9 @@ for.inc87.split:3 %specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName,
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="19" bw="4" op_0_bw="11">
+<Node id="19" bw="4" op_0_bw="4">
 <![CDATA[
-for.inc87.split:5 %labels_load = load i11 %labels_addr_1
+for.inc87.split:5 %labels_load = load i4 %labels_addr_1
 
 ]]></Node>
 <StgValue><ssdm name="labels_load"/></StgValue>

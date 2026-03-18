@@ -85,7 +85,7 @@ Args:
   - String:          'Sequential '
   - Direction:       write
   - String:          ' of length '
-  - Length:          '1000'
+  - Length:          '10'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
   - AccessID:        y_test3seq
@@ -145,7 +145,7 @@ Args:
   - String:          'Sequential '
   - Direction:       read
   - String:          ' of length '
-  - Length:          '73500'
+  - Length:          '490'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
   - AccessID:        X_train6seq
@@ -175,7 +175,7 @@ Args:
   - String:          'Sequential '
   - Direction:       read
   - String:          ' of length '
-  - Length:          '1500'
+  - Length:          '10'
   - String:          ' has been inferred'
   - String:          ' _XLX_SEP_ '
   - AccessID:        y_train7seq
@@ -531,7 +531,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
-  - Length:          '73500'
+  - Length:          '490'
   - String:          ' and bit width '
   - Width:           '64'
   - String:          ' has been inferred.'
@@ -559,7 +559,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
-  - Length:          '73500'
+  - Length:          '490'
   - String:          ' and bit width '
   - Width:           '64'
   - String:          ' in loop '''
@@ -581,7 +581,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
-  - Length:          '1500'
+  - Length:          '10'
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' has been inferred.'
@@ -609,7 +609,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       reads
   - String:          ' of length '
-  - Length:          '1500'
+  - Length:          '10'
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' in loop '''
@@ -672,7 +672,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
-  - Length:          '1000'
+  - Length:          '10'
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' has been inferred.'
@@ -700,7 +700,7 @@ Args:
   - String:          'Multiple burst '
   - Direction:       writes
   - String:          ' of length '
-  - Length:          '1000'
+  - Length:          '10'
   - String:          ' and bit width '
   - Width:           '32'
   - String:          ' in loop '''

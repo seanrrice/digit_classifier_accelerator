@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort_Pipeline_sort_loop_j'
 ================================================================
-* Date:           Tue Mar 17 18:06:09 2026
+* Date:           Tue Mar 17 19:32:51 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        knn_accelerator
@@ -20,29 +20,29 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  6.508 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  6.438 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+-----------+-----------+-----+------+------------------------------------------------+
-    |  Latency (cycles) |   Latency (absolute)  |  Interval  |                    Pipeline                    |
-    |   min   |   max   |    min    |    max    | min |  max |                      Type                      |
-    +---------+---------+-----------+-----------+-----+------+------------------------------------------------+
-    |        7|     7497|  70.000 ns|  74.970 us|    6|  7496|  loop auto-rewind stp (delay=0 clock cycles(s))|
-    +---------+---------+-----------+-----------+-----+------+------------------------------------------------+
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval |                    Pipeline                    |
+    |   min   |   max   |    min    |    max   | min | max |                      Type                      |
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
+    |        7|       47|  70.000 ns|  0.470 us|    6|   46|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+----------+-----+-----+------------------------------------------------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +---------------+---------+---------+----------+-----------+-----------+----------+----------+
-        |               |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
-        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
-        +---------------+---------+---------+----------+-----------+-----------+----------+----------+
-        |- sort_loop_j  |        5|     7495|         5|          5|          1|  1 ~ 1499|       yes|
-        +---------------+---------+---------+----------+-----------+-----------+----------+----------+
+        +---------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |               |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        |   Loop Name   |   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +---------------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- sort_loop_j  |        5|       45|         5|          5|          1|  1 ~ 9|       yes|
+        +---------------+---------+---------+----------+-----------+-----------+-------+----------+
 
 
 
@@ -54,14 +54,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|    174|    -|
+|Expression       |        -|    -|       0|    176|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       -|      -|    -|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       0|    114|    -|
-|Register         |        -|    -|     224|      -|    -|
+|Register         |        -|    -|     168|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     224|    288|    0|
+|Total            |        0|    0|     168|    290|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -91,10 +91,10 @@
     +-----------------------+----------+----+---+----+------------+------------+
     |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +-----------------------+----------+----+---+----+------------+------------+
-    |add_ln66_fu_126_p2     |         +|   0|  0|  12|          11|           1|
+    |add_ln66_fu_126_p2     |         +|   0|  0|  13|           4|           1|
     |and_ln66_1_fu_218_p2   |       and|   0|  0|   2|           1|           1|
     |and_ln66_fu_212_p2     |       and|   0|  0|   2|           1|           1|
-    |icmp_ln65_fu_120_p2    |      icmp|   0|  0|  12|          11|          11|
+    |icmp_ln65_fu_120_p2    |      icmp|   0|  0|  13|           4|           4|
     |icmp_ln66_1_fu_182_p2  |      icmp|   0|  0|  59|          52|           1|
     |icmp_ln66_2_fu_194_p2  |      icmp|   0|  0|  12|          11|           2|
     |icmp_ln66_3_fu_200_p2  |      icmp|   0|  0|  59|          52|           1|
@@ -102,7 +102,7 @@
     |or_ln66_1_fu_206_p2    |        or|   0|  0|   2|           1|           1|
     |or_ln66_fu_188_p2      |        or|   0|  0|   2|           1|           1|
     +-----------------------+----------+----+---+----+------------+------------+
-    |Total                  |          |   0|  0| 174|         152|          22|
+    |Total                  |          |   0|  0| 176|         138|          15|
     +-----------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
@@ -111,36 +111,36 @@
     +--------------------------+----+-----------+-----+-----------+
     |ap_NS_fsm                 |  31|          6|    1|          6|
     |ap_done_int               |   9|          2|    1|          2|
-    |ap_sig_allocacmp_j_1      |   9|          2|   11|         22|
-    |distances_address0_local  |  14|          3|   11|         33|
-    |distances_address1_local  |  14|          3|   11|         33|
-    |j_fu_46                   |   9|          2|   11|         22|
-    |labels_address0_local     |  14|          3|   11|         33|
-    |labels_address1_local     |  14|          3|   11|         33|
+    |ap_sig_allocacmp_j_1      |   9|          2|    4|          8|
+    |distances_address0_local  |  14|          3|    4|         12|
+    |distances_address1_local  |  14|          3|    4|         12|
+    |j_fu_46                   |   9|          2|    4|          8|
+    |labels_address0_local     |  14|          3|    4|         12|
+    |labels_address1_local     |  14|          3|    4|         12|
     +--------------------------+----+-----------+-----+-----------+
-    |Total                     | 114|         24|   68|        184|
+    |Total                     | 114|         24|   26|         72|
     +--------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +--------------------------+----+----+-----+-----------+
     |           Name           | FF | LUT| Bits| Const Bits|
     +--------------------------+----+----+-----+-----------+
-    |add_ln66_reg_239          |  11|   0|   11|          0|
+    |add_ln66_reg_239          |   4|   0|    4|          0|
     |and_ln66_1_reg_278        |   1|   0|    1|          0|
     |ap_CS_fsm                 |   5|   0|    5|          0|
     |ap_done_reg               |   1|   0|    1|          0|
-    |distances_addr_1_reg_259  |  11|   0|   11|          0|
-    |distances_addr_reg_249    |  11|   0|   11|          0|
+    |distances_addr_1_reg_259  |   4|   0|    4|          0|
+    |distances_addr_reg_249    |   4|   0|    4|          0|
     |distances_load_1_reg_271  |  64|   0|   64|          0|
     |icmp_ln65_reg_235         |   1|   0|    1|          0|
-    |j_fu_46                   |  11|   0|   11|          0|
-    |labels_addr_1_reg_287     |  11|   0|   11|          0|
-    |labels_addr_reg_282       |  11|   0|   11|          0|
+    |j_fu_46                   |   4|   0|    4|          0|
+    |labels_addr_1_reg_287     |   4|   0|    4|          0|
+    |labels_addr_reg_282       |   4|   0|    4|          0|
     |temp_dist_reg_264         |  64|   0|   64|          0|
-    |zext_ln65_reg_244         |  11|   0|   64|         53|
-    |zext_ln66_reg_254         |  11|   0|   64|         53|
+    |zext_ln65_reg_244         |   4|   0|   64|         60|
+    |zext_ln66_reg_254         |   4|   0|   64|         60|
     +--------------------------+----+----+-----+-----------+
-    |Total                     | 224|   0|  330|        106|
+    |Total                     | 168|   0|  288|        120|
     +--------------------------+----+----+-----+-----------+
 
 
@@ -158,23 +158,23 @@
 |ap_done             |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Pipeline_sort_loop_j|  return value|
 |ap_idle             |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Pipeline_sort_loop_j|  return value|
 |ap_ready            |  out|    1|  ap_ctrl_hs|  knn_distance_and_sort_Pipeline_sort_loop_j|  return value|
-|indvars_iv14        |   in|   11|     ap_none|                                indvars_iv14|        scalar|
-|distances_address0  |  out|   11|   ap_memory|                                   distances|         array|
+|indvars_iv14        |   in|    4|     ap_none|                                indvars_iv14|        scalar|
+|distances_address0  |  out|    4|   ap_memory|                                   distances|         array|
 |distances_ce0       |  out|    1|   ap_memory|                                   distances|         array|
 |distances_we0       |  out|    1|   ap_memory|                                   distances|         array|
 |distances_d0        |  out|   64|   ap_memory|                                   distances|         array|
 |distances_q0        |   in|   64|   ap_memory|                                   distances|         array|
-|distances_address1  |  out|   11|   ap_memory|                                   distances|         array|
+|distances_address1  |  out|    4|   ap_memory|                                   distances|         array|
 |distances_ce1       |  out|    1|   ap_memory|                                   distances|         array|
 |distances_we1       |  out|    1|   ap_memory|                                   distances|         array|
 |distances_d1        |  out|   64|   ap_memory|                                   distances|         array|
 |distances_q1        |   in|   64|   ap_memory|                                   distances|         array|
-|labels_address0     |  out|   11|   ap_memory|                                      labels|         array|
+|labels_address0     |  out|    4|   ap_memory|                                      labels|         array|
 |labels_ce0          |  out|    1|   ap_memory|                                      labels|         array|
 |labels_we0          |  out|    1|   ap_memory|                                      labels|         array|
 |labels_d0           |  out|    4|   ap_memory|                                      labels|         array|
 |labels_q0           |   in|    4|   ap_memory|                                      labels|         array|
-|labels_address1     |  out|   11|   ap_memory|                                      labels|         array|
+|labels_address1     |  out|    4|   ap_memory|                                      labels|         array|
 |labels_ce1          |  out|    1|   ap_memory|                                      labels|         array|
 |labels_we1          |  out|    1|   ap_memory|                                      labels|         array|
 |labels_d1           |  out|    4|   ap_memory|                                      labels|         array|

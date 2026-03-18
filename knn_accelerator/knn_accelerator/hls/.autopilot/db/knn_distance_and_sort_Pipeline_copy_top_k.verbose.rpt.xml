@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_distance_and_sort_Pipeline_copy_top_k'" level="0">
-<item name = "Date">Tue Mar 17 18:06:10 2026
+<item name = "Date">Tue Mar 17 19:32:52 2026
 </item>
 <item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
 <item name = "Project">knn_accelerator</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 4.842 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 4.741 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -119,7 +119,7 @@
 <column name="top_k_labels_2_ap_vld">out, 1, ap_vld, top_k_labels_2, pointer</column>
 <column name="top_k_labels_1">out, 4, ap_vld, top_k_labels_1, pointer</column>
 <column name="top_k_labels_1_ap_vld">out, 1, ap_vld, top_k_labels_1, pointer</column>
-<column name="labels_address0">out, 11, ap_memory, labels, array</column>
+<column name="labels_address0">out, 4, ap_memory, labels, array</column>
 <column name="labels_ce0">out, 1, ap_memory, labels, array</column>
 <column name="labels_q0">in, 4, ap_memory, labels, array</column>
 </table>

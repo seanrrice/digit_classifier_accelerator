@@ -18,11 +18,11 @@ set cdfgNum 13
 set C_modelName {knn_distance_and_sort_Outline_sort_loop_i}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
-dict set ap_memory_interface_dict distances { MEM_WIDTH 64 MEM_SIZE 12000 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
-dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 1500 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict distances { MEM_WIDTH 64 MEM_SIZE 80 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 10 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
 set C_modelArgList {
-	{ distances double 64 regular {array 1500 { 2 2 } 1 1 }  }
-	{ labels int 4 regular {array 1500 { 2 2 } 1 1 }  }
+	{ distances double 64 regular {array 10 { 2 2 } 1 1 }  }
+	{ labels int 4 regular {array 10 { 2 2 } 1 1 }  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
@@ -39,22 +39,22 @@ set portList {
 	{ ap_done sc_out sc_logic 1 predone -1 } 
 	{ ap_idle sc_out sc_logic 1 done -1 } 
 	{ ap_ready sc_out sc_logic 1 ready -1 } 
-	{ distances_address0 sc_out sc_lv 11 signal 0 } 
+	{ distances_address0 sc_out sc_lv 4 signal 0 } 
 	{ distances_ce0 sc_out sc_logic 1 signal 0 } 
 	{ distances_we0 sc_out sc_logic 1 signal 0 } 
 	{ distances_d0 sc_out sc_lv 64 signal 0 } 
 	{ distances_q0 sc_in sc_lv 64 signal 0 } 
-	{ distances_address1 sc_out sc_lv 11 signal 0 } 
+	{ distances_address1 sc_out sc_lv 4 signal 0 } 
 	{ distances_ce1 sc_out sc_logic 1 signal 0 } 
 	{ distances_we1 sc_out sc_logic 1 signal 0 } 
 	{ distances_d1 sc_out sc_lv 64 signal 0 } 
 	{ distances_q1 sc_in sc_lv 64 signal 0 } 
-	{ labels_address0 sc_out sc_lv 11 signal 1 } 
+	{ labels_address0 sc_out sc_lv 4 signal 1 } 
 	{ labels_ce0 sc_out sc_logic 1 signal 1 } 
 	{ labels_we0 sc_out sc_logic 1 signal 1 } 
 	{ labels_d0 sc_out sc_lv 4 signal 1 } 
 	{ labels_q0 sc_in sc_lv 4 signal 1 } 
-	{ labels_address1 sc_out sc_lv 11 signal 1 } 
+	{ labels_address1 sc_out sc_lv 4 signal 1 } 
 	{ labels_ce1 sc_out sc_logic 1 signal 1 } 
 	{ labels_we1 sc_out sc_logic 1 signal 1 } 
 	{ labels_d1 sc_out sc_lv 4 signal 1 } 
@@ -67,22 +67,22 @@ set NewPortList {[
  	{ "name": "ap_done", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "predone", "bundle":{"name": "ap_done", "role": "default" }} , 
  	{ "name": "ap_idle", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "done", "bundle":{"name": "ap_idle", "role": "default" }} , 
  	{ "name": "ap_ready", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "ready", "bundle":{"name": "ap_ready", "role": "default" }} , 
- 	{ "name": "distances_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "distances", "role": "address0" }} , 
+ 	{ "name": "distances_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "distances", "role": "address0" }} , 
  	{ "name": "distances_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "ce0" }} , 
  	{ "name": "distances_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "we0" }} , 
  	{ "name": "distances_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "distances", "role": "d0" }} , 
  	{ "name": "distances_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "distances", "role": "q0" }} , 
- 	{ "name": "distances_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "distances", "role": "address1" }} , 
+ 	{ "name": "distances_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "distances", "role": "address1" }} , 
  	{ "name": "distances_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "ce1" }} , 
  	{ "name": "distances_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "we1" }} , 
  	{ "name": "distances_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "distances", "role": "d1" }} , 
  	{ "name": "distances_q1", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "distances", "role": "q1" }} , 
- 	{ "name": "labels_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "labels", "role": "address0" }} , 
+ 	{ "name": "labels_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "address0" }} , 
  	{ "name": "labels_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "labels", "role": "ce0" }} , 
  	{ "name": "labels_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "labels", "role": "we0" }} , 
  	{ "name": "labels_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "d0" }} , 
  	{ "name": "labels_q0", "direction": "in", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "q0" }} , 
- 	{ "name": "labels_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "labels", "role": "address1" }} , 
+ 	{ "name": "labels_address1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "address1" }} , 
  	{ "name": "labels_ce1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "labels", "role": "ce1" }} , 
  	{ "name": "labels_we1", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "labels", "role": "we1" }} , 
  	{ "name": "labels_d1", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "d1" }} , 
@@ -100,14 +100,14 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "13492", "Max" : "11241002"}
-	, {"Name" : "Interval", "Min" : "13492", "Max" : "11241002"}
+	{"Name" : "Latency", "Min" : "82", "Max" : "442"}
+	, {"Name" : "Interval", "Min" : "82", "Max" : "442"}
 ]}
 
 set PipelineEnableSignalInfo {[
 ]}
 
 set Spec2ImplPortList { 
-	distances { ap_memory {  { distances_address0 mem_address 1 11 }  { distances_ce0 mem_ce 1 1 }  { distances_we0 mem_we 1 1 }  { distances_d0 mem_din 1 64 }  { distances_q0 mem_dout 0 64 }  { distances_address1 MemPortADDR2 1 11 }  { distances_ce1 MemPortCE2 1 1 }  { distances_we1 MemPortWE2 1 1 }  { distances_d1 MemPortDIN2 1 64 }  { distances_q1 MemPortDOUT2 0 64 } } }
-	labels { ap_memory {  { labels_address0 mem_address 1 11 }  { labels_ce0 mem_ce 1 1 }  { labels_we0 mem_we 1 1 }  { labels_d0 mem_din 1 4 }  { labels_q0 mem_dout 0 4 }  { labels_address1 MemPortADDR2 1 11 }  { labels_ce1 MemPortCE2 1 1 }  { labels_we1 MemPortWE2 1 1 }  { labels_d1 MemPortDIN2 1 4 }  { labels_q1 MemPortDOUT2 0 4 } } }
+	distances { ap_memory {  { distances_address0 mem_address 1 4 }  { distances_ce0 mem_ce 1 1 }  { distances_we0 mem_we 1 1 }  { distances_d0 mem_din 1 64 }  { distances_q0 mem_dout 0 64 }  { distances_address1 MemPortADDR2 1 4 }  { distances_ce1 MemPortCE2 1 1 }  { distances_we1 MemPortWE2 1 1 }  { distances_d1 MemPortDIN2 1 64 }  { distances_q1 MemPortDOUT2 0 64 } } }
+	labels { ap_memory {  { labels_address0 mem_address 1 4 }  { labels_ce0 mem_ce 1 1 }  { labels_we0 mem_we 1 1 }  { labels_d0 mem_din 1 4 }  { labels_q0 mem_dout 0 4 }  { labels_address1 MemPortADDR2 1 4 }  { labels_ce1 MemPortCE2 1 1 }  { labels_we1 MemPortWE2 1 1 }  { labels_d1 MemPortDIN2 1 4 }  { labels_q1 MemPortDOUT2 0 4 } } }
 }

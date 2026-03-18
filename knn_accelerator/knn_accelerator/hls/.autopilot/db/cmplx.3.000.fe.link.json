@@ -1,7 +1,7 @@
 {
   "0": {
     "basicblocks": 7,
-    "calls": "1 2",
+    "calls": "3 1",
     "control_depth": 0,
     "def_use_depth": 2,
     "file": "knn.cpp",
@@ -15,24 +15,6 @@
     "total_instructions": 239
   },
   "1": {
-    "basicblocks": 39,
-    "calls": "3",
-    "control_depth": 2,
-    "def_use_depth": 5,
-    "file": "knn.cpp",
-    "fileloc": 9,
-    "instructions": 150,
-    "loads": {
-      "L": 11
-    },
-    "memory_accesses": 18,
-    "name": "knn_distance_and_sort",
-    "stores": {
-      "L": 10
-    },
-    "total_instructions": 152
-  },
-  "2": {
     "basicblocks": 21,
     "calls": "",
     "control_depth": 2,
@@ -50,7 +32,7 @@
     },
     "total_instructions": 57
   },
-  "3": {
+  "2": {
     "basicblocks": 1,
     "calls": "",
     "control_depth": 0,
@@ -61,5 +43,23 @@
     "memory_accesses": 0,
     "name": "sqrt",
     "total_instructions": 2
+  },
+  "3": {
+    "basicblocks": 39,
+    "calls": "2",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "knn.cpp",
+    "fileloc": 9,
+    "instructions": 150,
+    "loads": {
+      "L": 11
+    },
+    "memory_accesses": 18,
+    "name": "knn_distance_and_sort",
+    "stores": {
+      "L": 10
+    },
+    "total_instructions": 152
   }
 }

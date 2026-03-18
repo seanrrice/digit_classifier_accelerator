@@ -22,7 +22,7 @@ port (
     top_k_labels_2_ap_vld : OUT STD_LOGIC;
     top_k_labels_1 : OUT STD_LOGIC_VECTOR (3 downto 0);
     top_k_labels_1_ap_vld : OUT STD_LOGIC;
-    labels_address0 : OUT STD_LOGIC_VECTOR (10 downto 0);
+    labels_address0 : OUT STD_LOGIC_VECTOR (3 downto 0);
     labels_ce0 : OUT STD_LOGIC;
     labels_q0 : IN STD_LOGIC_VECTOR (3 downto 0) );
 end;
@@ -259,7 +259,7 @@ begin
     end process;
 
     icmp_ln77_fu_85_p2 <= "1" when (ap_sig_allocacmp_i_5 = ap_const_lv2_3) else "0";
-    labels_address0 <= zext_ln77_fu_97_p1(11 - 1 downto 0);
+    labels_address0 <= zext_ln77_fu_97_p1(4 - 1 downto 0);
     labels_ce0 <= labels_ce0_local;
 
     labels_ce0_local_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter0, ap_block_pp0_stage0_11001)

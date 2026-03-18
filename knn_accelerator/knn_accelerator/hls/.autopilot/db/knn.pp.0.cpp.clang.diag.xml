@@ -3277,7 +3277,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*1500_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -3293,7 +3293,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=y_train offset=slave bundle=gmem_y_train depth=1500_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=y_train offset=slave bundle=gmem_y_train depth=10_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -3309,7 +3309,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*1000_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>
@@ -3325,7 +3325,7 @@
       <key>column</key>
       <integer>9</integer>
       <key>message</key>
-      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=y_test offset=slave bundle=gmem_y_test depth=1000_XLX_SEP_</string>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=knn_accelerator_XLX_SEP_ PragmaOptions=m_axi port=y_test offset=slave bundle=gmem_y_test depth=10_XLX_SEP_</string>
       <key>ID</key>
       <integer>5471</integer>
       <key>WarningOption</key>

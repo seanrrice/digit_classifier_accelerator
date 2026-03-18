@@ -12,8 +12,8 @@ entity knn_accelerator_knn_distance_and_sort_labels_RAM_AUTO_1R1W is
     generic(
         MEM_TYPE        : string    := "auto"; 
         DataWidth       : integer   := 4; 
-        AddressWidth    : integer   := 11;
-        AddressRange    : integer   := 1500
+        AddressWidth    : integer   := 4;
+        AddressRange    : integer   := 10
     ); 
     port (
         address0    : in std_logic_vector(AddressWidth-1 downto 0); 

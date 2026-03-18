@@ -18,8 +18,8 @@ set cdfgNum 13
 set C_modelName {knn_distance_and_sort_Pipeline_train_loop}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
-dict set ap_memory_interface_dict distances { MEM_WIDTH 64 MEM_SIZE 12000 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
-dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 1500 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
+dict set ap_memory_interface_dict distances { MEM_WIDTH 64 MEM_SIZE 80 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
+dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 10 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
 set C_modelArgList {
 	{ gmem_x_test int 64 regular {axi_master 0}  }
 	{ p_cast_cast int 61 regular  }
@@ -27,8 +27,8 @@ set C_modelArgList {
 	{ sext_ln40 int 61 regular  }
 	{ gmem_y_train int 32 regular {axi_master 0}  }
 	{ sext_ln40_1 int 62 regular  }
-	{ distances double 64 regular {array 1500 { 0 3 } 0 1 }  }
-	{ labels int 4 regular {array 1500 { 0 3 } 0 1 }  }
+	{ distances double 64 regular {array 10 { 0 3 } 0 1 }  }
+	{ labels int 4 regular {array 10 { 0 3 } 0 1 }  }
 }
 set hasAXIMCache 0
 set l_AXIML2Cache [list]
@@ -192,11 +192,11 @@ set portList {
 	{ p_cast_cast sc_in sc_lv 61 signal 1 } 
 	{ sext_ln40 sc_in sc_lv 61 signal 3 } 
 	{ sext_ln40_1 sc_in sc_lv 62 signal 5 } 
-	{ distances_address0 sc_out sc_lv 11 signal 6 } 
+	{ distances_address0 sc_out sc_lv 4 signal 6 } 
 	{ distances_ce0 sc_out sc_logic 1 signal 6 } 
 	{ distances_we0 sc_out sc_logic 1 signal 6 } 
 	{ distances_d0 sc_out sc_lv 64 signal 6 } 
-	{ labels_address0 sc_out sc_lv 11 signal 7 } 
+	{ labels_address0 sc_out sc_lv 4 signal 7 } 
 	{ labels_ce0 sc_out sc_logic 1 signal 7 } 
 	{ labels_we0 sc_out sc_logic 1 signal 7 } 
 	{ labels_d0 sc_out sc_lv 4 signal 7 } 
@@ -349,11 +349,11 @@ set NewPortList {[
  	{ "name": "p_cast_cast", "direction": "in", "datatype": "sc_lv", "bitwidth":61, "type": "signal", "bundle":{"name": "p_cast_cast", "role": "default" }} , 
  	{ "name": "sext_ln40", "direction": "in", "datatype": "sc_lv", "bitwidth":61, "type": "signal", "bundle":{"name": "sext_ln40", "role": "default" }} , 
  	{ "name": "sext_ln40_1", "direction": "in", "datatype": "sc_lv", "bitwidth":62, "type": "signal", "bundle":{"name": "sext_ln40_1", "role": "default" }} , 
- 	{ "name": "distances_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "distances", "role": "address0" }} , 
+ 	{ "name": "distances_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "distances", "role": "address0" }} , 
  	{ "name": "distances_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "ce0" }} , 
  	{ "name": "distances_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "distances", "role": "we0" }} , 
  	{ "name": "distances_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "distances", "role": "d0" }} , 
- 	{ "name": "labels_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":11, "type": "signal", "bundle":{"name": "labels", "role": "address0" }} , 
+ 	{ "name": "labels_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "address0" }} , 
  	{ "name": "labels_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "labels", "role": "ce0" }} , 
  	{ "name": "labels_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "labels", "role": "we0" }} , 
  	{ "name": "labels_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":4, "type": "signal", "bundle":{"name": "labels", "role": "d0" }}  ]}
@@ -372,8 +372,8 @@ set ArgLastReadFirstWriteLatency {
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "73883", "Max" : "73883"}
-	, {"Name" : "Interval", "Min" : "73883", "Max" : "73883"}
+	{"Name" : "Latency", "Min" : "873", "Max" : "873"}
+	, {"Name" : "Interval", "Min" : "873", "Max" : "873"}
 ]}
 
 set PipelineEnableSignalInfo {[
@@ -387,6 +387,6 @@ set Spec2ImplPortList {
 	sext_ln40 { ap_none {  { sext_ln40 in_data 0 61 } } }
 	 { m_axi {  { m_axi_gmem_y_train_0_AWVALID VALID 1 1 }  { m_axi_gmem_y_train_0_AWREADY READY 0 1 }  { m_axi_gmem_y_train_0_AWADDR ADDR 1 64 }  { m_axi_gmem_y_train_0_AWID ID 1 1 }  { m_axi_gmem_y_train_0_AWLEN SIZE 1 32 }  { m_axi_gmem_y_train_0_AWSIZE BURST 1 3 }  { m_axi_gmem_y_train_0_AWBURST LOCK 1 2 }  { m_axi_gmem_y_train_0_AWLOCK CACHE 1 2 }  { m_axi_gmem_y_train_0_AWCACHE PROT 1 4 }  { m_axi_gmem_y_train_0_AWPROT QOS 1 3 }  { m_axi_gmem_y_train_0_AWQOS REGION 1 4 }  { m_axi_gmem_y_train_0_AWREGION USER 1 4 }  { m_axi_gmem_y_train_0_AWUSER DATA 1 1 }  { m_axi_gmem_y_train_0_WVALID VALID 1 1 }  { m_axi_gmem_y_train_0_WREADY READY 0 1 }  { m_axi_gmem_y_train_0_WDATA FIFONUM 1 32 }  { m_axi_gmem_y_train_0_WSTRB STRB 1 4 }  { m_axi_gmem_y_train_0_WLAST LAST 1 1 }  { m_axi_gmem_y_train_0_WID ID 1 1 }  { m_axi_gmem_y_train_0_WUSER DATA 1 1 }  { m_axi_gmem_y_train_0_ARVALID VALID 1 1 }  { m_axi_gmem_y_train_0_ARREADY READY 0 1 }  { m_axi_gmem_y_train_0_ARADDR ADDR 1 64 }  { m_axi_gmem_y_train_0_ARID ID 1 1 }  { m_axi_gmem_y_train_0_ARLEN SIZE 1 32 }  { m_axi_gmem_y_train_0_ARSIZE BURST 1 3 }  { m_axi_gmem_y_train_0_ARBURST LOCK 1 2 }  { m_axi_gmem_y_train_0_ARLOCK CACHE 1 2 }  { m_axi_gmem_y_train_0_ARCACHE PROT 1 4 }  { m_axi_gmem_y_train_0_ARPROT QOS 1 3 }  { m_axi_gmem_y_train_0_ARQOS REGION 1 4 }  { m_axi_gmem_y_train_0_ARREGION USER 1 4 }  { m_axi_gmem_y_train_0_ARUSER DATA 1 1 }  { m_axi_gmem_y_train_0_RVALID VALID 0 1 }  { m_axi_gmem_y_train_0_RREADY READY 1 1 }  { m_axi_gmem_y_train_0_RDATA FIFONUM 0 32 }  { m_axi_gmem_y_train_0_RLAST LAST 0 1 }  { m_axi_gmem_y_train_0_RID ID 0 1 }  { m_axi_gmem_y_train_0_RFIFONUM LEN 0 9 }  { m_axi_gmem_y_train_0_RUSER DATA 0 1 }  { m_axi_gmem_y_train_0_RRESP RESP 0 2 }  { m_axi_gmem_y_train_0_BVALID VALID 0 1 }  { m_axi_gmem_y_train_0_BREADY READY 1 1 }  { m_axi_gmem_y_train_0_BRESP RESP 0 2 }  { m_axi_gmem_y_train_0_BID ID 0 1 }  { m_axi_gmem_y_train_0_BUSER DATA 0 1 } } }
 	sext_ln40_1 { ap_none {  { sext_ln40_1 in_data 0 62 } } }
-	distances { ap_memory {  { distances_address0 mem_address 1 11 }  { distances_ce0 mem_ce 1 1 }  { distances_we0 mem_we 1 1 }  { distances_d0 mem_din 1 64 } } }
-	labels { ap_memory {  { labels_address0 mem_address 1 11 }  { labels_ce0 mem_ce 1 1 }  { labels_we0 mem_we 1 1 }  { labels_d0 mem_din 1 4 } } }
+	distances { ap_memory {  { distances_address0 mem_address 1 4 }  { distances_ce0 mem_ce 1 1 }  { distances_we0 mem_we 1 1 }  { distances_d0 mem_din 1 64 } } }
+	labels { ap_memory {  { labels_address0 mem_address 1 4 }  { labels_ce0 mem_ce 1 1 }  { labels_we0 mem_we 1 1 }  { labels_d0 mem_din 1 4 } } }
 }

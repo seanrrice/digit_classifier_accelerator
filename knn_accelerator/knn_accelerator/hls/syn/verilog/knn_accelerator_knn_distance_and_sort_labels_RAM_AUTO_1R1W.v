@@ -17,8 +17,8 @@ module knn_accelerator_knn_distance_and_sort_labels_RAM_AUTO_1R1W (
     reset, clk);
 
 parameter DataWidth = 4;
-parameter AddressWidth = 11;
-parameter AddressRange = 1500;
+parameter AddressWidth = 4;
+parameter AddressRange = 10;
  
 input[AddressWidth-1:0] address0;
 input ce0;

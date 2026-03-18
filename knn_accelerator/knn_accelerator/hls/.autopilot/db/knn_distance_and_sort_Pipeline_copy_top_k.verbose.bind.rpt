@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort_Pipeline_copy_top_k'
 ================================================================
-* Date:           Tue Mar 17 18:06:02 2026
+* Date:           Tue Mar 17 19:32:43 2026
 
 * Version:        2025.1 (Build 6135595 on May 21 2025)
 * Project:        knn_accelerator
@@ -20,7 +20,7 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  4.842 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  4.741 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
@@ -84,7 +84,7 @@ IsGatedGlobalClock: 0
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 4.84>
+State 1 <SV = 0> <Delay = 4.74>
 ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [../src/knn.cpp:77]   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 6 [1/1] (1.58ns)   --->   "%store_ln77 = store i2 0, i2 %i" [../src/knn.cpp:77]   --->   Operation 6 'store' 'store_ln77' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc87"   --->   Operation 7 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
@@ -94,17 +94,17 @@ ST_1 : Operation 10 [1/1] (1.56ns)   --->   "%add_ln77 = add i2 %i_5, i2 1" [../
 ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln77 = br i1 %icmp_ln77, void %for.inc87.split, void %for.end89.exitStub" [../src/knn.cpp:77]   --->   Operation 11 'br' 'br_ln77' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln77 = zext i2 %i_5" [../src/knn.cpp:77]   --->   Operation 12 'zext' 'zext_ln77' <Predicate = (!icmp_ln77)> <Delay = 0.00>
 ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%labels_addr_1 = getelementptr i4 %labels, i64 0, i64 %zext_ln77" [../src/knn.cpp:79]   --->   Operation 13 'getelementptr' 'labels_addr_1' <Predicate = (!icmp_ln77)> <Delay = 0.00>
-ST_1 : Operation 14 [2/2] (3.25ns)   --->   "%labels_load = load i11 %labels_addr_1" [../src/knn.cpp:79]   --->   Operation 14 'load' 'labels_load' <Predicate = (!icmp_ln77)> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 1500> <RAM>
+ST_1 : Operation 14 [2/2] (2.32ns)   --->   "%labels_load = load i4 %labels_addr_1" [../src/knn.cpp:79]   --->   Operation 14 'load' 'labels_load' <Predicate = (!icmp_ln77)> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 10> <RAM>
 ST_1 : Operation 15 [1/1] (1.56ns)   --->   "%switch_ln79 = switch i2 %i_5, void %arrayidx865.case.2, i2 0, void %arrayidx865.case.0, i2 1, void %arrayidx865.case.1" [../src/knn.cpp:79]   --->   Operation 15 'switch' 'switch_ln79' <Predicate = (!icmp_ln77)> <Delay = 1.56>
 ST_1 : Operation 16 [1/1] (1.58ns)   --->   "%store_ln77 = store i2 %add_ln77, i2 %i" [../src/knn.cpp:77]   --->   Operation 16 'store' 'store_ln77' <Predicate = (!icmp_ln77)> <Delay = 1.58>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln77 = br void %for.inc87" [../src/knn.cpp:77]   --->   Operation 17 'br' 'br_ln77' <Predicate = (!icmp_ln77)> <Delay = 0.00>
 ST_1 : Operation 28 [1/1] (1.58ns)   --->   "%ret_ln0 = ret"   --->   Operation 28 'ret' 'ret_ln0' <Predicate = (icmp_ln77)> <Delay = 1.58>
 
-State 2 <SV = 1> <Delay = 3.25>
+State 2 <SV = 1> <Delay = 2.32>
 ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%specpipeline_ln77 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [../src/knn.cpp:77]   --->   Operation 18 'specpipeline' 'specpipeline_ln77' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%speclooptripcount_ln77 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 3, i64 3, i64 3" [../src/knn.cpp:77]   --->   Operation 19 'speclooptripcount' 'speclooptripcount_ln77' <Predicate = true> <Delay = 0.00>
 ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln77 = specloopname void @_ssdm_op_SpecLoopName, void @empty_20" [../src/knn.cpp:77]   --->   Operation 20 'specloopname' 'specloopname_ln77' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 21 [1/2] ( I:3.25ns O:3.25ns )   --->   "%labels_load = load i11 %labels_addr_1" [../src/knn.cpp:79]   --->   Operation 21 'load' 'labels_load' <Predicate = true> <Delay = 3.25> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 1500> <RAM>
+ST_2 : Operation 21 [1/2] ( I:2.32ns O:2.32ns )   --->   "%labels_load = load i4 %labels_addr_1" [../src/knn.cpp:79]   --->   Operation 21 'load' 'labels_load' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 81 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 4> <Depth = 10> <RAM>
 ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%write_ln79 = write void @_ssdm_op_Write.ap_auto.i4P0A, i4 %top_k_labels_1, i4 %labels_load" [../src/knn.cpp:79]   --->   Operation 22 'write' 'write_ln79' <Predicate = (i_5 == 1)> <Delay = 0.00>
 ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln79 = br void %arrayidx865.exit" [../src/knn.cpp:79]   --->   Operation 23 'br' 'br_ln79' <Predicate = (i_5 == 1)> <Delay = 0.00>
 ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%write_ln79 = write void @_ssdm_op_Write.ap_auto.i4P0A, i4 %top_k_labels_0, i4 %labels_load" [../src/knn.cpp:79]   --->   Operation 24 'write' 'write_ln79' <Predicate = (i_5 == 0)> <Delay = 0.00>
@@ -380,7 +380,7 @@ ret_ln0                (ret              ) [ 000]
 <pin id="62" dir="0" index="0" bw="4" slack="0"/>
 <pin id="63" dir="0" index="1" bw="1" slack="0"/>
 <pin id="64" dir="0" index="2" bw="2" slack="0"/>
-<pin id="65" dir="1" index="3" bw="11" slack="0"/>
+<pin id="65" dir="1" index="3" bw="4" slack="0"/>
 </pin_list>
 <bind>
 <opcode="getelementptr(29) " fcode="getelementptr"/>
@@ -390,7 +390,7 @@ ret_ln0                (ret              ) [ 000]
 
 <comp id="68" class="1004" name="grp_access_fu_68">
 <pin_list>
-<pin id="69" dir="0" index="0" bw="11" slack="0"/>
+<pin id="69" dir="0" index="0" bw="4" slack="0"/>
 <pin id="70" dir="0" index="1" bw="4" slack="2147483647"/>
 <pin id="71" dir="0" index="2" bw="0" slack="2147483647"/>
 <pin id="72" dir="1" index="3" bw="4" slack="0"/>
@@ -506,8 +506,8 @@ ret_ln0                (ret              ) [ 000]
 
 <comp id="129" class="1005" name="labels_addr_1_reg_129">
 <pin_list>
-<pin id="130" dir="0" index="0" bw="11" slack="1"/>
-<pin id="131" dir="1" index="1" bw="11" slack="1"/>
+<pin id="130" dir="0" index="0" bw="4" slack="1"/>
+<pin id="131" dir="1" index="1" bw="4" slack="1"/>
 </pin_list>
 <bind>
 <opset="labels_addr_1 "/>
@@ -641,18 +641,18 @@ N/A
 +---------------------+--------+
 |     i_5_reg_122     |    2   |
 |      i_reg_115      |    2   |
-|labels_addr_1_reg_129|   11   |
+|labels_addr_1_reg_129|    4   |
 +---------------------+--------+
-|        Total        |   15   |
+|        Total        |    8   |
 +---------------------+--------+
 
 * Multiplexer (MUX) list: 
 |------------------|------|------|------|--------||---------||---------||---------|
 |       Comp       |  Pin | Size |  BW  | S x BW ||  Delay  ||    FF   ||   LUT   |
 |------------------|------|------|------|--------||---------||---------||---------|
-| grp_access_fu_68 |  p0  |   2  |  11  |   22   ||    0    ||    9    |
+| grp_access_fu_68 |  p0  |   2  |   4  |    8   ||    0    ||    9    |
 |------------------|------|------|------|--------||---------||---------||---------|
-|       Total      |      |      |      |   22   ||  1.588  ||    0    ||    9    |
+|       Total      |      |      |      |    8   ||  1.588  ||    0    ||    9    |
 |------------------|------|------|------|--------||---------||---------||---------|
 
 
@@ -664,7 +664,7 @@ N/A
 |  Function |    -   |    0   |   20   |
 |   Memory  |    -   |    -   |    -   |
 |Multiplexer|    1   |    0   |    9   |
-|  Register |    -   |   15   |    -   |
+|  Register |    -   |    8   |    -   |
 +-----------+--------+--------+--------+
-|   Total   |    1   |   15   |   29   |
+|   Total   |    1   |    8   |   29   |
 +-----------+--------+--------+--------+

@@ -48,23 +48,23 @@ input   ap_start;
 output   ap_done;
 output   ap_idle;
 output   ap_ready;
-input  [10:0] indvars_iv14;
-output  [10:0] distances_address0;
+input  [3:0] indvars_iv14;
+output  [3:0] distances_address0;
 output   distances_ce0;
 output   distances_we0;
 output  [63:0] distances_d0;
 input  [63:0] distances_q0;
-output  [10:0] distances_address1;
+output  [3:0] distances_address1;
 output   distances_ce1;
 output   distances_we1;
 output  [63:0] distances_d1;
 input  [63:0] distances_q1;
-output  [10:0] labels_address0;
+output  [3:0] labels_address0;
 output   labels_ce0;
 output   labels_we0;
 output  [3:0] labels_d0;
 input  [3:0] labels_q0;
-output  [10:0] labels_address1;
+output  [3:0] labels_address1;
 output   labels_ce1;
 output   labels_we1;
 output  [3:0] labels_d1;
@@ -81,35 +81,35 @@ wire    ap_loop_exit_ready;
 reg    ap_ready_int;
 wire    ap_CS_fsm_state5;
 reg   [0:0] icmp_ln65_reg_235;
-wire   [10:0] add_ln66_fu_126_p2;
-reg   [10:0] add_ln66_reg_239;
+wire   [3:0] add_ln66_fu_126_p2;
+reg   [3:0] add_ln66_reg_239;
 wire   [63:0] zext_ln65_fu_132_p1;
 reg   [63:0] zext_ln65_reg_244;
-reg   [10:0] distances_addr_reg_249;
+reg   [3:0] distances_addr_reg_249;
 wire   [63:0] zext_ln66_fu_137_p1;
 reg   [63:0] zext_ln66_reg_254;
-reg   [10:0] distances_addr_1_reg_259;
+reg   [3:0] distances_addr_1_reg_259;
 reg   [63:0] temp_dist_reg_264;
 wire    ap_CS_fsm_state2;
 reg   [63:0] distances_load_1_reg_271;
 wire   [0:0] and_ln66_1_fu_218_p2;
 reg   [0:0] and_ln66_1_reg_278;
 wire    ap_CS_fsm_state4;
-reg   [10:0] labels_addr_reg_282;
-reg   [10:0] labels_addr_1_reg_287;
-reg   [10:0] j_fu_46;
+reg   [3:0] labels_addr_reg_282;
+reg   [3:0] labels_addr_1_reg_287;
+reg   [3:0] j_fu_46;
 wire    ap_loop_init;
-reg   [10:0] ap_sig_allocacmp_j_1;
+reg   [3:0] ap_sig_allocacmp_j_1;
 reg    distances_ce1_local;
-reg   [10:0] distances_address1_local;
+reg   [3:0] distances_address1_local;
 reg    distances_ce0_local;
-reg   [10:0] distances_address0_local;
+reg   [3:0] distances_address0_local;
 reg    distances_we1_local;
 reg    distances_we0_local;
 reg    labels_ce1_local;
-reg   [10:0] labels_address1_local;
+reg   [3:0] labels_address1_local;
 reg    labels_ce0_local;
-reg   [10:0] labels_address0_local;
+reg   [3:0] labels_address0_local;
 reg    labels_we1_local;
 reg    labels_we0_local;
 wire    ap_CS_fsm_state3;
@@ -144,7 +144,7 @@ wire    ap_ce_reg;
 // power-on initialization
 initial begin
 #0 ap_CS_fsm = 5'd1;
-#0 j_fu_46 = 11'd0;
+#0 j_fu_46 = 4'd0;
 #0 ap_done_reg = 1'b0;
 end
 
@@ -201,7 +201,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_state1_pp0_stage0_iter0) & (1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-        j_fu_46 <= 11'd0;
+        j_fu_46 <= 4'd0;
     end else if (((icmp_ln65_reg_235 == 1'd0) & (1'b1 == ap_CS_fsm_state5))) begin
         j_fu_46 <= add_ln66_reg_239;
     end
@@ -213,8 +213,8 @@ always @ (posedge ap_clk) begin
         distances_addr_1_reg_259 <= zext_ln66_fu_137_p1;
         distances_addr_reg_249 <= zext_ln65_fu_132_p1;
         icmp_ln65_reg_235 <= icmp_ln65_fu_120_p2;
-        zext_ln65_reg_244[10 : 0] <= zext_ln65_fu_132_p1[10 : 0];
-        zext_ln66_reg_254[10 : 0] <= zext_ln66_fu_137_p1[10 : 0];
+        zext_ln65_reg_244[3 : 0] <= zext_ln65_fu_132_p1[3 : 0];
+        zext_ln66_reg_254[3 : 0] <= zext_ln66_fu_137_p1[3 : 0];
     end
 end
 
@@ -283,7 +283,7 @@ end
 
 always @ (*) begin
     if (((1'b1 == ap_CS_fsm_state1) & (ap_loop_init == 1'b1))) begin
-        ap_sig_allocacmp_j_1 = 11'd0;
+        ap_sig_allocacmp_j_1 = 4'd0;
     end else begin
         ap_sig_allocacmp_j_1 = j_fu_46;
     end
@@ -422,7 +422,7 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln66_fu_126_p2 = (ap_sig_allocacmp_j_1 + 11'd1);
+assign add_ln66_fu_126_p2 = (ap_sig_allocacmp_j_1 + 4'd1);
 
 assign and_ln66_1_fu_218_p2 = (grp_fu_108_p2 & and_ln66_fu_212_p2);
 
@@ -511,8 +511,8 @@ assign zext_ln65_fu_132_p1 = ap_sig_allocacmp_j_1;
 assign zext_ln66_fu_137_p1 = add_ln66_fu_126_p2;
 
 always @ (posedge ap_clk) begin
-    zext_ln65_reg_244[63:11] <= 53'b00000000000000000000000000000000000000000000000000000;
-    zext_ln66_reg_254[63:11] <= 53'b00000000000000000000000000000000000000000000000000000;
+    zext_ln65_reg_244[63:4] <= 60'b000000000000000000000000000000000000000000000000000000000000;
+    zext_ln66_reg_254[63:4] <= 60'b000000000000000000000000000000000000000000000000000000000000;
 end
 
 endmodule //knn_accelerator_knn_distance_and_sort_Pipeline_sort_loop_j
