@@ -89,3 +89,15 @@
 19:27:11 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr3692835497756744920 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
 19:27:13 INFO  : Embedded Template List generated successfully
 20:13:31 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+20:13:40 INFO  : updated workspace path: C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+20:13:41 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr11889110015683541585 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+20:13:47 INFO  : Embedded Template List generated successfully
+20:13:47 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr10594129626277351735 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+20:13:50 INFO  : Embedded Template List generated successfully
+21:19:10 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+21:19:14 INFO  : updated workspace path: C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
+21:19:14 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr6823662758138222739 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+21:19:15 INFO  : Embedded Template List generated successfully
+21:19:15 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\seanr\AppData\Local\Temp\rigel_lopper_seanr14410786635946048566 -r C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\_ide\.wsdata\.repo.yaml
+21:19:18 INFO  : Embedded Template List generated successfully
+21:53:44 INFO  : created .gitignore file for the project C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel
