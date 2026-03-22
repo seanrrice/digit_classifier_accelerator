@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_distance_and_sort'" level="0">
-<item name = "Date">Tue Mar 17 19:32:43 2026
+<item name = "Date">Sat Mar 21 23:51:26 2026
 </item>
-<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">knn_accelerator</item>
 <item name = "Solution">hls (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 8.536 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">980, 1340, 9.800 us, 13.400 us, 980, 1340, no</column>
+<column name="">12029, 12389, 0.120 ms, 0.124 ms, 12029, 12389, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,6 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- copy_top_k">6, 6, 2, -, -, 3, no</column>
 </table>
 </item>
 </section>

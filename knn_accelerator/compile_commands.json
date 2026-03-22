@@ -1,27 +1,27 @@
 [
   {
-    "directory": "C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator",
+    "directory": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\knn_accelerator",
     "arguments": [
-      "C:\\Xilinx\\2025.1\\Vitis\\vcxx\\libexec\\clang++.exe",
-      "--sysroot=C:\\Xilinx\\2025.1\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "T:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=T:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
       "-fhls",
-      "-hls-syn-headers-dir=C:\\Xilinx\\2025.1\\Vitis\\common\\technology\\autopilot",
+      "-hls-syn-headers-dir=T:\\AMDDesignTools\\2025.2\\Vitis\\common\\technology\\autopilot",
       "-fhlstoplevel=knn_accelerator",
       "-c",
-      "C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\..\\src\\knn.cpp"
+      "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\src\\knn.cpp"
     ],
-    "file": "C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\..\\src\\knn.cpp"
+    "file": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\src\\knn.cpp"
   },
   {
-    "directory": "C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator",
+    "directory": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\knn_accelerator",
     "arguments": [
-      "C:\\Xilinx\\2025.1\\Vitis\\vcxx\\libexec\\clang++.exe",
-      "--sysroot=C:\\Xilinx\\2025.1\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
+      "T:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
+      "--sysroot=T:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
       "-fhls-tb",
-      "-hls-sim-headers-dir=C:\\Xilinx\\2025.1\\Vitis\\include",
+      "-hls-sim-headers-dir=T:\\AMDDesignTools\\2025.2\\Vitis\\include",
       "-c",
-      "C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\..\\test\\knn_test.cpp"
+      "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\test\\knn_test.cpp"
     ],
-    "file": "C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\..\\test\\knn_test.cpp"
+    "file": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\test\\knn_test.cpp"
   }
 ]

@@ -37,165 +37,85 @@
          <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator//AESL_inst_knn_accelerator_activity.dataflowTxWaveData.Cycles</obj_property>
          <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator//AESL_inst_knn_accelerator_activity.dataflowTxWaveData.OutStanding</obj_property>
          <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator//AESL_inst_knn_accelerator_activity.dataflowTxTooltipData</obj_property>
-         <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_fu_172_activity">
-            <obj_property name="label">grp_knn_distance_and_sort_fu_172_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_fu_178_activity">
+            <obj_property name="label">grp_knn_distance_and_sort_fu_178_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_knn_distance_and_sort_fu_172_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_fu_172_activity</obj_property>
+            <obj_property name="ElementShortName">grp_knn_distance_and_sort_fu_178_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_fu_178_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_fu_172_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_fu_172_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_fu_172_activity.dataflowTxTooltipData</obj_property>
-            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity">
-               <obj_property name="label">grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity</obj_property>
+            <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_fu_178_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_fu_178_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_fu_178_activity.dataflowTxTooltipData</obj_property>
+            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity">
+               <obj_property name="label">grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity</obj_property>
+               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity</obj_property>
                <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity.dataflowTxTooltipData</obj_property>
             </wvobject>
-            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity">
-               <obj_property name="label">grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity</obj_property>
+            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity">
+               <obj_property name="label">grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity</obj_property>
+               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity</obj_property>
                <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity.dataflowTxTooltipData</obj_property>
             </wvobject>
-            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity">
-               <obj_property name="label">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity</obj_property>
+            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity">
+               <obj_property name="label">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity</obj_property>
                <obj_property name="DisplayName">label</obj_property>
                <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity</obj_property>
+               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity</obj_property>
+               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity</obj_property>
                <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
                <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
                <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
                <obj_property name="UseCustomSignalColor">true</obj_property>
                <obj_property name="CustomSignalColor">turquoise</obj_property>
                <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity.dataflowTxTooltipData</obj_property>
-               <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity">
-                  <obj_property name="label">grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity</obj_property>
-                  <obj_property name="DisplayName">label</obj_property>
-                  <obj_property name="UseFullPath">true</obj_property>
-                  <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity</obj_property>
-                  <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity</obj_property>
-                  <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-                  <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-                  <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-                  <obj_property name="UseCustomSignalColor">true</obj_property>
-                  <obj_property name="CustomSignalColor">turquoise</obj_property>
-                  <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-                  <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity.dataflowTxWaveData.Cycles</obj_property>
-                  <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity.dataflowTxWaveData.OutStanding</obj_property>
-                  <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity.dataflowTxTooltipData</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity">
-               <obj_property name="label">grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity</obj_property>
-               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-               <obj_property name="CustomSignalColor">turquoise</obj_property>
-               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity.dataflowTxTooltipData</obj_property>
+               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity.dataflowTxWaveData.Cycles</obj_property>
+               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity.dataflowTxWaveData.OutStanding</obj_property>
+               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity.dataflowTxTooltipData</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_fu_189_activity">
-            <obj_property name="label">grp_knn_majority_vote_fu_189_activity</obj_property>
+         <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/grp_knn_majority_vote_fu_195_activity">
+            <obj_property name="label">grp_knn_majority_vote_fu_195_activity</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="UseFullPath">true</obj_property>
-            <obj_property name="ElementShortName">grp_knn_majority_vote_fu_189_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_majority_vote_fu_189_activity</obj_property>
+            <obj_property name="ElementShortName">grp_knn_majority_vote_fu_195_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_knn_majority_vote_fu_195_activity</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
             <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
             <obj_property name="CustomSignalColor">turquoise</obj_property>
             <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-            <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_fu_189_activity.dataflowTxWaveData.Cycles</obj_property>
-            <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_fu_189_activity.dataflowTxWaveData.OutStanding</obj_property>
-            <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_fu_189_activity.dataflowTxTooltipData</obj_property>
-            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity">
-               <obj_property name="label">grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity</obj_property>
-               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-               <obj_property name="CustomSignalColor">turquoise</obj_property>
-               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity.dataflowTxTooltipData</obj_property>
-            </wvobject>
-            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity">
-               <obj_property name="label">grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity</obj_property>
-               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-               <obj_property name="CustomSignalColor">turquoise</obj_property>
-               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity.dataflowTxTooltipData</obj_property>
-            </wvobject>
-            <wvobject type="group" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity">
-               <obj_property name="label">grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <obj_property name="UseFullPath">true</obj_property>
-               <obj_property name="ElementShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity</obj_property>
-               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-               <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-               <obj_property name="EnumTransactionColorTable">0=blank ffff=blank 0bad=#FF0000</obj_property>
-               <obj_property name="UseCustomSignalColor">true</obj_property>
-               <obj_property name="CustomSignalColor">turquoise</obj_property>
-               <obj_property name="EnumTransactionValueTable">65535=blank</obj_property>
-               <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity.dataflowTxWaveData.Cycles</obj_property>
-               <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity.dataflowTxWaveData.OutStanding</obj_property>
-               <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity.dataflowTxTooltipData</obj_property>
-            </wvobject>
+            <obj_property name="Render_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/grp_knn_majority_vote_fu_195_activity.dataflowTxWaveData.Cycles</obj_property>
+            <obj_property name="Value_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/grp_knn_majority_vote_fu_195_activity.dataflowTxWaveData.OutStanding</obj_property>
+            <obj_property name="Detail_Data">/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/grp_knn_majority_vote_fu_195_activity.dataflowTxTooltipData</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
@@ -206,13 +126,13 @@
    <wvobject type="group" fp_name="AESL_inst_knn_accelerator_group">
       <obj_property name="label">AESL_inst_knn_accelerator</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_fu_172_activity">
-         <obj_property name="ElementShortName">grp_knn_distance_and_sort_fu_172_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_knn_distance_and_sort_fu_172_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_fu_178_activity">
+         <obj_property name="ElementShortName">grp_knn_distance_and_sort_fu_178_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_knn_distance_and_sort_fu_178_activity</obj_property>
       </wvobject>
-      <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_fu_189_activity">
-         <obj_property name="ElementShortName">grp_knn_majority_vote_fu_189_activity</obj_property>
-         <obj_property name="ObjectShortName">grp_knn_majority_vote_fu_189_activity</obj_property>
+      <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/grp_knn_majority_vote_fu_195_activity">
+         <obj_property name="ElementShortName">grp_knn_majority_vote_fu_195_activity</obj_property>
+         <obj_property name="ObjectShortName">grp_knn_majority_vote_fu_195_activity</obj_property>
       </wvobject>
       <wvobject type="group" fp_name="AESL_inst_knn_accelerator_Handshake_group">
          <obj_property name="label">Block-level handshake</obj_property>
@@ -230,235 +150,115 @@
             <obj_property name="ObjectShortName">ap_done</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_knn_distance_and_sort_fu_172_group">
-         <obj_property name="label">grp_knn_distance_and_sort_fu_172</obj_property>
+      <wvobject type="group" fp_name="grp_knn_distance_and_sort_fu_178_group">
+         <obj_property name="label">grp_knn_distance_and_sort_fu_178</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity">
-            <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_activity</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity">
+            <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_init_top_k_fu_190_activity</obj_property>
          </wvobject>
-         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity">
-            <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_activity</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity">
+            <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_train_loop_fu_200_activity</obj_property>
          </wvobject>
-         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity">
-            <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_activity</obj_property>
+         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity">
+            <obj_property name="ElementShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity</obj_property>
+            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_activity</obj_property>
          </wvobject>
-         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity">
-            <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_activity</obj_property>
-         </wvobject>
-         <wvobject type="group" fp_name="grp_knn_distance_and_sort_fu_172_Handshake_group">
+         <wvobject type="group" fp_name="grp_knn_distance_and_sort_fu_178_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/ap_start">
+            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/ap_done">
+            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_group">
-            <obj_property name="label">grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126</obj_property>
+         <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_init_top_k_fu_190_group">
+            <obj_property name="label">grp_knn_distance_and_sort_Outline_init_top_k_fu_190</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_Handshake_group">
+            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_init_top_k_fu_190_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/ap_start">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126/ap_done">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_init_top_k_fu_190/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_group">
-            <obj_property name="label">grp_knn_distance_and_sort_Pipeline_train_loop_fu_136</obj_property>
+         <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_train_loop_fu_200_group">
+            <obj_property name="label">grp_knn_distance_and_sort_Outline_train_loop_fu_200</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_Handshake_group">
+            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_train_loop_fu_200_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/ap_start">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_train_loop_fu_136/ap_done">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_train_loop_fu_200/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_group">
-            <obj_property name="label">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151</obj_property>
+         <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_group">
+            <obj_property name="label">grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity">
-               <obj_property name="ElementShortName">grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity</obj_property>
-               <obj_property name="ObjectShortName">grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_activity</obj_property>
-            </wvobject>
-            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_Handshake_group">
+            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_Handshake_group">
                <obj_property name="label">Block-level handshake</obj_property>
                <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/ap_start">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/ap_start">
                   <obj_property name="ElementShortName">ap_start</obj_property>
                   <obj_property name="ObjectShortName">ap_start</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/ap_ready">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/ap_ready">
                   <obj_property name="ElementShortName">ap_ready</obj_property>
                   <obj_property name="ObjectShortName">ap_ready</obj_property>
                </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/ap_done">
-                  <obj_property name="ElementShortName">ap_done</obj_property>
-                  <obj_property name="ObjectShortName">ap_done</obj_property>
-               </wvobject>
-            </wvobject>
-            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_group">
-               <obj_property name="label">grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_Handshake_group">
-                  <obj_property name="label">Block-level handshake</obj_property>
-                  <obj_property name="DisplayName">label</obj_property>
-                  <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/ap_start">
-                     <obj_property name="ElementShortName">ap_start</obj_property>
-                     <obj_property name="ObjectShortName">ap_start</obj_property>
-                  </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/ap_ready">
-                     <obj_property name="ElementShortName">ap_ready</obj_property>
-                     <obj_property name="ObjectShortName">ap_ready</obj_property>
-                  </wvobject>
-                  <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151/grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32/ap_done">
-                     <obj_property name="ElementShortName">ap_done</obj_property>
-                     <obj_property name="ObjectShortName">ap_done</obj_property>
-                  </wvobject>
-               </wvobject>
-            </wvobject>
-         </wvobject>
-         <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_group">
-            <obj_property name="label">grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_Handshake_group">
-               <obj_property name="label">Block-level handshake</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/ap_start">
-                  <obj_property name="ElementShortName">ap_start</obj_property>
-                  <obj_property name="ObjectShortName">ap_start</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/ap_ready">
-                  <obj_property name="ElementShortName">ap_ready</obj_property>
-                  <obj_property name="ObjectShortName">ap_ready</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_172/grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157/ap_done">
+               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_distance_and_sort_fu_178/grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215/ap_done">
                   <obj_property name="ElementShortName">ap_done</obj_property>
                   <obj_property name="ObjectShortName">ap_done</obj_property>
                </wvobject>
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="grp_knn_majority_vote_fu_189_group">
-         <obj_property name="label">grp_knn_majority_vote_fu_189</obj_property>
+      <wvobject type="group" fp_name="grp_knn_majority_vote_fu_195_group">
+         <obj_property name="label">grp_knn_majority_vote_fu_195</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity">
-            <obj_property name="ElementShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_activity</obj_property>
-         </wvobject>
-         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity">
-            <obj_property name="ElementShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_activity</obj_property>
-         </wvobject>
-         <wvobject type="protoinst" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity">
-            <obj_property name="ElementShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity</obj_property>
-            <obj_property name="ObjectShortName">grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_activity</obj_property>
-         </wvobject>
-         <wvobject type="group" fp_name="grp_knn_majority_vote_fu_189_Handshake_group">
+         <wvobject type="group" fp_name="grp_knn_majority_vote_fu_195_Handshake_group">
             <obj_property name="label">Block-level handshake</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/ap_start">
+            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/ap_start">
                <obj_property name="ElementShortName">ap_start</obj_property>
                <obj_property name="ObjectShortName">ap_start</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/ap_ready">
+            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/ap_ready">
                <obj_property name="ElementShortName">ap_ready</obj_property>
                <obj_property name="ObjectShortName">ap_ready</obj_property>
             </wvobject>
-            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/ap_done">
+            <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_195/ap_done">
                <obj_property name="ElementShortName">ap_done</obj_property>
                <obj_property name="ObjectShortName">ap_done</obj_property>
-            </wvobject>
-         </wvobject>
-         <wvobject type="group" fp_name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_group">
-            <obj_property name="label">grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42_Handshake_group">
-               <obj_property name="label">Block-level handshake</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/ap_start">
-                  <obj_property name="ElementShortName">ap_start</obj_property>
-                  <obj_property name="ObjectShortName">ap_start</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/ap_ready">
-                  <obj_property name="ElementShortName">ap_ready</obj_property>
-                  <obj_property name="ObjectShortName">ap_ready</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42/ap_done">
-                  <obj_property name="ElementShortName">ap_done</obj_property>
-                  <obj_property name="ObjectShortName">ap_done</obj_property>
-               </wvobject>
-            </wvobject>
-         </wvobject>
-         <wvobject type="group" fp_name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_group">
-            <obj_property name="label">grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48_Handshake_group">
-               <obj_property name="label">Block-level handshake</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/ap_start">
-                  <obj_property name="ElementShortName">ap_start</obj_property>
-                  <obj_property name="ObjectShortName">ap_start</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/ap_ready">
-                  <obj_property name="ElementShortName">ap_ready</obj_property>
-                  <obj_property name="ObjectShortName">ap_ready</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48/ap_done">
-                  <obj_property name="ElementShortName">ap_done</obj_property>
-                  <obj_property name="ObjectShortName">ap_done</obj_property>
-               </wvobject>
-            </wvobject>
-         </wvobject>
-         <wvobject type="group" fp_name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_group">
-            <obj_property name="label">grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <wvobject type="group" fp_name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59_Handshake_group">
-               <obj_property name="label">Block-level handshake</obj_property>
-               <obj_property name="DisplayName">label</obj_property>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/ap_start">
-                  <obj_property name="ElementShortName">ap_start</obj_property>
-                  <obj_property name="ObjectShortName">ap_start</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/ap_ready">
-                  <obj_property name="ElementShortName">ap_ready</obj_property>
-                  <obj_property name="ObjectShortName">ap_ready</obj_property>
-               </wvobject>
-               <wvobject type="logic" fp_name="/apatb_knn_accelerator_top/AESL_inst_knn_accelerator/grp_knn_majority_vote_fu_189/grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59/ap_done">
-                  <obj_property name="ElementShortName">ap_done</obj_property>
-                  <obj_property name="ObjectShortName">ap_done</obj_property>
-               </wvobject>
             </wvobject>
          </wvobject>
       </wvobject>

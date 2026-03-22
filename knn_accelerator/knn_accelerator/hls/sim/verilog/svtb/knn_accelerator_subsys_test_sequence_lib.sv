@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -143,16 +143,14 @@
                                 axi_master_wr_control_r_seq.StableAxiliteNoUpdate=1;
                                 axi_master_wr_control_r_seq.datamerge_inavg(databusbit_y_test, 0, 52, 1);
                                 `uvm_send(axi_master_wr_control_r_seq);
-                                @(posedge refm.misc_if.clock); //wait address 2 rsp done
-                                @(posedge refm.misc_if.clock);
                                 refm.write_data_finish_control_r = 1;
                                 `uvm_info("control_r data writting thread", $sformatf("%0dth(total 1): waiting for all write data finish event",i), UVM_LOW)
                                 wait(refm.allaxilite_write_data_finish.triggered);
                                 refm.write_data_finish_control_r = 0;
-                        `uvm_info("control_r wait for ap_ready for next trans", $sformatf("%0dth(total 1): begin to wait",i), UVM_LOW)
-                        wait(refm.dut2tb_ap_ready.triggered);
-                        wait(refm.ap_done_for_nexttrans.triggered);
-                        #0.01; //make sure mem incr_rd_page_idx is called first
+                                `uvm_info("control_r wait for ap_ready for next trans", $sformatf("%0dth(total 1): begin to wait",i), UVM_LOW)
+                                wait(refm.dut2tb_ap_ready.triggered);
+                                wait(refm.ap_done_for_nexttrans.triggered);
+                                #0.01; //make sure mem incr_rd_page_idx is called first
                             end
                         end
                         begin
@@ -166,7 +164,7 @@
                             for(int i=0; i<1; i++) begin
                                 wait(refm.allaxilite_write_data_finish.triggered);
                                 fork
-                                    begin
+                                    begin // configure start to enable DUT
                                         axi_master_wr_control_seq.wr_addr_data.push_back( (1<<0)+(0<<32) );
                                         `uvm_info("control start dut by axilite", $sformatf("%0dth(total 1): begin to set start bit",i), UVM_LOW)
                                         `uvm_send(axi_master_wr_control_seq);

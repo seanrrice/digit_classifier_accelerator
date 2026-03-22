@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_distance_and_sort_Outline_sort_loop_i'" level="0">
-<item name = "Date">Tue Mar 17 19:32:43 2026
+<item name = "Date">Sat Mar 21 23:51:26 2026
 </item>
-<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">knn_accelerator</item>
 <item name = "Solution">hls (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">82, 442, 0.820 us, 4.420 us, 82, 442, no</column>
+<column name="">64, 424, 0.640 us, 4.240 us, 64, 424, no</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,8 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- sort_loop_i">81, 441, 9 ~ 49, -, -, 9, no</column>
+<column name="- sort_loop_i">63, 423, 7 ~ 47, -, -, 9, no</column>
+<column name=" + sort_loop_j">5, 45, 5, -, -, 1 ~ 9, no</column>
 </table>
 </item>
 </section>

@@ -1,6 +1,6 @@
 # ==============================================================
-# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-# Tool Version Limit: 2025.05
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+# Tool Version Limit: 2025.11
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
@@ -27,17 +27,17 @@ HLS_SOURCES = ../../../../../test/knn_test.cpp ../../../../../src/knn.cpp
 
 override TARGET := csim.exe
 
-AUTOPILOT_ROOT := C:/Xilinx/2025.1/Vitis
+AUTOPILOT_ROOT := T:/AMDDesignTools/2025.2/Vitis
 AUTOPILOT_MACH := win64
 ifdef AP_GCC_M32
   AUTOPILOT_MACH := Linux_x86
   IFLAG += -m32
 endif
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := C:/Xilinx/2025.1/Vitis/tps/win64/msys64/mingw64/bin
+  AP_GCC_PATH := T:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt/bin
 endif
 AUTOPILOT_TOOL := ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
-AP_CLANG_PATH := ${XILINX_VCXX}/libexec
+AP_CLANG_PATH := ${AUTOPILOT_ROOT}/win64/tools/clang-16/bin
 AUTOPILOT_TECH := ${AUTOPILOT_ROOT}/common/technology
 
 
@@ -70,11 +70,13 @@ DFLAG += -D__xilinx_ip_top= -DAESL_TB
 CCFLAG += -Werror=return-type
 CCFLAG += -Wno-abi
 CCFLAG += -fdebug-default-version=4
-CCFLAG += --sysroot=C:/Xilinx/2025.1/Vitis/tps/mingw/10.0.0/win64.o/nt
+CCFLAG += --sysroot=T:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt
 CCFLAG += -Werror=uninitialized
 CCFLAG += -Wno-c++11-narrowing
 CCFLAG += -Wno-error=sometimes-uninitialized
-LFLAG += --sysroot=C:/Xilinx/2025.1/Vitis/tps/mingw/10.0.0/win64.o/nt
+LFLAG += --sysroot=T:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt
+CCFLAG += --target=x86_64-w64-windows-gnu
+LFLAG += --target=x86_64-w64-windows-gnu
 
 
 
@@ -86,12 +88,12 @@ all: $(TARGET)
 
 $(ObjDir)/knn_test.o: ../../../../../test/knn_test.cpp $(ObjDir)/.dir csim.mk
 	$(Echo) "   Compiling ../../../../../test/knn_test.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CXX) -std=gnu++17 ${CCFLAG} -c -MMD -Wno-unknown-pragmas -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/knn_test.d
 
 $(ObjDir)/knn.o: ../../../../../src/knn.cpp $(ObjDir)/.dir csim.mk
 	$(Echo) "   Compiling ../../../../../src/knn.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CXX) -std=gnu++14 ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CXX) -std=gnu++17 ${CCFLAG} -c -MMD  -fhls-csim -fhlstoplevel=knn_accelerator $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/knn.d

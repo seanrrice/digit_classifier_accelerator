@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2025.1</Version>
+<Version>2025.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -18,18 +18,18 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>8.536</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.300</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>10237</Best-caseLatency>
-<Average-caseLatency>12037</Average-caseLatency>
-<Worst-caseLatency>13837</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.102 ms</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.120 ms</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.138 ms</Worst-caseRealTimeLatency>
-<Interval-min>10238</Interval-min>
-<Interval-max>13838</Interval-max>
+<Best-caseLatency>120747</Best-caseLatency>
+<Average-caseLatency>122547</Average-caseLatency>
+<Worst-caseLatency>124347</Worst-caseLatency>
+<Best-caseRealTimeLatency>1.207 ms</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>1.225 ms</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>1.243 ms</Worst-caseRealTimeLatency>
+<Interval-min>120748</Interval-min>
+<Interval-max>124348</Interval-max>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
 <SummaryOfLoopLatency>
@@ -39,20 +39,20 @@
 <isPerfectNested>0</isPerfectNested>
 <Latency>
 <range>
-<min>10230</min>
-<max>13830</max>
+<min>120740</min>
+<max>124340</max>
 </range>
 </Latency>
 <AbsoluteTimeLatency>
 <range>
-<min>102300</min>
-<max>138300</max>
+<min>1207400</min>
+<max>1243400</max>
 </range>
 </AbsoluteTimeLatency>
 <IterationLatency>
 <range>
-<min>1023</min>
-<max>1383</max>
+<min>12074</min>
+<max>12434</max>
 </range>
 </IterationLatency>
 <PerformancePragma>-</PerformancePragma>
@@ -63,13 +63,13 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../src/knn.cpp:151</SourceLocation>
+<SourceLocation>../src/knn.cpp:160</SourceLocation>
 <SummaryOfLoopViolations>
 <test_data>
 <Name>test_data</Name>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../src/knn.cpp:151</SourceLocation>
+<SourceLocation>../src/knn.cpp:160</SourceLocation>
 </test_data>
 </SummaryOfLoopViolations>
 </SummaryOfViolations>
@@ -78,9 +78,9 @@
 <AreaEstimates>
 <Resources>
 <BRAM_18K>10</BRAM_18K>
-<DSP>17</DSP>
-<FF>13974</FF>
-<LUT>10946</LUT>
+<DSP>14</DSP>
+<FF>5614</FF>
+<LUT>7581</LUT>
 <URAM>0</URAM>
 </Resources>
 <AvailableResources>

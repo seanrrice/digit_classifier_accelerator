@@ -4,4 +4,4 @@
   CREATE_STREAM @125000 {NAME:knn_accelerator_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_gmem_y_train.vsqr STREAM:9134}
   CREATE_STREAM @125000 {NAME:knn_accelerator_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_master_gmem_y_test.vsqr STREAM:9143}
   CREATE_STREAM @125000 {NAME:knn_accelerator_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control_r.vsqr STREAM:9152}
-  CREATE_STREAM @405000 {NAME:knn_accelerator_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control.vsqr STREAM:9488}
+  CREATE_STREAM @385000 {NAME:knn_accelerator_subsys_test_sequence_lib T:Transactions SCOPE:uvm_test_top.top_env.axi_lite_control.vsqr STREAM:9488}

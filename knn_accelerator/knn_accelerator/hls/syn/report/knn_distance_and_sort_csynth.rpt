@@ -3,9 +3,9 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort'
 ================================================================
-* Date:           Tue Mar 17 19:32:52 2026
+* Date:           Sat Mar 21 23:51:30 2026
 
-* Version:        2025.1 (Build 6135595 on May 21 2025)
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        knn_accelerator
 * Solution:       hls (Vivado IP Flow Target)
 * Product family: zynq
@@ -20,32 +20,36 @@
     +--------+----------+----------+------------+
     |  Clock |  Target  | Estimated| Uncertainty|
     +--------+----------+----------+------------+
-    |ap_clk  |  10.00 ns|  8.536 ns|     2.70 ns|
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
     +--------+----------+----------+------------+
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+-----------+-----+------+---------+
-    |  Latency (cycles) |  Latency (absolute)  |  Interval  | Pipeline|
-    |   min   |   max   |    min   |    max    | min |  max |   Type  |
-    +---------+---------+----------+-----------+-----+------+---------+
-    |      980|     1340|  9.800 us|  13.400 us|  980|  1340|       no|
-    +---------+---------+----------+-----------+-----+------+---------+
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    12029|    12389|  0.120 ms|  0.124 ms|  12029|  12389|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
 
     + Detail: 
         * Instance: 
-        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-        |                                                      |                                           |  Latency (cycles) |   Latency (absolute)  |  Interval |                    Pipeline                    |
-        |                       Instance                       |                   Module                  |   min   |   max   |    min    |    max    | min | max |                      Type                      |
-        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
-        |grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126  |knn_distance_and_sort_Pipeline_init_top_k  |        5|        5|  50.000 ns|  50.000 ns|    4|    4|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_knn_distance_and_sort_Pipeline_train_loop_fu_136  |knn_distance_and_sort_Pipeline_train_loop  |      873|      873|   8.730 us|   8.730 us|  539|  539|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151  |knn_distance_and_sort_Outline_sort_loop_i  |       82|      442|   0.820 us|   4.420 us|   82|  442|                                              no|
-        |grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157  |knn_distance_and_sort_Pipeline_copy_top_k  |        5|        5|  50.000 ns|  50.000 ns|    4|    4|  loop auto-rewind stp (delay=0 clock cycles(s))|
-        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-----+-----+------------------------------------------------+
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |                                                      |                                           |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
+        |                       Instance                       |                   Module                  |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        |grp_knn_distance_and_sort_Outline_init_top_k_fu_190   |knn_distance_and_sort_Outline_init_top_k   |        4|        4|  40.000 ns|  40.000 ns|      4|      4|       no|
+        |grp_knn_distance_and_sort_Outline_train_loop_fu_200   |knn_distance_and_sort_Outline_train_loop   |    11941|    11941|   0.119 ms|   0.119 ms|  11941|  11941|       no|
+        |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215  |knn_distance_and_sort_Outline_sort_loop_i  |       64|      424|   0.640 us|   4.240 us|     64|    424|       no|
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
 
         * Loop: 
-        N/A
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- copy_top_k  |        6|        6|         2|          -|          -|     3|        no|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
 
@@ -57,18 +61,18 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|     73|    -|
+|Expression       |        -|    -|       0|     93|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|   17|    9944|   5830|    -|
+|Instance         |        -|   14|    1722|   2729|    -|
 |Memory           |        0|    -|     136|     11|    0|
-|Multiplexer      |        -|    -|       0|    634|    -|
-|Register         |        -|    -|     216|      -|    -|
+|Multiplexer      |        -|    -|       0|    604|    -|
+|Register         |        -|    -|     221|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|   17|   10296|   6548|    0|
+|Total            |        0|   14|    2079|   3437|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    7|       9|     12|    0|
+|Utilization (%)  |        0|    6|       1|      6|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -76,12 +80,11 @@
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
     |                       Instance                       |                   Module                  | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
-    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151  |knn_distance_and_sort_Outline_sort_loop_i  |        0|   0|   184|   367|    0|
-    |grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157  |knn_distance_and_sort_Pipeline_copy_top_k  |        0|   0|     7|    58|    0|
-    |grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126  |knn_distance_and_sort_Pipeline_init_top_k  |        0|   0|     4|    47|    0|
-    |grp_knn_distance_and_sort_Pipeline_train_loop_fu_136  |knn_distance_and_sort_Pipeline_train_loop  |        0|  17|  9749|  5358|    0|
+    |grp_knn_distance_and_sort_Outline_init_top_k_fu_190   |knn_distance_and_sort_Outline_init_top_k   |        0|   0|     4|    43|    0|
+    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215  |knn_distance_and_sort_Outline_sort_loop_i  |        0|   0|   180|   340|    0|
+    |grp_knn_distance_and_sort_Outline_train_loop_fu_200   |knn_distance_and_sort_Outline_train_loop   |        0|  14|  1538|  2346|    0|
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
-    |Total                                                 |                                           |        0|  17|  9944|  5830|    0|
+    |Total                                                 |                                           |        0|  14|  1722|  2729|    0|
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
 
     * DSP: 
@@ -101,14 +104,16 @@
     N/A
 
     * Expression: 
-    +--------------------+----------+----+---+----+------------+------------+
-    |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +--------------------+----------+----+---+----+------------+------------+
-    |add_ln40_fu_222_p2  |         +|   0|  0|  71|          64|          64|
-    |ap_block_state3_io  |        or|   0|  0|   2|           1|           1|
-    +--------------------+----------+----+---+----+------------+------------+
-    |Total               |          |   0|  0|  73|          65|          65|
-    +--------------------+----------+----+---+----+------------+------------+
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |add_ln41_fu_280_p2   |         +|   0|  0|  71|          64|          64|
+    |add_ln82_fu_306_p2   |         +|   0|  0|  10|           2|           1|
+    |icmp_ln82_fu_300_p2  |      icmp|   0|  0|  10|           2|           2|
+    |ap_block_state3_io   |        or|   0|  0|   2|           1|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  93|          69|          68|
+    +---------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +-------------------------------+----+-----------+-----+-----------+
@@ -123,8 +128,9 @@
     |distances_we1                  |   9|          2|    1|          2|
     |gmem_x_train_blk_n_AR          |   9|          2|    1|          2|
     |gmem_y_train_blk_n_AR          |   9|          2|    1|          2|
-    |labels_address0                |  20|          4|    4|         16|
-    |labels_ce0                     |  20|          4|    1|          4|
+    |i_5_fu_104                     |   9|          2|    2|          4|
+    |labels_address0                |  14|          3|    4|         12|
+    |labels_ce0                     |  14|          3|    1|          3|
     |labels_ce1                     |   9|          2|    1|          2|
     |labels_d0                      |  14|          3|    4|         12|
     |labels_we0                     |  14|          3|    1|          3|
@@ -157,34 +163,33 @@
     |m_axi_gmem_y_train_0_RREADY    |   9|          2|    1|          2|
     |top_k_labels_0                 |  14|          3|    4|         12|
     |top_k_labels_0_ap_vld          |  14|          3|    1|          3|
-    |top_k_labels_0_reg             |   9|          2|    4|          8|
     |top_k_labels_1                 |  14|          3|    4|         12|
     |top_k_labels_1_ap_vld          |  14|          3|    1|          3|
-    |top_k_labels_1_reg             |   9|          2|    4|          8|
     |top_k_labels_2                 |  14|          3|    4|         12|
     |top_k_labels_2_ap_vld          |  14|          3|    1|          3|
-    |top_k_labels_2_reg             |   9|          2|    4|          8|
     +-------------------------------+----+-----------+-----+-----------+
-    |Total                          | 634|        137|  358|       1025|
+    |Total                          | 604|        131|  348|       1000|
     +-------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +-------------------------------------------------------------------+----+----+-----+-----------+
     |                                Name                               | FF | LUT| Bits| Const Bits|
     +-------------------------------------------------------------------+----+----+-----+-----------+
+    |add_ln82_reg_367                                                   |   2|   0|    2|          0|
     |ap_CS_fsm                                                          |  16|   0|   16|          0|
-    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_151_ap_start_reg  |   1|   0|    1|          0|
-    |grp_knn_distance_and_sort_Pipeline_copy_top_k_fu_157_ap_start_reg  |   1|   0|    1|          0|
-    |grp_knn_distance_and_sort_Pipeline_init_top_k_fu_126_ap_start_reg  |   1|   0|    1|          0|
-    |grp_knn_distance_and_sort_Pipeline_train_loop_fu_136_ap_start_reg  |   1|   0|    1|          0|
-    |p_cast_reg_259                                                     |  61|   0|   61|          0|
+    |grp_knn_distance_and_sort_Outline_init_top_k_fu_190_ap_start_reg   |   1|   0|    1|          0|
+    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_ap_start_reg  |   1|   0|    1|          0|
+    |grp_knn_distance_and_sort_Outline_train_loop_fu_200_ap_start_reg   |   1|   0|    1|          0|
+    |i_5_fu_104                                                         |   2|   0|    2|          0|
+    |i_reg_360                                                          |   2|   0|    2|          0|
     |top_k_labels_0_reg                                                 |   4|   0|    4|          0|
     |top_k_labels_1_reg                                                 |   4|   0|    4|          0|
     |top_k_labels_2_reg                                                 |   4|   0|    4|          0|
-    |trunc_ln40_1_reg_249                                               |  62|   0|   62|          0|
-    |trunc_ln_reg_239                                                   |  61|   0|   61|          0|
+    |trunc_ln1_reg_355                                                  |  61|   0|   61|          0|
+    |trunc_ln41_1_reg_345                                               |  62|   0|   62|          0|
+    |trunc_ln_reg_335                                                   |  61|   0|   61|          0|
     +-------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                              | 216|   0|  216|          0|
+    |Total                                                              | 221|   0|  221|          0|
     +-------------------------------------------------------------------+----+----+-----+-----------+
 
 

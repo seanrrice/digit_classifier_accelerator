@@ -1,14 +1,14 @@
 # ==============================================================
-# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-# Tool Version Limit: 2025.05
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+# Tool Version Limit: 2025.11
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 # ==============================================================
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/fpo_v7_1;$::env(PATH)"
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/fft_v9_1;$::env(PATH)"
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/fir_v7_0;$::env(PATH)"
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/dds_v6_0;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/fpo_v7_1;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/fft_v9_1;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/fir_v7_0;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/dds_v6_0;$::env(PATH)"
 set_param hls.enable_hidden_option_error false
 
 source check_sim.tcl
@@ -54,7 +54,8 @@ proc run_exec {fileExe} {
 		return -code error -errorcode 10
 	}
 	set err {}
-set ret [catch {eval exec "./$fileExe | tee tmp.log" >&@ stdout} err]
+	set ap_argv {}
+	set ret [catch {exec ./$fileExe {*}$ap_argv | tee tmp.log >&@ stdout} err]
 	
 	cpfilecontent tmp.log ../../.temp11.log
 	

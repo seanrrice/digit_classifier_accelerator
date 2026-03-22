@@ -1,5 +1,6 @@
 [
   {
+    "csim": false,
     "functionLabel": "",
     "functionName": "knn_accelerator",
     "id": 0,

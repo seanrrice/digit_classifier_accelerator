@@ -6,6 +6,7 @@ set isPipelined 0
 set isPipelined_legacy 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
+set restart_counter_num 0
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
@@ -14,12 +15,12 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 13
+set cdfgNum 8
 set C_modelName {knn_distance_and_sort_Outline_sort_loop_i}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
-dict set ap_memory_interface_dict distances { MEM_WIDTH 64 MEM_SIZE 80 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
-dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 10 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 1 }
+dict set ap_memory_interface_dict distances { MEM_WIDTH 64 MEM_SIZE 80 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
+dict set ap_memory_interface_dict labels { MEM_WIDTH 4 MEM_SIZE 10 MASTER_TYPE BRAM_CTRL MEM_ADDRESS_MODE WORD_ADDRESS PACKAGE_IO port READ_LATENCY 0 }
 set C_modelArgList {
 	{ distances double 64 regular {array 10 { 2 2 } 1 1 }  }
 	{ labels int 4 regular {array 10 { 2 2 } 1 1 }  }
@@ -90,18 +91,14 @@ set NewPortList {[
 
 set ArgLastReadFirstWriteLatency {
 	knn_distance_and_sort_Outline_sort_loop_i {
-		distances {Type IO LastRead 1 FirstWrite 4}
-		labels {Type IO LastRead 4 FirstWrite 4}}
-	knn_distance_and_sort_Pipeline_sort_loop_j {
-		indvars_iv14 {Type I LastRead 0 FirstWrite -1}
-		distances {Type IO LastRead 1 FirstWrite 4}
-		labels {Type IO LastRead 4 FirstWrite 4}}}
+		distances {Type IO LastRead 3 FirstWrite 6}
+		labels {Type IO LastRead 6 FirstWrite 6}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "82", "Max" : "442"}
-	, {"Name" : "Interval", "Min" : "82", "Max" : "442"}
+	{"Name" : "Latency", "Min" : "64", "Max" : "424"}
+	, {"Name" : "Interval", "Min" : "64", "Max" : "424"}
 ]}
 
 set PipelineEnableSignalInfo {[

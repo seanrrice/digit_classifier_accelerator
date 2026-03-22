@@ -5,7 +5,7 @@
     "control_depth": 0,
     "def_use_depth": 3,
     "file": "knn.cpp",
-    "fileloc": 133,
+    "fileloc": 142,
     "instructions": 27,
     "memory_accesses": 0,
     "name": "knn_accelerator",
@@ -17,12 +17,12 @@
     "control_depth": 0,
     "def_use_depth": 4,
     "file": "knn.cpp",
-    "fileloc": 86,
+    "fileloc": 92,
     "instructions": 35,
     "loads": {
       "L": 3
     },
-    "memory_accesses": 5,
+    "memory_accesses": 0,
     "name": "knn_majority_vote",
     "stores": {
       "L": 2
@@ -32,7 +32,7 @@
   "2": {
     "basicblocks": 15,
     "calls": "",
-    "control_depth": 2,
+    "control_depth": 0,
     "def_use_depth": 5,
     "file": "knn.cpp",
     "fileloc": 9,
@@ -40,7 +40,7 @@
     "loads": {
       "L": 5
     },
-    "memory_accesses": 13,
+    "memory_accesses": 0,
     "name": "knn_distance_and_sort",
     "stores": {
       "L": 8

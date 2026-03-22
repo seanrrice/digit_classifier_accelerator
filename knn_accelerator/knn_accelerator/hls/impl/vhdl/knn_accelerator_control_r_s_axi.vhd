@@ -1,6 +1,6 @@
 -- ==============================================================
--- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
--- Tool Version Limit: 2025.05
+-- Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+-- Tool Version Limit: 2025.11
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- 
@@ -71,6 +71,8 @@ end entity knn_accelerator_control_r_s_axi;
 -- (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 architecture behave of knn_accelerator_control_r_s_axi is
+attribute DowngradeIPIdentifiedWarnings : STRING;
+attribute DowngradeIPIdentifiedWarnings of behave : architecture is "yes";
     type states is (wridle, wrdata, wrresp, wrreset, rdidle, rddata, rdreset);  -- read and write fsm states
     signal wstate  : states := wrreset;
     signal rstate  : states := rdreset;

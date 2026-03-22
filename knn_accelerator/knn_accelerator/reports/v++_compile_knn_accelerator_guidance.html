@@ -3406,19 +3406,19 @@ window.onload = function () { addSorting(); }
 </head><body>
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
-<tr><td><b>Tool Version</b></td><td>xcd v.2025.1 (win64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Tue Mar 17 19:32:59 2026</td></tr>
-<tr><td><b>Host</b></td><td>LAPTOP-L6H807T2 running 64-bit major release  (build 9200)</td></tr>
-<tr><td><b>Command</b></td><td>C:/Xilinx/2025.1/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\hls_config.cfg --work_dir knn_accelerator </td></tr>
+<tr><td><b>Tool Version</b></td><td>xcd v.2025.2 (win64) Build 0 </td></tr>
+<tr><td><b>Date</b></td><td>Sat Mar 21 23:51:34 2026</td></tr>
+<tr><td><b>Host</b></td><td>jwood_Win_PC running 64-bit major release  (build 9200)</td></tr>
+<tr><td><b>Command</b></td><td>T:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\hls_config.cfg --work_dir knn_accelerator </td></tr>
 </table></center><br>
 <table class="toc" border="1"><tr><td><b>Table of Contents</b></td></tr>
 <tr><td><a href="#REPORT SUMMARY">1 REPORT SUMMARY</a></tr></td>
 <tr><td><a href="#VIOLATION DETAILS">2 VIOLATION DETAILS</a></tr></td>
 </table>
 <a name="REPORT SUMMARY"></a><h1>1 REPORT SUMMARY</h1>
-<pre>Violations found: 27
+<pre>Violations found: 7
 </pre>
-<pre>Rule Specs Violated: 3
+<pre>Rule Specs Violated: 2
 </pre>
 <a name="VIOLATION DETAILS"></a><h1>2 VIOLATION DETAILS</h1>
 <table border="1">
@@ -3434,180 +3434,24 @@ window.onload = function () { addSorting(); }
 <th align="left" width="380">Resolution</th>
 </tr>
 <tr>
-<td align="left">5</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'init_top_k'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">11</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 43, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">21</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_95_1'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">13</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 48, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.knn_accelerator.Interface</td>
-<td align="left">Multiple burst writes of length 10 and bit width 32 in loop 'test_data'(<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=151">knn.cpp</a>) has been inferred on bundle 'gmem_y_test'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=151">knn.cpp</a>)
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">18</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_sort_loop_j' (loop 'sort_loop_j'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'store' operation 0 bit ('distances_addr_1_write_ln69', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=69">knn.cpp</a>) of variable 'temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a> on array 'distances' and 'load' operation 64 bit ('temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a>) on array 'distances'.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">10</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">23</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 2, Depth = 4, loop 'VITIS_LOOP_106_2'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">15</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_sort_loop_j' (loop 'sort_loop_j'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation 0 bit ('distances_addr_1_write_ln69', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=69">knn.cpp</a>) of variable 'temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a> on array 'distances' and 'load' operation 64 bit ('temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a>) on array 'distances'.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">8</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">12</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 47, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">20</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'copy_top_k'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">17</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_sort_loop_j' (loop 'sort_loop_j'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'store' operation 0 bit ('distances_addr_1_write_ln69', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=69">knn.cpp</a>) of variable 'temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a> on array 'distances' and 'load' operation 64 bit ('temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a>) on array 'distances'.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">22</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_majority_vote_Pipeline_VITIS_LOOP_106_2' (loop 'VITIS_LOOP_106_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 2, offset = 1) between 'store' operation 0 bit ('counts_addr_write_ln108', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=108">knn.cpp</a>) of variable 'add_ln108', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=108">knn.cpp</a> on array 'counts' and 'load' operation 32 bit ('counts_load', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=108">knn.cpp</a>) on array 'counts'.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">26</td>
+<td align="left">6</td>
 <td align="left">Kernel</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.knn_accelerator.Kernel</td>
-<td align="left">**** Loop Constraint Status: All loop constraints were satisfied.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+<td align="left">%s</td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">27</td>
+<td align="left">7</td>
 <td align="left">Kernel</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.knn_accelerator.Kernel</td>
-<td align="left">**** Estimated Fmax: 117.15 MHz
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+<td align="left">%s</td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
 <td align="left">2</td>
@@ -3616,64 +3460,20 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.knn_accelerator.Interface</td>
-<td align="left">Multiple burst reads of length 10 and bit width 32 in loop 'train_loop'(<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=40">knn.cpp</a>) has been inferred on bundle 'gmem_y_train'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=40">knn.cpp</a>)
+<td align="left">Multiple burst reads of length 10 and bit width 32 in loop 'train_loop'(<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=41">knn.cpp</a>) has been inferred on bundle 'gmem_y_train'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=41">knn.cpp</a>)
 </td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">6</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">9</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">7</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_train_loop' (loop 'train_loop'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between bus read operation ('gmem_x_test_addr_read_48', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) and bus read operation ('gmem_x_test_addr_read', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>) on port 'gmem_x_test' (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=51">knn.cpp</a>).
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">16</td>
-<td align="left">Throughput</td>
-<td align="left">WARNING</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">The II Violation in module 'knn_distance_and_sort_Pipeline_sort_loop_j' (loop 'sort_loop_j'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'store' operation 0 bit ('distances_addr_1_write_ln69', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=69">knn.cpp</a>) of variable 'temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a> on array 'distances' and 'load' operation 64 bit ('temp_dist', <a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=66">knn.cpp</a>) on array 'distances'.
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">3</td>
+<td align="left">4</td>
 <td align="left">Interface</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.knn_accelerator.Interface</td>
-<td align="left">Multiple burst reads of length 49 and bit width 64 has been inferred on bundle 'gmem_x_test'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=50">knn.cpp</a>)
+<td align="left">Multiple burst writes of length 10 and bit width 32 in loop 'test_data'(<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=160">knn.cpp</a>) has been inferred on bundle 'gmem_y_test'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=160">knn.cpp</a>)
 </td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
 <td align="left">1</td>
@@ -3682,53 +3482,30 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.knn_accelerator.Interface</td>
-<td align="left">Multiple burst reads of length 490 and bit width 64 in loop 'train_loop'(<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=40">knn.cpp</a>) has been inferred on bundle 'gmem_x_train'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=40">knn.cpp</a>)
+<td align="left">Multiple burst reads of length 490 and bit width 64 in loop 'train_loop'(<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=41">knn.cpp</a>) has been inferred on bundle 'gmem_x_train'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=41">knn.cpp</a>)
 </td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">25</td>
+<td align="left">3</td>
 <td align="left">Interface</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.knn_accelerator.Interface</td>
-<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+<td align="left">Multiple burst reads of length 49 and bit width 64 in loop 'feature_loop'(<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=52">knn.cpp</a>) has been inferred on bundle 'gmem_x_test'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator\../src/knn.cpp#line=52">knn.cpp</a>)
 </td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">24</td>
-<td align="left">Throughput</td>
+<td align="left">5</td>
+<td align="left">Interface</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_119_3'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">19</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 5, Depth = 5, loop 'sort_loop_j'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">14</td>
-<td align="left">Throughput</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Throughput Related</td>
-<td align="left">Accelerator.knn_accelerator.Throughput</td>
-<td align="left">Pipelining result : Target II = NA, Final II = 49, Depth = 431, loop 'train_loop'
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.knn_accelerator.Interface</td>
+<td align="left">%s</td>
+<td align="left"><a href="http:///docs.amd.com/access/sources/dita/map?Doc_Version=2025.2%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 </table>
 <br>

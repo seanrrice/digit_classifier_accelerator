@@ -1,12 +1,12 @@
 --- !Passed
 Pass:            inline
 Name:            AlwaysInline
-DebugLoc:        { File: ../src/knn.cpp, Line: 54, Column: 24 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 57, Column: 24 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          'Inlining function '''
   - Callee:          'hls::sqrt(double)'
-    DebugLoc:        { File: 'C:\scratch\2025.1\hls_product\640\2025.1\src\shared\hls\clib\hlsmath\src\c++\sqrtdouble.cpp', 
+    DebugLoc:        { File: 'C:\scratch\2025.2\hls_product\666\2025.2\src\shared\hls\clib\hlsmath\src\c++\sqrtdouble.cpp', 
                        Line: 6, Column: 0 }
   - String:          ''' into '''
   - Caller:          'knn_distance_and_sort(double*, double*, int*, int*)'
@@ -16,53 +16,53 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/knn.cpp, Line: 153, Column: 9 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 163, Column: 9 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - Callee:          'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/knn.cpp, Line: 156, Column: 21 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 166, Column: 21 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - Callee:          'knn_majority_vote(int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 86, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 92, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/knn.cpp, Line: 153, Column: 9 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 163, Column: 9 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - Callee:          'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/knn.cpp, Line: 156, Column: 21 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 166, Column: 21 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - Callee:          'knn_majority_vote(int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 86, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 92, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
@@ -71,7 +71,7 @@ Name:            NeverInline
 Function:        apatb_knn_accelerator_ir
 Args:            
   - Callee:          'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          apatb_knn_accelerator_ir
   - String:          ' because it should never be inlined (cost=never)'
@@ -79,7 +79,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: ../src/knn.cpp, Line: 151, Column: 16 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 160, Column: 16 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - String:          'Sequential '
@@ -95,21 +95,21 @@ Args:
   - String:          ' '
   - LoopName:        test_data
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:151:16'
+  - LoopLoc:         '../src/knn.cpp:160:16'
   - String:          ' '
   - Function:        'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      store
-    DebugLoc:        { File: ../src/knn.cpp, Line: 156, Column: 19 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 166, Column: 19 }
   - OrigDirection:   write
   - OrigID:          for.inc.store.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 52, Column: 23 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          'Sequential '
@@ -125,21 +125,21 @@ Args:
   - String:          ' '
   - LoopName:        feature_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:50:23'
+  - LoopLoc:         '../src/knn.cpp:52:23'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: ../src/knn.cpp, Line: 51, Column: 28 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 54, Column: 28 }
   - OrigDirection:   read
   - OrigID:          for.inc18.load.7
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          'Sequential '
@@ -155,21 +155,21 @@ Args:
   - String:          ' '
   - LoopName:        train_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: ../src/knn.cpp, Line: 51, Column: 44 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 54, Column: 44 }
   - OrigDirection:   read
   - OrigID:          for.inc18.load.12
 ...
 --- !Passed
 Pass:            reflow-burst-inference
 Name:            BurstInferred
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          'Sequential '
@@ -185,27 +185,27 @@ Args:
   - String:          ' '
   - LoopName:        train_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' '
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      load
-    DebugLoc:        { File: ../src/knn.cpp, Line: 55, Column: 21 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 58, Column: 21 }
   - OrigDirection:   read
   - OrigID:          for.inc27.load.7
 ...
 --- !Missed
 Pass:            reflow-burst-inference
 Name:            CouldNotAnalyzePattern
-DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 52, Column: 23 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          Could not analyze pattern
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 52, Column: 23 }
   - OrigDirection:   read
   - OrigID:          scevgepseq
   - ArrayName:       test_point
@@ -214,7 +214,7 @@ Args:
   - String:          ' '
   - LoopName:        train_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
@@ -223,7 +223,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: ../src/knn.cpp, Line: 151, Column: 16 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 160, Column: 16 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - String:          'Could not widen since type '
@@ -232,7 +232,7 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: ../src/knn.cpp, Line: 151, Column: 16 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 160, Column: 16 }
   - OrigDirection:   write
   - OrigID:          y_test3seq
   - ArrayName:       y_test
@@ -241,16 +241,16 @@ Args:
   - String:          ' '
   - LoopName:        test_data
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:151:16'
+  - LoopLoc:         '../src/knn.cpp:160:16'
   - String:          ' '
   - Function:        'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' '
 ...
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          'Could not widen since type '
@@ -259,7 +259,7 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
   - OrigDirection:   read
   - OrigID:          y_train7seq
   - ArrayName:       y_train
@@ -268,7 +268,7 @@ Args:
   - String:          ' '
   - LoopName:        train_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
@@ -277,7 +277,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 52, Column: 23 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          'Could not widen since type '
@@ -286,7 +286,7 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 52, Column: 23 }
   - OrigDirection:   read
   - OrigID:          scevgepseq
   - ArrayName:       test_point
@@ -295,7 +295,7 @@ Args:
   - String:          ' '
   - LoopName:        feature_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:50:23'
+  - LoopLoc:         '../src/knn.cpp:52:23'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
@@ -304,7 +304,7 @@ Args:
 --- !Missed
 Pass:            reflow-burst-widen
 Name:            GreaterOrEqualThreshold
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_
 Args:            
   - String:          'Could not widen since type '
@@ -313,7 +313,7 @@ Args:
   - Threshold:       '0'
   - String:          ' _XLX_SEP_ '
   - OrigAccess:      call
-    DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
   - OrigDirection:   read
   - OrigID:          X_train6seq
   - ArrayName:       X_train
@@ -322,192 +322,46 @@ Args:
   - String:          ' '
   - LoopName:        feature_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:50:23'
+  - LoopLoc:         '../src/knn.cpp:52:23'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' '
 ...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        train_loop
-  - String:          '> at '
-  - LoopLoc:         '../src/knn.cpp:40:17'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        sort_loop_j
-  - String:          '> at '
-  - LoopLoc:         '../src/knn.cpp:65:22'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        copy_top_k
-  - String:          '> at '
-  - LoopLoc:         '../src/knn.cpp:77:17'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        init_top_k
-  - String:          '> at '
-  - LoopLoc:         '../src/knn.cpp:28:17'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_119_3
-  - String:          '> at '
-  - LoopLoc:         '../src/knn.cpp:119:23'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_106_2
-  - String:          '> at '
-  - LoopLoc:         '../src/knn.cpp:106:23'
-  - String:          ' '
-...
---- !HLSReportInfo
-Pass:            auto-loop-pipeline
-Name:            AutoLoopPipeline
-Args:            
-  - String:          'automatically set the pipeline for Loop< '
-  - LoopName:        VITIS_LOOP_95_1
-  - String:          '> at '
-  - LoopLoc:         '../src/knn.cpp:95:22'
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-infer-unroll
-Name:            ImplicitUnroll
-DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
-Function:        _Z21knn_distance_and_sortPdS_PiS0_
-Args:            
-  - String:          'Loop '''
-  - LoopName:        feature_loop
-  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
-...
---- !Passed
-Pass:            reflow-pragma-loop-unroll
-Name:            PragmaFullyUnroll
-DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
-Function:        _Z21knn_distance_and_sortPdS_PiS0_
-Args:            
-  - String:          'Unrolling loop '''
-  - LoopName:        feature_loop
-  - String:          ''' ('
-  - LoopLoc:         '../src/knn.cpp:50:23'
-  - String:          ') '
-  - String:          'in function '''
-  - String:          knn_distance_and_sort
-  - String:          ''' completely with a factor of '
-  - Factor:          '49'
-...
---- !Passed
-Pass:            reflow-loop-flatten-cost-model
-Name:            FlattenOffInference
-DebugLoc:        { File: ../src/knn.cpp, Line: 64, Column: 18 }
-Function:        _Z21knn_distance_and_sortPdS_PiS0_
-Args:            
-  - String:          'Automatically disabling loop flattening for loop '''
-  - LoopName:        sort_loop_i
-  - String:          '''.'
-...
---- !Passed
-Pass:            reflow-loop-flatten-cost-model
-Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../src/knn.cpp, Line: 64, Column: 18 }
-Function:        _Z21knn_distance_and_sortPdS_PiS0_
-Args:            
-  - PragmaType:      loop_flatten
-  - String:          ' '
-  - PragmaOptions:   off
-  - String:          ' '
-  - PragmaIsAuto:    '1'
-  - String:          ' '
-  - PragmaFunction:  knn_distance_and_sort
-  - String:          ' '
-  - PragmaSrcLoc:    '../src/knn.cpp:64:18'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 64, Column: 18 }
-  - LoopName:        sort_loop_i
-  - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:64:18'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 64, Column: 18 }
-  - String:          ' '
-...
---- !Passed
-Pass:            reflow-auto-array-partition
-Name:            AutoSmallArrayPartition
-DebugLoc:        { File: ../src/knn.cpp, Line: 149, Column: 10 }
-Function:        _Z15knn_acceleratorPdS_PiS0_
-Args:            
-  - String:          'Automatically partitioning small array '''
-  - Value:           top_k_labels
-  - String:          ''' completely based on array size.'
-...
 --- !Passed
 Pass:            reflow-auto-array-partition
 Name:            AutoParallelPerformanceDrivenVerbosePassed
-DebugLoc:        { File: ../src/knn.cpp, Line: 149, Column: 10 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 158, Column: 13 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - PragmaType:      array_partition
   - String:          ' '
-  - PragmaOptions:   'dim=1 type=complete  variable=top_k_labels'
+  - PragmaOptions:   'dim=1 type=complete variable=top_k_labels'
   - String:          ' '
   - PragmaIsAuto:    '1'
   - String:          ' '
   - PragmaFunction:  knn_accelerator
   - String:          ' '
-  - varLoc:          '../src/knn.cpp:149:10'
+  - VarLoc:          '../src/knn.cpp:158:13'
   - String:          ' '
+  - PragmaInferReason: config_array_partition -complete_threshold 4
   - VarName:         top_k_labels
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-auto-array-partition
-Name:            AutoArrayXform
-DebugLoc:        { File: ../src/knn.cpp, Line: 149, Column: 10 }
+Name:            AutoSmallArrayPartition
+DebugLoc:        { File: ../src/knn.cpp, Line: 158, Column: 13 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
-  - String:          'Inferring pragma '''
-  - PragmaType:      array_partition
-  - String:          ' type='
-  - Mode:            complete
-  - String:          ' dim='
-  - Dim:             '1'
-  - String:          ''' for array '''
-  - Name:            top_k_labels
-  - String:          ''''
-  - String:          ' due to '
-  - String:          pipeline
-  - String:          ' pragma'
+  - String:          'Partitioning small array '''
+  - Value:           top_k_labels
+  - String:          ''' due to array size.'
 ...
 --- !Passed
 Pass:            reflow-array-partition
 Name:            ArrayXform
-DebugLoc:        { File: ../src/knn.cpp, Line: 149, Column: 10 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 158, Column: 13 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - String:          'Applying '
@@ -525,7 +379,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_.1
 Args:            
   - String:          'Multiple burst '
@@ -544,7 +398,7 @@ Args:
   - String:          ' '
   - LoopName:        train_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*) (.1)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
@@ -553,7 +407,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_.1
 Args:            
   - String:          'Multiple burst '
@@ -565,7 +419,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        train_loop
   - String:          '''('
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem_x_train
@@ -575,7 +429,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_.1
 Args:            
   - String:          'Multiple burst '
@@ -594,7 +448,7 @@ Args:
   - String:          ' '
   - LoopName:        train_loop
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*) (.1)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
@@ -603,7 +457,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 40, Column: 17 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 41, Column: 17 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_.1
 Args:            
   - String:          'Multiple burst '
@@ -615,7 +469,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        train_loop
   - String:          '''('
-  - LoopLoc:         '../src/knn.cpp:40:17'
+  - LoopLoc:         '../src/knn.cpp:41:17'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem_y_train
@@ -625,7 +479,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 52, Column: 23 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_.1
 Args:            
   - String:          'Multiple burst '
@@ -642,6 +496,10 @@ Args:
   - String:          ' '
   - BundleName:      gmem_x_test
   - String:          ' '
+  - LoopName:        feature_loop
+  - String:          ' '
+  - LoopLoc:         '../src/knn.cpp:52:23'
+  - String:          ' '
   - Function:        'knn_distance_and_sort(double*, double*, int*, int*) (.1)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' '
@@ -649,7 +507,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 50, Column: 23 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 52, Column: 23 }
 Function:        _Z21knn_distance_and_sortPdS_PiS0_.1
 Args:            
   - String:          'Multiple burst '
@@ -658,6 +516,11 @@ Args:
   - Length:          '49'
   - String:          ' and bit width '
   - Width:           '64'
+  - String:          ' in loop '''
+  - LoopName:        feature_loop
+  - String:          '''('
+  - LoopLoc:         '../src/knn.cpp:52:23'
+  - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem_x_test
   - String:          '''.'
@@ -666,7 +529,7 @@ Args:
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredVerboseSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 151, Column: 16 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 160, Column: 16 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - String:          'Multiple burst '
@@ -685,16 +548,16 @@ Args:
   - String:          ' '
   - LoopName:        test_data
   - String:          ' '
-  - LoopLoc:         '../src/knn.cpp:151:16'
+  - LoopLoc:         '../src/knn.cpp:160:16'
   - String:          ' '
   - Function:        'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' '
 ...
 --- !Passed
 Pass:            reflow-burst-summary
 Name:            BurstInferredSummary
-DebugLoc:        { File: ../src/knn.cpp, Line: 151, Column: 16 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 160, Column: 16 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - String:          'Multiple burst '
@@ -706,7 +569,7 @@ Args:
   - String:          ' in loop '''
   - LoopName:        test_data
   - String:          '''('
-  - LoopLoc:         '../src/knn.cpp:151:16'
+  - LoopLoc:         '../src/knn.cpp:160:16'
   - String:          ')'
   - String:          ' has been inferred on bundle '''
   - BundleName:      gmem_y_test
@@ -716,26 +579,26 @@ Args:
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/knn.cpp, Line: 153, Column: 9 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 163, Column: 9 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - Callee:          'knn_distance_and_sort(double*, double*, int*, int*) (.1)'
     DebugLoc:        { File: ../src/knn.cpp, Line: 14, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...
 --- !Missed
 Pass:            inline
 Name:            NeverInline
-DebugLoc:        { File: ../src/knn.cpp, Line: 156, Column: 21 }
+DebugLoc:        { File: ../src/knn.cpp, Line: 166, Column: 21 }
 Function:        _Z15knn_acceleratorPdS_PiS0_
 Args:            
   - Callee:          'knn_majority_vote(int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 86, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 92, Column: 0 }
   - String:          ' not inlined into '
   - Caller:          'knn_accelerator(double*, double*, int*, int*)'
-    DebugLoc:        { File: ../src/knn.cpp, Line: 138, Column: 0 }
+    DebugLoc:        { File: ../src/knn.cpp, Line: 147, Column: 0 }
   - String:          ' because it should never be inlined (cost=never)'
 ...

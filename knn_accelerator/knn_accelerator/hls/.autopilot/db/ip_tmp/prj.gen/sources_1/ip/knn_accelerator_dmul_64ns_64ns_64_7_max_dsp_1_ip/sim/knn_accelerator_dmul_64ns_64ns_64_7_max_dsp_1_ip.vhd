@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:floating_point:7.1
--- IP Revision: 20
+-- IP Revision: 21
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY floating_point_v7_1_20;
-USE floating_point_v7_1_20.floating_point_v7_1_20;
+LIBRARY floating_point_v7_1_21;
+USE floating_point_v7_1_21.floating_point_v7_1_21;
 
 ENTITY knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip IS
   PORT (
@@ -72,7 +72,7 @@ END knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip;
 ARCHITECTURE knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip_arch OF knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip_arch: ARCHITECTURE IS "yes";
-  COMPONENT floating_point_v7_1_20 IS
+  COMPONENT floating_point_v7_1_21 IS
     GENERIC (
       C_XDEVICEFAMILY : STRING;
       C_PART : STRING;
@@ -182,7 +182,7 @@ ARCHITECTURE knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip_arch OF knn_accele
       m_axis_result_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_result_tlast : OUT STD_LOGIC
     );
-  END COMPONENT floating_point_v7_1_20;
+  END COMPONENT floating_point_v7_1_21;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_MODE : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
@@ -205,7 +205,7 @@ ARCHITECTURE knn_accelerator_dmul_64ns_64ns_64_7_max_dsp_1_ip_arch OF knn_accele
   ATTRIBUTE X_INTERFACE_MODE OF s_axis_b_tvalid: SIGNAL IS "slave S_AXIS_B";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_b_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_B, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
 BEGIN
-  U0 : floating_point_v7_1_20
+  U0 : floating_point_v7_1_21
     GENERIC MAP (
       C_XDEVICEFAMILY => "zynq",
       C_PART => "xc7z020clg400-1",

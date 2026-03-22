@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2025.1</Version>
+<Version>2025.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -18,32 +18,87 @@
 <PipelineType>no</PipelineType>
 <SummaryOfTimingAnalysis>
 <unit>ns</unit>
-<EstimatedClockPeriod>7.160</EstimatedClockPeriod>
+<EstimatedClockPeriod>7.196</EstimatedClockPeriod>
 </SummaryOfTimingAnalysis>
 <SummaryOfOverallLatency>
 <unit>clock cycles</unit>
-<Best-caseLatency>38</Best-caseLatency>
-<Average-caseLatency>38</Average-caseLatency>
-<Worst-caseLatency>38</Worst-caseLatency>
-<Best-caseRealTimeLatency>0.380 us</Best-caseRealTimeLatency>
-<Average-caseRealTimeLatency>0.380 us</Average-caseRealTimeLatency>
-<Worst-caseRealTimeLatency>0.380 us</Worst-caseRealTimeLatency>
-<Interval-min>38</Interval-min>
-<Interval-max>38</Interval-max>
+<Best-caseLatency>39</Best-caseLatency>
+<Average-caseLatency>39</Average-caseLatency>
+<Worst-caseLatency>39</Worst-caseLatency>
+<Best-caseRealTimeLatency>0.390 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>0.390 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>0.390 us</Worst-caseRealTimeLatency>
+<Interval-min>39</Interval-min>
+<Interval-max>39</Interval-max>
 <PerformancePragma>-</PerformancePragma>
 </SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<count_init_loop>
+<Slack>7.30</Slack>
+<TripCount>10</TripCount>
+<isPerfectNested>0</isPerfectNested>
+<Latency>10</Latency>
+<AbsoluteTimeLatency>100</AbsoluteTimeLatency>
+<IterationLatency>1</IterationLatency>
+<PerformancePragma>-</PerformancePragma>
+<InstanceList>
+</InstanceList>
+</count_init_loop>
+<set_counts_loop>
+<Slack>7.30</Slack>
+<TripCount>3</TripCount>
+<isPerfectNested>0</isPerfectNested>
+<Latency>6</Latency>
+<AbsoluteTimeLatency>60</AbsoluteTimeLatency>
+<IterationLatency>2</IterationLatency>
+<PerformancePragma>-</PerformancePragma>
+<InstanceList>
+</InstanceList>
+</set_counts_loop>
+<max_count_loop>
+<Slack>7.30</Slack>
+<TripCount>10</TripCount>
+<isPerfectNested>0</isPerfectNested>
+<Latency>20</Latency>
+<AbsoluteTimeLatency>200</AbsoluteTimeLatency>
+<IterationLatency>2</IterationLatency>
+<PerformancePragma>-</PerformancePragma>
+<InstanceList>
+</InstanceList>
+</max_count_loop>
+</SummaryOfLoopLatency>
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../src/knn.cpp:88</SourceLocation>
+<SourceLocation>../src/knn.cpp:101</SourceLocation>
+<SummaryOfLoopViolations>
+<count_init_loop>
+<Name>count_init_loop</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../src/knn.cpp:101</SourceLocation>
+</count_init_loop>
+<set_counts_loop>
+<Name>set_counts_loop</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../src/knn.cpp:113</SourceLocation>
+</set_counts_loop>
+<max_count_loop>
+<Name>max_count_loop</Name>
+<IssueType>-</IssueType>
+<ViolationType>-</ViolationType>
+<SourceLocation>../src/knn.cpp:127</SourceLocation>
+</max_count_loop>
+</SummaryOfLoopViolations>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
 <AreaEstimates>
 <Resources>
 <BRAM_18K>0</BRAM_18K>
-<FF>296</FF>
-<LUT>594</LUT>
+<FF>120</FF>
+<LUT>340</LUT>
 <URAM>0</URAM>
 <DSP>0</DSP>
 </Resources>
@@ -146,8 +201,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>top_k_labels_read_10</name>
-<Object>top_k_labels_read_10</Object>
+<name>top_k_labels_read_8</name>
+<Object>top_k_labels_read_8</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -157,8 +212,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>top_k_labels_read_11</name>
-<Object>top_k_labels_read_11</Object>
+<name>top_k_labels_read_9</name>
+<Object>top_k_labels_read_9</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

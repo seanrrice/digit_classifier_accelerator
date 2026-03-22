@@ -1,1 +1,1 @@
-    vitis_hls run_sim.tcl
+    T:/AMDDesignTools/2025.2/Vitis/bin/vitis-run --mode hls --tcl run_sim.tcl

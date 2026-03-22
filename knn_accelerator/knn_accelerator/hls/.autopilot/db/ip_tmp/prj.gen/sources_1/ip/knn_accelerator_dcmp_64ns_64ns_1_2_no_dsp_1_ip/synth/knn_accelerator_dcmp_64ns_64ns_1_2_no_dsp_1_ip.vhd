@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:floating_point:7.1
--- IP Revision: 20
+-- IP Revision: 21
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY floating_point_v7_1_20;
-USE floating_point_v7_1_20.floating_point_v7_1_20;
+LIBRARY floating_point_v7_1_21;
+USE floating_point_v7_1_21.floating_point_v7_1_21;
 
 ENTITY knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip IS
   PORT (
@@ -72,7 +72,7 @@ END knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip;
 ARCHITECTURE knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch: ARCHITECTURE IS "yes";
-  COMPONENT floating_point_v7_1_20 IS
+  COMPONENT floating_point_v7_1_21 IS
     GENERIC (
       C_XDEVICEFAMILY : STRING;
       C_PART : STRING;
@@ -182,13 +182,13 @@ ARCHITECTURE knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch OF knn_accelera
       m_axis_result_tuser : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
       m_axis_result_tlast : OUT STD_LOGIC
     );
-  END COMPONENT floating_point_v7_1_20;
+  END COMPONENT floating_point_v7_1_21;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch: ARCHITECTURE IS "floating_point_v7_1_20,Vivado 2025.1";
+  ATTRIBUTE X_CORE_INFO OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch: ARCHITECTURE IS "floating_point_v7_1_21,Vivado 2025.2";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
-  ATTRIBUTE CHECK_LICENSE_TYPE OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch : ARCHITECTURE IS "knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip,floating_point_v7_1_20,{}";
+  ATTRIBUTE CHECK_LICENSE_TYPE OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch : ARCHITECTURE IS "knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip,floating_point_v7_1_21,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch: ARCHITECTURE IS "knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip,floating_point_v7_1_20,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=floating_point,x_ipVersion=7.1,x_ipCoreRevision=20,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_XDEVICEFAMILY=zynq,C_PART=xc7z020clg400-1,C_HAS_ADD=0,C_HAS_SUBTRACT=0,C_HAS_MULTIPLY=0,C_HAS_DIVIDE=0,C_HAS_SQRT=0,C_HAS_COMPARE=1,C_HAS_FIX_TO_FLT=0,C_HAS_FLT_TO_FIX=0,C_HAS_FLT_TO_FLT=0,C_HAS_RECIP=0,C_HAS_RECIP_SQRT=0,C_HAS_ABSOLUTE=0,C_HAS_LOGARITHM=0,C_HA" & 
+  ATTRIBUTE CORE_GENERATION_INFO OF knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch: ARCHITECTURE IS "knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip,floating_point_v7_1_21,{x_ipProduct=Vivado 2025.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=floating_point,x_ipVersion=7.1,x_ipCoreRevision=21,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_XDEVICEFAMILY=zynq,C_PART=xc7z020clg400-1,C_HAS_ADD=0,C_HAS_SUBTRACT=0,C_HAS_MULTIPLY=0,C_HAS_DIVIDE=0,C_HAS_SQRT=0,C_HAS_COMPARE=1,C_HAS_FIX_TO_FLT=0,C_HAS_FLT_TO_FIX=0,C_HAS_FLT_TO_FLT=0,C_HAS_RECIP=0,C_HAS_RECIP_SQRT=0,C_HAS_ABSOLUTE=0,C_HAS_LOGARITHM=0,C_HA" & 
 "S_EXPONENTIAL=0,C_HAS_FMA=0,C_HAS_FMS=0,C_HAS_UNFUSED_MULTIPLY_ADD=0,C_HAS_UNFUSED_MULTIPLY_SUB=0,C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A=0,C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S=0,C_HAS_ACCUMULATOR_A=0,C_HAS_ACCUMULATOR_S=0,C_HAS_ACCUMULATOR_PRIMITIVE_A=0,C_HAS_ACCUMULATOR_PRIMITIVE_S=0,C_A_WIDTH=64,C_A_FRACTION_WIDTH=53,C_B_WIDTH=64,C_B_FRACTION_WIDTH=53,C_C_WIDTH=64,C_C_FRACTION_WIDTH=53,C_RESULT_WIDTH=1,C_RESULT_FRACTION_WIDTH=0,C_COMPARE_OPERATION=8,C_LATENCY=0,C_OPTIMIZATION=1,C_MULT_USAGE=0,C_" & 
 "BRAM_USAGE=0,C_RATE=1,C_ACCUM_INPUT_MSB=32,C_ACCUM_MSB=32,C_ACCUM_LSB=-31,C_HAS_UNDERFLOW=0,C_HAS_OVERFLOW=0,C_HAS_INVALID_OP=0,C_HAS_DIVIDE_BY_ZERO=0,C_HAS_ACCUM_OVERFLOW=0,C_HAS_ACCUM_INPUT_OVERFLOW=0,C_HAS_ACLKEN=0,C_HAS_ARESETN=0,C_THROTTLE_SCHEME=3,C_HAS_A_TUSER=0,C_HAS_A_TLAST=0,C_HAS_B=1,C_HAS_B_TUSER=0,C_HAS_B_TLAST=0,C_HAS_C=0,C_HAS_C_TUSER=0,C_HAS_C_TLAST=0,C_HAS_OPERATION=1,C_HAS_OPERATION_TUSER=0,C_HAS_OPERATION_TLAST=0,C_HAS_RESULT_TUSER=0,C_HAS_RESULT_TLAST=0,C_TLAST_RESOLUTION=0,C" & 
 "_A_TDATA_WIDTH=64,C_A_TUSER_WIDTH=1,C_B_TDATA_WIDTH=64,C_B_TUSER_WIDTH=1,C_C_TDATA_WIDTH=64,C_C_TUSER_WIDTH=1,C_OPERATION_TDATA_WIDTH=8,C_OPERATION_TUSER_WIDTH=1,C_RESULT_TDATA_WIDTH=8,C_RESULT_TUSER_WIDTH=1,C_FIXED_DATA_UNSIGNED=0}";
@@ -212,7 +212,7 @@ ARCHITECTURE knn_accelerator_dcmp_64ns_64ns_1_2_no_dsp_1_ip_arch OF knn_accelera
   ATTRIBUTE X_INTERFACE_MODE OF s_axis_operation_tvalid: SIGNAL IS "slave S_AXIS_OPERATION";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axis_operation_tvalid: SIGNAL IS "XIL_INTERFACENAME S_AXIS_OPERATION, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 0, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, LAYERED_METADATA undef, INSERT_VIP 0";
 BEGIN
-  U0 : floating_point_v7_1_20
+  U0 : floating_point_v7_1_21
     GENERIC MAP (
       C_XDEVICEFAMILY => "zynq",
       C_PART => "xc7z020clg400-1",

@@ -43,7 +43,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 55 \
+			id 40 \
 			corename knn_accelerator_control_axilite \
 			name knn_accelerator_control_s_axi \
 			ports {$port_control} \
@@ -105,7 +105,7 @@ dict set axilite_register_dict control_r $port_control_r
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 56 \
+			id 41 \
 			corename knn_accelerator_control_r_axilite \
 			name knn_accelerator_control_r_s_axi \
 			ports {$port_control_r} \

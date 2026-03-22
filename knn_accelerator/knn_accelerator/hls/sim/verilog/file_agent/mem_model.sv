@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -149,7 +149,7 @@ class mem_model_pages#(int DATA_WIDTH=32, int ELE_WIDTH = 8) extends uvm_object;
         end
     endfunction
 
-    virtual function void tvinload_pagechk_atinit(string fpath[$], int depth, bit ispagechk=0, int offset=0, string compare_path="");
+    virtual function void tvinload_pagechk_atinit(string fpath[$], int depth, bit ispagechk=0, int offset=0);
         //need to figureout how many transaction here
         int ceiling_two_power = next_power_of_2(DATA_WIDTH);
         localparam int ceiling_bytes = next_bytes_num(DATA_WIDTH);
@@ -160,14 +160,7 @@ class mem_model_pages#(int DATA_WIDTH=32, int ELE_WIDTH = 8) extends uvm_object;
         //                   $sformatf("depth setting is unreasonable: depth: 'd%0d, elenum:'d%0d", depth,elenum))
         bitw.push_back(ceiling_bytes);
         fr.set_binary(is_binary); 
-        fr.config_file(fpath, bitw); 
-        if(compare_path == "STABLE_INPUT") begin
-            fr.stable_single_input_compare();
-        end     
-        else if(compare_path != "") begin
-            fr.set_compare_file_path(compare_path);
-            fr.stable_inout_compare();
-        end
+        fr.config_file(fpath, bitw);
         fr.read_TVIN_file();
         for(int i=0; i<fr.TV_Queue.size; i++) begin
             mem_model#(ELE_WIDTH) blk = mem_model#(ELE_WIDTH)::type_id::create($sformatf("mem_blk page %0d",i));
@@ -196,24 +189,28 @@ class mem_model_pages#(int DATA_WIDTH=32, int ELE_WIDTH = 8) extends uvm_object;
         void'(pages[rd_page_idx].read_elems(data, addr, length));
     endfunction 
 
-    virtual function void tvout_dump_frontpage(bit true_dump=1);
+    virtual function void tvout_dump_frontpage(bit true_dump=1, input int restart_trans_num=1);
         int ceiling_two_power = next_power_of_2(DATA_WIDTH);
         logic[DATA_WIDTH-1:0] data;
         logic[ELE_WIDTH-1:0] tmp;
         int elenum = (ceiling_two_power+ELE_WIDTH-1)/ELE_WIDTH;
         int i;
+        int j;
         if(true_dump) begin
-            for(i=0; i<(pages[0].depth+elenum-1)/elenum; i++) begin
-                data = 0;
-                for(int j=0; j<elenum; j++) begin
-                    void'(pages[0].read_one_elem(tmp, i*elenum+j+pages[0].offset));
-                    data += (tmp<<j*ELE_WIDTH);
-                    if(i+1==(pages[0].depth+elenum-1)/elenum && pages[0].depth%elenum!=0 
-                       && j+1== pages[0].depth%elenum) break;
+            //dump the content of the last transaction inside ap_memory for multiple times to avoid bad TV file error in auto restart cases
+            for(j = 0; j < restart_trans_num; j++) begin
+                for(i=0; i<(pages[0].depth+elenum-1)/elenum; i++) begin
+                    data = 0;
+                    for(int j=0; j<elenum; j++) begin
+                        void'(pages[0].read_one_elem(tmp, i*elenum+j+pages[0].offset));
+                        data += (tmp<<j*ELE_WIDTH);
+                        if(i+1==(pages[0].depth+elenum-1)/elenum && pages[0].depth%elenum!=0 
+                        && j+1== pages[0].depth%elenum) break;
+                    end
+                    FileWr.write_TVOUT_data(data);
                 end
-                FileWr.write_TVOUT_data(data);
+                FileWr.receive_ap_done();
             end
-            FileWr.receive_ap_done();
         end
         void'(pages.pop_front());
         //if(rd_page_idx>0) rd_page_idx--;
@@ -298,11 +295,11 @@ class mem_model_pages_with_diffofst#(int DATA_WIDTH=32, int ELE_WIDTH = 8) exten
         page_ofst[rd_page_idx]=0;
     endfunction
 
-    virtual function void tvinload_pagechk_atinit(string fpath[$], int depth, bit ispagechk=0, int offset=0, string compare_path="");
+    virtual function void tvinload_pagechk_atinit(string fpath[$], int depth, bit ispagechk=0, int offset=0);
         string varname;
         integer bitw[$];
         string  fpath_varoffset[$];
-        super.tvinload_pagechk_atinit(fpath, depth, ispagechk, 0, compare_path);
+        super.tvinload_pagechk_atinit(fpath, depth, ispagechk, 0);
         page_ofst[rd_page_idx]=0;
         bitw.push_back(64);
         if(maxi_bundlevar_fpath.first(varname))
@@ -328,8 +325,8 @@ class mem_model_pages_with_diffofst#(int DATA_WIDTH=32, int ELE_WIDTH = 8) exten
         end
     endfunction
 
-    virtual function void tvout_dump_frontpage(bit true_dump=1);
-        super.tvout_dump_frontpage(true_dump);
+    virtual function void tvout_dump_frontpage(bit true_dump=1, input int restart_trans_num=1);
+        super.tvout_dump_frontpage(true_dump, restart_trans_num);
         recycle_page_ofst.push_back(page_ofst.pop_front());
     endfunction
 

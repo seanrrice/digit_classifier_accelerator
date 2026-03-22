@@ -1,6 +1,6 @@
 # ==============================================================
-# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-# Tool Version Limit: 2025.05
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+# Tool Version Limit: 2025.11
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
@@ -28,7 +28,7 @@ IRWRAPPER  := $(basename $(wildcard *.ll))
 CPPWRAPPER := $(IRWRAPPER:_ir=)
 APATB_UTIL := $(basename $(wildcard $(IRWRAPPER:_ir=_util).cpp))
 
-AUTOPILOT_ROOT := C:/Xilinx/2025.1/Vitis
+AUTOPILOT_ROOT := T:/AMDDesignTools/2025.2/Vitis
 AUTOPILOT_MACH := win64
 
 ifdef AP_GCC_M32
@@ -36,13 +36,13 @@ ifdef AP_GCC_M32
   IFLAG += -m32
 endif
 ifndef AP_GCC_PATH
-  AP_GCC_PATH := C:/Xilinx/2025.1/Vitis/tps/win64/msys64/mingw64/bin
+  AP_GCC_PATH := T:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt/bin
 endif
 AUTOPILOT_TOOL = ${AUTOPILOT_ROOT}/${AUTOPILOT_MACH}/tools
 AUTOPILOT_TECH = ${AUTOPILOT_ROOT}/common/technology
-  AP_CLANG_PATH := C:/Xilinx/2025.1/Vitis/win64/tools/vcxx/libexec/
-TOOLCHAIN += --sysroot=C:/Xilinx/2025.1/Vitis/tps/mingw/10.0.0/win64.o/nt
-LFLAG += --sysroot=C:/Xilinx/2025.1/Vitis/tps/mingw/10.0.0/win64.o/nt
+AP_CLANG_PATH := ${AUTOPILOT_ROOT}/win64/tools/clang-16/bin
+TOOLCHAIN += --sysroot=T:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt
+LFLAG += --sysroot=T:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt
 CCFLAG += -Werror=uninitialized
 CCFLAG += -Wno-error=c++11-narrowing
 CCFLAG += -Wno-error=sometimes-uninitialized
@@ -70,6 +70,9 @@ IFLAG += -D__RTL_SIMULATION__
 IFLAG += -D__xilinx_ip_top=
 DFLAG += -DAESL_PIPELINE
 LFLAG += -Wl,--enable-auto-import
+CCFLAG += --target=x86_64-w64-windows-gnu
+WFLAG += --target=x86_64-w64-windows-gnu
+LFLAG += --target=x86_64-w64-windows-gnu
 
 include ./Makefile.rules
 
@@ -88,8 +91,8 @@ $(ObjDir)/$(APATB_UTIL).o: $(APATB_UTIL).cpp
 
 $(ObjDir)/knn_test.cpp_pre.cpp.tb.o : knn_test.cpp_pre.cpp.tb.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling knn_test.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
-	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -std=gnu++14 -fno-builtin-isinf -fno-builtin-isnan -c -Wno-unknown-pragmas -Wno-unknown-pragmas $(IFLAG) $(DFLAG) $< -o $@; \
+	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -std=gnu++17 -fno-builtin-isinf -fno-builtin-isnan -c -Wno-unknown-pragmas -Wno-unknown-pragmas $(IFLAG) $(DFLAG) $< -o $@; \
 
 $(ObjDir)/knn.cpp_pre.cpp.tb.o : knn.cpp_pre.cpp.tb.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling knn.cpp_pre.cpp.tb.cpp" $(AVE_DIR_DLOG)
-	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -std=gnu++14 -fno-builtin-isinf -fno-builtin-isnan -c  $(IFLAG) $(DFLAG) $< -o $@; \
+	$(Verb) $(CC) ${CCFLAG} ${TOOLCHAIN} -std=gnu++17 -fno-builtin-isinf -fno-builtin-isnan -c  $(IFLAG) $(DFLAG) $< -o $@; \

@@ -13,9 +13,9 @@
     <option name="rtl" tcl="config_cosim -rtl" ini="cosim.rtl">verilog</option>
     <option name="setup" tcl="config_cosim -setup" ini="cosim.setup"></option>
     <option name="stable_axilite_update" tcl="config_cosim -stable_axilite_update" ini="cosim.stable_axilite_update"></option>
+    <option name="stdmath" tcl="config_cosim -stdmath" ini="cosim.stdmath">0</option>
     <option name="tool" tcl="config_cosim -tool" ini="cosim.tool">xsim</option>
-    <option name="trace_level" tcl="config_cosim -trace_level" ini="cosim.trace_level">none</option>
+    <option name="trace_level" tcl="config_cosim -trace_level" ini="cosim.trace_level">all</option>
     <option name="user_stall" tcl="config_cosim -user_stall" ini="cosim.user_stall"></option>
     <option name="wave_debug" tcl="config_cosim -wave_debug" ini="cosim.wave_debug"></option>
 </cosim_options>
-

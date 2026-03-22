@@ -1,20 +1,21 @@
 # ==============================================================
-# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-# Tool Version Limit: 2025.05
+# Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+# Tool Version Limit: 2025.11
 # Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 # 
 # ==============================================================
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/fpo_v7_1;$::env(PATH)"
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/fft_v9_1;$::env(PATH)"
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/fir_v7_0;$::env(PATH)"
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/win64/tools/dds_v6_0;$::env(PATH)"
-set ::env(PATH) "C:/Xilinx/2025.1/Vitis/tps/mingw/10.0.0/win64.o/nt/bin;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/fpo_v7_1;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/fft_v9_1;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/fir_v7_0;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/win64/tools/dds_v6_0;$::env(PATH)"
+set ::env(PATH) "T:/AMDDesignTools/2025.2/Vitis/tps/mingw/10.0.0/win64.o/nt/bin;$::env(PATH)"
 set_param hls.enable_hidden_option_error false
 
 source check_sim.tcl
 source dataflow_monitor_API.tcl
 
+set ap_argv {}
 # --> test vector generation
 
 ::AP::printMsg INFO COSIM 302 COSIM_302_998
@@ -28,7 +29,7 @@ if {![file exists cosim.tv.exe]} {
 	return -code error -errorcode $::errorCode
 }
 
-set ret [catch {eval exec ./cosim.tv.exe | tee temp0.log >&@ stdout} err]
+set ret [catch {exec ./cosim.tv.exe {*}$ap_argv | tee temp0.log >&@ stdout} err]
 
 if {$ret == 1} {
 	::AP::printMsg ERR COSIM 320 COSIM_320_1000
@@ -92,6 +93,6 @@ if {![file exists cosim.pc.exe]} {
     return -code error -errorcode $::errorCode
 }
 
-set ret [catch {eval exec ./cosim.pc.exe | tee temp0.log >&@ stdout} err]
+set ret [catch {exec ./cosim.pc.exe {*}$ap_argv | tee temp0.log >&@ stdout} err]
 
 sc_sim_check $ret $err "temp3.log"

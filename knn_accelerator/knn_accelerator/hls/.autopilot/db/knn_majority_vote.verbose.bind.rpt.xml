@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_majority_vote'" level="0">
-<item name = "Date">Tue Mar 17 19:32:47 2026
+<item name = "Date">Sat Mar 21 23:51:26 2026
 </item>
-<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">knn_accelerator</item>
 <item name = "Solution">hls (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 7.160 ns, 2.70 ns</column>
+<column name="ap_clk">10.00 ns, 7.196 ns, 2.70 ns</column>
 </table>
 </item>
 </section>
@@ -24,20 +24,20 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">38, 38, 0.380 us, 0.380 us, 38, 38, no</column>
+<column name="">39, 39, 0.390 us, 0.390 us, 39, 39, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_95_1_fu_42">knn_majority_vote_Pipeline_VITIS_LOOP_95_1, 12, 12, 0.120 us, 0.120 us, 11, 11, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_106_2_fu_48">knn_majority_vote_Pipeline_VITIS_LOOP_106_2, 8, 8, 80.000 ns, 80.000 ns, 7, 7, loop auto-rewind stp (delay=0 clock cycles(s))</column>
-<column name="grp_knn_majority_vote_Pipeline_VITIS_LOOP_119_3_fu_59">knn_majority_vote_Pipeline_VITIS_LOOP_119_3, 12, 12, 0.120 us, 0.120 us, 11, 11, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- count_init_loop">10, 10, 1, -, -, 10, no</column>
+<column name="- set_counts_loop">6, 6, 2, -, -, 3, no</column>
+<column name="- max_count_loop">20, 20, 2, -, -, 10, no</column>
 </table>
 </item>
 </section>

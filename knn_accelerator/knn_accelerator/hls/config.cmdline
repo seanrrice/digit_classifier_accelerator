@@ -1,3 +1,3 @@
-relativeroot=C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator
-original_argv=--mode hls --cosim --config C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\hls_config.cfg --work_dir knn_accelerator 
+relativeroot=T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator
+original_argv=--mode hls --cosim --config T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\hls_config.cfg --work_dir knn_accelerator 
 

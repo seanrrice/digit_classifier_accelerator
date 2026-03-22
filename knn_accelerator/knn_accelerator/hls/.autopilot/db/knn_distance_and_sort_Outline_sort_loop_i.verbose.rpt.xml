@@ -1,9 +1,9 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'knn_distance_and_sort_Outline_sort_loop_i'" level="0">
-<item name = "Date">Tue Mar 17 19:32:51 2026
+<item name = "Date">Sat Mar 21 23:51:30 2026
 </item>
-<item name = "Version">2025.1 (Build 6135595 on May 21 2025)</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
 <item name = "Project">knn_accelerator</item>
 <item name = "Solution">hls (Vivado IP Flow Target)</item>
 <item name = "Product family">zynq</item>
@@ -24,19 +24,19 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">82, 442, 0.820 us, 4.420 us, 82, 442, no</column>
+<column name="">64, 424, 0.640 us, 4.240 us, 64, 424, no</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
-<column name="grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32">knn_distance_and_sort_Pipeline_sort_loop_j, 7, 47, 70.000 ns, 0.470 us, 6, 46, loop auto-rewind stp (delay=0 clock cycles(s))</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- sort_loop_i">81, 441, 9 ~ 49, -, -, 9, no</column>
+<column name="- sort_loop_i">63, 423, 7 ~ 47, -, -, 9, no</column>
+<column name=" + sort_loop_j">5, 45, 5, -, -, 1 ~ 9, no</column>
 </table>
 </item>
 </section>
@@ -49,12 +49,12 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 39, -</column>
+<column name="Expression">-, -, 0, 215, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">-, -, 168, 290, -</column>
+<column name="Instance">-, -, -, -, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, 0, 38, -</column>
-<column name="Register">-, -, 16, -, -</column>
+<column name="Multiplexer">-, -, 0, 125, -</column>
+<column name="Register">-, -, 180, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
 <specialColumn name="Utilization (%)">0, 0, ~0, ~0, 0</specialColumn>
 </table>
@@ -63,7 +63,7 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
-<column name="grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32">knn_distance_and_sort_Pipeline_sort_loop_j, 0, 0, 168, 290, 0</column>
+<column name="dcmp_64ns_64ns_1_2_no_dsp_1_U18">dcmp_64ns_64ns_1_2_no_dsp_1, 0, 0, 0, 0, 0</column>
 </table>
 </item>
 <item name = "DSP"><table name="" hasTotal="0">
@@ -80,25 +80,50 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln64_fu_70_p2">+, 0, 0, 13, 4, 2</column>
-<column name="i_6_fu_60_p2">+, 0, 0, 13, 4, 1</column>
-<column name="icmp_ln64_fu_54_p2">icmp, 0, 0, 13, 4, 4</column>
+<column name="add_ln67_fu_173_p2">+, 0, 0, 13, 4, 2</column>
+<column name="add_ln71_fu_157_p2">+, 0, 0, 13, 4, 1</column>
+<column name="i_6_fu_142_p2">+, 0, 0, 13, 4, 1</column>
+<column name="and_ln71_1_fu_264_p2">and, 0, 0, 2, 1, 1</column>
+<column name="and_ln71_fu_258_p2">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln67_fu_136_p2">icmp, 0, 0, 13, 4, 4</column>
+<column name="icmp_ln69_fu_151_p2">icmp, 0, 0, 13, 4, 4</column>
+<column name="icmp_ln71_1_fu_228_p2">icmp, 0, 0, 59, 52, 1</column>
+<column name="icmp_ln71_2_fu_240_p2">icmp, 0, 0, 12, 11, 2</column>
+<column name="icmp_ln71_3_fu_246_p2">icmp, 0, 0, 59, 52, 1</column>
+<column name="icmp_ln71_fu_222_p2">icmp, 0, 0, 12, 11, 2</column>
+<column name="or_ln71_1_fu_252_p2">or, 0, 0, 2, 1, 1</column>
+<column name="or_ln71_fu_234_p2">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">20, 4, 1, 4</column>
-<column name="i_4_fu_24">9, 2, 4, 8</column>
-<column name="indvars_iv14_fu_28">9, 2, 4, 8</column>
+<column name="ap_NS_fsm">42, 8, 1, 8</column>
+<column name="distances_address0_local">14, 3, 4, 12</column>
+<column name="distances_address1_local">14, 3, 4, 12</column>
+<column name="i_4_fu_48">9, 2, 4, 8</column>
+<column name="indvars_iv14_fu_52">9, 2, 4, 8</column>
+<column name="j_reg_108">9, 2, 4, 8</column>
+<column name="labels_address0_local">14, 3, 4, 12</column>
+<column name="labels_address1_local">14, 3, 4, 12</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">3, 0, 3, 0</column>
-<column name="grp_knn_distance_and_sort_Pipeline_sort_loop_j_fu_32_ap_start_reg">1, 0, 1, 0</column>
-<column name="i_4_fu_24">4, 0, 4, 0</column>
-<column name="indvars_iv14_fu_28">4, 0, 4, 0</column>
-<column name="indvars_iv14_load_reg_103">4, 0, 4, 0</column>
+<column name="add_ln71_reg_295">4, 0, 4, 0</column>
+<column name="and_ln71_1_reg_334">1, 0, 1, 0</column>
+<column name="ap_CS_fsm">7, 0, 7, 0</column>
+<column name="distances_addr_1_reg_315">4, 0, 4, 0</column>
+<column name="distances_addr_reg_305">4, 0, 4, 0</column>
+<column name="distances_load_1_reg_327">64, 0, 64, 0</column>
+<column name="i_4_fu_48">4, 0, 4, 0</column>
+<column name="i_6_reg_287">4, 0, 4, 0</column>
+<column name="indvars_iv14_fu_52">4, 0, 4, 0</column>
+<column name="j_reg_108">4, 0, 4, 0</column>
+<column name="labels_addr_1_reg_343">4, 0, 4, 0</column>
+<column name="labels_addr_reg_338">4, 0, 4, 0</column>
+<column name="temp_dist_reg_320">64, 0, 64, 0</column>
+<column name="zext_ln69_reg_300">4, 0, 64, 60</column>
+<column name="zext_ln71_reg_310">4, 0, 64, 60</column>
 </table>
 </item>
 </section>

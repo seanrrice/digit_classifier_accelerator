@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -31,15 +31,15 @@ class axi_cfg extends uvm_object;
         `uvm_field_object(clatency,     UVM_DEFAULT)
     `uvm_object_utils_end
 
-    function new (string name = "axi_cfg");
+    function new (string name = "axi_cfg", int id_num_init = 1);
         super.new(name);
+        id_num = id_num_init;
     endfunction
 
     function void set_default();
         drv_type    = MON_ALONE;
         has_checker = 1;
         has_coverage= 1;
-        id_num      = 1;
         reset_level = RESET_LEVEL_LOW;
         write_latency_mode= CHANNEL_FIRST;
         read_latency_mode= CHANNEL_FIRST;

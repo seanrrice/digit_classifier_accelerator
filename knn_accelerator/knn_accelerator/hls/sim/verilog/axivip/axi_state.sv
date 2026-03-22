@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -36,16 +36,20 @@ class axi_state extends uvm_component;
     `uvm_register_cb(axi_state, axi_state_cbs);
 
     axi_cfg  cfg;
-    //Future improvement: change static array to associate array
-    axi_transfer awq        [][$];
-    axi_transfer wq         [][$];
-    axi_transfer bq_rsp     [][$];
-    axi_transfer bq_for_rsp_lat [][$];
+    //Associative array with int keys and dynamic queues as values
+    axi_transfer awq[int][$];
+    axi_transfer wq[int][$];
+    axi_transfer bq_rsp[int][$];
+    axi_transfer bq_for_rsp_lat[int][$];
     //axi_transfer bq_a2rinfo [][$];
 
-    axi_transfer arq[][$];
-    axi_transfer rq [][$];
-    axi_transfer rq_from_model[][$];
+    axi_transfer arq[int][$];
+    axi_transfer rq[int][$];
+    axi_transfer rq_from_model[int][$];
+
+    int maxi_read_id[int]; // Associative array with `trclone.id` as the key
+    int maxi_write_id[int]; // Associative array with `trclone.id` as the key
+    
     int bqnum_for_slaseq;
     event brx_evt;
     int rq_from_model_num;
@@ -89,14 +93,6 @@ class axi_state extends uvm_component;
         super.build_phase(phase);
         if(!uvm_config_db#(axi_cfg)::get(this, "", "cfg", cfg))
             `uvm_fatal(this.get_full_name(), "axi config must be set for cfg!!!")
-        awq           = new[cfg.id_num];
-        wq            = new[cfg.id_num];
-        bq_rsp        = new[cfg.id_num];
-        bq_for_rsp_lat= new[cfg.id_num];
-        //bq_a2rinfo    = new[cfg.id_num];
-        arq           = new[cfg.id_num];
-        rq            = new[cfg.id_num];
-        rq_from_model = new[cfg.id_num];
     endfunction
 
     virtual function void write_aw(axi_transfer tr);
@@ -113,6 +109,7 @@ class axi_state extends uvm_component;
         //    awq[tr.id].push_back(tr);
 
         awq[tr.id].push_back(tr);
+        maxi_write_id[tr.id] = 1;
         aw_w_merge(tr.id);
     endfunction
 
@@ -149,11 +146,11 @@ class axi_state extends uvm_component;
 
     virtual function void get_bq_ids(output int ids[$]);
         ids.delete();
-        for(int i=0; i<cfg.id_num; i++) begin
-            if(bq_rsp[i].size) begin
-                for(int j=0;j<bq_rsp[i].size; j++) begin
-                    if(bq_rsp[i][j].brsp_done==0) begin
-                        ids.push_back(i);
+        foreach (maxi_write_id[id]) begin
+            if(bq_rsp[id].size) begin
+                for(int j=0;j<bq_rsp[id].size; j++) begin
+                    if(bq_rsp[id][j].brsp_done==0) begin
+                        ids.push_back(id);
                         break;
                     end
                 end
@@ -196,6 +193,8 @@ class axi_state extends uvm_component;
         trclone.data.delete;
         `uvm_do_callbacks(  axi_state, axi_state_cbs, memmodel_read_fromar(trclone.data, trclone.addr, trclone.get_bytenum())  )
         rq_from_model[trclone.id].push_back(trclone);
+        // Add trclone.id to the associative array (ensures uniqueness)
+        maxi_read_id[trclone.id] = 1;
         rq_from_model_num++;
         arq[tr.id].push_back(tr);
         `uvm_info("get_one_ar", $sformatf("arq size:%0d", arq[tr.id].size), UVM_MEDIUM)
@@ -203,8 +202,12 @@ class axi_state extends uvm_component;
 
     virtual function void get_arq_ids(output int ids[$]);
         ids.delete();
-        for(int i=0; i<cfg.id_num; i++)
-            if(rq_from_model[i].size) ids.push_back(i);
+        foreach (maxi_read_id[id]) begin
+            if (rq_from_model[id].size) begin
+                `uvm_info("get_arq_ids", $sformatf("maxi_read_id[%0d]:%0d", id, id), UVM_MEDIUM)
+                ids.push_back(id);
+            end
+        end
     endfunction
 
     virtual function axi_transfer get_onedata_from_rqmodel(int id);

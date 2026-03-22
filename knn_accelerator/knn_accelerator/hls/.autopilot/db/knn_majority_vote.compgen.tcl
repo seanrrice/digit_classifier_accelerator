@@ -1,6 +1,11 @@
 # This script segment is generated automatically by AutoPilot
 
 if {${::AESL::PGuard_rtl_comp_handler}} {
+	::AP::rtl_comp_handler knn_accelerator_sparsemux_7_2_4_1_1 BINDTYPE {op} TYPE {sparsemux} IMPL {onehotencoding_realdef}
+}
+
+
+if {${::AESL::PGuard_rtl_comp_handler}} {
 	::AP::rtl_comp_handler knn_accelerator_knn_majority_vote_counts_RAM_AUTO_1R1W BINDTYPE {storage} TYPE {ram} IMPL {auto} LATENCY 2 ALLOW_PRAGMA 1
 }
 
@@ -15,7 +20,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 52 \
+    id 37 \
     name top_k_labels_read \
     type other \
     dir I \
@@ -30,30 +35,30 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 53 \
-    name top_k_labels_read_10 \
+    id 38 \
+    name top_k_labels_read_8 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_top_k_labels_read_10 \
+    corename dc_top_k_labels_read_8 \
     op interface \
-    ports { top_k_labels_read_10 { I 4 vector } } \
+    ports { top_k_labels_read_8 { I 4 vector } } \
 } "
 }
 
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 54 \
-    name top_k_labels_read_11 \
+    id 39 \
+    name top_k_labels_read_9 \
     type other \
     dir I \
     reset_level 1 \
     sync_rst true \
-    corename dc_top_k_labels_read_11 \
+    corename dc_top_k_labels_read_9 \
     op interface \
-    ports { top_k_labels_read_11 { I 4 vector } } \
+    ports { top_k_labels_read_9 { I 4 vector } } \
 } "
 }
 

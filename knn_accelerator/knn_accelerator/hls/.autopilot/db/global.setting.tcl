@@ -30,13 +30,10 @@ set ExtraCLdFlags {}
 set SynCheckOptions {}
 set PresynOptions {}
 set PreprocOptions {}
-set SchedOptions {}
-set BindOptions {}
-set RtlGenOptions {}
 set RtlWriterOptions {}
-set CbcGenFlag {}
-set CasGenFlag {}
-set CasMonitorFlag {}
+set CbcGenFlag 0
+set CasGenFlag 0
+set CasMonitorFlag 0
 set AutoSimOptions {}
 set ExportMCPathFlag 0
 set SCTraceFileName mytrace
@@ -46,7 +43,7 @@ set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../../../src/knn.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile {}
-set TBFiles {verilog {C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/train_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/test_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/test/knn_test.cpp} bc {C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/train_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/test_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/test/knn_test.cpp} vhdl {C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/train_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/test_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/test/knn_test.cpp} sc {C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/train_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/test_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/test/knn_test.cpp} cas {C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/train_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/src/test_data_hls.dat C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/test/knn_test.cpp} c {}}
+set TBFiles {verilog {T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/train_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/test_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/test/knn_test.cpp} bc {T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/train_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/test_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/test/knn_test.cpp} vhdl {T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/train_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/test_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/test/knn_test.cpp} sc {T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/train_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/test_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/test/knn_test.cpp} cas {T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/train_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/src/test_data_hls.dat T:/Documents/ECE574/Labs/digit_classifier_accelerator/test/knn_test.cpp} c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

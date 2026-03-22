@@ -93,6 +93,15 @@ namespace hls::sim
   }
 }
 
+
+static std::vector<unsigned> autorestart_seq;
+extern "C" {
+  void __hls_sim_static_autorestart_seq_push(int value);
+}
+
+void __hls_sim_static_autorestart_seq_push(int value) {
+  autorestart_seq.push_back(value);
+}
 namespace hls::sim
 {
   size_t divide_ceil(size_t a, size_t b)
@@ -552,6 +561,17 @@ namespace hls::sim
          << "  BitWidth " << widthHBM << "\n"
          << "}\n";
     }
+    
+    void formatAutorestartSeq()
+    {
+      if (!autorestart_seq.empty()) {
+        ss << "set Autorestart_seq {\n";
+        for (const auto &val : autorestart_seq) {
+          ss << "  " << val << "\n";
+        }
+        ss << "}\n";
+      }
+    }
 
     void close()
     {
@@ -559,6 +579,7 @@ namespace hls::sim
       formatTransDepth();
       formatContainsVLA();
       formatTransNum();
+      formatAutorestartSeq();
       if (nameHBM != "") {
         formatHBM();
       }

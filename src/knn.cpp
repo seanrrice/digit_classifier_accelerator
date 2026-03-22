@@ -26,6 +26,7 @@ void knn_distance_and_sort(
     // distance (e.g., 0xFFFFFFFF) and top_k_labels to 0.
     /* YOUR CODE HERE */
     init_top_k: for (int i = 0; i < K_NEIGHBORS; i++){
+        #pragma HLS PIPELINE OFF
         top_k_dist[i] = 0xFFFFFFFF;
         top_k_labels[i] = 0;
     }
@@ -38,6 +39,7 @@ void knn_distance_and_sort(
     // Iterates NUM_TRAIN_SAMPLES times.    
     /* YOUR CODE HERE */
     train_loop: for( int i = 0; i < NUM_TRAIN_SAMPLES; i++){
+        #pragma HLS PIPELINE OFF
       
 
     // --------------------------------------------------------
@@ -48,6 +50,7 @@ void knn_distance_and_sort(
         dist_t sum = 0.0;
 
         feature_loop: for (int j = 0; j < NUM_FEATURES; j++){
+            #pragma HLS PIPELINE OFF
             pixel_t diff = test_point[j] - X_train[i * NUM_FEATURES + j];
             sum += diff * diff;
         }
@@ -62,7 +65,9 @@ void knn_distance_and_sort(
     // the top K shortest distances and store them into the top_k_labels array.        
     /* YOUR CODE HERE */
     sort_loop_i: for (int i = 0; i < NUM_TRAIN_SAMPLES -1; i++) {
+        #pragma HLS PIPELINE OFF
         sort_loop_j: for (int j = 0; j < NUM_TRAIN_SAMPLES - i - 1; j++) {
+            #pragma HLS PIPELINE OFF
             if (distances[j] > distances[j + 1]) {
                 dist_t temp_dist = distances[j];
                 distances[j] = distances[j + 1];
@@ -75,6 +80,7 @@ void knn_distance_and_sort(
         }
     }
     copy_top_k: for (int i = 0; i < K_NEIGHBORS; i++) {
+        #pragma HLS PIPELINE OFF
         top_k_dist[i] = distances[i];
         top_k_labels[i] = labels[i];
     }
@@ -92,7 +98,8 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     // --------------------------------------------------------
     // Initialize all elements in the 'counts' array to 0.    
     /* YOUR CODE HERE */
-    for (int i = 0; i < NUM_CLASSES; i++) {
+    count_init_loop: for (int i = 0; i < NUM_CLASSES; i++) {
+        #pragma HLS PIPELINE OFF
         counts[i] = 0;
     }
 
@@ -103,7 +110,8 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     // Loop through the 'top_k_labels' array and increment the 
     // corresponding index in your 'counts' array.
     /* YOUR CODE HERE */
-    for (int i = 0; i < K_NEIGHBORS; i++) {
+    set_counts_loop: for (int i = 0; i < K_NEIGHBORS; i++) {
+        #pragma HLS PIPELINE OFF
         int idx = top_k_labels[i];
         counts[idx] ++;
     }
@@ -116,7 +124,8 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     /* YOUR CODE HERE */
     int max = 0;
     label_t max_label;
-    for (int i = 0; i < NUM_CLASSES; i++) {
+    max_count_loop: for (int i = 0; i < NUM_CLASSES; i++) {
+        #pragma HLS PIPELINE OFF
         if (counts[i] > max) {
             max = counts[i];
             max_label = i;
@@ -149,6 +158,7 @@ void knn_accelerator(
     label_t top_k_labels[K_NEIGHBORS];
     
     test_data: for (int i = 0; i < NUM_TEST_SAMPLES; i++) {
+        #pragma HLS PIPELINE OFF
         // 1. Calculate distances and identify the K-Nearest neighbors
         knn_distance_and_sort(X_test+i*NUM_FEATURES, X_train, y_train, top_k_labels);
         

@@ -69,26 +69,23 @@ endif
 
 
 ifdef __USE_CLANG__
-ifdef AP_CLANG_PATH
-CC      = $(AP_CLANG_PATH)/clang
-CXX     = $(AP_CLANG_PATH)/clang++
-LLC     = $(AUTOPILOT_TOOL)/clang-3.9-csynth/bin/llc
+  ifdef AP_CLANG_PATH
+    CC  = $(AP_CLANG_PATH)/clang
+    CXX = $(AP_CLANG_PATH)/clang++
+  else
+    CC  = clang
+    CXX = clang++
+  endif
 else
-CC      = clang
-CXX     = clang++
-LLC     = $(AUTOPILOT_TOOL)/clang-3.9-csynth/bin/llc
+  ifdef AP_GCC_PATH
+    CC  = $(AP_GCC_PATH)/gcc
+    CXX = $(AP_GCC_PATH)/g++
+  else
+    CC	= gcc
+    CXX	= g++
+  endif
 endif
-else
-ifdef AP_GCC_PATH
-CC      = $(AP_GCC_PATH)/gcc
-CXX     = $(AP_GCC_PATH)/g++
-LLC     = $(AUTOPILOT_TOOL)/clang-3.9-csynth/bin/llc
-else
-CC	= gcc
-CXX	= g++
-LLC     = $(AUTOPILOT_TOOL)/clang-3.9-csynth/bin/llc
-endif
-endif
+LLC = $(AUTOPILOT_TOOL)/clang-3.9-csynth/bin/llc
 
 LINUX	=
 INCPATH	= .
@@ -129,50 +126,37 @@ else
 endif
 
 ifdef __SIM_MATHHLS__
-
-  # use the gcc compiled libraries hlsmath when compiling with the vcxx clang compiler
   ifdef __USE_VCXX_CLANG__
+    # use gcc compiled libraries when compiling with the vcxx compiler
     ifeq ($(AUTOPILOT_MACH),win64)
       LFLAG += -L "$(MATHHLSLIB)" -lhlsmc++-GCC95-x64
     else
       LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-GCC46
     endif
-  else ifdef __USE_CLANG__ # if we are using the clang compiler that is not the vcxx compiler use the old clang compiled libraries
-      ifeq ($(AUTOPILOT_MACH),win64)
-        LFLAG += -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39-x64
-      else
-        LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39
-      endif
-  else
+  else 
     ifeq ($(AUTOPILOT_MACH),win64)
-      LFLAG += -L "$(MATHHLSLIB)" -lhlsmc++-GCC62-x64
+      LFLAG += -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39-x64
     else
-      LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-GCC46
+      LFLAG += -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsmc++-CLANG39
     endif
   endif
 
   ifndef __SIM_MATHSTD__
-    ifdef __USE_VCXX_CLANG__ # use the gcc compiled libraries hlsmath when compiling with the vcxx compiler
+    ifdef __USE_VCXX_CLANG__ 
+      # use gcc compiled libraries when compiling with the vcxx compiler
       ifeq ($(AUTOPILOT_MACH),win64)
         LFLAG += -fno-builtin -fno-inline -L "$(MATHHLSLIB)" -lhlsm-GCC95-x64
       else
         LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-GCC46
       endif
-    else ifdef __USE_CLANG__ # if we are using the clang compiler that is not the vcxx compiler use the old clang compiled libraries
+    else
       ifeq ($(AUTOPILOT_MACH),win64)
         LFLAG += -fno-builtin -fno-inline -L "$(MATHHLSLIB)" -lhlsm-CLANG39-x64
       else
         LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-CLANG39
       endif
-    else
-      ifeq ($(AUTOPILOT_MACH),win64)
-        LFLAG += -fno-builtin -fno-inline -L "$(MATHHLSLIB)" -lhlsm-GCC62-x64
-      else
-        LFLAG += -fno-builtin -fno-inline -Wl,-rpath,"$(MATHHLSLIB)" -L "$(MATHHLSLIB)" -lhlsm-GCC46
-      endif
     endif
   endif
-
 
   ifneq ($(AUTOPILOT_MACH),win64)
     export LD_LIBRARY_PATH := ${LD_LIBRARY_PATH}:$(MATHHLSLIB)

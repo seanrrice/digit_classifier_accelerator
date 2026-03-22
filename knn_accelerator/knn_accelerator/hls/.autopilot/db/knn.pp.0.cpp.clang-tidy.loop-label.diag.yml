@@ -1,1331 +1,1564 @@
 ---
-MainSourceFile:  'C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator/knn_accelerator/hls/.autopilot/db/knn.pp.0.cpp'
-Diagnostics:     
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_676_1:  '
-    FileOffset:      676
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          279605
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_676_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_690_1:  '
-    FileOffset:      690
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          280071
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_690_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_704_1:  '
-    FileOffset:      704
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          280538
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_704_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1248_1:  '
-    FileOffset:      1248
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          575008
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1248_1: '
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      91
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      92
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      93
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      94
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      95
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      125
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      126
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      127
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      128
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      129
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      130
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      131
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      132
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      133
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      134
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      184
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      185
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      186
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      213
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      214
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      215
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      216
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      217
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      218
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      254
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  clang-diagnostic-error
-    Message:         'Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE''s option ''type + impl'''
-    FileOffset:      255
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hotbm_apfixed.h'
-    Replacements:    
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_61_1:  '
-    FileOffset:      61
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1161378
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_61_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_117_1:  '
-    FileOffset:      117
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1162188
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_117_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_289_1:  '
-    FileOffset:      289
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1164831
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_289_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_449_1:  '
-    FileOffset:      449
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1167550
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_449_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_629_1:  '
-    FileOffset:      629
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1170711
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_629_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_633_2:  '
-    FileOffset:      633
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1170792
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_633_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_743_1:  '
-    FileOffset:      743
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1173101
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_743_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_840_1:  '
-    FileOffset:      840
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1174591
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_840_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_859_2:  '
-    FileOffset:      859
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1174821
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_859_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1173_1:  '
-    FileOffset:      1173
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1180995
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1173_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1256_1:  '
-    FileOffset:      1256
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1182598
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1256_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_68_1:  '
-    FileOffset:      68
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1190463
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_68_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_74_2:  '
-    FileOffset:      74
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1190613
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_74_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_78_3:  '
-    FileOffset:      78
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1190710
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_78_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_145_4:  '
-    FileOffset:      145
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1192525
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_145_4: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_151_5:  '
-    FileOffset:      151
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1192675
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_151_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_155_6:  '
-    FileOffset:      155
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1192772
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_155_6: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_170_7:  '
-    FileOffset:      170
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1193153
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_170_7: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_178_8:  '
-    FileOffset:      178
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1193384
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_178_8: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_243_9:  '
-    FileOffset:      243
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1196789
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_243_9: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_249_10:  '
-    FileOffset:      249
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1196941
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_249_10: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_253_11:  '
-    FileOffset:      253
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1197041
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_253_11: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_268_12:  '
-    FileOffset:      268
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1197423
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_268_12: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_276_13:  '
-    FileOffset:      276
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1197661
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_276_13: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_505_14:  '
-    FileOffset:      505
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1213216
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_505_14: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_511_15:  '
-    FileOffset:      511
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1213368
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_511_15: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_515_16:  '
-    FileOffset:      515
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1213467
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_515_16: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_525_17:  '
-    FileOffset:      525
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1213644
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_525_17: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_529_18:  '
-    FileOffset:      529
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1213742
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_529_18: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_539_19:  '
-    FileOffset:      539
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1214027
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_539_19: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_547_20:  '
-    FileOffset:      547
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1214282
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_547_20: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_908_21:  '
-    FileOffset:      908
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1246521
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_908_21: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_914_22:  '
-    FileOffset:      914
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1246673
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_914_22: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_918_23:  '
-    FileOffset:      918
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1246773
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_918_23: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1034_1:  '
-    FileOffset:      1034
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1249463
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1034_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1040_2:  '
-    FileOffset:      1040
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1249613
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1040_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1044_3:  '
-    FileOffset:      1044
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1249711
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1044_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1131_4:  '
-    FileOffset:      1131
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1253181
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1131_4: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1137_5:  '
-    FileOffset:      1137
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1253332
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1137_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1141_6:  '
-    FileOffset:      1141
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1253431
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1141_6: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1160_7:  '
-    FileOffset:      1160
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1253911
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1160_7: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1167_8:  '
-    FileOffset:      1167
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1254153
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1167_8: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1283_9:  '
-    FileOffset:      1283
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1259601
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1283_9: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1289_10:  '
-    FileOffset:      1289
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1259753
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1289_10: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1293_11:  '
-    FileOffset:      1293
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1259852
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1293_11: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1313_12:  '
-    FileOffset:      1313
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1260361
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1313_12: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1320_13:  '
-    FileOffset:      1320
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1260610
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1320_13: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1582_14:  '
-    FileOffset:      1582
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1277887
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1582_14: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1588_15:  '
-    FileOffset:      1588
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1278039
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1588_15: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1592_16:  '
-    FileOffset:      1592
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1278139
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1592_16: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1616_17:  '
-    FileOffset:      1616
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1278613
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1616_17: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1623_18:  '
-    FileOffset:      1623
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1278880
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1623_18: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2053_19:  '
-    FileOffset:      2053
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1317320
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2053_19: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2059_20:  '
-    FileOffset:      2059
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1317472
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2059_20: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2063_21:  '
-    FileOffset:      2063
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1317572
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2063_21: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2192_1:  '
-    FileOffset:      2192
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1320183
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2192_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2199_2:  '
-    FileOffset:      2199
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1320346
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2199_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2203_3:  '
-    FileOffset:      2203
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1320438
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2203_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2250_4:  '
-    FileOffset:      2250
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1322047
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2250_4: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2257_5:  '
-    FileOffset:      2257
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1322209
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2257_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2261_6:  '
-    FileOffset:      2261
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1322301
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2261_6: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2279_7:  '
-    FileOffset:      2279
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1322674
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2279_7: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2334_8:  '
-    FileOffset:      2334
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1325140
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2334_8: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2341_9:  '
-    FileOffset:      2341
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1325307
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2341_9: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2345_10:  '
-    FileOffset:      2345
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1325400
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2345_10: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2363_11:  '
-    FileOffset:      2363
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1325781
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2363_11: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2452_12:  '
-    FileOffset:      2452
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1331222
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2452_12: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2459_13:  '
-    FileOffset:      2459
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1331390
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2459_13: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2463_14:  '
-    FileOffset:      2463
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1331484
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2463_14: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2473_15:  '
-    FileOffset:      2473
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1331655
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2473_15: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2477_16:  '
-    FileOffset:      2477
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1331746
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2477_16: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2488_17:  '
-    FileOffset:      2488
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1332028
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2488_17: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2496_18:  '
-    FileOffset:      2496
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1332215
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2496_18: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2821_19:  '
-    FileOffset:      2821
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1366685
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2821_19: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2828_20:  '
-    FileOffset:      2828
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1366853
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2828_20: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2832_21:  '
-    FileOffset:      2832
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1366947
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2832_21: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2920_1:  '
-    FileOffset:      2920
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1368733
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2920_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2927_2:  '
-    FileOffset:      2927
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1368841
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2927_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2931_3:  '
-    FileOffset:      2931
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1368912
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2931_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2946_4:  '
-    FileOffset:      2946
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1369200
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2946_4: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2978_5:  '
-    FileOffset:      2978
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1370414
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2978_5: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2985_6:  '
-    FileOffset:      2985
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1370525
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2985_6: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_2989_7:  '
-    FileOffset:      2989
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1370598
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_2989_7: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3004_8:  '
-    FileOffset:      3004
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1370893
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3004_8: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3054_9:  '
-    FileOffset:      3054
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1374226
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3054_9: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3061_10:  '
-    FileOffset:      3061
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1374337
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3061_10: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3065_11:  '
-    FileOffset:      3065
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1374410
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3065_11: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3080_12:  '
-    FileOffset:      3080
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1374706
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3080_12: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3217_13:  '
-    FileOffset:      3217
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1394018
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3217_13: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3224_14:  '
-    FileOffset:      3224
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1394132
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3224_14: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3228_15:  '
-    FileOffset:      3228
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1394207
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3228_15: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3243_16:  '
-    FileOffset:      3243
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1394494
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3243_16: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3403_17:  '
-    FileOffset:      3403
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1420104
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3403_17: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3410_18:  '
-    FileOffset:      3410
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1420218
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3410_18: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_3414_19:  '
-    FileOffset:      3414
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1420295
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_3414_19: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_703_1:  '
-    FileOffset:      703
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_log_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1454347
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_703_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_921_1:  '
-    FileOffset:      921
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_log_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1462736
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_921_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_1345_1:  '
-    FileOffset:      1345
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_log_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1481705
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_1345_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_243_1:  '
-    FileOffset:      243
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1496573
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_243_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_271_2:  '
-    FileOffset:      271
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1497094
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_271_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_48_1:  '
-    FileOffset:      48
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1513002
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_48_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_109_2:  '
-    FileOffset:      109
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1514148
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_109_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_123_3:  '
-    FileOffset:      123
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1514457
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_123_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_153_4:  '
-    FileOffset:      153
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1514967
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_153_4: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_281_1:  '
-    FileOffset:      281
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1516810
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_281_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_301_2:  '
-    FileOffset:      301
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1517175
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_301_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_315_3:  '
-    FileOffset:      315
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1517483
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_315_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_433_1:  '
-    FileOffset:      433
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1519307
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_433_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_447_2:  '
-    FileOffset:      447
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1519632
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_447_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_33_1:  '
-    FileOffset:      33
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_diff_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1522265
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_33_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_183_1:  '
-    FileOffset:      183
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_diff_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1525145
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_183_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_248_1:  '
-    FileOffset:      248
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_diff_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1526428
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_248_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_44_1:  '
-    FileOffset:      44
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_frexp_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1532021
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_44_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_16_1:  '
-    FileOffset:      16
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1537245
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_16_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_27_1:  '
-    FileOffset:      27
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1537420
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_27_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_38_1:  '
-    FileOffset:      38
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1537581
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_38_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_49_1:  '
-    FileOffset:      49
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1537743
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_49_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_60_1:  '
-    FileOffset:      60
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1537917
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_60_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_71_1:  '
-    FileOffset:      71
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1538092
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_71_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_82_1:  '
-    FileOffset:      82
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1538253
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_82_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_93_1:  '
-    FileOffset:      93
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1538415
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_93_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_26_1:  '
-    FileOffset:      26
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_mad_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1609789
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_26_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_40_1:  '
-    FileOffset:      40
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_cbrt_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1611521
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_40_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_49_1:  '
-    FileOffset:      49
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hypot_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1615996
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_49_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_81_2:  '
-    FileOffset:      81
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hypot_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1616723
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_81_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_169_3:  '
-    FileOffset:      169
-    FilePath:        'C:\Xilinx\2025.1\Vitis\common\technology\autopilot\etc\hls_hypot_apfixed.h'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1618404
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_169_3: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_95_1:  '
-    FileOffset:      95
-    FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\src\knn.cpp'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1672399
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_95_1: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_106_2:  '
-    FileOffset:      106
-    FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\src\knn.cpp'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1672486
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_106_2: '
-  - DiagnosticName:  xilinx-label-all-loops
-    Message:         'Added loop label VITIS_LOOP_119_3:  '
-    FileOffset:      119
-    FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\src\knn.cpp'
-    Replacements:    
-      - FilePath:        'C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
-        Offset:          1672632
-        Length:          0
-        ReplacementText: 'VITIS_LOOP_119_3: '
+MainSourceFile:  'T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator/knn_accelerator/hls/.autopilot/db/knn.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          280101
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          280572
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          281044
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          626447
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_61_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      61
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2290594
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_61_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_117_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      117
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2291417
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_117_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_289_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      289
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2294088
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_289_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_449_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      449
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2296824
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_449_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_629_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      629
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2299994
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_629_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_633_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      633
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2300080
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_633_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_743_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      743
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2302394
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_743_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_840_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      840
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2303892
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_840_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_859_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      859
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2304129
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_859_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1176_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      1176
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2310387
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1176_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1259_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cordic_apfixed.h'
+      FileOffset:      1259
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2311990
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1259_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_68_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      68
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2319882
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_68_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_74_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      74
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2320047
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_74_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_78_3:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      78
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2320163
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_78_3: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_145_4:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      145
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2322005
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_145_4: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_151_5:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      151
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2322170
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_151_5: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_155_6:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      155
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2322286
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_155_6: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_170_7:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      170
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2322686
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_170_7: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_178_8:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      178
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2322928
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_178_8: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_243_9:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      243
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2326350
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_243_9: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_249_10:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      249
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2326517
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_249_10: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_253_11:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      253
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2326636
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_253_11: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_268_12:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      268
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2327037
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_268_12: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_276_13:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      276
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2327286
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_276_13: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_505_14:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      505
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2342858
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_505_14: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_511_15:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      511
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2343025
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_511_15: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_515_16:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      515
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2343143
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_515_16: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_525_17:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      525
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2343339
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_525_17: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_529_18:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      529
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2343448
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_529_18: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_539_19:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      539
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2343744
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_539_19: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_547_20:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      547
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2344010
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_547_20: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_908_21:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      908
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2376266
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_908_21: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_914_22:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      914
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2376433
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_914_22: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_918_23:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      918
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2376552
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_918_23: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1034_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1034
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2379264
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1034_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1040_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1040
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2379429
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1040_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1044_3:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1044
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2379546
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1044_3: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1131_4:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1131
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2383035
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1131_4: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1137_5:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1137
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2383201
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1137_5: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1141_6:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1141
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2383319
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1141_6: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1160_7:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1160
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2383818
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1160_7: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1167_8:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1167
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2384071
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1167_8: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1283_9:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1283
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2389536
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1283_9: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1289_10:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1289
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2389703
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1289_10: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1293_11:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1293
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2389821
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1293_11: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1313_12:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1313
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2390349
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1313_12: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1320_13:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1320
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2390609
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1320_13: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1582_14:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1582
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2407904
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1582_14: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1588_15:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1588
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2408071
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1588_15: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1592_16:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1592
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2408190
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1592_16: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1616_17:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1616
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2408683
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1616_17: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1623_18:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      1623
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2408961
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1623_18: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2053_19:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2053
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2447419
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2053_19: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2059_20:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2059
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2447586
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2059_20: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2063_21:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2063
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2447705
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2063_21: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2192_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2192
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2450335
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2192_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2199_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2199
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2450513
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2199_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2203_3:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2203
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2450624
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2203_3: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2250_4:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2250
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2452252
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2250_4: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2257_5:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2257
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2452429
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2257_5: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2261_6:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2261
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2452540
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2261_6: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2279_7:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2279
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2452932
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2279_7: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2334_8:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2334
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2455409
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2334_8: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2341_9:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2341
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2455591
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2341_9: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2345_10:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2345
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2455703
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2345_10: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2363_11:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2363
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2456103
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2363_11: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2452_12:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2452
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2461555
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2452_12: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2459_13:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2459
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2461738
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2459_13: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2463_14:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2463
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2461851
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2463_14: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2473_15:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2473
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2462041
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2473_15: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2477_16:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2477
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2462143
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2477_16: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2488_17:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2488
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2462436
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2488_17: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2496_18:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2496
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2462634
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2496_18: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2821_19:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2821
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2497123
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2821_19: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2828_20:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2828
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2497306
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2828_20: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2832_21:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2832
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2497419
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2832_21: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2920_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2920
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2499224
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2920_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2927_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2927
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2499335
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2927_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2931_3:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2931
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2499410
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2931_3: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2946_4:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2946
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2499702
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2946_4: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2978_5:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2978
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2500918
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2978_5: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2985_6:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2985
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2501032
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2985_6: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_2989_7:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      2989
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2501109
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_2989_7: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3004_8:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3004
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2501408
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3004_8: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3054_9:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3054
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2504743
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3054_9: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3061_10:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3061
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2504857
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3061_10: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3065_11:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3065
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2504934
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3065_11: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3080_12:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3080
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2505234
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3080_12: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3217_13:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3217
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2524548
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3217_13: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3224_14:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3224
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2524665
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3224_14: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3228_15:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3228
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2524744
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3228_15: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3243_16:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3243
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2525035
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3243_16: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3403_17:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3403
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2550647
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3403_17: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3410_18:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3410
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2550764
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3410_18: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_3414_19:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_exp_apfixed.h'
+      FileOffset:      3414
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2550845
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_3414_19: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_703_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_log_apfixed.h'
+      FileOffset:      703
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2584936
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_703_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_921_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_log_apfixed.h'
+      FileOffset:      921
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2593343
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_921_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1345_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_log_apfixed.h'
+      FileOffset:      1345
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2612338
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1345_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_243_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
+      FileOffset:      243
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2627323
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_243_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_271_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_sqrt_apfixed.h'
+      FileOffset:      271
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2627855
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_271_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_48_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      48
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2643867
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_48_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_109_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      109
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2645034
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_109_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_123_3:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      123
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2645350
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_123_3: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_153_4:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      153
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2645875
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_153_4: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_281_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      281
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2647748
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_281_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_301_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      301
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2648128
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_301_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_315_3:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      315
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2648454
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_315_3: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_433_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      433
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2650307
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_433_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_447_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_pow_apfixed.h'
+      FileOffset:      447
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2650646
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_447_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_33_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_diff_apfixed.h'
+      FileOffset:      33
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2653339
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_33_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_183_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_diff_apfixed.h'
+      FileOffset:      183
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2656261
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_183_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_248_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_diff_apfixed.h'
+      FileOffset:      248
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2657570
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_248_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_44_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_frexp_apfixed.h'
+      FileOffset:      44
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2663234
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_44_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_16_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      16
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2668559
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_16_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_27_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      27
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2668737
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_27_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_38_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      38
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2668901
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_38_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_49_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      49
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2669066
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_49_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_60_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      60
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2669243
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_60_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_71_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      71
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2669421
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_71_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_82_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      82
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2669585
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_82_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_93_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_all_any_apfixed.h'
+      FileOffset:      93
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2669750
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_93_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_26_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_mad_apfixed.h'
+      FileOffset:      26
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2741501
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_26_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_40_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_cbrt_apfixed.h'
+      FileOffset:      40
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2743271
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_40_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_49_1:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+      FileOffset:      49
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2747810
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_49_1: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_81_2:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+      FileOffset:      81
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2748545
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_81_2: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_169_3:  '
+      FilePath:        'T:\AMDDesignTools\2025.2\Vitis\common\technology\autopilot\etc\hls_hypot_apfixed.h'
+      FileOffset:      169
+      Replacements:
+        - FilePath:        'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\knn_accelerator\hls\.autopilot\db\knn.pp.0.cpp'
+          Offset:          2750234
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_169_3: '
+    Level:           Remark
+    BuildDirectory:  'T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator'
 ...

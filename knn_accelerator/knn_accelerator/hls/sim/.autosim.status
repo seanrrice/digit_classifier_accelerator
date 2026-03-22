@@ -11,4 +11,4 @@ set status(hdl_tvin) ""
 set status(hdl_tvout) ""
 set status(vlog_needed) 0
 set status(tb_needed) 1
-set status(argv) ""
+set status(argv) {}

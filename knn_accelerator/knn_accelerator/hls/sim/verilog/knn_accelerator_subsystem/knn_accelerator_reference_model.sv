@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -111,7 +111,7 @@ misc_if.dut2tb_ap_done = 0;
         mem_blk_pages_gmem_x_test.whole_page_size=4048;
         mem_blk_pages_gmem_x_test.maxi_bundlevar_fpath["X_test"]=`TV_IN_OFFSET_X_test;
         mem_blk_pages_gmem_x_test.set_binary(1);
-        mem_blk_pages_gmem_x_test.tvinload_pagechk_atinit(fpath, 490*((64+7)/8), 0, 0, "");
+        mem_blk_pages_gmem_x_test.tvinload_pagechk_atinit(fpath, 490*((64+7)/8), 0, 0);
         fpath.delete();
 
         fpath.push_back(`TV_IN_gmem_x_train);
@@ -119,7 +119,7 @@ misc_if.dut2tb_ap_done = 0;
         mem_blk_pages_gmem_x_train.whole_page_size=4048;
         mem_blk_pages_gmem_x_train.maxi_bundlevar_fpath["X_train"]=`TV_IN_OFFSET_X_train;
         mem_blk_pages_gmem_x_train.set_binary(1);
-        mem_blk_pages_gmem_x_train.tvinload_pagechk_atinit(fpath, 490*((64+7)/8), 0, 0, "");
+        mem_blk_pages_gmem_x_train.tvinload_pagechk_atinit(fpath, 490*((64+7)/8), 0, 0);
         fpath.delete();
 
         fpath.push_back(`TV_IN_gmem_y_train);
@@ -127,7 +127,7 @@ misc_if.dut2tb_ap_done = 0;
         mem_blk_pages_gmem_y_train.whole_page_size=104;
         mem_blk_pages_gmem_y_train.maxi_bundlevar_fpath["y_train"]=`TV_IN_OFFSET_y_train;
         mem_blk_pages_gmem_y_train.set_binary(1);
-        mem_blk_pages_gmem_y_train.tvinload_pagechk_atinit(fpath, 10*((32+7)/8), 0, 0, "");
+        mem_blk_pages_gmem_y_train.tvinload_pagechk_atinit(fpath, 10*((32+7)/8), 0, 0);
         fpath.delete();
 
         fpath.push_back(`TV_IN_gmem_y_test);
@@ -135,7 +135,7 @@ misc_if.dut2tb_ap_done = 0;
         mem_blk_pages_gmem_y_test.whole_page_size=104;
         mem_blk_pages_gmem_y_test.maxi_bundlevar_fpath["y_test"]=`TV_IN_OFFSET_y_test;
         mem_blk_pages_gmem_y_test.set_binary(1);
-        mem_blk_pages_gmem_y_test.tvinload_pagechk_atinit(fpath, 10*((32+7)/8), 0, 0, "");
+        mem_blk_pages_gmem_y_test.tvinload_pagechk_atinit(fpath, 10*((32+7)/8), 0, 0);
         mem_blk_pages_gmem_y_test.tvoutdump_atinit(`TV_OUT_gmem_y_test);
         fpath.delete();
 
@@ -207,6 +207,20 @@ misc_if.dut2tb_ap_done = 0;
                 `uvm_info(this.get_full_name(), "trigger event DUT2TB_AP_READY", UVM_LOW)
                 -> dut2tb_ap_ready;
                  misc_if.tb2dut_ap_start = 0;
+            end
+            forever begin
+                forever begin
+                    @(negedge misc_if.clock);
+                    if (misc_if.dut2tb_ap_done_kernel === 1)   break;
+                end
+                @(posedge misc_if.clock);
+                fork
+                    begin
+                        @(negedge misc_if.clock);
+                        `uvm_info(this.get_full_name(), "trigger event dut2tb_ap_done_kernel_evt", UVM_LOW)
+                        -> misc_if.dut2tb_ap_done_kernel_evt;
+                    end
+                join_none
             end
         join
     endtask

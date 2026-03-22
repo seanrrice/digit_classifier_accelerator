@@ -334,7 +334,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>67</item>
+					<item>68</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -352,15 +352,15 @@
 						<id>10</id>
 						<name>i</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item class_id="11" tracking_level="0" version="0">
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second class_id="12" tracking_level="0" version="0">
 									<count>1</count>
 									<item_version>0</item_version>
@@ -369,7 +369,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -390,7 +390,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>68</item>
+					<item>69</item>
 				</oprand_edges>
 				<opcode>alloca</opcode>
 				<m_Display>0</m_Display>
@@ -432,8 +432,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>70</item>
 					<item>71</item>
+					<item>72</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -475,8 +475,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>72</item>
 					<item>73</item>
+					<item>74</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -518,8 +518,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>74</item>
 					<item>75</item>
+					<item>76</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -561,8 +561,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>76</item>
 					<item>77</item>
+					<item>78</item>
 				</oprand_edges>
 				<opcode>read</opcode>
 				<m_Display>0</m_Display>
@@ -580,15 +580,15 @@
 						<id>33</id>
 						<name>top_k_labels</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>149</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>158</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -597,63 +597,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>149</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName>top_k_labels</originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>4</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>1</count>
-					<item_version>0</item_version>
-					<item>79</item>
-				</oprand_edges>
-				<opcode>alloca</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>7</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_16">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>34</id>
-						<name>top_k_labels_1</name>
-						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>149</lineNumber>
-						<contextFuncName>knn_accelerator</contextFuncName>
-						<contextNormFuncName>knn_accelerator</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/knn.cpp</first>
-											<second>knn_accelerator</second>
-										</first>
-										<second>149</second>
+										<second>158</second>
 									</item>
 								</second>
 							</item>
@@ -682,25 +626,25 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>8</m_topoIndex>
+				<m_topoIndex>7</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_17">
+			<item class_id_reference="9" object_id="_16">
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>35</id>
-						<name>top_k_labels_2</name>
+						<id>34</id>
+						<name>top_k_labels_1</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>149</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>158</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -709,7 +653,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>149</second>
+										<second>158</second>
 									</item>
 								</second>
 							</item>
@@ -738,6 +682,62 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
+				<m_topoIndex>8</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_17">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>35</id>
+						<name>top_k_labels_2</name>
+						<fileName>../src/knn.cpp</fileName>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>158</lineNumber>
+						<contextFuncName>knn_accelerator</contextFuncName>
+						<contextNormFuncName>knn_accelerator</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/knn.cpp</first>
+											<second>knn_accelerator</second>
+										</first>
+										<second>158</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName>top_k_labels</originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>4</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>1</count>
+					<item_version>0</item_version>
+					<item>82</item>
+				</oprand_edges>
+				<opcode>alloca</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
 				<m_topoIndex>9</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
@@ -748,15 +748,15 @@
 						<id>36</id>
 						<name>trunc_ln</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -765,7 +765,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -786,10 +786,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>83</item>
 					<item>84</item>
-					<item>86</item>
-					<item>88</item>
+					<item>85</item>
+					<item>87</item>
+					<item>89</item>
 				</oprand_edges>
 				<opcode>partselect</opcode>
 				<m_Display>0</m_Display>
@@ -805,17 +805,17 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>sext_ln151</name>
+						<name>sext_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -824,7 +824,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -845,7 +845,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>89</item>
+					<item>90</item>
 				</oprand_edges>
 				<opcode>sext</opcode>
 				<m_Display>0</m_Display>
@@ -863,15 +863,15 @@
 						<id>38</id>
 						<name>gmem_y_test_addr</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -880,7 +880,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -901,8 +901,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>90</item>
 					<item>91</item>
+					<item>92</item>
 				</oprand_edges>
 				<opcode>getelementptr</opcode>
 				<m_Display>0</m_Display>
@@ -920,15 +920,15 @@
 						<id>39</id>
 						<name>empty</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -937,7 +937,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -958,9 +958,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>93</item>
 					<item>94</item>
-					<item>96</item>
+					<item>95</item>
+					<item>97</item>
 				</oprand_edges>
 				<opcode>writereq</opcode>
 				<m_Display>0</m_Display>
@@ -976,17 +976,17 @@
 					<Obj>
 						<type>0</type>
 						<id>40</id>
-						<name>i_write_ln151</name>
+						<name>i_write_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -995,7 +995,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1016,8 +1016,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>98</item>
 					<item>99</item>
+					<item>100</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1059,8 +1059,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>101</item>
 					<item>102</item>
+					<item>103</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1076,17 +1076,17 @@
 					<Obj>
 						<type>0</type>
 						<id>42</id>
-						<name>br_ln151</name>
+						<name>br_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1095,7 +1095,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1116,7 +1116,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>103</item>
+					<item>104</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -1132,17 +1132,17 @@
 					<Obj>
 						<type>0</type>
 						<id>44</id>
-						<name>i_7</name>
+						<name>i_8</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1151,7 +1151,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1172,8 +1172,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>104</item>
-					<item>464</item>
+					<item>105</item>
+					<item>488</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1189,17 +1189,17 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>icmp_ln151</name>
+						<name>icmp_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1208,7 +1208,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1229,8 +1229,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>105</item>
-					<item>107</item>
+					<item>106</item>
+					<item>108</item>
 				</oprand_edges>
 				<opcode>icmp</opcode>
 				<m_Display>0</m_Display>
@@ -1246,17 +1246,17 @@
 					<Obj>
 						<type>0</type>
 						<id>46</id>
-						<name>add_ln151</name>
+						<name>add_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1265,7 +1265,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1286,8 +1286,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>108</item>
-					<item>110</item>
+					<item>109</item>
+					<item>111</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -1303,17 +1303,17 @@
 					<Obj>
 						<type>0</type>
 						<id>47</id>
-						<name>br_ln151</name>
+						<name>br_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1322,7 +1322,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1343,9 +1343,9 @@
 				<oprand_edges>
 					<count>3</count>
 					<item_version>0</item_version>
-					<item>111</item>
 					<item>112</item>
 					<item>113</item>
+					<item>114</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -1363,15 +1363,15 @@
 						<id>49</id>
 						<name>phi_mul_load</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>163</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1380,64 +1380,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>153</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>9</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>114</item>
-					<item>467</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>22</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_30">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>52</id>
-						<name>add_ln153</name>
-						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>153</lineNumber>
-						<contextFuncName>knn_accelerator</contextFuncName>
-						<contextNormFuncName>knn_accelerator</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/knn.cpp</first>
-											<second>knn_accelerator</second>
-										</first>
-										<second>153</second>
+										<second>163</second>
 									</item>
 								</second>
 							</item>
@@ -1459,7 +1402,64 @@
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>115</item>
-					<item>117</item>
+					<item>491</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>22</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_30">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>53</id>
+						<name>add_ln163</name>
+						<fileName>../src/knn.cpp</fileName>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>163</lineNumber>
+						<contextFuncName>knn_accelerator</contextFuncName>
+						<contextNormFuncName>knn_accelerator</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/knn.cpp</first>
+											<second>knn_accelerator</second>
+										</first>
+										<second>163</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>9</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>116</item>
+					<item>118</item>
 				</oprand_edges>
 				<opcode>add</opcode>
 				<m_Display>0</m_Display>
@@ -1474,18 +1474,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>53</id>
-						<name>_ln153</name>
+						<id>54</id>
+						<name>_ln163</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>163</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1494,7 +1494,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>153</second>
+										<second>163</second>
 									</item>
 								</second>
 							</item>
@@ -1515,7 +1515,6 @@
 				<oprand_edges>
 					<count>11</count>
 					<item_version>0</item_version>
-					<item>119</item>
 					<item>120</item>
 					<item>121</item>
 					<item>122</item>
@@ -1526,6 +1525,7 @@
 					<item>127</item>
 					<item>128</item>
 					<item>129</item>
+					<item>130</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1540,18 +1540,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>54</id>
+						<id>55</id>
 						<name>top_k_labels_load</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>156</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>166</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1560,64 +1560,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>156</second>
-									</item>
-								</second>
-							</item>
-						</inlineStackInfo>
-						<originalName></originalName>
-						<rtlName></rtlName>
-						<control></control>
-						<opType></opType>
-						<implIndex></implIndex>
-						<coreName></coreName>
-						<isStorage>0</isStorage>
-						<storageDepth>0</storageDepth>
-						<coreId>4294967295</coreId>
-						<rtlModuleName></rtlModuleName>
-					</Obj>
-					<bitwidth>4</bitwidth>
-				</Value>
-				<oprand_edges>
-					<count>2</count>
-					<item_version>0</item_version>
-					<item>130</item>
-					<item>460</item>
-				</oprand_edges>
-				<opcode>load</opcode>
-				<m_Display>0</m_Display>
-				<m_isOnCriticalPath>0</m_isOnCriticalPath>
-				<m_isLCDNode>0</m_isLCDNode>
-				<m_isStartOfPath>0</m_isStartOfPath>
-				<m_delay>0.00</m_delay>
-				<m_topoIndex>26</m_topoIndex>
-				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
-			</item>
-			<item class_id_reference="9" object_id="_33">
-				<Value>
-					<Obj>
-						<type>0</type>
-						<id>55</id>
-						<name>top_k_labels_1_load</name>
-						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>156</lineNumber>
-						<contextFuncName>knn_accelerator</contextFuncName>
-						<contextNormFuncName>knn_accelerator</contextNormFuncName>
-						<inlineStackInfo>
-							<count>1</count>
-							<item_version>0</item_version>
-							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
-								<second>
-									<count>1</count>
-									<item_version>0</item_version>
-									<item>
-										<first>
-											<first>../src/knn.cpp</first>
-											<second>knn_accelerator</second>
-										</first>
-										<second>156</second>
+										<second>166</second>
 									</item>
 								</second>
 							</item>
@@ -1639,7 +1582,7 @@
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>131</item>
-					<item>461</item>
+					<item>484</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1647,25 +1590,25 @@
 				<m_isLCDNode>0</m_isLCDNode>
 				<m_isStartOfPath>0</m_isStartOfPath>
 				<m_delay>0.00</m_delay>
-				<m_topoIndex>27</m_topoIndex>
+				<m_topoIndex>26</m_topoIndex>
 				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
 			</item>
-			<item class_id_reference="9" object_id="_34">
+			<item class_id_reference="9" object_id="_33">
 				<Value>
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>top_k_labels_2_load</name>
+						<name>top_k_labels_1_load</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>156</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>166</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1674,7 +1617,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>156</second>
+										<second>166</second>
 									</item>
 								</second>
 							</item>
@@ -1696,7 +1639,64 @@
 					<count>2</count>
 					<item_version>0</item_version>
 					<item>132</item>
-					<item>462</item>
+					<item>485</item>
+				</oprand_edges>
+				<opcode>load</opcode>
+				<m_Display>0</m_Display>
+				<m_isOnCriticalPath>0</m_isOnCriticalPath>
+				<m_isLCDNode>0</m_isLCDNode>
+				<m_isStartOfPath>0</m_isStartOfPath>
+				<m_delay>0.00</m_delay>
+				<m_topoIndex>27</m_topoIndex>
+				<m_clusterGroupNumber>-1</m_clusterGroupNumber>
+			</item>
+			<item class_id_reference="9" object_id="_34">
+				<Value>
+					<Obj>
+						<type>0</type>
+						<id>57</id>
+						<name>top_k_labels_2_load</name>
+						<fileName>../src/knn.cpp</fileName>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>166</lineNumber>
+						<contextFuncName>knn_accelerator</contextFuncName>
+						<contextNormFuncName>knn_accelerator</contextNormFuncName>
+						<inlineStackInfo>
+							<count>1</count>
+							<item_version>0</item_version>
+							<item>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
+								<second>
+									<count>1</count>
+									<item_version>0</item_version>
+									<item>
+										<first>
+											<first>../src/knn.cpp</first>
+											<second>knn_accelerator</second>
+										</first>
+										<second>166</second>
+									</item>
+								</second>
+							</item>
+						</inlineStackInfo>
+						<originalName></originalName>
+						<rtlName></rtlName>
+						<control></control>
+						<opType></opType>
+						<implIndex></implIndex>
+						<coreName></coreName>
+						<isStorage>0</isStorage>
+						<storageDepth>0</storageDepth>
+						<coreId>4294967295</coreId>
+						<rtlModuleName></rtlModuleName>
+					</Obj>
+					<bitwidth>4</bitwidth>
+				</Value>
+				<oprand_edges>
+					<count>2</count>
+					<item_version>0</item_version>
+					<item>133</item>
+					<item>486</item>
 				</oprand_edges>
 				<opcode>load</opcode>
 				<m_Display>0</m_Display>
@@ -1711,18 +1711,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>57</id>
+						<id>58</id>
 						<name>tmp</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>156</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>166</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1731,7 +1731,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>156</second>
+										<second>166</second>
 									</item>
 								</second>
 							</item>
@@ -1752,10 +1752,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>134</item>
 					<item>135</item>
 					<item>136</item>
 					<item>137</item>
+					<item>138</item>
 				</oprand_edges>
 				<opcode>call</opcode>
 				<m_Display>0</m_Display>
@@ -1770,18 +1770,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>58</id>
-						<name>gmem_y_test_addr_write_ln156</name>
+						<id>59</id>
+						<name>gmem_y_test_addr_write_ln166</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>156</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>166</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1790,7 +1790,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>156</second>
+										<second>166</second>
 									</item>
 								</second>
 							</item>
@@ -1811,11 +1811,11 @@
 				<oprand_edges>
 					<count>5</count>
 					<item_version>0</item_version>
-					<item>139</item>
 					<item>140</item>
 					<item>141</item>
-					<item>143</item>
-					<item>465</item>
+					<item>142</item>
+					<item>144</item>
+					<item>489</item>
 				</oprand_edges>
 				<opcode>write</opcode>
 				<m_Display>0</m_Display>
@@ -1830,18 +1830,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>59</id>
-						<name>i_write_ln151</name>
+						<id>60</id>
+						<name>i_write_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1850,7 +1850,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1871,10 +1871,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>144</item>
 					<item>145</item>
-					<item>466</item>
-					<item>469</item>
+					<item>146</item>
+					<item>490</item>
+					<item>493</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1889,18 +1889,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>60</id>
-						<name>phi_mul_write_ln153</name>
+						<id>61</id>
+						<name>phi_mul_write_ln163</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>153</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>163</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1909,7 +1909,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>153</second>
+										<second>163</second>
 									</item>
 								</second>
 							</item>
@@ -1930,10 +1930,10 @@
 				<oprand_edges>
 					<count>4</count>
 					<item_version>0</item_version>
-					<item>146</item>
 					<item>147</item>
-					<item>463</item>
-					<item>468</item>
+					<item>148</item>
+					<item>487</item>
+					<item>492</item>
 				</oprand_edges>
 				<opcode>store</opcode>
 				<m_Display>0</m_Display>
@@ -1948,18 +1948,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>61</id>
-						<name>br_ln151</name>
+						<id>62</id>
+						<name>br_ln160</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>151</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>160</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -1968,7 +1968,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>151</second>
+										<second>160</second>
 									</item>
 								</second>
 							</item>
@@ -1989,7 +1989,7 @@
 				<oprand_edges>
 					<count>1</count>
 					<item_version>0</item_version>
-					<item>148</item>
+					<item>149</item>
 				</oprand_edges>
 				<opcode>br</opcode>
 				<m_Display>0</m_Display>
@@ -2004,18 +2004,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>63</id>
-						<name>empty_31</name>
+						<id>64</id>
+						<name>empty_32</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>158</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>168</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2024,7 +2024,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>158</second>
+										<second>168</second>
 									</item>
 								</second>
 							</item>
@@ -2045,8 +2045,8 @@
 				<oprand_edges>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>150</item>
 					<item>151</item>
+					<item>152</item>
 				</oprand_edges>
 				<opcode>writeresp</opcode>
 				<m_Display>0</m_Display>
@@ -2061,18 +2061,18 @@
 				<Value>
 					<Obj>
 						<type>0</type>
-						<id>64</id>
-						<name>_ln158</name>
+						<id>65</id>
+						<name>_ln168</name>
 						<fileName>../src/knn.cpp</fileName>
-						<fileDirectory>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</fileDirectory>
-						<lineNumber>158</lineNumber>
+						<fileDirectory>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</fileDirectory>
+						<lineNumber>168</lineNumber>
 						<contextFuncName>knn_accelerator</contextFuncName>
 						<contextNormFuncName>knn_accelerator</contextNormFuncName>
 						<inlineStackInfo>
 							<count>1</count>
 							<item_version>0</item_version>
 							<item>
-								<first>C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator</first>
+								<first>T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator</first>
 								<second>
 									<count>1</count>
 									<item_version>0</item_version>
@@ -2081,7 +2081,7 @@
 											<first>../src/knn.cpp</first>
 											<second>knn_accelerator</second>
 										</first>
-										<second>158</second>
+										<second>168</second>
 									</item>
 								</second>
 							</item>
@@ -2120,7 +2120,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>66</id>
+						<id>67</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2151,7 +2151,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>78</id>
+						<id>79</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2182,7 +2182,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>85</id>
+						<id>86</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2213,7 +2213,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>87</id>
+						<id>88</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2244,7 +2244,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>95</id>
+						<id>96</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2275,7 +2275,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>97</id>
+						<id>98</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2306,7 +2306,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>100</id>
+						<id>101</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2337,7 +2337,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>106</id>
+						<id>107</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2368,7 +2368,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>109</id>
+						<id>110</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2399,7 +2399,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>116</id>
+						<id>117</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2430,7 +2430,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>118</id>
+						<id>119</id>
 						<name>knn_distance_and_sort</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2461,7 +2461,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>133</id>
+						<id>134</id>
 						<name>knn_majority_vote</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2492,7 +2492,7 @@
 				<Value>
 					<Obj>
 						<type>2</type>
-						<id>142</id>
+						<id>143</id>
 						<name>empty</name>
 						<fileName></fileName>
 						<fileDirectory></fileDirectory>
@@ -2606,7 +2606,7 @@
 			<item class_id_reference="18" object_id="_57">
 				<Obj>
 					<type>3</type>
-					<id>62</id>
+					<id>63</id>
 					<name>for.inc.split</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -2632,7 +2632,6 @@
 					<count>11</count>
 					<item_version>0</item_version>
 					<item>49</item>
-					<item>52</item>
 					<item>53</item>
 					<item>54</item>
 					<item>55</item>
@@ -2642,12 +2641,13 @@
 					<item>59</item>
 					<item>60</item>
 					<item>61</item>
+					<item>62</item>
 				</node_objs>
 			</item>
 			<item class_id_reference="18" object_id="_58">
 				<Obj>
 					<type>3</type>
-					<id>65</id>
+					<id>66</id>
 					<name>for.end</name>
 					<fileName></fileName>
 					<fileDirectory></fileDirectory>
@@ -2672,8 +2672,8 @@
 				<node_objs>
 					<count>2</count>
 					<item_version>0</item_version>
-					<item>63</item>
 					<item>64</item>
+					<item>65</item>
 				</node_objs>
 			</item>
 		</blocks>
@@ -2681,521 +2681,521 @@
 			<count>74</count>
 			<item_version>0</item_version>
 			<item class_id="20" tracking_level="1" version="0" object_id="_59">
-				<id>67</id>
+				<id>68</id>
 				<edge_type>1</edge_type>
-				<source_obj>66</source_obj>
+				<source_obj>67</source_obj>
 				<sink_obj>9</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_60">
-				<id>68</id>
+				<id>69</id>
 				<edge_type>1</edge_type>
-				<source_obj>66</source_obj>
+				<source_obj>67</source_obj>
 				<sink_obj>10</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_61">
-				<id>71</id>
+				<id>72</id>
 				<edge_type>1</edge_type>
 				<source_obj>8</source_obj>
 				<sink_obj>29</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_62">
-				<id>73</id>
+				<id>74</id>
 				<edge_type>1</edge_type>
 				<source_obj>7</source_obj>
 				<sink_obj>30</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_63">
-				<id>75</id>
+				<id>76</id>
 				<edge_type>1</edge_type>
 				<source_obj>6</source_obj>
 				<sink_obj>31</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_64">
-				<id>77</id>
+				<id>78</id>
 				<edge_type>1</edge_type>
 				<source_obj>5</source_obj>
 				<sink_obj>32</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_65">
-				<id>79</id>
+				<id>80</id>
 				<edge_type>1</edge_type>
-				<source_obj>78</source_obj>
+				<source_obj>79</source_obj>
 				<sink_obj>33</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_66">
-				<id>80</id>
+				<id>81</id>
 				<edge_type>1</edge_type>
-				<source_obj>78</source_obj>
+				<source_obj>79</source_obj>
 				<sink_obj>34</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_67">
-				<id>81</id>
+				<id>82</id>
 				<edge_type>1</edge_type>
-				<source_obj>78</source_obj>
+				<source_obj>79</source_obj>
 				<sink_obj>35</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_68">
-				<id>84</id>
+				<id>85</id>
 				<edge_type>1</edge_type>
 				<source_obj>29</source_obj>
 				<sink_obj>36</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_69">
-				<id>86</id>
+				<id>87</id>
 				<edge_type>1</edge_type>
-				<source_obj>85</source_obj>
+				<source_obj>86</source_obj>
 				<sink_obj>36</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_70">
-				<id>88</id>
+				<id>89</id>
 				<edge_type>1</edge_type>
-				<source_obj>87</source_obj>
+				<source_obj>88</source_obj>
 				<sink_obj>36</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_71">
-				<id>89</id>
+				<id>90</id>
 				<edge_type>1</edge_type>
 				<source_obj>36</source_obj>
 				<sink_obj>37</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_72">
-				<id>90</id>
+				<id>91</id>
 				<edge_type>1</edge_type>
 				<source_obj>4</source_obj>
 				<sink_obj>38</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_73">
-				<id>91</id>
+				<id>92</id>
 				<edge_type>1</edge_type>
 				<source_obj>37</source_obj>
 				<sink_obj>38</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_74">
-				<id>94</id>
+				<id>95</id>
 				<edge_type>1</edge_type>
 				<source_obj>38</source_obj>
 				<sink_obj>39</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_75">
-				<id>96</id>
+				<id>97</id>
 				<edge_type>1</edge_type>
-				<source_obj>95</source_obj>
+				<source_obj>96</source_obj>
 				<sink_obj>39</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_76">
-				<id>98</id>
+				<id>99</id>
 				<edge_type>1</edge_type>
-				<source_obj>97</source_obj>
+				<source_obj>98</source_obj>
 				<sink_obj>40</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_77">
-				<id>99</id>
+				<id>100</id>
 				<edge_type>1</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>40</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_78">
-				<id>101</id>
+				<id>102</id>
 				<edge_type>1</edge_type>
-				<source_obj>100</source_obj>
+				<source_obj>101</source_obj>
 				<sink_obj>41</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_79">
-				<id>102</id>
+				<id>103</id>
 				<edge_type>1</edge_type>
 				<source_obj>9</source_obj>
 				<sink_obj>41</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_80">
-				<id>103</id>
+				<id>104</id>
 				<edge_type>2</edge_type>
 				<source_obj>48</source_obj>
 				<sink_obj>42</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_81">
-				<id>104</id>
+				<id>105</id>
 				<edge_type>1</edge_type>
 				<source_obj>10</source_obj>
 				<sink_obj>44</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_82">
-				<id>105</id>
+				<id>106</id>
 				<edge_type>1</edge_type>
 				<source_obj>44</source_obj>
 				<sink_obj>45</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_83">
-				<id>107</id>
+				<id>108</id>
 				<edge_type>1</edge_type>
-				<source_obj>106</source_obj>
+				<source_obj>107</source_obj>
 				<sink_obj>45</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_84">
-				<id>108</id>
+				<id>109</id>
 				<edge_type>1</edge_type>
 				<source_obj>44</source_obj>
 				<sink_obj>46</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_85">
-				<id>110</id>
+				<id>111</id>
 				<edge_type>1</edge_type>
-				<source_obj>109</source_obj>
+				<source_obj>110</source_obj>
 				<sink_obj>46</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_86">
-				<id>111</id>
+				<id>112</id>
 				<edge_type>1</edge_type>
 				<source_obj>45</source_obj>
 				<sink_obj>47</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_87">
-				<id>112</id>
+				<id>113</id>
 				<edge_type>2</edge_type>
-				<source_obj>62</source_obj>
+				<source_obj>63</source_obj>
 				<sink_obj>47</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_88">
-				<id>113</id>
+				<id>114</id>
 				<edge_type>2</edge_type>
-				<source_obj>65</source_obj>
+				<source_obj>66</source_obj>
 				<sink_obj>47</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_89">
-				<id>114</id>
+				<id>115</id>
 				<edge_type>1</edge_type>
 				<source_obj>9</source_obj>
 				<sink_obj>49</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_90">
-				<id>115</id>
+				<id>116</id>
 				<edge_type>1</edge_type>
 				<source_obj>49</source_obj>
-				<sink_obj>52</sink_obj>
+				<sink_obj>53</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_91">
-				<id>117</id>
+				<id>118</id>
 				<edge_type>1</edge_type>
-				<source_obj>116</source_obj>
-				<sink_obj>52</sink_obj>
+				<source_obj>117</source_obj>
+				<sink_obj>53</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_92">
-				<id>119</id>
+				<id>120</id>
 				<edge_type>1</edge_type>
-				<source_obj>118</source_obj>
-				<sink_obj>53</sink_obj>
+				<source_obj>119</source_obj>
+				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_93">
-				<id>120</id>
+				<id>121</id>
 				<edge_type>1</edge_type>
 				<source_obj>1</source_obj>
-				<sink_obj>53</sink_obj>
+				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_94">
-				<id>121</id>
+				<id>122</id>
 				<edge_type>1</edge_type>
 				<source_obj>32</source_obj>
-				<sink_obj>53</sink_obj>
+				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_95">
-				<id>122</id>
+				<id>123</id>
 				<edge_type>1</edge_type>
 				<source_obj>2</source_obj>
-				<sink_obj>53</sink_obj>
+				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_96">
-				<id>123</id>
+				<id>124</id>
 				<edge_type>1</edge_type>
 				<source_obj>31</source_obj>
-				<sink_obj>53</sink_obj>
+				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_97">
-				<id>124</id>
+				<id>125</id>
 				<edge_type>1</edge_type>
 				<source_obj>3</source_obj>
-				<sink_obj>53</sink_obj>
+				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_98">
-				<id>125</id>
+				<id>126</id>
 				<edge_type>1</edge_type>
 				<source_obj>30</source_obj>
-				<sink_obj>53</sink_obj>
+				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_99">
-				<id>126</id>
-				<edge_type>1</edge_type>
-				<source_obj>33</source_obj>
-				<sink_obj>53</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_100">
 				<id>127</id>
-				<edge_type>1</edge_type>
-				<source_obj>34</source_obj>
-				<sink_obj>53</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_101">
-				<id>128</id>
-				<edge_type>1</edge_type>
-				<source_obj>35</source_obj>
-				<sink_obj>53</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_102">
-				<id>129</id>
-				<edge_type>1</edge_type>
-				<source_obj>49</source_obj>
-				<sink_obj>53</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_103">
-				<id>130</id>
 				<edge_type>1</edge_type>
 				<source_obj>33</source_obj>
 				<sink_obj>54</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_104">
-				<id>131</id>
+			<item class_id_reference="20" object_id="_100">
+				<id>128</id>
 				<edge_type>1</edge_type>
 				<source_obj>34</source_obj>
+				<sink_obj>54</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_101">
+				<id>129</id>
+				<edge_type>1</edge_type>
+				<source_obj>35</source_obj>
+				<sink_obj>54</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_102">
+				<id>130</id>
+				<edge_type>1</edge_type>
+				<source_obj>49</source_obj>
+				<sink_obj>54</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_103">
+				<id>131</id>
+				<edge_type>1</edge_type>
+				<source_obj>33</source_obj>
 				<sink_obj>55</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_105">
+			<item class_id_reference="20" object_id="_104">
 				<id>132</id>
 				<edge_type>1</edge_type>
-				<source_obj>35</source_obj>
+				<source_obj>34</source_obj>
 				<sink_obj>56</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_106">
-				<id>134</id>
+			<item class_id_reference="20" object_id="_105">
+				<id>133</id>
 				<edge_type>1</edge_type>
-				<source_obj>133</source_obj>
+				<source_obj>35</source_obj>
 				<sink_obj>57</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_107">
+			<item class_id_reference="20" object_id="_106">
 				<id>135</id>
 				<edge_type>1</edge_type>
-				<source_obj>54</source_obj>
-				<sink_obj>57</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_108">
-				<id>136</id>
-				<edge_type>1</edge_type>
-				<source_obj>55</source_obj>
-				<sink_obj>57</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_109">
-				<id>137</id>
-				<edge_type>1</edge_type>
-				<source_obj>56</source_obj>
-				<sink_obj>57</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_110">
-				<id>140</id>
-				<edge_type>1</edge_type>
-				<source_obj>38</source_obj>
+				<source_obj>134</source_obj>
 				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_111">
-				<id>141</id>
+			<item class_id_reference="20" object_id="_107">
+				<id>136</id>
+				<edge_type>1</edge_type>
+				<source_obj>55</source_obj>
+				<sink_obj>58</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_108">
+				<id>137</id>
+				<edge_type>1</edge_type>
+				<source_obj>56</source_obj>
+				<sink_obj>58</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_109">
+				<id>138</id>
 				<edge_type>1</edge_type>
 				<source_obj>57</source_obj>
 				<sink_obj>58</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_112">
-				<id>143</id>
+			<item class_id_reference="20" object_id="_110">
+				<id>141</id>
 				<edge_type>1</edge_type>
-				<source_obj>142</source_obj>
-				<sink_obj>58</sink_obj>
+				<source_obj>38</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_111">
+				<id>142</id>
+				<edge_type>1</edge_type>
+				<source_obj>58</source_obj>
+				<sink_obj>59</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_112">
+				<id>144</id>
+				<edge_type>1</edge_type>
+				<source_obj>143</source_obj>
+				<sink_obj>59</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_113">
-				<id>144</id>
+				<id>145</id>
 				<edge_type>1</edge_type>
 				<source_obj>46</source_obj>
-				<sink_obj>59</sink_obj>
+				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_114">
-				<id>145</id>
+				<id>146</id>
 				<edge_type>1</edge_type>
 				<source_obj>10</source_obj>
-				<sink_obj>59</sink_obj>
+				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_115">
-				<id>146</id>
-				<edge_type>1</edge_type>
-				<source_obj>52</source_obj>
-				<sink_obj>60</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_116">
 				<id>147</id>
 				<edge_type>1</edge_type>
-				<source_obj>9</source_obj>
-				<sink_obj>60</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_117">
-				<id>148</id>
-				<edge_type>2</edge_type>
-				<source_obj>48</source_obj>
+				<source_obj>53</source_obj>
 				<sink_obj>61</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
+			<item class_id_reference="20" object_id="_116">
+				<id>148</id>
+				<edge_type>1</edge_type>
+				<source_obj>9</source_obj>
+				<sink_obj>61</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
+			<item class_id_reference="20" object_id="_117">
+				<id>149</id>
+				<edge_type>2</edge_type>
+				<source_obj>48</source_obj>
+				<sink_obj>62</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
 			<item class_id_reference="20" object_id="_118">
-				<id>151</id>
+				<id>152</id>
 				<edge_type>1</edge_type>
 				<source_obj>38</source_obj>
-				<sink_obj>63</sink_obj>
+				<sink_obj>64</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_119">
-				<id>456</id>
+				<id>480</id>
 				<edge_type>2</edge_type>
 				<source_obj>43</source_obj>
 				<sink_obj>48</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_120">
-				<id>457</id>
+				<id>481</id>
 				<edge_type>2</edge_type>
 				<source_obj>48</source_obj>
-				<sink_obj>65</sink_obj>
+				<sink_obj>66</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_121">
-				<id>458</id>
+				<id>482</id>
 				<edge_type>2</edge_type>
 				<source_obj>48</source_obj>
-				<sink_obj>62</sink_obj>
+				<sink_obj>63</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_122">
-				<id>459</id>
+				<id>483</id>
 				<edge_type>2</edge_type>
-				<source_obj>62</source_obj>
+				<source_obj>63</source_obj>
 				<sink_obj>48</sink_obj>
 				<is_back_edge>1</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_123">
-				<id>460</id>
+				<id>484</id>
 				<edge_type>4</edge_type>
-				<source_obj>53</source_obj>
-				<sink_obj>54</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_124">
-				<id>461</id>
-				<edge_type>4</edge_type>
-				<source_obj>53</source_obj>
+				<source_obj>54</source_obj>
 				<sink_obj>55</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
-			<item class_id_reference="20" object_id="_125">
-				<id>462</id>
+			<item class_id_reference="20" object_id="_124">
+				<id>485</id>
 				<edge_type>4</edge_type>
-				<source_obj>53</source_obj>
+				<source_obj>54</source_obj>
 				<sink_obj>56</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
+			<item class_id_reference="20" object_id="_125">
+				<id>486</id>
+				<edge_type>4</edge_type>
+				<source_obj>54</source_obj>
+				<sink_obj>57</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
 			<item class_id_reference="20" object_id="_126">
-				<id>463</id>
+				<id>487</id>
 				<edge_type>4</edge_type>
 				<source_obj>49</source_obj>
-				<sink_obj>60</sink_obj>
+				<sink_obj>61</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_127">
-				<id>464</id>
+				<id>488</id>
 				<edge_type>4</edge_type>
 				<source_obj>40</source_obj>
 				<sink_obj>44</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_128">
-				<id>465</id>
+				<id>489</id>
 				<edge_type>4</edge_type>
 				<source_obj>39</source_obj>
-				<sink_obj>58</sink_obj>
-				<is_back_edge>0</is_back_edge>
-			</item>
-			<item class_id_reference="20" object_id="_129">
-				<id>466</id>
-				<edge_type>4</edge_type>
-				<source_obj>40</source_obj>
 				<sink_obj>59</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
+			<item class_id_reference="20" object_id="_129">
+				<id>490</id>
+				<edge_type>4</edge_type>
+				<source_obj>40</source_obj>
+				<sink_obj>60</sink_obj>
+				<is_back_edge>0</is_back_edge>
+			</item>
 			<item class_id_reference="20" object_id="_130">
-				<id>467</id>
+				<id>491</id>
 				<edge_type>4</edge_type>
 				<source_obj>41</source_obj>
 				<sink_obj>49</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_131">
-				<id>468</id>
+				<id>492</id>
 				<edge_type>4</edge_type>
 				<source_obj>41</source_obj>
-				<sink_obj>60</sink_obj>
+				<sink_obj>61</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 			<item class_id_reference="20" object_id="_132">
-				<id>469</id>
+				<id>493</id>
 				<edge_type>4</edge_type>
 				<source_obj>44</source_obj>
-				<sink_obj>59</sink_obj>
+				<sink_obj>60</sink_obj>
 				<is_back_edge>0</is_back_edge>
 			</item>
 		</edges>
@@ -3223,8 +3223,8 @@
 			<mDepth>-1</mDepth>
 			<mMinTripCount>-1</mMinTripCount>
 			<mMaxTripCount>-1</mMaxTripCount>
-			<mMinLatency>10237</mMinLatency>
-			<mMaxLatency>13837</mMaxLatency>
+			<mMinLatency>120747</mMinLatency>
+			<mMaxLatency>124347</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -3264,14 +3264,14 @@
 				<count>2</count>
 				<item_version>0</item_version>
 				<item>48</item>
-				<item>62</item>
+				<item>63</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
 			<mMinTripCount>10</mMinTripCount>
 			<mMaxTripCount>10</mMaxTripCount>
-			<mMinLatency>10230</mMinLatency>
-			<mMaxLatency>13830</mMaxLatency>
+			<mMinLatency>120740</mMinLatency>
+			<mMaxLatency>124340</mMaxLatency>
 			<mIsDfPipe>0</mIsDfPipe>
 			<mDfPipe class_id="-1"></mDfPipe>
 		</item>
@@ -3287,7 +3287,7 @@
 			<basic_blocks>
 				<count>1</count>
 				<item_version>0</item_version>
-				<item>65</item>
+				<item>66</item>
 			</basic_blocks>
 			<mII>-1</mII>
 			<mDepth>-1</mDepth>
@@ -3452,24 +3452,17 @@
 			</second>
 		</item>
 		<item>
-			<first>52</first>
-			<second>
-				<first>3</first>
-				<second>0</second>
-			</second>
-		</item>
-		<item>
 			<first>53</first>
 			<second>
 				<first>3</first>
-				<second>1</second>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>54</first>
 			<second>
-				<first>5</first>
-				<second>0</second>
+				<first>3</first>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
@@ -3490,48 +3483,55 @@
 			<first>57</first>
 			<second>
 				<first>5</first>
-				<second>1</second>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>58</first>
 			<second>
-				<first>6</first>
-				<second>0</second>
+				<first>5</first>
+				<second>1</second>
 			</second>
 		</item>
 		<item>
 			<first>59</first>
 			<second>
-				<first>2</first>
+				<first>7</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>60</first>
 			<second>
-				<first>3</first>
+				<first>2</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>61</first>
 			<second>
-				<first>6</first>
+				<first>3</first>
 				<second>0</second>
 			</second>
 		</item>
 		<item>
-			<first>63</first>
+			<first>62</first>
 			<second>
 				<first>7</first>
-				<second>4</second>
+				<second>0</second>
 			</second>
 		</item>
 		<item>
 			<first>64</first>
 			<second>
-				<first>11</first>
+				<first>8</first>
+				<second>4</second>
+			</second>
+		</item>
+		<item>
+			<first>65</first>
+			<second>
+				<first>12</first>
 				<second>0</second>
 			</second>
 		</item>
@@ -3554,14 +3554,14 @@
 			</second>
 		</item>
 		<item>
-			<first>62</first>
+			<first>63</first>
 			<second>
 				<first>2</first>
-				<second>6</second>
+				<second>7</second>
 			</second>
 		</item>
 		<item>
-			<first>65</first>
+			<first>66</first>
 			<second>
 				<first>3</first>
 				<second>7</second>
@@ -3624,6 +3624,7 @@
 		<count>0</count>
 		<item_version>0</item_version>
 	</node2core>
+	<sched_res class_id="-1"></sched_res>
 </syndb>
 </boost_serialization>
 

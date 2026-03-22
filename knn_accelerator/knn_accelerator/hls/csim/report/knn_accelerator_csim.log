@@ -1,5 +1,4 @@
 INFO: [SIM 2] *************** CSIM start ***************
-INFO: [SIM 4] CSIM will launch CLANG as the compiler.
    Compiling ../../../../../test/knn_test.cpp in debug mode
    Compiling ../../../../../src/knn.cpp in debug mode
    Generating csim.exe

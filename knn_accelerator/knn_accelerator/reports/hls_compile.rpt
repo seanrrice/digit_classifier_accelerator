@@ -4,42 +4,37 @@
 == Synthesis Summary Report of 'knn_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Tue Mar 17 19:32:54 2026
-    * Version:        2025.1 (Build 6135595 on May 21 2025)
+    * Date:           Sat Mar 21 23:51:31 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
     * Project:        knn_accelerator
     * Solution:       hls (Vivado IP Flow Target)
     * Product family: zynq
     * Target device:  xc7z020-clg400-1
     
 
-+ Performance & Resource Estimates: 
-    
-    PS: '+' for module; 'o' for loop; '*' for dataflow
-    +---------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-------------+-------------+-----+
-    |                      Modules                      |  Issue  |       |       Latency       | Iteration|         | Trip |          |         |         |             |             |     |
-    |                      & Loops                      |   Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   |   DSP   |      FF     |     LUT     | URAM|
-    +---------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-------------+-------------+-----+
-    |+ knn_accelerator                                  |   Timing|  -1.24|    13837|  1.384e+05|         -|    13838|     -|        no|  10 (3%)|  17 (7%)|  13974 (13%)|  10946 (20%)|    -|
-    | o test_data                                       |        -|   7.30|    13830|  1.383e+05|      1383|        -|    10|        no|        -|        -|            -|            -|    -|
-    |  + knn_distance_and_sort                          |   Timing|  -1.24|     1340|  1.340e+04|         -|     1340|     -|        no|        -|  17 (7%)|   10296 (9%)|   6548 (12%)|    -|
-    |   + knn_distance_and_sort_Pipeline_init_top_k     |        -|   2.56|        5|     50.000|         -|        4|     -|    rewind|        -|        -|      4 (~0%)|     47 (~0%)|    -|
-    |    o init_top_k                                   |        -|   7.30|        3|     30.000|         1|        1|     3|       yes|        -|        -|            -|            -|    -|
-    |   + knn_distance_and_sort_Pipeline_train_loop     |   Timing|  -1.24|      873|  8.730e+03|         -|      539|     -|    rewind|        -|  17 (7%)|    9749 (9%)|   5358 (10%)|    -|
-    |    o train_loop                                   |       II|   7.30|      871|  8.710e+03|       431|       49|    10|       yes|        -|        -|            -|            -|    -|
-    |   + knn_distance_and_sort_Outline_sort_loop_i     |        -|   0.86|      442|  4.420e+03|         -|      442|     -|        no|        -|        -|    184 (~0%)|    367 (~0%)|    -|
-    |    o sort_loop_i                                  |        -|   7.30|      441|  4.410e+03|        49|        -|     9|        no|        -|        -|            -|            -|    -|
-    |     + knn_distance_and_sort_Pipeline_sort_loop_j  |        -|   0.86|       47|    470.000|         -|       46|     -|    rewind|        -|        -|    168 (~0%)|    290 (~0%)|    -|
-    |      o sort_loop_j                                |       II|   7.30|       45|    450.000|         5|        5|     9|       yes|        -|        -|            -|            -|    -|
-    |   + knn_distance_and_sort_Pipeline_copy_top_k     |        -|   2.56|        5|     50.000|         -|        4|     -|    rewind|        -|        -|      7 (~0%)|     58 (~0%)|    -|
-    |    o copy_top_k                                   |        -|   7.30|        3|     30.000|         2|        1|     3|       yes|        -|        -|            -|            -|    -|
-    |  + knn_majority_vote                              |        -|   0.14|       38|    380.000|         -|       38|     -|        no|        -|        -|    296 (~0%)|     594 (1%)|    -|
-    |   + knn_majority_vote_Pipeline_VITIS_LOOP_95_1    |        -|   1.66|       12|    120.000|         -|       11|     -|    rewind|        -|        -|      6 (~0%)|     53 (~0%)|    -|
-    |    o VITIS_LOOP_95_1                              |        -|   7.30|       10|    100.000|         1|        1|    10|       yes|        -|        -|            -|            -|    -|
-    |   + knn_majority_vote_Pipeline_VITIS_LOOP_106_2   |        -|   0.14|        8|     80.000|         -|        7|     -|    rewind|        -|        -|    141 (~0%)|    241 (~0%)|    -|
-    |    o VITIS_LOOP_106_2                             |       II|   7.30|        6|     60.000|         3|        2|     3|       yes|        -|        -|            -|            -|    -|
-    |   + knn_majority_vote_Pipeline_VITIS_LOOP_119_3   |        -|   0.14|       12|    120.000|         -|       11|     -|    rewind|        -|        -|     75 (~0%)|    176 (~0%)|    -|
-    |    o VITIS_LOOP_119_3                             |        -|   7.30|       10|    100.000|         2|        1|    10|       yes|        -|        -|            -|            -|    -|
-    +---------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+---------+---------+-------------+-------------+-----+
+* Performance & Resource Estimates: 
++------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+------------+-----+
+|                     Modules                    | Issue|               | Iteration|         | Trip |          |       Latency       |      |         |         |           |            |     |
+|                     & Loops                    | Type | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack|  BRAM   |   DSP   |     FF    |     LUT    | URAM|
++------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+------------+-----+
+|+ knn_accelerator                               |     -|              -|         -|   124348|     -|        no|   124347|  1.243e+06|  0.00|  10 (3%)|  14 (6%)|  5614 (5%)|  7581 (14%)|    -|
+| o test_data                                    |     -|              -|     12434|        -|    10|        no|   124340|  1.243e+06|  7.30|        -|        -|          -|           -|    -|
+|  + knn_distance_and_sort                       |     -|              -|         -|    12389|     -|        no|    12389|  1.239e+05|  0.00|        -|  14 (6%)|  2079 (1%)|   3437 (6%)|    -|
+|   + knn_distance_and_sort_Outline_init_top_k   |     -|              -|         -|        4|     -|        no|        4|     40.000|  4.15|        -|        -|    4 (~0%)|    43 (~0%)|    -|
+|    o init_top_k                                |     -|              -|         1|        -|     3|        no|        3|     30.000|  7.30|        -|        -|          -|           -|    -|
+|   + knn_distance_and_sort_Outline_train_loop   |     -|              -|         -|    11941|     -|        no|    11941|  1.194e+05|  0.00|        -|  14 (6%)|  1538 (1%)|   2346 (4%)|    -|
+|    o train_loop                                |     -|              -|      1194|        -|    10|        no|    11940|  1.194e+05|  7.30|        -|        -|          -|           -|    -|
+|     o feature_loop                             |     -|              -|        23|        -|    49|        no|     1127|  1.127e+04|  7.30|        -|        -|          -|           -|    -|
+|   + knn_distance_and_sort_Outline_sort_loop_i  |     -|              -|         -|      424|     -|        no|      424|  4.240e+03|  0.86|        -|        -|  180 (~0%)|   340 (~0%)|    -|
+|    o sort_loop_i                               |     -|              -|        47|        -|     9|        no|      423|  4.230e+03|  7.30|        -|        -|          -|           -|    -|
+|     o sort_loop_j                              |     -|              -|         5|        -|     9|        no|       45|    450.000|  7.30|        -|        -|          -|           -|    -|
+|   o copy_top_k                                 |     -|              -|         2|        -|     3|        no|        6|     60.000|  7.30|        -|        -|          -|           -|    -|
+|  + knn_majority_vote                           |     -|              -|         -|       39|     -|        no|       39|    390.000|  0.10|        -|        -|  120 (~0%)|   340 (~0%)|    -|
+|   o count_init_loop                            |     -|              -|         1|        -|    10|        no|       10|    100.000|  7.30|        -|        -|          -|           -|    -|
+|   o set_counts_loop                            |     -|              -|         2|        -|     3|        no|        6|     60.000|  7.30|        -|        -|          -|           -|    -|
+|   o max_count_loop                             |     -|              -|         2|        -|    10|        no|       20|    200.000|  7.30|        -|        -|          -|           -|    -|
++------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+------------+-----+
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
 
 
 ================================================================
@@ -131,235 +126,86 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+--------------------+-----------+--------+-------+------------+-----------------------+
-| HW Interface       | Direction | Length | Width | Loop       | Loop Location         |
-+--------------------+-----------+--------+-------+------------+-----------------------+
-| m_axi_gmem_x_test  | read      | 49     | 64    |            |                       |
-| m_axi_gmem_x_train | read      | 490    | 64    | train_loop | ../src/knn.cpp:40:17  |
-| m_axi_gmem_y_test  | write     | 10     | 32    | test_data  | ../src/knn.cpp:151:16 |
-| m_axi_gmem_y_train | read      | 10     | 32    | train_loop | ../src/knn.cpp:40:17  |
-+--------------------+-----------+--------+-------+------------+-----------------------+
++--------------------+-----------+--------+-------+--------------+-----------------------+
+| HW Interface       | Direction | Length | Width | Loop         | Loop Location         |
++--------------------+-----------+--------+-------+--------------+-----------------------+
+| m_axi_gmem_x_test  | read      | 49     | 64    | feature_loop | ../src/knn.cpp:52:23  |
+| m_axi_gmem_x_train | read      | 490    | 64    | train_loop   | ../src/knn.cpp:41:17  |
+| m_axi_gmem_y_test  | write     | 10     | 32    | test_data    | ../src/knn.cpp:160:16 |
+| m_axi_gmem_y_train | read      | 10     | 32    | train_loop   | ../src/knn.cpp:41:17  |
++--------------------+-----------+--------+-------+--------------+-----------------------+
 
 * All M_AXI Variable Accesses
 +--------------------+------------+-----------------------+-----------+--------------+--------+--------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
 | HW Interface       | Variable   | Access Location       | Direction | Burst Status | Length | Loop         | Loop Location         | Resolution | Problem                                                                                                  |
 +--------------------+------------+-----------------------+-----------+--------------+--------+--------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
-| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:51:28  | read      | Widen Fail   |        | feature_loop | ../src/knn.cpp:50:23  | 214-353    | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:51:28  | read      | Fail         |        | train_loop   | ../src/knn.cpp:40:17  | 214-229    | Could not analyze pattern                                                                                |
-| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:51:28  | read      | Inferred     | 49     | feature_loop | ../src/knn.cpp:50:23  |            |                                                                                                          |
-| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:51:44  | read      | Widen Fail   |        | feature_loop | ../src/knn.cpp:50:23  | 214-353    | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:51:44  | read      | Inferred     | 490    | train_loop   | ../src/knn.cpp:40:17  |            |                                                                                                          |
-| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:156:19 | write     | Widen Fail   |        | test_data    | ../src/knn.cpp:151:16 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
-| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:156:19 | write     | Inferred     | 10     | test_data    | ../src/knn.cpp:151:16 |            |                                                                                                          |
-| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:55:21  | read      | Widen Fail   |        | train_loop   | ../src/knn.cpp:40:17  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
-| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:55:21  | read      | Inferred     | 10     | train_loop   | ../src/knn.cpp:40:17  |            |                                                                                                          |
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:54:28  | read      | Widen Fail   |        | feature_loop | ../src/knn.cpp:52:23  | 214-353    | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:54:28  | read      | Fail         |        | train_loop   | ../src/knn.cpp:41:17  | 214-229    | Could not analyze pattern                                                                                |
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:54:28  | read      | Inferred     | 49     | feature_loop | ../src/knn.cpp:52:23  |            |                                                                                                          |
+| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:54:44  | read      | Widen Fail   |        | feature_loop | ../src/knn.cpp:52:23  | 214-353    | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:54:44  | read      | Inferred     | 490    | train_loop   | ../src/knn.cpp:41:17  |            |                                                                                                          |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:166:19 | write     | Widen Fail   |        | test_data    | ../src/knn.cpp:160:16 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:166:19 | write     | Inferred     | 10     | test_data    | ../src/knn.cpp:160:16 |            |                                                                                                          |
+| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:58:21  | read      | Widen Fail   |        | train_loop   | ../src/knn.cpp:41:17  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
+| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:58:21  | read      | Inferred     | 10     | train_loop   | ../src/knn.cpp:41:17  |            |                                                                                                          |
 +--------------------+------------+-----------------------+-----------+--------------+--------+--------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
 
-    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+    * Resolution URL: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
 ================================================================
-+-------------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
-| Name                                            | DSP | Pragma | Variable     | Op        | Impl                   | Latency |
-+-------------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
-| + knn_accelerator                               | 17  |        |              |           |                        |         |
-|   icmp_ln151_fu_230_p2                          |     |        | icmp_ln151   | seteq     | auto                   | 0       |
-|   add_ln151_fu_236_p2                           |     |        | add_ln151    | add       | fabric                 | 0       |
-|   add_ln153_fu_251_p2                           |     |        | add_ln153    | add       | fabric                 | 0       |
-|  + knn_distance_and_sort                        | 17  |        |              |           |                        |         |
-|    add_ln40_fu_222_p2                           |     |        | add_ln40     | add       | fabric                 | 0       |
-|   + knn_distance_and_sort_Pipeline_init_top_k   | 0   |        |              |           |                        |         |
-|     icmp_ln28_fu_70_p2                          |     |        | icmp_ln28    | seteq     | auto                   | 0       |
-|     add_ln28_fu_76_p2                           |     |        | add_ln28     | add       | fabric                 | 0       |
-|   + knn_distance_and_sort_Pipeline_train_loop   | 17  |        |              |           |                        |         |
-|     icmp_ln40_fu_331_p2                         |     |        | icmp_ln40    | seteq     | auto                   | 0       |
-|     add_ln40_fu_337_p2                          |     |        | add_ln40     | add       | fabric                 | 0       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff         | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul          | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | sum          | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_1       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_1      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | sum_1        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_2       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_2      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | sum_2        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_3       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_3      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | sum_3        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_4       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_4      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | sum_4        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_5       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_5      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_5        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_6       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_6      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_6        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_7       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_7      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_7        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_8       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_8      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_8        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_9       | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_9      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_9        | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_10      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_s      | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_10       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_11      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_10     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_11       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_12      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_11     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_12       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_13      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_12     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_13       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_14      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_13     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_14       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | diff_15      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_14     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_15       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_16      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_15     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_16       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_17      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_16     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_17       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_18      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_17     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_18       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_19      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_18     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_19       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_20      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_19     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_20       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_21      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_20     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_21       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | diff_22      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_21     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_22       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_23      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_22     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_23       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_24      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_23     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_24       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_25      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_24     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_25       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_26      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_25     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_26       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_27      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_26     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_27       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_28      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_27     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_28       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | diff_29      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_28     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_29       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_30      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_29     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_30       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_31      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_30     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_31       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_32      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_31     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_32       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_33      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_32     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_33       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_34      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_33     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_34       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_35      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_34     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_35       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | diff_36      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_35     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_36       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_37      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_36     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_37       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_38      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_37     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_38       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_39      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_38     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_39       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_40      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_39     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_40       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_41      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_40     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_41       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_42      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_41     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_42       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | diff_43      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_42     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_43       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_44      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_43     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_44       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_45      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_44     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_45       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_46      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_45     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_46       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_47      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_46     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_47       | dsub      | fulldsp                | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4       | 3   |        | diff_48      | dsub      | fulldsp                | 6       |
-|     dmul_64ns_64ns_64_7_max_dsp_1_U6            | 11  |        | mul16_47     | dmul      | maxdsp                 | 6       |
-|     dadddsub_64ns_64ns_64_7_full_dsp_1_U5       | 3   |        | sum_48       | dsub      | fulldsp                | 6       |
-|     dsqrt_64ns_64ns_64_57_no_dsp_1_U7           |     |        | tmp          | dsqrt     | fabric                 | 56      |
-|   + knn_distance_and_sort_Outline_sort_loop_i   | 0   |        |              |           |                        |         |
-|     icmp_ln64_fu_54_p2                          |     |        | icmp_ln64    | seteq     | auto                   | 0       |
-|     i_6_fu_60_p2                                |     |        | i_6          | add       | fabric                 | 0       |
-|     add_ln64_fu_70_p2                           |     |        | add_ln64     | add       | fabric                 | 0       |
-|    + knn_distance_and_sort_Pipeline_sort_loop_j | 0   |        |              |           |                        |         |
-|      icmp_ln65_fu_120_p2                        |     |        | icmp_ln65    | seteq     | auto                   | 0       |
-|      add_ln66_fu_126_p2                         |     |        | add_ln66     | add       | fabric                 | 0       |
-|      icmp_ln66_fu_176_p2                        |     |        | icmp_ln66    | setne     | auto                   | 0       |
-|      icmp_ln66_1_fu_182_p2                      |     |        | icmp_ln66_1  | seteq     | auto                   | 0       |
-|      or_ln66_fu_188_p2                          |     |        | or_ln66      | or        | auto                   | 0       |
-|      icmp_ln66_2_fu_194_p2                      |     |        | icmp_ln66_2  | setne     | auto                   | 0       |
-|      icmp_ln66_3_fu_200_p2                      |     |        | icmp_ln66_3  | seteq     | auto                   | 0       |
-|      or_ln66_1_fu_206_p2                        |     |        | or_ln66_1    | or        | auto                   | 0       |
-|      dcmp_64ns_64ns_1_2_no_dsp_1_U19            |     |        | tmp_3        | dcmp      | auto                   | 1       |
-|      and_ln66_fu_212_p2                         |     |        | and_ln66     | and       | auto                   | 0       |
-|      and_ln66_1_fu_218_p2                       |     |        | and_ln66_1   | and       | auto                   | 0       |
-|   + knn_distance_and_sort_Pipeline_copy_top_k   | 0   |        |              |           |                        |         |
-|     icmp_ln77_fu_85_p2                          |     |        | icmp_ln77    | seteq     | auto                   | 0       |
-|     add_ln77_fu_91_p2                           |     |        | add_ln77     | add       | fabric                 | 0       |
-|  + knn_majority_vote                            | 0   |        |              |           |                        |         |
-|   + knn_majority_vote_Pipeline_VITIS_LOOP_95_1  | 0   |        |              |           |                        |         |
-|     icmp_ln95_fu_54_p2                          |     |        | icmp_ln95    | seteq     | auto                   | 0       |
-|     add_ln95_fu_60_p2                           |     |        | add_ln95     | add       | fabric                 | 0       |
-|   + knn_majority_vote_Pipeline_VITIS_LOOP_106_2 | 0   |        |              |           |                        |         |
-|     icmp_ln106_fu_109_p2                        |     |        | icmp_ln106   | seteq     | auto                   | 0       |
-|     add_ln106_fu_115_p2                         |     |        | add_ln106    | add       | fabric                 | 0       |
-|     sparsemux_7_2_4_1_1_U43                     |     |        | idx          | sparsemux | onehotencoding_realdef | 0       |
-|     addr_cmp_fu_146_p2                          |     |        | addr_cmp     | seteq     | auto                   | 0       |
-|     reuse_select_fu_165_p3                      |     |        | reuse_select | select    | auto_sel               | 0       |
-|     add_ln108_fu_172_p2                         |     |        | add_ln108    | add       | fabric                 | 0       |
-|   + knn_majority_vote_Pipeline_VITIS_LOOP_119_3 | 0   |        |              |           |                        |         |
-|     icmp_ln119_fu_77_p2                         |     |        | icmp_ln119   | seteq     | auto                   | 0       |
-|     add_ln119_fu_83_p2                          |     |        | add_ln119    | add       | fabric                 | 0       |
-|     icmp_ln120_fu_105_p2                        |     |        | icmp_ln120   | setgt     | auto                   | 0       |
-|     max_1_fu_111_p3                             |     |        | max_1        | select    | auto_sel               | 0       |
-|     max_label_1_fu_122_p3                       |     |        | max_label_1  | select    | auto_sel               | 0       |
-+-------------------------------------------------+-----+--------+--------------+-----------+------------------------+---------+
++-----------------------------------------------+-----+--------+-------------+-----------+------------------------+---------+
+| Name                                          | DSP | Pragma | Variable    | Op        | Impl                   | Latency |
++-----------------------------------------------+-----+--------+-------------+-----------+------------------------+---------+
+| + knn_accelerator                             | 14  |        |             |           |                        |         |
+|   icmp_ln160_fu_235_p2                        |     |        | icmp_ln160  | seteq     | auto                   | 0       |
+|   add_ln160_fu_241_p2                         |     |        | add_ln160   | add       | fabric                 | 0       |
+|   add_ln163_fu_256_p2                         |     |        | add_ln163   | add       | fabric                 | 0       |
+|  + knn_distance_and_sort                      | 14  |        |             |           |                        |         |
+|    add_ln41_fu_280_p2                         |     |        | add_ln41    | add       | fabric                 | 0       |
+|    icmp_ln82_fu_300_p2                        |     |        | icmp_ln82   | seteq     | auto                   | 0       |
+|    add_ln82_fu_306_p2                         |     |        | add_ln82    | add       | fabric                 | 0       |
+|   + knn_distance_and_sort_Outline_init_top_k  | 0   |        |             |           |                        |         |
+|     icmp_ln28_fu_70_p2                        |     |        | icmp_ln28   | seteq     | auto                   | 0       |
+|     add_ln28_fu_76_p2                         |     |        | add_ln28    | add       | fabric                 | 0       |
+|   + knn_distance_and_sort_Outline_train_loop  | 14  |        |             |           |                        |         |
+|     icmp_ln41_fu_216_p2                       |     |        | icmp_ln41   | seteq     | auto                   | 0       |
+|     add_ln41_fu_222_p2                        |     |        | add_ln41    | add       | fabric                 | 0       |
+|     icmp_ln52_fu_247_p2                       |     |        | icmp_ln52   | seteq     | auto                   | 0       |
+|     add_ln52_fu_253_p2                        |     |        | add_ln52    | add       | fabric                 | 0       |
+|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4     | 3   |        | diff        | dsub      | fulldsp                | 6       |
+|     dmul_64ns_64ns_64_7_max_dsp_1_U5          | 11  |        | mul         | dmul      | maxdsp                 | 6       |
+|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4     | 3   |        | sum_1       | dsub      | fulldsp                | 6       |
+|     dsqrt_64ns_64ns_64_57_no_dsp_1_U6         |     |        | tmp         | dsqrt     | fabric                 | 56      |
+|   + knn_distance_and_sort_Outline_sort_loop_i | 0   |        |             |           |                        |         |
+|     icmp_ln67_fu_136_p2                       |     |        | icmp_ln67   | seteq     | auto                   | 0       |
+|     i_6_fu_142_p2                             |     |        | i_6         | add       | fabric                 | 0       |
+|     icmp_ln69_fu_151_p2                       |     |        | icmp_ln69   | seteq     | auto                   | 0       |
+|     add_ln71_fu_157_p2                        |     |        | add_ln71    | add       | fabric                 | 0       |
+|     icmp_ln71_fu_222_p2                       |     |        | icmp_ln71   | setne     | auto                   | 0       |
+|     icmp_ln71_1_fu_228_p2                     |     |        | icmp_ln71_1 | seteq     | auto                   | 0       |
+|     or_ln71_fu_234_p2                         |     |        | or_ln71     | or        | auto                   | 0       |
+|     icmp_ln71_2_fu_240_p2                     |     |        | icmp_ln71_2 | setne     | auto                   | 0       |
+|     icmp_ln71_3_fu_246_p2                     |     |        | icmp_ln71_3 | seteq     | auto                   | 0       |
+|     or_ln71_1_fu_252_p2                       |     |        | or_ln71_1   | or        | auto                   | 0       |
+|     and_ln71_fu_258_p2                        |     |        | and_ln71    | and       | auto                   | 0       |
+|     dcmp_64ns_64ns_1_2_no_dsp_1_U18           |     |        | tmp_3       | dcmp      | auto                   | 1       |
+|     and_ln71_1_fu_264_p2                      |     |        | and_ln71_1  | and       | auto                   | 0       |
+|     add_ln67_fu_173_p2                        |     |        | add_ln67    | add       | fabric                 | 0       |
+|  + knn_majority_vote                          | 0   |        |             |           |                        |         |
+|    icmp_ln101_fu_134_p2                       |     |        | icmp_ln101  | seteq     | auto                   | 0       |
+|    add_ln101_fu_140_p2                        |     |        | add_ln101   | add       | fabric                 | 0       |
+|    icmp_ln113_fu_164_p2                       |     |        | icmp_ln113  | seteq     | auto                   | 0       |
+|    add_ln113_fu_170_p2                        |     |        | add_ln113   | add       | fabric                 | 0       |
+|    sparsemux_7_2_4_1_1_U34                    |     |        | idx         | sparsemux | onehotencoding_realdef | 0       |
+|    add_ln116_fu_213_p2                        |     |        | add_ln116   | add       | fabric                 | 0       |
+|    icmp_ln127_fu_223_p2                       |     |        | icmp_ln127  | seteq     | auto                   | 0       |
+|    add_ln127_fu_229_p2                        |     |        | add_ln127   | add       | fabric                 | 0       |
+|    icmp_ln129_fu_248_p2                       |     |        | icmp_ln129  | setgt     | auto                   | 0       |
+|    max_1_fu_254_p3                            |     |        | max_1       | select    | auto_sel               | 0       |
+|    max_label_1_fu_265_p3                      |     |        | max_label_1 | select    | auto_sel               | 0       |
++-----------------------------------------------+-----+--------+-------------+-----------+------------------------+---------+
 
 
 ================================================================
@@ -380,7 +226,7 @@
 |    distances_U           | ram_t2p array |           |      |      |        | distances | auto | 1       | 64, 10, 1        |
 |    labels_U              | ram_t2p array |           |      |      |        | labels    | auto | 1       | 4, 10, 1         |
 |  + knn_majority_vote     |               |           | 0    | 0    |        |           |      |         |                  |
-|    counts_U              | ram_2p array  |           |      |      |        | counts    | auto | 1       | 32, 10, 1        |
+|    counts_U              | ram_1p array  |           |      |      |        | counts    | auto | 1       | 32, 10, 1        |
 +--------------------------+---------------+-----------+------+------+--------+-----------+------+---------+------------------+
 
 
@@ -388,23 +234,33 @@
 == Pragma Report
 ================================================================
 * Inferred Pragmas
-+--------------+---------+------------------------------------------------------------------------------------+-------------------------------+
-| Type         | Options | Location                                                                           | Inferred From                 |
-+--------------+---------+------------------------------------------------------------------------------------+-------------------------------+
-| LOOP_FLATTEN | 0       | loop sort_loop_i (../src/knn.cpp:64:18) in knn_distance_and_sort ../src/knn.cpp:64 | performance ../src/knn.cpp:64 |
-+--------------+---------+------------------------------------------------------------------------------------+-------------------------------+
++-----------------+-------------------------------------------+---------------------------------------------------------------+------------------------------------------+
+| Type            | Options                                   | Location                                                      | Inferred From                            |
++-----------------+-------------------------------------------+---------------------------------------------------------------+------------------------------------------+
+| ARRAY_PARTITION | dim=1 type=complete variable=top_k_labels | variable top_k_labels in knn_accelerator (../src/knn.cpp:158) | syn.array_partition.complete_threshold=4 |
++-----------------+-------------------------------------------+---------------------------------------------------------------+------------------------------------------+
 
 * Valid Pragma Syntax
-+-----------+-----------------------------------------------------------------+------------------------------------------------+
-| Type      | Options                                                         | Location                                       |
-+-----------+-----------------------------------------------------------------+------------------------------------------------+
-| INLINE    | off                                                             | ../src/knn.cpp:15 in knn_distance_and_sort     |
-| INLINE    | off                                                             | ../src/knn.cpp:87 in knn_majority_vote         |
-| INTERFACE | m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10 | ../src/knn.cpp:140 in knn_accelerator, X_train |
-| INTERFACE | m_axi port=y_train offset=slave bundle=gmem_y_train depth=10    | ../src/knn.cpp:141 in knn_accelerator, y_train |
-| INTERFACE | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10   | ../src/knn.cpp:142 in knn_accelerator, X_test  |
-| INTERFACE | m_axi port=y_test offset=slave bundle=gmem_y_test depth=10      | ../src/knn.cpp:143 in knn_accelerator, y_test  |
-| INTERFACE | s_axilite port=return bundle=control                            | ../src/knn.cpp:146 in knn_accelerator, return  |
-+-----------+-----------------------------------------------------------------+------------------------------------------------+
++-----------+-----------------------------------------------------------------+----------------------------------------------+
+| Type      | Options                                                         | Location                                     |
++-----------+-----------------------------------------------------------------+----------------------------------------------+
+| INLINE    | off                                                             | in knn_distance_and_sort (../src/knn.cpp:15) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:29) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:42) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:53) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:68) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:70) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:83) |
+| INLINE    | off                                                             | in knn_majority_vote (../src/knn.cpp:93)     |
+| PIPELINE  | OFF                                                             | in knn_majority_vote (../src/knn.cpp:102)    |
+| PIPELINE  | OFF                                                             | in knn_majority_vote (../src/knn.cpp:114)    |
+| PIPELINE  | OFF                                                             | in knn_majority_vote (../src/knn.cpp:128)    |
+| INTERFACE | m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10 | in knn_accelerator (../src/knn.cpp:149)      |
+| INTERFACE | m_axi port=y_train offset=slave bundle=gmem_y_train depth=10    | in knn_accelerator (../src/knn.cpp:150)      |
+| INTERFACE | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10   | in knn_accelerator (../src/knn.cpp:151)      |
+| INTERFACE | m_axi port=y_test offset=slave bundle=gmem_y_test depth=10      | in knn_accelerator (../src/knn.cpp:152)      |
+| INTERFACE | s_axilite port=return bundle=control                            | in knn_accelerator (../src/knn.cpp:155)      |
+| PIPELINE  | OFF                                                             | in knn_accelerator (../src/knn.cpp:161)      |
++-----------+-----------------------------------------------------------------+----------------------------------------------+
 
 

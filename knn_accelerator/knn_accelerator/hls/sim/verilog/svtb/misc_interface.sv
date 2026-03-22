@@ -1,6 +1,6 @@
 //==============================================================
-//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.1 (64-bit)
-//Tool Version Limit: 2025.05
+//Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2025.2 (64-bit)
+//Tool Version Limit: 2025.11
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 //
@@ -23,6 +23,7 @@ interface misc_interface (input clock, input reset);
     logic    finished = 0;
     event    dut2tb_ap_ready_evt;
     event    dut2tb_ap_done_evt;
+    event    dut2tb_ap_done_kernel_evt;
     event    initialed_evt;
     event    finished_evt;
 

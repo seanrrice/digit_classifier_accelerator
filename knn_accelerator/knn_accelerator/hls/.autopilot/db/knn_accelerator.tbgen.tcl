@@ -6,6 +6,7 @@ set isPipelined 0
 set isPipelined_legacy 0
 set pipeline_type none
 set FunctionProtocol ap_ctrl_hs
+set restart_counter_num 0
 set isOneStateSeq 0
 set ProfileFlag 0
 set StallSigGenFlag 0
@@ -14,7 +15,7 @@ set hasInterrupt 0
 set DLRegFirstOffset 0
 set DLRegItemOffset 0
 set svuvm_can_support 1
-set cdfgNum 13
+set cdfgNum 8
 set C_modelName {knn_accelerator}
 set C_modelType { void 0 }
 set ap_memory_interface_dict [dict create]
@@ -32,10 +33,10 @@ set hasAXIMCache 0
 set l_AXIML2Cache [list]
 set AXIMCacheInstDict [dict create]
 set C_modelArgMapList {[ 
-	{ "Name" : "gmem_x_test", "interface" : "axi_master", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "X_test","offset": { "type": "dynamic","port_name": "X_test","bundle": "control_r"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "gmem_x_train", "interface" : "axi_master", "bitwidth" : 64, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "X_train","offset": { "type": "dynamic","port_name": "X_train","bundle": "control_r"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "gmem_y_train", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "y_train","offset": { "type": "dynamic","port_name": "y_train","bundle": "control_r"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "gmem_y_test", "interface" : "axi_master", "bitwidth" : 32, "direction" : "WRITEONLY", "bitSlice":[ {"cElement": [{"cName": "y_test","offset": { "type": "dynamic","port_name": "y_test","bundle": "control_r"},"direction": "WRITEONLY"}]}]} , 
+	{ "Name" : "gmem_x_test", "interface" : "axi_master", "bitwidth" : 64, "direction" : "READONLY", "id_num" : 1, "bitSlice":[ {"cElement": [{"cName": "X_test","offset": { "type": "dynamic","port_name": "X_test","bundle": "control_r"},"direction": "READONLY"}]}]} , 
+ 	{ "Name" : "gmem_x_train", "interface" : "axi_master", "bitwidth" : 64, "direction" : "READONLY", "id_num" : 1, "bitSlice":[ {"cElement": [{"cName": "X_train","offset": { "type": "dynamic","port_name": "X_train","bundle": "control_r"},"direction": "READONLY"}]}]} , 
+ 	{ "Name" : "gmem_y_train", "interface" : "axi_master", "bitwidth" : 32, "direction" : "READONLY", "id_num" : 1, "bitSlice":[ {"cElement": [{"cName": "y_train","offset": { "type": "dynamic","port_name": "y_train","bundle": "control_r"},"direction": "READONLY"}]}]} , 
+ 	{ "Name" : "gmem_y_test", "interface" : "axi_master", "bitwidth" : 32, "direction" : "WRITEONLY", "id_num" : 1, "bitSlice":[ {"cElement": [{"cName": "y_test","offset": { "type": "dynamic","port_name": "y_test","bundle": "control_r"},"direction": "WRITEONLY"}]}]} , 
  	{ "Name" : "X_test", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":16}, "offset_end" : {"in":27}} , 
  	{ "Name" : "X_train", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":28}, "offset_end" : {"in":39}} , 
  	{ "Name" : "y_train", "interface" : "axi_slave", "bundle":"control_r","type":"ap_none","bitwidth" : 64, "direction" : "READONLY", "offset" : {"in":40}, "offset_end" : {"in":51}} , 
@@ -482,70 +483,51 @@ set NewPortList {[
 
 set ArgLastReadFirstWriteLatency {
 	knn_accelerator {
-		gmem_x_test {Type I LastRead 57 FirstWrite -1}
-		gmem_x_train {Type I LastRead 49 FirstWrite -1}
-		gmem_y_train {Type I LastRead 2 FirstWrite -1}
-		gmem_y_test {Type O LastRead 3 FirstWrite 6}
+		gmem_x_test {Type I LastRead 11 FirstWrite -1}
+		gmem_x_train {Type I LastRead 11 FirstWrite -1}
+		gmem_y_train {Type I LastRead 11 FirstWrite -1}
+		gmem_y_test {Type O LastRead 3 FirstWrite 7}
 		X_test {Type I LastRead 0 FirstWrite -1}
 		X_train {Type I LastRead 0 FirstWrite -1}
 		y_train {Type I LastRead 0 FirstWrite -1}
 		y_test {Type I LastRead 0 FirstWrite -1}}
 	knn_distance_and_sort {
-		gmem_x_test {Type I LastRead 57 FirstWrite -1}
+		gmem_x_test {Type I LastRead 11 FirstWrite -1}
 		test_point {Type I LastRead 10 FirstWrite -1}
-		gmem_x_train {Type I LastRead 49 FirstWrite -1}
+		gmem_x_train {Type I LastRead 11 FirstWrite -1}
 		X_train {Type I LastRead 2 FirstWrite -1}
-		gmem_y_train {Type I LastRead 2 FirstWrite -1}
+		gmem_y_train {Type I LastRead 11 FirstWrite -1}
 		y_train {Type I LastRead 2 FirstWrite -1}
-		top_k_labels_0 {Type O LastRead -1 FirstWrite 0}
-		top_k_labels_1 {Type O LastRead -1 FirstWrite 0}
-		top_k_labels_2 {Type O LastRead -1 FirstWrite 0}
+		top_k_labels_0 {Type O LastRead -1 FirstWrite 1}
+		top_k_labels_1 {Type O LastRead -1 FirstWrite 1}
+		top_k_labels_2 {Type O LastRead -1 FirstWrite 1}
 		idx {Type I LastRead 10 FirstWrite -1}}
-	knn_distance_and_sort_Pipeline_init_top_k {
-		top_k_labels_0 {Type O LastRead -1 FirstWrite 0}
-		top_k_labels_2 {Type O LastRead -1 FirstWrite 0}
-		top_k_labels_1 {Type O LastRead -1 FirstWrite 0}}
-	knn_distance_and_sort_Pipeline_train_loop {
-		gmem_x_test {Type I LastRead 57 FirstWrite -1}
-		p_cast_cast {Type I LastRead 0 FirstWrite -1}
-		gmem_x_train {Type I LastRead 49 FirstWrite -1}
-		sext_ln40 {Type I LastRead 0 FirstWrite -1}
-		gmem_y_train {Type I LastRead 1 FirstWrite -1}
-		sext_ln40_1 {Type I LastRead 0 FirstWrite -1}
-		distances {Type O LastRead -1 FirstWrite 430}
-		labels {Type O LastRead -1 FirstWrite 2}}
-	knn_distance_and_sort_Outline_sort_loop_i {
-		distances {Type IO LastRead 1 FirstWrite 4}
-		labels {Type IO LastRead 4 FirstWrite 4}}
-	knn_distance_and_sort_Pipeline_sort_loop_j {
-		indvars_iv14 {Type I LastRead 0 FirstWrite -1}
-		distances {Type IO LastRead 1 FirstWrite 4}
-		labels {Type IO LastRead 4 FirstWrite 4}}
-	knn_distance_and_sort_Pipeline_copy_top_k {
+	knn_distance_and_sort_Outline_init_top_k {
 		top_k_labels_0 {Type O LastRead -1 FirstWrite 1}
 		top_k_labels_2 {Type O LastRead -1 FirstWrite 1}
-		top_k_labels_1 {Type O LastRead -1 FirstWrite 1}
-		labels {Type I LastRead 0 FirstWrite -1}}
+		top_k_labels_1 {Type O LastRead -1 FirstWrite 1}}
+	knn_distance_and_sort_Outline_train_loop {
+		distances {Type O LastRead -1 FirstWrite 67}
+		labels {Type O LastRead -1 FirstWrite 12}
+		gmem_y_train {Type I LastRead 11 FirstWrite -1}
+		sext_ln41_1 {Type I LastRead 0 FirstWrite -1}
+		gmem_x_test {Type I LastRead 11 FirstWrite -1}
+		sext_ln52 {Type I LastRead 0 FirstWrite -1}
+		gmem_x_train {Type I LastRead 11 FirstWrite -1}
+		sext_ln41 {Type I LastRead 0 FirstWrite -1}}
+	knn_distance_and_sort_Outline_sort_loop_i {
+		distances {Type IO LastRead 3 FirstWrite 6}
+		labels {Type IO LastRead 6 FirstWrite 6}}
 	knn_majority_vote {
-		top_k_labels_read {Type I LastRead 2 FirstWrite -1}
-		top_k_labels_read_10 {Type I LastRead 2 FirstWrite -1}
-		top_k_labels_read_11 {Type I LastRead 2 FirstWrite -1}}
-	knn_majority_vote_Pipeline_VITIS_LOOP_95_1 {
-		counts {Type O LastRead -1 FirstWrite 0}}
-	knn_majority_vote_Pipeline_VITIS_LOOP_106_2 {
 		top_k_labels_read {Type I LastRead 0 FirstWrite -1}
-		top_k_labels_read_3 {Type I LastRead 0 FirstWrite -1}
-		top_k_labels_read_4 {Type I LastRead 0 FirstWrite -1}
-		counts {Type IO LastRead 1 FirstWrite 3}}
-	knn_majority_vote_Pipeline_VITIS_LOOP_119_3 {
-		counts {Type I LastRead 0 FirstWrite -1}
-		max_label_out {Type O LastRead -1 FirstWrite 0}}}
+		top_k_labels_read_8 {Type I LastRead 0 FirstWrite -1}
+		top_k_labels_read_9 {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
 
 set PerformanceInfo {[
-	{"Name" : "Latency", "Min" : "10237", "Max" : "13837"}
-	, {"Name" : "Interval", "Min" : "10238", "Max" : "13838"}
+	{"Name" : "Latency", "Min" : "120747", "Max" : "124347"}
+	, {"Name" : "Interval", "Min" : "120748", "Max" : "124348"}
 ]}
 
 set PipelineEnableSignalInfo {[
