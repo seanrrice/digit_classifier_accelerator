@@ -1,6 +1,0 @@
-   Build using "T:/AMDDesignTools/2025.2/Vitis/win64/tools/clang-16/bin/clang++"
-   Compiling apatb_knn_accelerator.cpp
-   Compiling knn.cpp_pre.cpp.tb.cpp
-   Compiling knn_test.cpp_pre.cpp.tb.cpp
-   Compiling apatb_knn_accelerator_ir.ll
-   Generating cosim.tv.exe

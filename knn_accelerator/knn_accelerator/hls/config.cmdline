@@ -1,3 +1,0 @@
-relativeroot=T:/Documents/ECE574/Labs/digit_classifier_accelerator/knn_accelerator
-original_argv=--mode hls --cosim --config T:\Documents\ECE574\Labs\digit_classifier_accelerator\knn_accelerator\hls_config.cfg --work_dir knn_accelerator 
-
