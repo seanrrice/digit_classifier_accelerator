@@ -19,14 +19,14 @@
         </SummaryOfTimingAnalysis>
         <SummaryOfOverallLatency>
             <unit>clock cycles</unit>
-            <Best-caseLatency>36667</Best-caseLatency>
-            <Average-caseLatency>37747</Average-caseLatency>
-            <Worst-caseLatency>38827</Worst-caseLatency>
-            <Best-caseRealTimeLatency>0.367 ms</Best-caseRealTimeLatency>
-            <Average-caseRealTimeLatency>0.377 ms</Average-caseRealTimeLatency>
-            <Worst-caseRealTimeLatency>0.388 ms</Worst-caseRealTimeLatency>
-            <Interval-min>36668</Interval-min>
-            <Interval-max>38828</Interval-max>
+            <Best-caseLatency>36177</Best-caseLatency>
+            <Average-caseLatency>36377</Average-caseLatency>
+            <Worst-caseLatency>36677</Worst-caseLatency>
+            <Best-caseRealTimeLatency>0.362 ms</Best-caseRealTimeLatency>
+            <Average-caseRealTimeLatency>0.364 ms</Average-caseRealTimeLatency>
+            <Worst-caseRealTimeLatency>0.367 ms</Worst-caseRealTimeLatency>
+            <Interval-min>36178</Interval-min>
+            <Interval-max>36678</Interval-max>
             <PerformancePragma>-</PerformancePragma>
         </SummaryOfOverallLatency>
         <SummaryOfLoopLatency>
@@ -36,20 +36,20 @@
                 <isPerfectNested>0</isPerfectNested>
                 <Latency>
                     <range>
-                        <min>36660</min>
-                        <max>38820</max>
+                        <min>36170</min>
+                        <max>36670</max>
                     </range>
                 </Latency>
                 <AbsoluteTimeLatency>
                     <range>
-                        <min>366600</min>
-                        <max>388200</max>
+                        <min>361700</min>
+                        <max>366700</max>
                     </range>
                 </AbsoluteTimeLatency>
                 <IterationLatency>
                     <range>
-                        <min>3666</min>
-                        <max>3882</max>
+                        <min>3617</min>
+                        <max>3667</max>
                     </range>
                 </IterationLatency>
                 <PerformancePragma>-</PerformancePragma>
@@ -59,13 +59,13 @@
         <SummaryOfViolations>
             <IssueType>-</IssueType>
             <ViolationType>-</ViolationType>
-            <SourceLocation>../src/knn.cpp:160</SourceLocation>
+            <SourceLocation>../src/knn.cpp:146</SourceLocation>
             <SummaryOfLoopViolations>
                 <test_data>
                     <Name>test_data</Name>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../src/knn.cpp:160</SourceLocation>
+                    <SourceLocation>../src/knn.cpp:146</SourceLocation>
                 </test_data>
             </SummaryOfLoopViolations>
         </SummaryOfViolations>
@@ -74,8 +74,8 @@
         <Resources>
             <BRAM_18K>6</BRAM_18K>
             <DSP>4</DSP>
-            <FF>4341</FF>
-            <LUT>5395</LUT>
+            <FF>4198</FF>
+            <LUT>4850</LUT>
             <URAM>0</URAM>
         </Resources>
         <AvailableResources>
@@ -2656,7 +2656,7 @@
         </RtlPorts>
     </InterfaceSummary>
     <RTLDesignHierarchy>
-        <TopModule MAX_DEPTH="4">
+        <TopModule MAX_DEPTH="3">
             <ModuleName>knn_accelerator</ModuleName>
             <InstancesList>
                 <Instance>
@@ -2664,62 +2664,44 @@
                     <ModuleName>knn_distance_and_sort</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>174</ID>
-                    <InstancesList>
-                        <Instance>
-                            <InstName>grp_knn_distance_and_sort_Outline_init_top_k_fu_182</InstName>
-                            <ModuleName>knn_distance_and_sort_Outline_init_top_k</ModuleName>
-                            <IsCompInst>true</IsCompInst>
-                            <ID>182</ID>
-                            <BindInstances>icmp_ln28_fu_70_p2 add_ln28_fu_76_p2</BindInstances>
-                        </Instance>
-                        <Instance>
-                            <InstName>grp_knn_distance_and_sort_Outline_train_loop_fu_192</InstName>
-                            <ModuleName>knn_distance_and_sort_Outline_train_loop</ModuleName>
-                            <IsCompInst>true</IsCompInst>
-                            <ID>192</ID>
-                            <BindInstances>icmp_ln41_fu_208_p2 add_ln41_fu_214_p2 icmp_ln52_fu_238_p2 add_ln52_fu_244_p2 diff_fu_266_p2 mul_28s_28s_56_3_1_U4 add_ln55_fu_286_p2</BindInstances>
-                        </Instance>
-                        <Instance>
-                            <InstName>grp_knn_distance_and_sort_Outline_sort_loop_i_fu_207</InstName>
-                            <ModuleName>knn_distance_and_sort_Outline_sort_loop_i</ModuleName>
-                            <IsCompInst>true</IsCompInst>
-                            <ID>207</ID>
-                            <BindInstances>icmp_ln67_fu_122_p2 i_8_fu_128_p2 icmp_ln69_fu_137_p2 add_ln71_fu_143_p2 icmp_ln71_fu_174_p2 add_ln67_fu_159_p2</BindInstances>
-                        </Instance>
-                    </InstancesList>
-                    <BindInstances>distances_U labels_U add_ln41_fu_258_p2 icmp_ln82_fu_278_p2 add_ln82_fu_284_p2</BindInstances>
+                    <BindInstances>icmp_ln28_fu_329_p2 add_ln28_fu_335_p2 add_ln41_fu_404_p2 icmp_ln41_fu_461_p2 add_ln41_1_fu_467_p2 icmp_ln52_fu_473_p2 add_ln52_fu_479_p2 diff_fu_503_p2 mul_28s_28s_56_3_1_U1 add_ln55_fu_523_p2 icmp_ln59_fu_539_p2 add_ln59_fu_545_p2 sparsemux_7_2_42_1_1_U2 icmp_ln61_fu_568_p2 icmp_ln62_fu_574_p2 add_ln64_fu_580_p2 icmp_ln64_1_fu_586_p2 top_k_dist_6_fu_592_p3 icmp_ln64_fu_599_p2 select_ln65_fu_605_p3</BindInstances>
                 </Instance>
                 <Instance>
                     <InstName>grp_knn_majority_vote_fu_191</InstName>
                     <ModuleName>knn_majority_vote</ModuleName>
                     <IsCompInst>true</IsCompInst>
                     <ID>191</ID>
-                    <BindInstances>counts_U icmp_ln101_fu_156_p2 add_ln101_fu_162_p2 icmp_ln113_fu_186_p2 add_ln113_fu_192_p2 sparsemux_7_2_4_1_1_U28 add_ln116_fu_235_p2 icmp_ln127_fu_245_p2 i_7_fu_251_p2 icmp_ln129_fu_277_p2 or_ln129_fu_283_p2 select_ln129_fu_289_p3 max_2_fu_296_p3 select_ln137_fu_267_p3</BindInstances>
+                    <BindInstances>counts_U icmp_ln87_fu_156_p2 add_ln87_fu_162_p2 icmp_ln99_fu_186_p2 add_ln99_fu_192_p2 sparsemux_7_2_4_1_1_U15 add_ln102_fu_235_p2 icmp_ln113_fu_245_p2 i_7_fu_251_p2 icmp_ln115_fu_277_p2 or_ln115_fu_283_p2 select_ln115_fu_289_p3 max_2_fu_296_p3 select_ln123_fu_267_p3</BindInstances>
                 </Instance>
             </InstancesList>
-            <BindInstances>icmp_ln160_fu_218_p2 add_ln160_fu_224_p2 add_ln163_fu_239_p2 control_s_axi_U control_r_s_axi_U gmem_x_test_m_axi_U gmem_x_train_m_axi_U gmem_y_test_m_axi_U gmem_y_train_m_axi_U</BindInstances>
+            <BindInstances>icmp_ln146_fu_218_p2 add_ln146_fu_224_p2 add_ln149_fu_234_p2 control_s_axi_U control_r_s_axi_U gmem_x_test_m_axi_U gmem_x_train_m_axi_U gmem_y_test_m_axi_U gmem_y_train_m_axi_U</BindInstances>
         </TopModule>
     </RTLDesignHierarchy>
     <ModuleInformation>
         <Module>
-            <Name>knn_distance_and_sort_Outline_init_top_k</Name>
+            <Name>knn_distance_and_sort</Name>
             <Loops>
                 <init_top_k/>
+                <train_loop>
+                    <feature_loop/>
+                    <sort_loop/>
+                    <sort_cascade_loop/>
+                </train_loop>
             </Loops>
             <PerformanceEstimates>
                 <SummaryOfTimingAnalysis>
                     <TargetClockPeriod>10.00</TargetClockPeriod>
                     <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>3.153</EstimatedClockPeriod>
+                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>4</Best-caseLatency>
-                    <Average-caseLatency>4</Average-caseLatency>
-                    <Worst-caseLatency>4</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>40.000 ns</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>40.000 ns</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>40.000 ns</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>4</PipelineInitiationInterval>
+                    <Best-caseLatency>3573</Best-caseLatency>
+                    <Average-caseLatency>3593</Average-caseLatency>
+                    <Worst-caseLatency>3623</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>35.730 us</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>35.930 us</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>36.230 us</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>3573 ~ 3623</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                     <PerformancePragma>-</PerformancePragma>
                 </SummaryOfOverallLatency>
@@ -2737,79 +2719,20 @@
                         <PerformancePragma>-</PerformancePragma>
                         <InstanceList/>
                     </init_top_k>
-                </SummaryOfLoopLatency>
-                <SummaryOfViolations>
-                    <IssueType>-</IssueType>
-                    <ViolationType>-</ViolationType>
-                    <SourceLocation>../src/knn.cpp:28</SourceLocation>
-                    <SummaryOfLoopViolations>
-                        <init_top_k>
-                            <Name>init_top_k</Name>
-                            <IssueType>-</IssueType>
-                            <ViolationType>-</ViolationType>
-                            <SourceLocation>../src/knn.cpp:28</SourceLocation>
-                        </init_top_k>
-                    </SummaryOfLoopViolations>
-                </SummaryOfViolations>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <FF>4</FF>
-                    <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>43</LUT>
-                    <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-            <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="init_top_k" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln28_fu_70_p2" SOURCE="../src/knn.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln28" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="init_top_k" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_76_p2" SOURCE="../src/knn.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln28" VISIBLE="true"/>
-            </BindNodes>
-        </Module>
-        <Module>
-            <Name>knn_distance_and_sort_Outline_train_loop</Name>
-            <Loops>
-                <train_loop>
-                    <feature_loop/>
-                </train_loop>
-            </Loops>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>3551</Best-caseLatency>
-                    <Average-caseLatency>3551</Average-caseLatency>
-                    <Worst-caseLatency>3551</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>35.510 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>35.510 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>35.510 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>3551</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
-                    <PerformancePragma>-</PerformancePragma>
-                </SummaryOfOverallLatency>
-                <SummaryOfLoopLatency>
                     <train_loop>
                         <Name>train_loop</Name>
                         <Slack>7.30</Slack>
                         <TripCount>10</TripCount>
                         <isPerfectNested>0</isPerfectNested>
-                        <Latency>3550</Latency>
-                        <AbsoluteTimeLatency>35.500 us</AbsoluteTimeLatency>
-                        <IterationLatency>355</IterationLatency>
-                        <PipelineDepth>355</PipelineDepth>
+                        <Latency>3560 ~ 3610</Latency>
+                        <AbsoluteTimeLatency>35.600 us ~ 36.100 us</AbsoluteTimeLatency>
+                        <IterationLatency>
+                            <range>
+                                <min>356</min>
+                                <max>361</max>
+                            </range>
+                        </IterationLatency>
+                        <PipelineDepth>356 ~ 361</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <PerformancePragma>-</PerformancePragma>
                         <InstanceList/>
@@ -2826,13 +2749,55 @@
                             <PerformancePragma>-</PerformancePragma>
                             <InstanceList/>
                         </feature_loop>
+                        <sort_loop>
+                            <Name>sort_loop</Name>
+                            <Slack>7.30</Slack>
+                            <TripCount>
+                                <range>
+                                    <min>0</min>
+                                    <max>3</max>
+                                </range>
+                            </TripCount>
+                            <isPerfectNested>0</isPerfectNested>
+                            <Latency>0 ~ 3</Latency>
+                            <AbsoluteTimeLatency>0 ns ~ 30.000 ns</AbsoluteTimeLatency>
+                            <IterationLatency>1</IterationLatency>
+                            <PipelineDepth>1</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <PerformancePragma>-</PerformancePragma>
+                            <InstanceList/>
+                        </sort_loop>
+                        <sort_cascade_loop>
+                            <Name>sort_cascade_loop</Name>
+                            <Slack>7.30</Slack>
+                            <TripCount>
+                                <range>
+                                    <min>0</min>
+                                    <max>2</max>
+                                </range>
+                            </TripCount>
+                            <isPerfectNested>0</isPerfectNested>
+                            <Latency>0 ~ 2</Latency>
+                            <AbsoluteTimeLatency>0 ns ~ 20.000 ns</AbsoluteTimeLatency>
+                            <IterationLatency>1</IterationLatency>
+                            <PipelineDepth>1</PipelineDepth>
+                            <PipelineType>no</PipelineType>
+                            <PerformancePragma>-</PerformancePragma>
+                            <InstanceList/>
+                        </sort_cascade_loop>
                     </train_loop>
                 </SummaryOfLoopLatency>
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../src/knn.cpp:41</SourceLocation>
+                    <SourceLocation>../src/knn.cpp:28</SourceLocation>
                     <SummaryOfLoopViolations>
+                        <init_top_k>
+                            <Name>init_top_k</Name>
+                            <IssueType>-</IssueType>
+                            <ViolationType>-</ViolationType>
+                            <SourceLocation>../src/knn.cpp:28</SourceLocation>
+                        </init_top_k>
                         <train_loop>
                             <Name>train_loop</Name>
                             <IssueType>-</IssueType>
@@ -2844,6 +2809,18 @@
                                 <ViolationType>-</ViolationType>
                                 <SourceLocation>../src/knn.cpp:52</SourceLocation>
                             </feature_loop>
+                            <sort_loop>
+                                <Name>sort_loop</Name>
+                                <IssueType>-</IssueType>
+                                <ViolationType>-</ViolationType>
+                                <SourceLocation>../src/knn.cpp:59</SourceLocation>
+                            </sort_loop>
+                            <sort_cascade_loop>
+                                <Name>sort_cascade_loop</Name>
+                                <IssueType>-</IssueType>
+                                <ViolationType>-</ViolationType>
+                                <SourceLocation>../src/knn.cpp:64</SourceLocation>
+                            </sort_cascade_loop>
                         </train_loop>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -2853,12 +2830,12 @@
                     <DSP>4</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>1</UTIL_DSP>
-                    <FF>498</FF>
+                    <FF>747</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
                     <UTIL_FF>~0</UTIL_FF>
-                    <LUT>428</LUT>
+                    <LUT>859</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
+                    <UTIL_LUT>1</UTIL_LUT>
                     <BRAM_18K>0</BRAM_18K>
                     <AVAIL_BRAM>280</AVAIL_BRAM>
                     <UTIL_BRAM>0</UTIL_BRAM>
@@ -2868,201 +2845,26 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="train_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln41_fu_208_p2" SOURCE="../src/knn.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln41" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="train_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_214_p2" SOURCE="../src/knn.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln41" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="feature_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln52_fu_238_p2" SOURCE="../src/knn.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln52" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="feature_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_244_p2" SOURCE="../src/knn.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln52" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="feature_loop" OPTYPE="sub" PRAGMA="" RTLNAME="diff_fu_266_p2" SOURCE="../src/knn.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="diff" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="2" LOOP="feature_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_28s_28s_56_3_1_U4" SOURCE="../src/knn.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln55" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="feature_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_fu_286_p2" SOURCE="../src/knn.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln55" VISIBLE="true"/>
-            </BindNodes>
-        </Module>
-        <Module>
-            <Name>knn_distance_and_sort_Outline_sort_loop_i</Name>
-            <Loops>
-                <sort_loop_i>
-                    <sort_loop_j/>
-                </sort_loop_i>
-            </Loops>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>5.255</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>46</Best-caseLatency>
-                    <Average-caseLatency>154</Average-caseLatency>
-                    <Worst-caseLatency>262</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.460 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>1.540 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>2.620 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>46 ~ 262</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
-                    <PerformancePragma>-</PerformancePragma>
-                </SummaryOfOverallLatency>
-                <SummaryOfLoopLatency>
-                    <sort_loop_i>
-                        <Name>sort_loop_i</Name>
-                        <Slack>7.30</Slack>
-                        <TripCount>9</TripCount>
-                        <isPerfectNested>0</isPerfectNested>
-                        <Latency>45 ~ 261</Latency>
-                        <AbsoluteTimeLatency>0.450 us ~ 2.610 us</AbsoluteTimeLatency>
-                        <IterationLatency>
-                            <range>
-                                <min>5</min>
-                                <max>29</max>
-                            </range>
-                        </IterationLatency>
-                        <PipelineDepth>5 ~ 29</PipelineDepth>
-                        <PipelineType>no</PipelineType>
-                        <PerformancePragma>-</PerformancePragma>
-                        <InstanceList/>
-                        <sort_loop_j>
-                            <Name>sort_loop_j</Name>
-                            <Slack>7.30</Slack>
-                            <TripCount>
-                                <range>
-                                    <min>1</min>
-                                    <max>9</max>
-                                </range>
-                            </TripCount>
-                            <isPerfectNested>0</isPerfectNested>
-                            <Latency>3 ~ 27</Latency>
-                            <AbsoluteTimeLatency>30.000 ns ~ 0.270 us</AbsoluteTimeLatency>
-                            <IterationLatency>3</IterationLatency>
-                            <PipelineDepth>3</PipelineDepth>
-                            <PipelineType>no</PipelineType>
-                            <PerformancePragma>-</PerformancePragma>
-                            <InstanceList/>
-                        </sort_loop_j>
-                    </sort_loop_i>
-                </SummaryOfLoopLatency>
-                <SummaryOfViolations>
-                    <IssueType>-</IssueType>
-                    <ViolationType>-</ViolationType>
-                    <SourceLocation>../src/knn.cpp:67</SourceLocation>
-                    <SummaryOfLoopViolations>
-                        <sort_loop_i>
-                            <Name>sort_loop_i</Name>
-                            <IssueType>-</IssueType>
-                            <ViolationType>-</ViolationType>
-                            <SourceLocation>../src/knn.cpp:67</SourceLocation>
-                            <sort_loop_j>
-                                <Name>sort_loop_j</Name>
-                                <IssueType>-</IssueType>
-                                <ViolationType>-</ViolationType>
-                                <SourceLocation>../src/knn.cpp:71</SourceLocation>
-                            </sort_loop_j>
-                        </sort_loop_i>
-                    </SummaryOfLoopViolations>
-                </SummaryOfViolations>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <FF>134</FF>
-                    <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>228</LUT>
-                    <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>~0</UTIL_LUT>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>0</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>0</UTIL_DSP>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-            <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_loop_i" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln67_fu_122_p2" SOURCE="../src/knn.cpp:67" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln67" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="sort_loop_i" OPTYPE="add" PRAGMA="" RTLNAME="i_8_fu_128_p2" SOURCE="../src/knn.cpp:67" STORAGESUBTYPE="" URAM="0" VARIABLE="i_8" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_loop_j" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln69_fu_137_p2" SOURCE="../src/knn.cpp:69" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln69" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="sort_loop_j" OPTYPE="add" PRAGMA="" RTLNAME="add_ln71_fu_143_p2" SOURCE="../src/knn.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln71" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_loop_j" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln71_fu_174_p2" SOURCE="../src/knn.cpp:71" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln71" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="sort_loop_i" OPTYPE="add" PRAGMA="" RTLNAME="add_ln67_fu_159_p2" SOURCE="../src/knn.cpp:67" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln67" VISIBLE="true"/>
-            </BindNodes>
-        </Module>
-        <Module>
-            <Name>knn_distance_and_sort</Name>
-            <Loops>
-                <copy_top_k/>
-            </Loops>
-            <PerformanceEstimates>
-                <SummaryOfTimingAnalysis>
-                    <TargetClockPeriod>10.00</TargetClockPeriod>
-                    <ClockUncertainty>2.70</ClockUncertainty>
-                    <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
-                </SummaryOfTimingAnalysis>
-                <SummaryOfOverallLatency>
-                    <Best-caseLatency>3621</Best-caseLatency>
-                    <Average-caseLatency>3729</Average-caseLatency>
-                    <Worst-caseLatency>3837</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>36.210 us</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>37.290 us</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>38.370 us</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>3621 ~ 3837</PipelineInitiationInterval>
-                    <PipelineType>no</PipelineType>
-                    <PerformancePragma>-</PerformancePragma>
-                </SummaryOfOverallLatency>
-                <SummaryOfLoopLatency>
-                    <copy_top_k>
-                        <Name>copy_top_k</Name>
-                        <Slack>7.30</Slack>
-                        <TripCount>3</TripCount>
-                        <isPerfectNested>0</isPerfectNested>
-                        <Latency>6</Latency>
-                        <AbsoluteTimeLatency>60.000 ns</AbsoluteTimeLatency>
-                        <IterationLatency>2</IterationLatency>
-                        <PipelineDepth>2</PipelineDepth>
-                        <PipelineType>no</PipelineType>
-                        <PerformancePragma>-</PerformancePragma>
-                        <InstanceList/>
-                    </copy_top_k>
-                </SummaryOfLoopLatency>
-                <SummaryOfViolations>
-                    <IssueType>-</IssueType>
-                    <ViolationType>-</ViolationType>
-                    <SourceLocation>../src/knn.cpp:82</SourceLocation>
-                    <SummaryOfLoopViolations>
-                        <copy_top_k>
-                            <Name>copy_top_k</Name>
-                            <IssueType>-</IssueType>
-                            <ViolationType>-</ViolationType>
-                            <SourceLocation>../src/knn.cpp:82</SourceLocation>
-                        </copy_top_k>
-                    </SummaryOfLoopViolations>
-                </SummaryOfViolations>
-            </PerformanceEstimates>
-            <AreaEstimates>
-                <Resources>
-                    <BRAM_18K>0</BRAM_18K>
-                    <AVAIL_BRAM>280</AVAIL_BRAM>
-                    <UTIL_BRAM>0</UTIL_BRAM>
-                    <DSP>4</DSP>
-                    <AVAIL_DSP>220</AVAIL_DSP>
-                    <UTIL_DSP>1</UTIL_DSP>
-                    <FF>889</FF>
-                    <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>~0</UTIL_FF>
-                    <LUT>1404</LUT>
-                    <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>2</UTIL_LUT>
-                    <URAM>0</URAM>
-                    <AVAIL_URAM>0</AVAIL_URAM>
-                    <UTIL_URAM>0</UTIL_URAM>
-                </Resources>
-            </AreaEstimates>
-            <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="distances_U" SOURCE="../src/knn.cpp:17" STORAGESIZE="42 10 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p array" URAM="0" VARIABLE="distances" VISIBLE="true"/>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_t2p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_t2p" PRAGMA="" RTLNAME="labels_U" SOURCE="../src/knn.cpp:18" STORAGESIZE="4 10 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_t2p array" URAM="0" VARIABLE="labels" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_258_p2" SOURCE="../src/knn.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln41" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="copy_top_k" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln82_fu_278_p2" SOURCE="../src/knn.cpp:82" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln82" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="copy_top_k" OPTYPE="add" PRAGMA="" RTLNAME="add_ln82_fu_284_p2" SOURCE="../src/knn.cpp:82" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln82" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="init_top_k" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln28_fu_329_p2" SOURCE="../src/knn.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln28" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="init_top_k" OPTYPE="add" PRAGMA="" RTLNAME="add_ln28_fu_335_p2" SOURCE="../src/knn.cpp:28" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln28" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_fu_404_p2" SOURCE="../src/knn.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln41" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="train_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln41_fu_461_p2" SOURCE="../src/knn.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln41" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="train_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln41_1_fu_467_p2" SOURCE="../src/knn.cpp:41" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln41_1" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="feature_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln52_fu_473_p2" SOURCE="../src/knn.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln52" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="feature_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln52_fu_479_p2" SOURCE="../src/knn.cpp:52" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln52" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sub" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="feature_loop" OPTYPE="sub" PRAGMA="" RTLNAME="diff_fu_503_p2" SOURCE="../src/knn.cpp:54" STORAGESUBTYPE="" URAM="0" VARIABLE="diff" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op mul" DSP="4" ID="" IMPL="auto" LATENCY="2" LOOP="feature_loop" OPTYPE="mul" PRAGMA="" RTLNAME="mul_28s_28s_56_3_1_U1" SOURCE="../src/knn.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="mul_ln55" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="feature_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln55_fu_523_p2" SOURCE="../src/knn.cpp:55" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln55" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln59_fu_539_p2" SOURCE="../src/knn.cpp:59" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln59" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="sort_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln59_fu_545_p2" SOURCE="../src/knn.cpp:59" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln59" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="onehotencoding_realdef" LATENCY="0" LOOP="sort_loop" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_7_2_42_1_1_U2" SOURCE="../src/knn.cpp:61" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setlt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_loop" OPTYPE="setlt" PRAGMA="" RTLNAME="icmp_ln61_fu_568_p2" SOURCE="../src/knn.cpp:61" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln61" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_cascade_loop" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln62_fu_574_p2" SOURCE="../src/knn.cpp:62" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln62" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="sort_cascade_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln64_fu_580_p2" SOURCE="../src/knn.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln64" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_cascade_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln64_1_fu_586_p2" SOURCE="../src/knn.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln64_1" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="sort_cascade_loop" OPTYPE="select" PRAGMA="" RTLNAME="top_k_dist_6_fu_592_p3" SOURCE="../src/knn.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="top_k_dist_6" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="sort_cascade_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln64_fu_599_p2" SOURCE="../src/knn.cpp:64" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln64" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="sort_cascade_loop" OPTYPE="select" PRAGMA="" RTLNAME="select_ln65_fu_605_p3" SOURCE="../src/knn.cpp:65" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln65" VISIBLE="false"/>
             </BindNodes>
         </Module>
         <Module>
@@ -3133,25 +2935,25 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../src/knn.cpp:101</SourceLocation>
+                    <SourceLocation>../src/knn.cpp:87</SourceLocation>
                     <SummaryOfLoopViolations>
                         <count_init_loop>
                             <Name>count_init_loop</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>../src/knn.cpp:101</SourceLocation>
+                            <SourceLocation>../src/knn.cpp:87</SourceLocation>
                         </count_init_loop>
                         <set_counts_loop>
                             <Name>set_counts_loop</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>../src/knn.cpp:113</SourceLocation>
+                            <SourceLocation>../src/knn.cpp:99</SourceLocation>
                         </set_counts_loop>
                         <max_count_loop>
                             <Name>max_count_loop</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>../src/knn.cpp:129</SourceLocation>
+                            <SourceLocation>../src/knn.cpp:115</SourceLocation>
                         </max_count_loop>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -3176,20 +2978,20 @@
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="counts_U" SOURCE="../src/knn.cpp:94" STORAGESIZE="32 10 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="counts" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="count_init_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln101_fu_156_p2" SOURCE="../src/knn.cpp:101" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln101" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="count_init_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln101_fu_162_p2" SOURCE="../src/knn.cpp:101" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln101" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="set_counts_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln113_fu_186_p2" SOURCE="../src/knn.cpp:113" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln113" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="set_counts_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln113_fu_192_p2" SOURCE="../src/knn.cpp:113" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln113" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="onehotencoding_realdef" LATENCY="0" LOOP="set_counts_loop" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_7_2_4_1_1_U28" SOURCE="../src/knn.cpp:115" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="set_counts_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln116_fu_235_p2" SOURCE="../src/knn.cpp:116" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln116" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="max_count_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln127_fu_245_p2" SOURCE="../src/knn.cpp:127" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln127" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="max_count_loop" OPTYPE="add" PRAGMA="" RTLNAME="i_7_fu_251_p2" SOURCE="../src/knn.cpp:127" STORAGESUBTYPE="" URAM="0" VARIABLE="i_7" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="max_count_loop" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln129_fu_277_p2" SOURCE="../src/knn.cpp:129" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln129" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="max_count_loop" OPTYPE="or" PRAGMA="" RTLNAME="or_ln129_fu_283_p2" SOURCE="../src/knn.cpp:129" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln129" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="max_count_loop" OPTYPE="select" PRAGMA="" RTLNAME="select_ln129_fu_289_p3" SOURCE="../src/knn.cpp:129" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln129" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="max_count_loop" OPTYPE="select" PRAGMA="" RTLNAME="max_2_fu_296_p3" SOURCE="../src/knn.cpp:129" STORAGESUBTYPE="" URAM="0" VARIABLE="max_2" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln137_fu_267_p3" SOURCE="../src/knn.cpp:137" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln137" VISIBLE="false"/>
+                <BindNode BINDTYPE="storage" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_storage ram_1p" DSP="0" ID="" IMPL="auto" LATENCY="1" LOOP="" OPTYPE="ram_1p" PRAGMA="" RTLNAME="counts_U" SOURCE="../src/knn.cpp:80" STORAGESIZE="32 10 1" STORAGESUBTYPE="" STORAGEUSAGE="ram_1p array" URAM="0" VARIABLE="counts" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="count_init_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln87_fu_156_p2" SOURCE="../src/knn.cpp:87" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln87" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="count_init_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln87_fu_162_p2" SOURCE="../src/knn.cpp:87" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln87" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="set_counts_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln99_fu_186_p2" SOURCE="../src/knn.cpp:99" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln99" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="set_counts_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln99_fu_192_p2" SOURCE="../src/knn.cpp:99" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln99" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op sparsemux" DSP="0" ID="" IMPL="onehotencoding_realdef" LATENCY="0" LOOP="set_counts_loop" OPTYPE="sparsemux" PRAGMA="" RTLNAME="sparsemux_7_2_4_1_1_U15" SOURCE="../src/knn.cpp:101" STORAGESUBTYPE="" URAM="0" VARIABLE="tmp" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="set_counts_loop" OPTYPE="add" PRAGMA="" RTLNAME="add_ln102_fu_235_p2" SOURCE="../src/knn.cpp:102" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln102" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="max_count_loop" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln113_fu_245_p2" SOURCE="../src/knn.cpp:113" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln113" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="max_count_loop" OPTYPE="add" PRAGMA="" RTLNAME="i_7_fu_251_p2" SOURCE="../src/knn.cpp:113" STORAGESUBTYPE="" URAM="0" VARIABLE="i_7" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op setgt" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="max_count_loop" OPTYPE="setgt" PRAGMA="" RTLNAME="icmp_ln115_fu_277_p2" SOURCE="../src/knn.cpp:115" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln115" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op or" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="max_count_loop" OPTYPE="or" PRAGMA="" RTLNAME="or_ln115_fu_283_p2" SOURCE="../src/knn.cpp:115" STORAGESUBTYPE="" URAM="0" VARIABLE="or_ln115" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="max_count_loop" OPTYPE="select" PRAGMA="" RTLNAME="select_ln115_fu_289_p3" SOURCE="../src/knn.cpp:115" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln115" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="max_count_loop" OPTYPE="select" PRAGMA="" RTLNAME="max_2_fu_296_p3" SOURCE="../src/knn.cpp:115" STORAGESUBTYPE="" URAM="0" VARIABLE="max_2" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op select" DSP="0" ID="" IMPL="auto_sel" LATENCY="0" LOOP="" OPTYPE="select" PRAGMA="" RTLNAME="select_ln123_fu_267_p3" SOURCE="../src/knn.cpp:123" STORAGESUBTYPE="" URAM="0" VARIABLE="select_ln123" VISIBLE="false"/>
             </BindNodes>
         </Module>
         <Module>
@@ -3204,13 +3006,13 @@
                     <EstimatedClockPeriod>7.300</EstimatedClockPeriod>
                 </SummaryOfTimingAnalysis>
                 <SummaryOfOverallLatency>
-                    <Best-caseLatency>36667</Best-caseLatency>
-                    <Average-caseLatency>37747</Average-caseLatency>
-                    <Worst-caseLatency>38827</Worst-caseLatency>
-                    <Best-caseRealTimeLatency>0.367 ms</Best-caseRealTimeLatency>
-                    <Average-caseRealTimeLatency>0.377 ms</Average-caseRealTimeLatency>
-                    <Worst-caseRealTimeLatency>0.388 ms</Worst-caseRealTimeLatency>
-                    <PipelineInitiationInterval>36668 ~ 38828</PipelineInitiationInterval>
+                    <Best-caseLatency>36177</Best-caseLatency>
+                    <Average-caseLatency>36377</Average-caseLatency>
+                    <Worst-caseLatency>36677</Worst-caseLatency>
+                    <Best-caseRealTimeLatency>0.362 ms</Best-caseRealTimeLatency>
+                    <Average-caseRealTimeLatency>0.364 ms</Average-caseRealTimeLatency>
+                    <Worst-caseRealTimeLatency>0.367 ms</Worst-caseRealTimeLatency>
+                    <PipelineInitiationInterval>36178 ~ 36678</PipelineInitiationInterval>
                     <PipelineType>no</PipelineType>
                     <PerformancePragma>-</PerformancePragma>
                 </SummaryOfOverallLatency>
@@ -3220,15 +3022,15 @@
                         <Slack>7.30</Slack>
                         <TripCount>10</TripCount>
                         <isPerfectNested>0</isPerfectNested>
-                        <Latency>36660 ~ 38820</Latency>
-                        <AbsoluteTimeLatency>0.367 ms ~ 0.388 ms</AbsoluteTimeLatency>
+                        <Latency>36170 ~ 36670</Latency>
+                        <AbsoluteTimeLatency>0.362 ms ~ 0.367 ms</AbsoluteTimeLatency>
                         <IterationLatency>
                             <range>
-                                <min>3666</min>
-                                <max>3882</max>
+                                <min>3617</min>
+                                <max>3667</max>
                             </range>
                         </IterationLatency>
-                        <PipelineDepth>3666 ~ 3882</PipelineDepth>
+                        <PipelineDepth>3617 ~ 3667</PipelineDepth>
                         <PipelineType>no</PipelineType>
                         <PerformancePragma>-</PerformancePragma>
                         <InstanceList>
@@ -3240,13 +3042,13 @@
                 <SummaryOfViolations>
                     <IssueType>-</IssueType>
                     <ViolationType>-</ViolationType>
-                    <SourceLocation>../src/knn.cpp:160</SourceLocation>
+                    <SourceLocation>../src/knn.cpp:146</SourceLocation>
                     <SummaryOfLoopViolations>
                         <test_data>
                             <Name>test_data</Name>
                             <IssueType>-</IssueType>
                             <ViolationType>-</ViolationType>
-                            <SourceLocation>../src/knn.cpp:160</SourceLocation>
+                            <SourceLocation>../src/knn.cpp:146</SourceLocation>
                         </test_data>
                     </SummaryOfLoopViolations>
                 </SummaryOfViolations>
@@ -3259,21 +3061,21 @@
                     <DSP>4</DSP>
                     <AVAIL_DSP>220</AVAIL_DSP>
                     <UTIL_DSP>1</UTIL_DSP>
-                    <FF>4341</FF>
+                    <FF>4198</FF>
                     <AVAIL_FF>106400</AVAIL_FF>
-                    <UTIL_FF>4</UTIL_FF>
-                    <LUT>5395</LUT>
+                    <UTIL_FF>3</UTIL_FF>
+                    <LUT>4850</LUT>
                     <AVAIL_LUT>53200</AVAIL_LUT>
-                    <UTIL_LUT>10</UTIL_LUT>
+                    <UTIL_LUT>9</UTIL_LUT>
                     <URAM>0</URAM>
                     <AVAIL_URAM>0</AVAIL_URAM>
                     <UTIL_URAM>0</UTIL_URAM>
                 </Resources>
             </AreaEstimates>
             <BindNodes>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="test_data" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln160_fu_218_p2" SOURCE="../src/knn.cpp:160" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln160" VISIBLE="false"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="test_data" OPTYPE="add" PRAGMA="" RTLNAME="add_ln160_fu_224_p2" SOURCE="../src/knn.cpp:160" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln160" VISIBLE="true"/>
-                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="test_data" OPTYPE="add" PRAGMA="" RTLNAME="add_ln163_fu_239_p2" SOURCE="../src/knn.cpp:163" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln163" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op seteq" DSP="0" ID="" IMPL="auto" LATENCY="0" LOOP="test_data" OPTYPE="seteq" PRAGMA="" RTLNAME="icmp_ln146_fu_218_p2" SOURCE="../src/knn.cpp:146" STORAGESUBTYPE="" URAM="0" VARIABLE="icmp_ln146" VISIBLE="false"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="test_data" OPTYPE="add" PRAGMA="" RTLNAME="add_ln146_fu_224_p2" SOURCE="../src/knn.cpp:146" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln146" VISIBLE="true"/>
+                <BindNode BINDTYPE="op" BRAM="0" BUNDLEDNAME="" DISPNAME="bind_op add" DSP="0" ID="" IMPL="fabric" LATENCY="0" LOOP="test_data" OPTYPE="add" PRAGMA="" RTLNAME="add_ln149_fu_234_p2" SOURCE="../src/knn.cpp:149" STORAGESUBTYPE="" URAM="0" VARIABLE="add_ln149" VISIBLE="true"/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="0" BUNDLEDNAME="control_r" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="control_r_s_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="s_axilite" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
                 <BindNode BINDTYPE="adapter" BRAM="2" BUNDLEDNAME="gmem_x_test" DISPNAME="bind_adapter " DSP="0" ID="" IMPL="" LATENCY="" LOOP="" OPTYPE="" PRAGMA="" RTLNAME="gmem_x_test_m_axi_U" SOURCE="" STORAGESIZE="" STORAGESUBTYPE="m_axi" STORAGEUSAGE="interface" URAM="0" VARIABLE=""/>
@@ -3819,7 +3621,7 @@
                     <keys size="6">HW Interface, Direction, Length, Width, Loop, Loop Location</keys>
                     <column name="m_axi_gmem_x_test">read, 49, 32, feature_loop, ../src/knn.cpp:52:23</column>
                     <column name="m_axi_gmem_x_train">read, 490, 32, train_loop, ../src/knn.cpp:41:17</column>
-                    <column name="m_axi_gmem_y_test">write, 10, 8, test_data, ../src/knn.cpp:160:16</column>
+                    <column name="m_axi_gmem_y_test">write, 10, 8, test_data, ../src/knn.cpp:146:16</column>
                     <column name="m_axi_gmem_y_train">read, 10, 8, train_loop, ../src/knn.cpp:41:17</column>
                 </table>
             </item>
@@ -3831,8 +3633,8 @@
                     <column name="m_axi_gmem_x_test">test_point, ../src/knn.cpp:54:42, read, Inferred, 49, feature_loop, ../src/knn.cpp:52:23, , </column>
                     <column name="m_axi_gmem_x_train">X_train, ../src/knn.cpp:54:42, read, Widen Fail, , feature_loop, ../src/knn.cpp:52:23, 214-353, Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
                     <column name="m_axi_gmem_x_train">X_train, ../src/knn.cpp:54:42, read, Inferred, 490, train_loop, ../src/knn.cpp:41:17, , </column>
-                    <column name="m_axi_gmem_y_test">y_test, ../src/knn.cpp:166:19, write, Widen Fail, , test_data, ../src/knn.cpp:160:16, 214-353, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
-                    <column name="m_axi_gmem_y_test">y_test, ../src/knn.cpp:166:19, write, Inferred, 10, test_data, ../src/knn.cpp:160:16, , </column>
+                    <column name="m_axi_gmem_y_test">y_test, ../src/knn.cpp:152:19, write, Widen Fail, , test_data, ../src/knn.cpp:146:16, 214-353, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
+                    <column name="m_axi_gmem_y_test">y_test, ../src/knn.cpp:152:19, write, Inferred, 10, test_data, ../src/knn.cpp:146:16, , </column>
                     <column name="m_axi_gmem_y_train">y_train, ../src/knn.cpp:58:19, read, Widen Fail, , train_loop, ../src/knn.cpp:41:17, 214-353, Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0</column>
                     <column name="m_axi_gmem_y_train">y_train, ../src/knn.cpp:58:19, read, Inferred, 10, train_loop, ../src/knn.cpp:41:17, , </column>
                 </table>
@@ -3844,21 +3646,21 @@
         <Pragma type="pipeline" location="../src/knn.cpp:29" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
         <Pragma type="pipeline" location="../src/knn.cpp:42" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
         <Pragma type="pipeline" location="../src/knn.cpp:53" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
-        <Pragma type="pipeline" location="../src/knn.cpp:68" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
-        <Pragma type="pipeline" location="../src/knn.cpp:70" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
-        <Pragma type="pipeline" location="../src/knn.cpp:83" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
-        <Pragma type="inline" location="../src/knn.cpp:93" status="valid" parentFunction="knn_majority_vote" variable="" isDirective="0" options="off"/>
-        <Pragma type="pipeline" location="../src/knn.cpp:102" status="valid" parentFunction="knn_majority_vote" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../src/knn.cpp:60" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../src/knn.cpp:63" status="valid" parentFunction="knn_distance_and_sort" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="inline" location="../src/knn.cpp:79" status="valid" parentFunction="knn_majority_vote" variable="" isDirective="0" options="off"/>
+        <Pragma type="pipeline" location="../src/knn.cpp:88" status="valid" parentFunction="knn_majority_vote" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="pipeline" location="../src/knn.cpp:100" status="valid" parentFunction="knn_majority_vote" variable="" isDirective="0" options="OFF"/>
         <Pragma type="pipeline" location="../src/knn.cpp:114" status="valid" parentFunction="knn_majority_vote" variable="" isDirective="0" options="OFF"/>
-        <Pragma type="pipeline" location="../src/knn.cpp:128" status="valid" parentFunction="knn_majority_vote" variable="" isDirective="0" options="OFF"/>
-        <Pragma type="interface" location="../src/knn.cpp:149" status="valid" parentFunction="knn_accelerator" variable="X_train" isDirective="0" options="m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10"/>
-        <Pragma type="interface" location="../src/knn.cpp:150" status="valid" parentFunction="knn_accelerator" variable="y_train" isDirective="0" options="m_axi port=y_train offset=slave bundle=gmem_y_train depth=10"/>
-        <Pragma type="interface" location="../src/knn.cpp:151" status="valid" parentFunction="knn_accelerator" variable="X_test" isDirective="0" options="m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10"/>
-        <Pragma type="interface" location="../src/knn.cpp:152" status="valid" parentFunction="knn_accelerator" variable="y_test" isDirective="0" options="m_axi port=y_test offset=slave bundle=gmem_y_test depth=10"/>
-        <Pragma type="interface" location="../src/knn.cpp:155" status="valid" parentFunction="knn_accelerator" variable="return" isDirective="0" options="s_axilite port=return bundle=control"/>
-        <Pragma type="pipeline" location="../src/knn.cpp:161" status="valid" parentFunction="knn_accelerator" variable="" isDirective="0" options="OFF"/>
+        <Pragma type="interface" location="../src/knn.cpp:135" status="valid" parentFunction="knn_accelerator" variable="X_train" isDirective="0" options="m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10"/>
+        <Pragma type="interface" location="../src/knn.cpp:136" status="valid" parentFunction="knn_accelerator" variable="y_train" isDirective="0" options="m_axi port=y_train offset=slave bundle=gmem_y_train depth=10"/>
+        <Pragma type="interface" location="../src/knn.cpp:137" status="valid" parentFunction="knn_accelerator" variable="X_test" isDirective="0" options="m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10"/>
+        <Pragma type="interface" location="../src/knn.cpp:138" status="valid" parentFunction="knn_accelerator" variable="y_test" isDirective="0" options="m_axi port=y_test offset=slave bundle=gmem_y_test depth=10"/>
+        <Pragma type="interface" location="../src/knn.cpp:141" status="valid" parentFunction="knn_accelerator" variable="return" isDirective="0" options="s_axilite port=return bundle=control"/>
+        <Pragma type="pipeline" location="../src/knn.cpp:147" status="valid" parentFunction="knn_accelerator" variable="" isDirective="0" options="OFF"/>
     </PragmaReport>
     <AutoPragmaReport>
-        <AutoPragma type="array_partition" parentFunction="knn_accelerator" options="dim=1 type=complete variable=top_k_labels" pragmaLocId="../src/knn.cpp:158:0" pragmaLocOpt="knn_accelerator/top_k_labels" srcTcl="config_array_partition -complete_threshold 4" srcIni="syn.array_partition.complete_threshold=4" srcPragmaType="" srcPragmaLoc="syn.array_partition.complete_threshold=4" srcPragmaSource="config" srcPragmaSourceDesc="syn.array_partition.complete_threshold=4" srcIsDirective="0" srcIsSlxDirective="0" srcIsCsimDirective="0" directiveIni="syn.directive.array_partition=knn_accelerator/top_k_labels dim=1 type=complete variable=top_k_labels" variable="top_k_labels" varLoc="../src/knn.cpp:158"/>
+        <AutoPragma type="array_partition" parentFunction="knn_accelerator" options="dim=1 type=complete variable=top_k_labels" pragmaLocId="../src/knn.cpp:144:0" pragmaLocOpt="knn_accelerator/top_k_labels" srcTcl="config_array_partition -complete_threshold 4" srcIni="syn.array_partition.complete_threshold=4" srcPragmaType="" srcPragmaLoc="syn.array_partition.complete_threshold=4" srcPragmaSource="config" srcPragmaSourceDesc="syn.array_partition.complete_threshold=4" srcIsDirective="0" srcIsSlxDirective="0" srcIsCsimDirective="0" directiveIni="syn.directive.array_partition=knn_accelerator/top_k_labels dim=1 type=complete variable=top_k_labels" variable="top_k_labels" varLoc="../src/knn.cpp:144"/>
+        <AutoPragma type="array_partition" parentFunction="knn_distance_and_sort" options="dim=1 type=complete variable=top_k_dist" pragmaLocId="../src/knn.cpp:19:0" pragmaLocOpt="knn_distance_and_sort/top_k_dist" srcTcl="config_array_partition -complete_threshold 4" srcIni="syn.array_partition.complete_threshold=4" srcPragmaType="" srcPragmaLoc="syn.array_partition.complete_threshold=4" srcPragmaSource="config" srcPragmaSourceDesc="syn.array_partition.complete_threshold=4" srcIsDirective="0" srcIsSlxDirective="0" srcIsCsimDirective="0" directiveIni="syn.directive.array_partition=knn_distance_and_sort/top_k_dist dim=1 type=complete variable=top_k_dist" variable="top_k_dist" varLoc="../src/knn.cpp:19"/>
     </AutoPragmaReport>
 </profile>

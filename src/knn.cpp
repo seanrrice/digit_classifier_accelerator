@@ -27,10 +27,10 @@ void knn_distance_and_sort(
     /* YOUR CODE HERE */
     init_top_k: for (int i = 0; i < K_NEIGHBORS; i++){
         #pragma HLS PIPELINE OFF
-        top_k_dist[i] = 0xFFFFFFFF;
+        top_k_dist[i] = 0x1FFFFF;
+        
         top_k_labels[i] = 0;
     }
-    
 
 
     // --------------------------------------------------------
@@ -56,33 +56,19 @@ void knn_distance_and_sort(
         }
         distances[i] = sum;
         labels[i] = y_train[i];
-
-    }
-    // --------------------------------------------------------
-    // TODO: Sort
-    // --------------------------------------------------------
-    // Sort the distances from smallest to largest, pick the labels corresponding to 
-    // the top K shortest distances and store them into the top_k_labels array.        
-    /* YOUR CODE HERE */
-    sort_loop_i: for (int i = 0; i < NUM_TRAIN_SAMPLES -1; i++) {
-        #pragma HLS PIPELINE OFF
-        sort_loop_j: for (int j = 0; j < NUM_TRAIN_SAMPLES - i - 1; j++) {
+        sort_loop: for(int j=0;j < K_NEIGHBORS; j++){
             #pragma HLS PIPELINE OFF
-            if (distances[j] > distances[j + 1]) {
-                dist_t temp_dist = distances[j];
-                distances[j] = distances[j + 1];
-                distances[j + 1] = temp_dist;
-
-                label_t temp_label = labels[j];
-                labels[j] = labels[j + 1];
-                labels[j + 1] = temp_label;
+            if(distances[i]<top_k_dist[j]){
+                sort_cascade_loop: for(int k=K_NEIGHBORS-1;k>j;k--){
+                    #pragma HLS PIPELINE OFF
+                    top_k_dist[k] = top_k_dist[k-1];
+                    top_k_labels[k] = top_k_labels[k-1];
+                }
+                top_k_dist[j] = distances[i];
+                top_k_labels[j] = labels[i];
+                break;
             }
         }
-    }
-    copy_top_k: for (int i = 0; i < K_NEIGHBORS; i++) {
-        #pragma HLS PIPELINE OFF
-        top_k_dist[i] = distances[i];
-        top_k_labels[i] = labels[i];
     }
 }
 
