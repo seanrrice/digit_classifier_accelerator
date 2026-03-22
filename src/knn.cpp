@@ -54,7 +54,7 @@ void knn_distance_and_sort(
             pixel_t diff = test_point[j] - X_train[i * NUM_FEATURES + j];
             sum += diff * diff;
         }
-        distances[i] = hls::sqrt(sum);
+        distances[i] = sum;
         labels[i] = y_train[i];
 
     }
