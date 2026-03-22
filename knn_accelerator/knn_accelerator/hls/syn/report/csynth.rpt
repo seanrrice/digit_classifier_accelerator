@@ -1,0 +1,266 @@
+
+
+================================================================
+== Synthesis Summary Report of 'knn_accelerator'
+================================================================
++ General Information: 
+    * Date:           Sat Mar 21 23:51:31 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        knn_accelerator
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
+* Performance & Resource Estimates: 
++------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+------------+-----+
+|                     Modules                    | Issue|               | Iteration|         | Trip |          |       Latency       |      |         |         |           |            |     |
+|                     & Loops                    | Type | Violation Type|  Latency | Interval| Count| Pipelined| (cycles)|    (ns)   | Slack|  BRAM   |   DSP   |     FF    |     LUT    | URAM|
++------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+------------+-----+
+|+ knn_accelerator                               |     -|              -|         -|   124348|     -|        no|   124347|  1.243e+06|  0.00|  10 (3%)|  14 (6%)|  5614 (5%)|  7581 (14%)|    -|
+| o test_data                                    |     -|              -|     12434|        -|    10|        no|   124340|  1.243e+06|  7.30|        -|        -|          -|           -|    -|
+|  + knn_distance_and_sort                       |     -|              -|         -|    12389|     -|        no|    12389|  1.239e+05|  0.00|        -|  14 (6%)|  2079 (1%)|   3437 (6%)|    -|
+|   + knn_distance_and_sort_Outline_init_top_k   |     -|              -|         -|        4|     -|        no|        4|     40.000|  4.15|        -|        -|    4 (~0%)|    43 (~0%)|    -|
+|    o init_top_k                                |     -|              -|         1|        -|     3|        no|        3|     30.000|  7.30|        -|        -|          -|           -|    -|
+|   + knn_distance_and_sort_Outline_train_loop   |     -|              -|         -|    11941|     -|        no|    11941|  1.194e+05|  0.00|        -|  14 (6%)|  1538 (1%)|   2346 (4%)|    -|
+|    o train_loop                                |     -|              -|      1194|        -|    10|        no|    11940|  1.194e+05|  7.30|        -|        -|          -|           -|    -|
+|     o feature_loop                             |     -|              -|        23|        -|    49|        no|     1127|  1.127e+04|  7.30|        -|        -|          -|           -|    -|
+|   + knn_distance_and_sort_Outline_sort_loop_i  |     -|              -|         -|      424|     -|        no|      424|  4.240e+03|  0.86|        -|        -|  180 (~0%)|   340 (~0%)|    -|
+|    o sort_loop_i                               |     -|              -|        47|        -|     9|        no|      423|  4.230e+03|  7.30|        -|        -|          -|           -|    -|
+|     o sort_loop_j                              |     -|              -|         5|        -|     9|        no|       45|    450.000|  7.30|        -|        -|          -|           -|    -|
+|   o copy_top_k                                 |     -|              -|         2|        -|     3|        no|        6|     60.000|  7.30|        -|        -|          -|           -|    -|
+|  + knn_majority_vote                           |     -|              -|         -|       39|     -|        no|       39|    390.000|  0.10|        -|        -|  120 (~0%)|   340 (~0%)|    -|
+|   o count_init_loop                            |     -|              -|         1|        -|    10|        no|       10|    100.000|  7.30|        -|        -|          -|           -|    -|
+|   o set_counts_loop                            |     -|              -|         2|        -|     3|        no|        6|     60.000|  7.30|        -|        -|          -|           -|    -|
+|   o max_count_loop                             |     -|              -|         2|        -|    10|        no|       20|    200.000|  7.30|        -|        -|          -|           -|    -|
++------------------------------------------------+------+---------------+----------+---------+------+----------+---------+-----------+------+---------+---------+-----------+------------+-----+
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++--------------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface          | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|                    |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++--------------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem_x_test  | READ_ONLY  | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_x_train | READ_ONLY  | 64 -> 64   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=4            |
+| m_axi_gmem_y_test  | WRITE_ONLY | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |                   |
+| m_axi_gmem_y_train | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
++--------------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++-----------------+------------+---------------+--------+----------+
+| Interface       | Data Width | Address Width | Offset | Register |
++-----------------+------------+---------------+--------+----------+
+| s_axi_control   | 32         | 4             |        |          |
+| s_axi_control_r | 32         | 6             | 16     | 0        |
++-----------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++-----------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface       | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++-----------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control   | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control   | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control   | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control   | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control_r | X_test_1  | 0x10   | 32    | W      | Data signal of X_test            |                                                                      |
+| s_axi_control_r | X_test_2  | 0x14   | 32    | W      | Data signal of X_test            |                                                                      |
+| s_axi_control_r | X_train_1 | 0x1c   | 32    | W      | Data signal of X_train           |                                                                      |
+| s_axi_control_r | X_train_2 | 0x20   | 32    | W      | Data signal of X_train           |                                                                      |
+| s_axi_control_r | y_train_1 | 0x28   | 32    | W      | Data signal of y_train           |                                                                      |
+| s_axi_control_r | y_train_2 | 0x2c   | 32    | W      | Data signal of y_train           |                                                                      |
+| s_axi_control_r | y_test_1  | 0x34   | 32    | W      | Data signal of y_test            |                                                                      |
+| s_axi_control_r | y_test_2  | 0x38   | 32    | W      | Data signal of y_test            |                                                                      |
++-----------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| X_test   | in        | double*  |
+| X_train  | in        | double*  |
+| y_train  | in        | int*     |
+| y_test   | out       | int*     |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+--------------------+-----------+----------+-------------------------------------+
+| Argument | HW Interface       | HW Type   | HW Usage | HW Info                             |
++----------+--------------------+-----------+----------+-------------------------------------+
+| X_test   | m_axi_gmem_x_test  | interface |          | channel=0                           |
+| X_test   | s_axi_control_r    | register  | offset   | name=X_test_1 offset=0x10 range=32  |
+| X_test   | s_axi_control_r    | register  | offset   | name=X_test_2 offset=0x14 range=32  |
+| X_train  | m_axi_gmem_x_train | interface |          | channel=0                           |
+| X_train  | s_axi_control_r    | register  | offset   | name=X_train_1 offset=0x1c range=32 |
+| X_train  | s_axi_control_r    | register  | offset   | name=X_train_2 offset=0x20 range=32 |
+| y_train  | m_axi_gmem_y_train | interface |          | channel=0                           |
+| y_train  | s_axi_control_r    | register  | offset   | name=y_train_1 offset=0x28 range=32 |
+| y_train  | s_axi_control_r    | register  | offset   | name=y_train_2 offset=0x2c range=32 |
+| y_test   | m_axi_gmem_y_test  | interface |          | channel=0                           |
+| y_test   | s_axi_control_r    | register  | offset   | name=y_test_1 offset=0x34 range=32  |
+| y_test   | s_axi_control_r    | register  | offset   | name=y_test_2 offset=0x38 range=32  |
++----------+--------------------+-----------+----------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------------+-----------+--------+-------+--------------+-----------------------+
+| HW Interface       | Direction | Length | Width | Loop         | Loop Location         |
++--------------------+-----------+--------+-------+--------------+-----------------------+
+| m_axi_gmem_x_test  | read      | 49     | 64    | feature_loop | ../src/knn.cpp:52:23  |
+| m_axi_gmem_x_train | read      | 490    | 64    | train_loop   | ../src/knn.cpp:41:17  |
+| m_axi_gmem_y_test  | write     | 10     | 32    | test_data    | ../src/knn.cpp:160:16 |
+| m_axi_gmem_y_train | read      | 10     | 32    | train_loop   | ../src/knn.cpp:41:17  |
++--------------------+-----------+--------+-------+--------------+-----------------------+
+
+* All M_AXI Variable Accesses
++--------------------+------------+-----------------------+-----------+--------------+--------+--------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
+| HW Interface       | Variable   | Access Location       | Direction | Burst Status | Length | Loop         | Loop Location         | Resolution | Problem                                                                                                  |
++--------------------+------------+-----------------------+-----------+--------------+--------+--------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:54:28  | read      | Widen Fail   |        | feature_loop | ../src/knn.cpp:52:23  | 214-353    | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:54:28  | read      | Fail         |        | train_loop   | ../src/knn.cpp:41:17  | 214-229    | Could not analyze pattern                                                                                |
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:54:28  | read      | Inferred     | 49     | feature_loop | ../src/knn.cpp:52:23  |            |                                                                                                          |
+| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:54:44  | read      | Widen Fail   |        | feature_loop | ../src/knn.cpp:52:23  | 214-353    | Could not widen since type double size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:54:44  | read      | Inferred     | 490    | train_loop   | ../src/knn.cpp:41:17  |            |                                                                                                          |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:166:19 | write     | Widen Fail   |        | test_data    | ../src/knn.cpp:160:16 | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:166:19 | write     | Inferred     | 10     | test_data    | ../src/knn.cpp:160:16 |            |                                                                                                          |
+| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:58:21  | read      | Widen Fail   |        | train_loop   | ../src/knn.cpp:41:17  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0    |
+| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:58:21  | read      | Inferred     | 10     | train_loop   | ../src/knn.cpp:41:17  |            |                                                                                                          |
++--------------------+------------+-----------------------+-----------+--------------+--------+--------------+-----------------------+------------+----------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------+-----+--------+-------------+-----------+------------------------+---------+
+| Name                                          | DSP | Pragma | Variable    | Op        | Impl                   | Latency |
++-----------------------------------------------+-----+--------+-------------+-----------+------------------------+---------+
+| + knn_accelerator                             | 14  |        |             |           |                        |         |
+|   icmp_ln160_fu_235_p2                        |     |        | icmp_ln160  | seteq     | auto                   | 0       |
+|   add_ln160_fu_241_p2                         |     |        | add_ln160   | add       | fabric                 | 0       |
+|   add_ln163_fu_256_p2                         |     |        | add_ln163   | add       | fabric                 | 0       |
+|  + knn_distance_and_sort                      | 14  |        |             |           |                        |         |
+|    add_ln41_fu_280_p2                         |     |        | add_ln41    | add       | fabric                 | 0       |
+|    icmp_ln82_fu_300_p2                        |     |        | icmp_ln82   | seteq     | auto                   | 0       |
+|    add_ln82_fu_306_p2                         |     |        | add_ln82    | add       | fabric                 | 0       |
+|   + knn_distance_and_sort_Outline_init_top_k  | 0   |        |             |           |                        |         |
+|     icmp_ln28_fu_70_p2                        |     |        | icmp_ln28   | seteq     | auto                   | 0       |
+|     add_ln28_fu_76_p2                         |     |        | add_ln28    | add       | fabric                 | 0       |
+|   + knn_distance_and_sort_Outline_train_loop  | 14  |        |             |           |                        |         |
+|     icmp_ln41_fu_216_p2                       |     |        | icmp_ln41   | seteq     | auto                   | 0       |
+|     add_ln41_fu_222_p2                        |     |        | add_ln41    | add       | fabric                 | 0       |
+|     icmp_ln52_fu_247_p2                       |     |        | icmp_ln52   | seteq     | auto                   | 0       |
+|     add_ln52_fu_253_p2                        |     |        | add_ln52    | add       | fabric                 | 0       |
+|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4     | 3   |        | diff        | dsub      | fulldsp                | 6       |
+|     dmul_64ns_64ns_64_7_max_dsp_1_U5          | 11  |        | mul         | dmul      | maxdsp                 | 6       |
+|     dadddsub_64ns_64ns_64_7_full_dsp_1_U4     | 3   |        | sum_1       | dsub      | fulldsp                | 6       |
+|     dsqrt_64ns_64ns_64_57_no_dsp_1_U6         |     |        | tmp         | dsqrt     | fabric                 | 56      |
+|   + knn_distance_and_sort_Outline_sort_loop_i | 0   |        |             |           |                        |         |
+|     icmp_ln67_fu_136_p2                       |     |        | icmp_ln67   | seteq     | auto                   | 0       |
+|     i_6_fu_142_p2                             |     |        | i_6         | add       | fabric                 | 0       |
+|     icmp_ln69_fu_151_p2                       |     |        | icmp_ln69   | seteq     | auto                   | 0       |
+|     add_ln71_fu_157_p2                        |     |        | add_ln71    | add       | fabric                 | 0       |
+|     icmp_ln71_fu_222_p2                       |     |        | icmp_ln71   | setne     | auto                   | 0       |
+|     icmp_ln71_1_fu_228_p2                     |     |        | icmp_ln71_1 | seteq     | auto                   | 0       |
+|     or_ln71_fu_234_p2                         |     |        | or_ln71     | or        | auto                   | 0       |
+|     icmp_ln71_2_fu_240_p2                     |     |        | icmp_ln71_2 | setne     | auto                   | 0       |
+|     icmp_ln71_3_fu_246_p2                     |     |        | icmp_ln71_3 | seteq     | auto                   | 0       |
+|     or_ln71_1_fu_252_p2                       |     |        | or_ln71_1   | or        | auto                   | 0       |
+|     and_ln71_fu_258_p2                        |     |        | and_ln71    | and       | auto                   | 0       |
+|     dcmp_64ns_64ns_1_2_no_dsp_1_U18           |     |        | tmp_3       | dcmp      | auto                   | 1       |
+|     and_ln71_1_fu_264_p2                      |     |        | and_ln71_1  | and       | auto                   | 0       |
+|     add_ln67_fu_173_p2                        |     |        | add_ln67    | add       | fabric                 | 0       |
+|  + knn_majority_vote                          | 0   |        |             |           |                        |         |
+|    icmp_ln101_fu_134_p2                       |     |        | icmp_ln101  | seteq     | auto                   | 0       |
+|    add_ln101_fu_140_p2                        |     |        | add_ln101   | add       | fabric                 | 0       |
+|    icmp_ln113_fu_164_p2                       |     |        | icmp_ln113  | seteq     | auto                   | 0       |
+|    add_ln113_fu_170_p2                        |     |        | add_ln113   | add       | fabric                 | 0       |
+|    sparsemux_7_2_4_1_1_U34                    |     |        | idx         | sparsemux | onehotencoding_realdef | 0       |
+|    add_ln116_fu_213_p2                        |     |        | add_ln116   | add       | fabric                 | 0       |
+|    icmp_ln127_fu_223_p2                       |     |        | icmp_ln127  | seteq     | auto                   | 0       |
+|    add_ln127_fu_229_p2                        |     |        | add_ln127   | add       | fabric                 | 0       |
+|    icmp_ln129_fu_248_p2                       |     |        | icmp_ln129  | setgt     | auto                   | 0       |
+|    max_1_fu_254_p3                            |     |        | max_1       | select    | auto_sel               | 0       |
+|    max_label_1_fu_265_p3                      |     |        | max_label_1 | select    | auto_sel               | 0       |
++-----------------------------------------------+-----+--------+-------------+-----------+------------------------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------------+---------------+-----------+------+------+--------+-----------+------+---------+------------------+
+| Name                     | Usage         | Type      | BRAM | URAM | Pragma | Variable  | Impl | Latency | Bitwidth, Depth, |
+|                          |               |           |      |      |        |           |      |         | Banks            |
++--------------------------+---------------+-----------+------+------+--------+-----------+------+---------+------------------+
+| + knn_accelerator        |               |           | 10   | 0    |        |           |      |         |                  |
+|   control_s_axi_U        | interface     | s_axilite |      |      |        |           |      |         |                  |
+|   control_r_s_axi_U      | interface     | s_axilite |      |      |        |           |      |         |                  |
+|   gmem_x_test_m_axi_U    | interface     | m_axi     | 4    |      |        |           |      |         |                  |
+|   gmem_x_train_m_axi_U   | interface     | m_axi     | 4    |      |        |           |      |         |                  |
+|   gmem_y_test_m_axi_U    | interface     | m_axi     |      |      |        |           |      |         |                  |
+|   gmem_y_train_m_axi_U   | interface     | m_axi     | 2    |      |        |           |      |         |                  |
+|  + knn_distance_and_sort |               |           | 0    | 0    |        |           |      |         |                  |
+|    distances_U           | ram_t2p array |           |      |      |        | distances | auto | 1       | 64, 10, 1        |
+|    labels_U              | ram_t2p array |           |      |      |        | labels    | auto | 1       | 4, 10, 1         |
+|  + knn_majority_vote     |               |           | 0    | 0    |        |           |      |         |                  |
+|    counts_U              | ram_1p array  |           |      |      |        | counts    | auto | 1       | 32, 10, 1        |
++--------------------------+---------------+-----------+------+------+--------+-----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++-----------------+-------------------------------------------+---------------------------------------------------------------+------------------------------------------+
+| Type            | Options                                   | Location                                                      | Inferred From                            |
++-----------------+-------------------------------------------+---------------------------------------------------------------+------------------------------------------+
+| ARRAY_PARTITION | dim=1 type=complete variable=top_k_labels | variable top_k_labels in knn_accelerator (../src/knn.cpp:158) | syn.array_partition.complete_threshold=4 |
++-----------------+-------------------------------------------+---------------------------------------------------------------+------------------------------------------+
+
+* Valid Pragma Syntax
++-----------+-----------------------------------------------------------------+----------------------------------------------+
+| Type      | Options                                                         | Location                                     |
++-----------+-----------------------------------------------------------------+----------------------------------------------+
+| INLINE    | off                                                             | in knn_distance_and_sort (../src/knn.cpp:15) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:29) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:42) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:53) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:68) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:70) |
+| PIPELINE  | OFF                                                             | in knn_distance_and_sort (../src/knn.cpp:83) |
+| INLINE    | off                                                             | in knn_majority_vote (../src/knn.cpp:93)     |
+| PIPELINE  | OFF                                                             | in knn_majority_vote (../src/knn.cpp:102)    |
+| PIPELINE  | OFF                                                             | in knn_majority_vote (../src/knn.cpp:114)    |
+| PIPELINE  | OFF                                                             | in knn_majority_vote (../src/knn.cpp:128)    |
+| INTERFACE | m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10 | in knn_accelerator (../src/knn.cpp:149)      |
+| INTERFACE | m_axi port=y_train offset=slave bundle=gmem_y_train depth=10    | in knn_accelerator (../src/knn.cpp:150)      |
+| INTERFACE | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10   | in knn_accelerator (../src/knn.cpp:151)      |
+| INTERFACE | m_axi port=y_test offset=slave bundle=gmem_y_test depth=10      | in knn_accelerator (../src/knn.cpp:152)      |
+| INTERFACE | s_axilite port=return bundle=control                            | in knn_accelerator (../src/knn.cpp:155)      |
+| PIPELINE  | OFF                                                             | in knn_accelerator (../src/knn.cpp:161)      |
++-----------+-----------------------------------------------------------------+----------------------------------------------+
+
+

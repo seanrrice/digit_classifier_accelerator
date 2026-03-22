@@ -1,0 +1,269 @@
+<ENTRY>
+{
+ "thisFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\knn_accelerator.hlsrun_impl_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/22/26 00:39:55",
+ "timestampMillis": "1774165195779",
+ "buildStep": {
+  "cmdId": "9bc2dd24-776c-4480-b05d-ff6e08345914",
+  "name": "vitis-run",
+  "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\logs\\knn_accelerator.steps.log",
+  "commandLine": "T:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config Z:\\Labs\\clab\\knn_accelerator\\hls_config.cfg --work_dir knn_accelerator ",
+  "args": [
+   "--mode",
+   "hls",
+   "--impl",
+   "--config",
+   "Z:\\Labs\\clab\\knn_accelerator\\hls_config.cfg",
+   "--work_dir",
+   "knn_accelerator"
+  ],
+  "iniFiles": [],
+  "cwd": "Z:\\Labs\\clab\\knn_accelerator"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 00:39:55",
+ "timestampMillis": "1774165195780",
+ "status": {
+  "cmdId": "9bc2dd24-776c-4480-b05d-ff6e08345914",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200808",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IMPL",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "knn_accelerator",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "Z:/Labs\\digit_classifier_accelerator\\src\\knn.cpp",
+     "Z:/Labs\\digit_classifier_accelerator\\include\\knn.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200809",
+ "buildStep": {
+  "cmdId": "bc1a7375-d270-43fa-b98d-1e5371eace13",
+  "name": "",
+  "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "Z:\\Labs\\clab\\knn_accelerator"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200810",
+ "status": {
+  "cmdId": "bc1a7375-d270-43fa-b98d-1e5371eace13",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200812",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200813",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_syn.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200813",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_syn.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200814",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\verilog",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200814",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_impl.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:40:00",
+ "timestampMillis": "1774165200815",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_impl.xml",
+  "name": "",
+  "fileType": "XML",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:48:37",
+ "timestampMillis": "1774165717099",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_RTL_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:48:37",
+ "timestampMillis": "1774165717100",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_PLACE_AND_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 00:48:37",
+ "timestampMillis": "1774165717100",
+ "status": {
+  "cmdId": "bc1a7375-d270-43fa-b98d-1e5371eace13",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/22/26 00:48:37",
+ "timestampMillis": "1774165717292",
+ "status": {
+  "cmdId": "9bc2dd24-776c-4480-b05d-ff6e08345914",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:48:37",
+ "timestampMillis": "1774165717296",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/22/26 00:48:37",
+ "timestampMillis": "1774165717296",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

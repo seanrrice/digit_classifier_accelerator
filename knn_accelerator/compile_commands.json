@@ -1,6 +1,6 @@
 [
   {
-    "directory": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\knn_accelerator",
+    "directory": "Z:\\Labs\\digit_classifier_accelerator\\knn_accelerator",
     "arguments": [
       "T:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
       "--sysroot=T:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
@@ -8,20 +8,20 @@
       "-hls-syn-headers-dir=T:\\AMDDesignTools\\2025.2\\Vitis\\common\\technology\\autopilot",
       "-fhlstoplevel=knn_accelerator",
       "-c",
-      "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\src\\knn.cpp"
+      "Z:\\Labs\\digit_classifier_accelerator\\src\\knn.cpp"
     ],
-    "file": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\src\\knn.cpp"
+    "file": "Z:\\Labs\\digit_classifier_accelerator\\src\\knn.cpp"
   },
   {
-    "directory": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\knn_accelerator",
+    "directory": "Z:\\Labs\\digit_classifier_accelerator\\knn_accelerator",
     "arguments": [
       "T:\\AMDDesignTools\\2025.2\\Vitis\\win64\\tools\\vcxx\\libexec\\clang++.exe",
       "--sysroot=T:\\AMDDesignTools\\2025.2\\Vitis\\tps\\mingw\\10.0.0\\win64.o\\nt",
       "-fhls-tb",
       "-hls-sim-headers-dir=T:\\AMDDesignTools\\2025.2\\Vitis\\include",
       "-c",
-      "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\test\\knn_test.cpp"
+      "Z:\\Labs\\digit_classifier_accelerator\\test\\knn_test.cpp"
     ],
-    "file": "T:\\Documents\\ECE574\\Labs\\digit_classifier_accelerator\\test\\knn_test.cpp"
+    "file": "Z:\\Labs\\digit_classifier_accelerator\\test\\knn_test.cpp"
   }
 ]
