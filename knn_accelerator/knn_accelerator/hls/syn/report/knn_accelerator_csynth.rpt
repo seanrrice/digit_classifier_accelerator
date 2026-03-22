@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_accelerator'
 ================================================================
-* Date:           Sat Mar 21 23:51:31 2026
+* Date:           Sun Mar 22 01:03:47 2026
 
 * Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        knn_accelerator
@@ -25,30 +25,30 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+--------+--------+---------+
-    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
-    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
-    +---------+---------+----------+----------+--------+--------+---------+
-    |   120747|   124347|  1.207 ms|  1.243 ms|  120748|  124348|       no|
-    +---------+---------+----------+----------+--------+--------+---------+
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    38967|    41127|  0.390 ms|  0.411 ms|  38968|  41128|       no|
+    +---------+---------+----------+----------+-------+-------+---------+
 
     + Detail: 
         * Instance: 
-        +----------------------------------+-----------------------+---------+---------+----------+----------+-------+-------+---------+
-        |                                  |                       |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-        |             Instance             |         Module        |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-        +----------------------------------+-----------------------+---------+---------+----------+----------+-------+-------+---------+
-        |grp_knn_distance_and_sort_fu_178  |knn_distance_and_sort  |    12029|    12389|  0.120 ms|  0.124 ms|  12029|  12389|       no|
-        |grp_knn_majority_vote_fu_195      |knn_majority_vote      |       39|       39|  0.390 us|  0.390 us|     39|     39|       no|
-        +----------------------------------+-----------------------+---------+---------+----------+----------+-------+-------+---------+
+        +----------------------------------+-----------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                  |                       |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |             Instance             |         Module        |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +----------------------------------+-----------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_knn_distance_and_sort_fu_174  |knn_distance_and_sort  |     3851|     4067|  38.510 us|  40.670 us|  3851|  4067|       no|
+        |grp_knn_majority_vote_fu_191      |knn_majority_vote      |       39|       39|   0.390 us|   0.390 us|    39|    39|       no|
+        +----------------------------------+-----------------------+---------+---------+-----------+-----------+------+------+---------+
 
         * Loop: 
-        +-------------+---------+---------+---------------+-----------+-----------+------+----------+
-        |             |  Latency (cycles) |   Iteration   |  Initiation Interval  | Trip |          |
-        |  Loop Name  |   min   |   max   |    Latency    |  achieved |   target  | Count| Pipelined|
-        +-------------+---------+---------+---------------+-----------+-----------+------+----------+
-        |- test_data  |   120740|   124340|  12074 ~ 12434|          -|          -|    10|        no|
-        +-------------+---------+---------+---------------+-----------+-----------+------+----------+
+        +-------------+---------+---------+-------------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) |  Iteration  |  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |   Latency   |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+-------------+-----------+-----------+------+----------+
+        |- test_data  |    38960|    41120|  3896 ~ 4112|          -|          -|    10|        no|
+        +-------------+---------+---------+-------------+-----------+-----------+------+----------+
 
 
 
@@ -62,34 +62,34 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|     40|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |       10|   14|    5277|   7377|    0|
+|Instance         |        6|    4|    7174|  13882|    0|
 |Memory           |        -|    -|       -|      -|    -|
 |Multiplexer      |        -|    -|       0|    164|    -|
-|Register         |        -|    -|     337|      -|    -|
+|Register         |        -|    -|     313|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |       10|   14|    5614|   7581|    0|
+|Total            |        6|    4|    7487|  14086|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        3|    6|       5|     14|    0|
+|Utilization (%)  |        2|    1|       7|     26|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +----------------------------------+-----------------------+---------+----+------+------+-----+
-    |             Instance             |         Module        | BRAM_18K| DSP|  FF  |  LUT | URAM|
-    +----------------------------------+-----------------------+---------+----+------+------+-----+
-    |control_r_s_axi_U                 |control_r_s_axi        |        0|   0|   310|   552|    0|
-    |control_s_axi_U                   |control_s_axi          |        0|   0|    36|    40|    0|
-    |gmem_x_test_m_axi_U               |gmem_x_test_m_axi      |        4|   0|   725|   843|    0|
-    |gmem_x_train_m_axi_U              |gmem_x_train_m_axi     |        4|   0|   725|   843|    0|
-    |gmem_y_test_m_axi_U               |gmem_y_test_m_axi      |        0|   0|   611|   665|    0|
-    |gmem_y_train_m_axi_U              |gmem_y_train_m_axi     |        2|   0|   671|   657|    0|
-    |grp_knn_distance_and_sort_fu_178  |knn_distance_and_sort  |        0|  14|  2079|  3437|    0|
-    |grp_knn_majority_vote_fu_195      |knn_majority_vote      |        0|   0|   120|   340|    0|
-    +----------------------------------+-----------------------+---------+----+------+------+-----+
-    |Total                             |                       |       10|  14|  5277|  7377|    0|
-    +----------------------------------+-----------------------+---------+----+------+------+-----+
+    +----------------------------------+-----------------------+---------+----+------+-------+-----+
+    |             Instance             |         Module        | BRAM_18K| DSP|  FF  |  LUT  | URAM|
+    +----------------------------------+-----------------------+---------+----+------+-------+-----+
+    |control_r_s_axi_U                 |control_r_s_axi        |        0|   0|   310|    552|    0|
+    |control_s_axi_U                   |control_s_axi          |        0|   0|    36|     40|    0|
+    |gmem_x_test_m_axi_U               |gmem_x_test_m_axi      |        2|   0|   671|    657|    0|
+    |gmem_x_train_m_axi_U              |gmem_x_train_m_axi     |        2|   0|   671|    657|    0|
+    |gmem_y_test_m_axi_U               |gmem_y_test_m_axi      |        0|   0|   647|    768|    0|
+    |gmem_y_train_m_axi_U              |gmem_y_train_m_axi     |        2|   0|   707|    777|    0|
+    |grp_knn_distance_and_sort_fu_174  |knn_distance_and_sort  |        0|   4|  4035|  10095|    0|
+    |grp_knn_majority_vote_fu_191      |knn_majority_vote      |        0|   0|    97|    336|    0|
+    +----------------------------------+-----------------------+---------+----+------+-------+-----+
+    |Total                             |                       |        6|   4|  7174|  13882|    0|
+    +----------------------------------+-----------------------+---------+----+------+-------+-----+
 
     * DSP: 
     N/A
@@ -104,9 +104,9 @@
     +----------------------+----------+----+---+----+------------+------------+
     |     Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +----------------------+----------+----+---+----+------------+------------+
-    |add_ln160_fu_241_p2   |         +|   0|  0|  13|           4|           1|
-    |add_ln163_fu_256_p2   |         +|   0|  0|  14|           9|           6|
-    |icmp_ln160_fu_235_p2  |      icmp|   0|  0|  13|           4|           4|
+    |add_ln160_fu_224_p2   |         +|   0|  0|  13|           4|           1|
+    |add_ln163_fu_239_p2   |         +|   0|  0|  14|           9|           6|
+    |icmp_ln160_fu_218_p2  |      icmp|   0|  0|  13|           4|           4|
     +----------------------+----------+----+---+----+------------+------------+
     |Total                 |          |   0|  0|  40|          17|          11|
     +----------------------+----------+----+---+----+------------+------------+
@@ -125,8 +125,8 @@
     |gmem_y_test_blk_n_W     |   9|          2|    1|          2|
     |gmem_y_train_0_ARVALID  |   9|          2|    1|          2|
     |gmem_y_train_0_RREADY   |   9|          2|    1|          2|
-    |i_fu_118                |   9|          2|    4|          8|
-    |phi_mul_fu_114          |   9|          2|    9|         18|
+    |i_fu_110                |   9|          2|    4|          8|
+    |phi_mul_fu_106          |   9|          2|    9|         18|
     +------------------------+----+-----------+-----+-----------+
     |Total                   | 164|         36|   23|         58|
     +------------------------+----+-----------+-----+-----------+
@@ -135,22 +135,23 @@
     +-----------------------------------------------+----+----+-----+-----------+
     |                      Name                     | FF | LUT| Bits| Const Bits|
     +-----------------------------------------------+----+----+-----+-----------+
-    |X_test_read_reg_303                            |  64|   0|   64|          0|
-    |X_train_read_reg_298                           |  64|   0|   64|          0|
+    |X_test_read_reg_305                            |  64|   0|   64|          0|
+    |X_train_read_reg_300                           |  64|   0|   64|          0|
     |ap_CS_fsm                                      |  13|   0|   13|          0|
-    |gmem_y_test_addr_reg_326                       |  64|   0|   64|          0|
-    |grp_knn_distance_and_sort_fu_178_ap_start_reg  |   1|   0|    1|          0|
-    |grp_knn_majority_vote_fu_195_ap_start_reg      |   1|   0|    1|          0|
-    |i_fu_118                                       |   4|   0|    4|          0|
-    |phi_mul_fu_114                                 |   9|   0|    9|          0|
-    |phi_mul_load_reg_336                           |   9|   0|    9|          0|
-    |tmp_reg_350                                    |  32|   0|   32|          0|
-    |top_k_labels_1_fu_126                          |   4|   0|    4|          0|
-    |top_k_labels_2_fu_130                          |   4|   0|    4|          0|
-    |top_k_labels_fu_122                            |   4|   0|    4|          0|
-    |y_train_read_reg_293                           |  64|   0|   64|          0|
+    |gmem_y_test_addr_reg_328                       |  64|   0|   64|          0|
+    |grp_knn_distance_and_sort_fu_174_ap_start_reg  |   1|   0|    1|          0|
+    |grp_knn_majority_vote_fu_191_ap_start_reg      |   1|   0|    1|          0|
+    |i_fu_110                                       |   4|   0|    4|          0|
+    |phi_mul_fu_106                                 |   9|   0|    9|          0|
+    |phi_mul_load_reg_338                           |   9|   0|    9|          0|
+    |ref_tmp_05_fu_114                              |   4|   0|    4|          0|
+    |ref_tmp_reg_355                                |   4|   0|    4|          0|
+    |top_k_labels_1_fu_122                          |   4|   0|    4|          0|
+    |top_k_labels_2_fu_126                          |   4|   0|    4|          0|
+    |top_k_labels_fu_118                            |   4|   0|    4|          0|
+    |y_train_read_reg_295                           |  64|   0|   64|          0|
     +-----------------------------------------------+----+----+-----+-----------+
-    |Total                                          | 337|   0|  337|          0|
+    |Total                                          | 313|   0|  313|          0|
     +-----------------------------------------------+----+----+-----+-----------+
 
 
@@ -214,8 +215,8 @@
 |m_axi_gmem_x_test_AWUSER     |  out|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_WVALID     |  out|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_WREADY     |   in|    1|       m_axi|      gmem_x_test|       pointer|
-|m_axi_gmem_x_test_WDATA      |  out|   64|       m_axi|      gmem_x_test|       pointer|
-|m_axi_gmem_x_test_WSTRB      |  out|    8|       m_axi|      gmem_x_test|       pointer|
+|m_axi_gmem_x_test_WDATA      |  out|   32|       m_axi|      gmem_x_test|       pointer|
+|m_axi_gmem_x_test_WSTRB      |  out|    4|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_WLAST      |  out|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_WID        |  out|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_WUSER      |  out|    1|       m_axi|      gmem_x_test|       pointer|
@@ -234,7 +235,7 @@
 |m_axi_gmem_x_test_ARUSER     |  out|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_RVALID     |   in|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_RREADY     |  out|    1|       m_axi|      gmem_x_test|       pointer|
-|m_axi_gmem_x_test_RDATA      |   in|   64|       m_axi|      gmem_x_test|       pointer|
+|m_axi_gmem_x_test_RDATA      |   in|   32|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_RLAST      |   in|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_RID        |   in|    1|       m_axi|      gmem_x_test|       pointer|
 |m_axi_gmem_x_test_RUSER      |   in|    1|       m_axi|      gmem_x_test|       pointer|
@@ -259,8 +260,8 @@
 |m_axi_gmem_x_train_AWUSER    |  out|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_WVALID    |  out|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_WREADY    |   in|    1|       m_axi|     gmem_x_train|       pointer|
-|m_axi_gmem_x_train_WDATA     |  out|   64|       m_axi|     gmem_x_train|       pointer|
-|m_axi_gmem_x_train_WSTRB     |  out|    8|       m_axi|     gmem_x_train|       pointer|
+|m_axi_gmem_x_train_WDATA     |  out|   32|       m_axi|     gmem_x_train|       pointer|
+|m_axi_gmem_x_train_WSTRB     |  out|    4|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_WLAST     |  out|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_WID       |  out|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_WUSER     |  out|    1|       m_axi|     gmem_x_train|       pointer|
@@ -279,7 +280,7 @@
 |m_axi_gmem_x_train_ARUSER    |  out|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_RVALID    |   in|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_RREADY    |  out|    1|       m_axi|     gmem_x_train|       pointer|
-|m_axi_gmem_x_train_RDATA     |   in|   64|       m_axi|     gmem_x_train|       pointer|
+|m_axi_gmem_x_train_RDATA     |   in|   32|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_RLAST     |   in|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_RID       |   in|    1|       m_axi|     gmem_x_train|       pointer|
 |m_axi_gmem_x_train_RUSER     |   in|    1|       m_axi|     gmem_x_train|       pointer|

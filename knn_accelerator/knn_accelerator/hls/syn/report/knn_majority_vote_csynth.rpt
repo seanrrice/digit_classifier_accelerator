@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_majority_vote'
 ================================================================
-* Date:           Sat Mar 21 23:51:30 2026
+* Date:           Sun Mar 22 01:03:47 2026
 
 * Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        knn_accelerator
@@ -56,14 +56,14 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|    214|    -|
+|Expression       |        -|    -|       0|    192|    -|
 |FIFO             |        -|    -|       -|      -|    -|
 |Instance         |        -|    -|       0|      9|    -|
 |Memory           |        0|    -|      32|      5|    0|
-|Multiplexer      |        -|    -|       0|    112|    -|
-|Register         |        -|    -|      88|      -|    -|
+|Multiplexer      |        -|    -|       0|    130|    -|
+|Register         |        -|    -|      65|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    0|     120|    340|    0|
+|Total            |        0|    0|      97|    336|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
@@ -75,7 +75,7 @@
     +-------------------------+---------------------+---------+----+---+----+-----+
     |         Instance        |        Module       | BRAM_18K| DSP| FF| LUT| URAM|
     +-------------------------+---------------------+---------+----+---+----+-----+
-    |sparsemux_7_2_4_1_1_U34  |sparsemux_7_2_4_1_1  |        0|   0|  0|   9|    0|
+    |sparsemux_7_2_4_1_1_U29  |sparsemux_7_2_4_1_1  |        0|   0|  0|   9|    0|
     +-------------------------+---------------------+---------+----+---+----+-----+
     |Total                    |                     |        0|   0|  0|   9|    0|
     +-------------------------+---------------------+---------+----+---+----+-----+
@@ -96,52 +96,58 @@
     N/A
 
     * Expression: 
-    +-----------------------+----------+----+---+----+------------+------------+
-    |     Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-----------------------+----------+----+---+----+------------+------------+
-    |add_ln101_fu_140_p2    |         +|   0|  0|  13|           4|           1|
-    |add_ln113_fu_170_p2    |         +|   0|  0|  10|           2|           1|
-    |add_ln116_fu_213_p2    |         +|   0|  0|  39|          32|           1|
-    |add_ln127_fu_229_p2    |         +|   0|  0|  13|           4|           1|
-    |icmp_ln101_fu_134_p2   |      icmp|   0|  0|  13|           4|           4|
-    |icmp_ln113_fu_164_p2   |      icmp|   0|  0|  10|           2|           2|
-    |icmp_ln127_fu_223_p2   |      icmp|   0|  0|  13|           4|           4|
-    |icmp_ln129_fu_248_p2   |      icmp|   0|  0|  39|          32|          32|
-    |max_1_fu_254_p3        |    select|   0|  0|  32|           1|          32|
-    |max_label_1_fu_265_p3  |    select|   0|  0|  32|           1|          32|
-    +-----------------------+----------+----+---+----+------------+------------+
-    |Total                  |          |   0|  0| 214|          86|         110|
-    +-----------------------+----------+----+---+----+------------+------------+
+    +------------------------+----------+----+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+----+---+----+------------+------------+
+    |add_ln101_fu_162_p2     |         +|   0|  0|  13|           4|           1|
+    |add_ln113_fu_192_p2     |         +|   0|  0|  10|           2|           1|
+    |add_ln116_fu_235_p2     |         +|   0|  0|  39|          32|           1|
+    |i_7_fu_251_p2           |         +|   0|  0|  13|           4|           1|
+    |icmp_ln101_fu_156_p2    |      icmp|   0|  0|  13|           4|           4|
+    |icmp_ln113_fu_186_p2    |      icmp|   0|  0|  10|           2|           2|
+    |icmp_ln127_fu_245_p2    |      icmp|   0|  0|  13|           4|           4|
+    |icmp_ln129_fu_277_p2    |      icmp|   0|  0|  39|          32|          32|
+    |or_ln129_fu_283_p2      |        or|   0|  0|   2|           1|           1|
+    |max_2_fu_296_p3         |    select|   0|  0|  32|           1|          32|
+    |select_ln129_fu_289_p3  |    select|   0|  0|   4|           1|           4|
+    |select_ln137_fu_267_p3  |    select|   0|  0|   4|           1|           4|
+    +------------------------+----------+----+---+----+------------+------------+
+    |Total                   |          |   0|  0| 192|          88|          87|
+    +------------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +-----------------------+----+-----------+-----+-----------+
     |          Name         | LUT| Input Size| Bits| Total Bits|
     +-----------------------+----+-----------+-----+-----------+
     |ap_NS_fsm              |  37|          7|    1|          7|
+    |ap_return              |   9|          2|    4|          8|
     |counts_address0_local  |  25|          5|    4|         20|
     |counts_d0_local        |  14|          3|   32|         96|
-    |i_1_fu_62              |   9|          2|    2|          4|
+    |i_1_fu_66              |   9|          2|    2|          4|
     |i_2_fu_74              |   9|          2|    4|          8|
-    |i_fu_54                |   9|          2|    4|          8|
-    |max_fu_66              |   9|          2|   32|         64|
+    |i_fu_58                |   9|          2|    4|          8|
+    |max_fu_70              |   9|          2|   32|         64|
+    |write_flag_0_reg_133   |   9|          2|    1|          2|
     +-----------------------+----+-----------+-----+-----------+
-    |Total                  | 112|         23|   79|        207|
+    |Total                  | 130|         27|   84|        217|
     +-----------------------+----+-----------+-----+-----------+
 
     * Register: 
     +-----------------------+----+----+-----+-----------+
     |          Name         | FF | LUT| Bits| Const Bits|
     +-----------------------+----+----+-----+-----------+
+    |agg_result_02_fu_78    |   4|   0|    4|          0|
     |ap_CS_fsm              |   6|   0|    6|          0|
-    |counts_addr_1_reg_318  |   4|   0|    4|          0|
-    |i_1_fu_62              |   2|   0|    2|          0|
+    |ap_return_preg         |   4|   0|    4|          0|
+    |counts_addr_1_reg_354  |   4|   0|    4|          0|
+    |i_1_fu_66              |   2|   0|    2|          0|
     |i_2_fu_74              |   4|   0|    4|          0|
-    |i_5_reg_343            |   4|   0|    4|          0|
-    |i_fu_54                |   4|   0|    4|          0|
-    |max_fu_66              |  32|   0|   32|          0|
-    |max_label_fu_70        |  32|   0|   32|          0|
+    |i_6_reg_379            |   4|   0|    4|          0|
+    |i_fu_58                |   4|   0|    4|          0|
+    |max_fu_70              |  32|   0|   32|          0|
+    |write_flag_0_reg_133   |   1|   0|    1|          0|
     +-----------------------+----+----+-----+-----------+
-    |Total                  |  88|   0|   88|          0|
+    |Total                  |  65|   0|   65|          0|
     +-----------------------+----+----+-----+-----------+
 
 
@@ -150,18 +156,19 @@
 == Interface
 ================================================================
 * Summary: 
-+---------------------+-----+-----+------------+---------------------+--------------+
-|      RTL Ports      | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
-+---------------------+-----+-----+------------+---------------------+--------------+
-|ap_clk               |   in|    1|  ap_ctrl_hs|    knn_majority_vote|  return value|
-|ap_rst               |   in|    1|  ap_ctrl_hs|    knn_majority_vote|  return value|
-|ap_start             |   in|    1|  ap_ctrl_hs|    knn_majority_vote|  return value|
-|ap_done              |  out|    1|  ap_ctrl_hs|    knn_majority_vote|  return value|
-|ap_idle              |  out|    1|  ap_ctrl_hs|    knn_majority_vote|  return value|
-|ap_ready             |  out|    1|  ap_ctrl_hs|    knn_majority_vote|  return value|
-|ap_return            |  out|   32|  ap_ctrl_hs|    knn_majority_vote|  return value|
-|top_k_labels_read    |   in|    4|     ap_none|    top_k_labels_read|        scalar|
-|top_k_labels_read_8  |   in|    4|     ap_none|  top_k_labels_read_8|        scalar|
-|top_k_labels_read_9  |   in|    4|     ap_none|  top_k_labels_read_9|        scalar|
-+---------------------+-----+-----+------------+---------------------+--------------+
++-----------+-----+-----+------------+-------------------+--------------+
+| RTL Ports | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-----------+-----+-----+------------+-------------------+--------------+
+|ap_clk     |   in|    1|  ap_ctrl_hs|  knn_majority_vote|  return value|
+|ap_rst     |   in|    1|  ap_ctrl_hs|  knn_majority_vote|  return value|
+|ap_start   |   in|    1|  ap_ctrl_hs|  knn_majority_vote|  return value|
+|ap_done    |  out|    1|  ap_ctrl_hs|  knn_majority_vote|  return value|
+|ap_idle    |  out|    1|  ap_ctrl_hs|  knn_majority_vote|  return value|
+|ap_ready   |  out|    1|  ap_ctrl_hs|  knn_majority_vote|  return value|
+|ap_return  |  out|    4|  ap_ctrl_hs|  knn_majority_vote|  return value|
+|p_read     |   in|    4|     ap_none|             p_read|        scalar|
+|p_read1    |   in|    4|     ap_none|            p_read1|        scalar|
+|p_read2    |   in|    4|     ap_none|            p_read2|        scalar|
+|p_read3    |   in|    4|     ap_none|            p_read3|        scalar|
++-----------+-----+-----+------------+-------------------+--------------+
 

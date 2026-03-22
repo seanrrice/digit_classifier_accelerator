@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort_Outline_train_loop'
 ================================================================
-* Date:           Sat Mar 21 23:51:28 2026
+* Date:           Sun Mar 22 01:03:45 2026
 
 * Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        knn_accelerator
@@ -25,24 +25,29 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    11941|    11941|  0.119 ms|  0.119 ms|  11941|  11941|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3781|     3781|  37.810 us|  37.810 us|  3781|  3781|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
 
     + Detail: 
         * Instance: 
-        N/A
+        +-------------------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                               |                    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |            Instance           |       Module       |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
+        |grp_sqrt_fixed_42_22_s_fu_189  |sqrt_fixed_42_22_s  |       23|       23|  0.230 us|  0.230 us|    1|    1|      yes|
+        +-------------------------------+--------------------+---------+---------+----------+----------+-----+-----+---------+
 
         * Loop: 
         +-----------------+---------+---------+----------+-----------+-----------+------+----------+
         |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
         |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
         +-----------------+---------+---------+----------+-----------+-----------+------+----------+
-        |- train_loop     |    11940|    11940|      1194|          -|          -|    10|        no|
-        | + feature_loop  |     1127|     1127|        23|          -|          -|    49|        no|
+        |- train_loop     |     3780|     3780|       378|          -|          -|    10|        no|
+        | + feature_loop  |      344|      344|         7|          -|          -|    49|        no|
         +-----------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
@@ -55,31 +60,30 @@
 |       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
 +-----------------+---------+-----+--------+-------+-----+
 |DSP              |        -|    -|       -|      -|    -|
-|Expression       |        -|    -|       0|     56|    -|
+|Expression       |        -|    -|       0|    160|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|   14|     972|   1727|    -|
+|Instance         |        -|    4|    3370|   8724|    -|
 |Memory           |        -|    -|       -|      -|    -|
-|Multiplexer      |        -|    -|       0|    563|    -|
-|Register         |        -|    -|     566|      -|    -|
+|Multiplexer      |        -|    -|       0|    248|    -|
+|Register         |        -|    -|     380|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|   14|    1538|   2346|    0|
+|Total            |        0|    4|    3750|   9132|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    6|       1|      4|    0|
+|Utilization (%)  |        0|    1|       3|     17|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
     * Instance: 
-    +---------------------------------------+------------------------------------+---------+----+-----+------+-----+
-    |                Instance               |               Module               | BRAM_18K| DSP|  FF |  LUT | URAM|
-    +---------------------------------------+------------------------------------+---------+----+-----+------+-----+
-    |dadddsub_64ns_64ns_64_7_full_dsp_1_U4  |dadddsub_64ns_64ns_64_7_full_dsp_1  |        0|   3|  630|  1141|    0|
-    |dmul_64ns_64ns_64_7_max_dsp_1_U5       |dmul_64ns_64ns_64_7_max_dsp_1       |        0|  11|  342|   586|    0|
-    |dsqrt_64ns_64ns_64_57_no_dsp_1_U6      |dsqrt_64ns_64ns_64_57_no_dsp_1      |        0|   0|    0|     0|    0|
-    +---------------------------------------+------------------------------------+---------+----+-----+------+-----+
-    |Total                                  |                                    |        0|  14|  972|  1727|    0|
-    +---------------------------------------+------------------------------------+---------+----+-----+------+-----+
+    +-------------------------------+--------------------+---------+----+------+------+-----+
+    |            Instance           |       Module       | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +-------------------------------+--------------------+---------+----+------+------+-----+
+    |mul_28s_28s_56_3_1_U5          |mul_28s_28s_56_3_1  |        0|   4|   141|   112|    0|
+    |grp_sqrt_fixed_42_22_s_fu_189  |sqrt_fixed_42_22_s  |        0|   0|  3229|  8612|    0|
+    +-------------------------------+--------------------+---------+----+------+------+-----+
+    |Total                          |                    |        0|   4|  3370|  8724|    0|
+    +-------------------------------+--------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
@@ -95,54 +99,54 @@
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
     |add_ln41_fu_222_p2   |         +|   0|  0|  13|           4|           1|
-    |add_ln52_fu_253_p2   |         +|   0|  0|  14|           6|           1|
+    |add_ln52_fu_252_p2   |         +|   0|  0|  14|           6|           1|
+    |add_ln55_fu_294_p2   |         +|   0|  0|  69|          62|          62|
+    |diff_fu_274_p2       |         -|   0|  0|  35|          28|          28|
     |icmp_ln41_fu_216_p2  |      icmp|   0|  0|  13|           4|           4|
-    |icmp_ln52_fu_247_p2  |      icmp|   0|  0|  14|           6|           5|
+    |icmp_ln52_fu_246_p2  |      icmp|   0|  0|  14|           6|           5|
     |ap_block_state12     |        or|   0|  0|   2|           1|           1|
     +---------------------+----------+----+---+----+------------+------------+
-    |Total                |          |   0|  0|  56|          21|          12|
+    |Total                |          |   0|  0| 160|         111|         102|
     +---------------------+----------+----+---+----+------------+------------+
 
     * Multiplexer: 
     +----------------------+-----+-----------+-----+-----------+
     |         Name         | LUT | Input Size| Bits| Total Bits|
     +----------------------+-----+-----------+-----+-----------+
-    |ap_NS_fsm             |  458|         91|    1|         91|
+    |ap_NS_fsm             |  185|         42|    1|         42|
+    |empty_reg_177         |    9|          2|   42|         84|
     |gmem_x_test_blk_n_AR  |    9|          2|    1|          2|
     |gmem_x_test_blk_n_R   |    9|          2|    1|          2|
     |gmem_x_train_blk_n_R  |    9|          2|    1|          2|
     |gmem_y_train_blk_n_R  |    9|          2|    1|          2|
-    |grp_fu_181_opcode     |   14|          3|    2|          6|
-    |grp_fu_181_p0         |   14|          3|   64|        192|
-    |grp_fu_181_p1         |   14|          3|   64|        192|
-    |i_3_fu_88             |    9|          2|    4|          8|
-    |j_reg_158             |    9|          2|    6|         12|
-    |sum_reg_169           |    9|          2|   64|        128|
+    |i_4_fu_96             |    9|          2|    4|          8|
+    |j_reg_166             |    9|          2|    6|         12|
     +----------------------+-----+-----------+-----+-----------+
-    |Total                 |  563|        114|  209|        637|
+    |Total                 |  248|         56|   57|        154|
     +----------------------+-----+-----------+-----+-----------+
 
     * Register: 
-    +--------------------------------+----+----+-----+-----------+
-    |              Name              | FF | LUT| Bits| Const Bits|
-    +--------------------------------+----+----+-----+-----------+
-    |add_ln41_reg_303                |   4|   0|    4|          0|
-    |add_ln52_reg_333                |   6|   0|    6|          0|
-    |ap_CS_fsm                       |  90|   0|   90|          0|
-    |diff_reg_358                    |  64|   0|   64|          0|
-    |gmem_x_test_addr_read_reg_338   |  64|   0|   64|          0|
-    |gmem_x_train_addr_read_reg_343  |  64|   0|   64|          0|
-    |i_3_fu_88                       |   4|   0|    4|          0|
-    |j_reg_158                       |   6|   0|    6|          0|
-    |mul_reg_364                     |  64|   0|   64|          0|
-    |sext_ln52_cast_reg_287          |  64|   0|   64|          0|
-    |sum_reg_169                     |  64|   0|   64|          0|
-    |tmp_reg_379                     |  64|   0|   64|          0|
-    |trunc_ln58_reg_374              |   4|   0|    4|          0|
-    |zext_ln41_reg_324               |   4|   0|   64|         60|
-    +--------------------------------+----+----+-----+-----------+
-    |Total                           | 566|   0|  626|         60|
-    +--------------------------------+----+----+-----+-----------+
+    +--------------------------+----+----+-----+-----------+
+    |           Name           | FF | LUT| Bits| Const Bits|
+    +--------------------------+----+----+-----+-----------+
+    |add_ln41_reg_338          |   4|   0|    4|          0|
+    |add_ln52_reg_369          |   6|   0|    6|          0|
+    |ap_CS_fsm                 |  41|   0|   41|          0|
+    |diff_reg_389              |  28|   0|   28|          0|
+    |empty_reg_177             |  42|   0|   42|          0|
+    |gmem_x_test_addr_reg_348  |  64|   0|   64|          0|
+    |i_4_fu_96                 |   4|   0|    4|          0|
+    |icmp_ln52_reg_365         |   1|   0|    1|          0|
+    |j_reg_166                 |   6|   0|    6|          0|
+    |mul_ln55_reg_400          |  56|   0|   56|          0|
+    |sext_ln52_cast_reg_327    |  64|   0|   64|          0|
+    |trunc_ln54_1_reg_379      |  28|   0|   28|          0|
+    |trunc_ln54_reg_374        |  28|   0|   28|          0|
+    |trunc_ln58_reg_384        |   4|   0|    4|          0|
+    |zext_ln41_reg_359         |   4|   0|   64|         60|
+    +--------------------------+----+----+-----+-----------+
+    |Total                     | 380|   0|  440|         60|
+    +--------------------------+----+----+-----+-----------+
 
 
 
@@ -162,7 +166,7 @@
 |distances_address0             |  out|    4|   ap_memory|                                 distances|         array|
 |distances_ce0                  |  out|    1|   ap_memory|                                 distances|         array|
 |distances_we0                  |  out|    1|   ap_memory|                                 distances|         array|
-|distances_d0                   |  out|   64|   ap_memory|                                 distances|         array|
+|distances_d0                   |  out|   31|   ap_memory|                                 distances|         array|
 |labels_address0                |  out|    4|   ap_memory|                                    labels|         array|
 |labels_ce0                     |  out|    1|   ap_memory|                                    labels|         array|
 |labels_we0                     |  out|    1|   ap_memory|                                    labels|         array|
@@ -182,8 +186,8 @@
 |m_axi_gmem_y_train_0_AWUSER    |  out|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WVALID    |  out|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WREADY    |   in|    1|       m_axi|                              gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_WDATA     |  out|   32|       m_axi|                              gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_WSTRB     |  out|    4|       m_axi|                              gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_WDATA     |  out|    8|       m_axi|                              gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_WSTRB     |  out|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WLAST     |  out|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WID       |  out|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WUSER     |  out|    1|       m_axi|                              gmem_y_train|       pointer|
@@ -202,10 +206,10 @@
 |m_axi_gmem_y_train_0_ARUSER    |  out|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RVALID    |   in|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RREADY    |  out|    1|       m_axi|                              gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_RDATA     |   in|   32|       m_axi|                              gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_RDATA     |   in|    8|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RLAST     |   in|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RID       |   in|    1|       m_axi|                              gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_RFIFONUM  |   in|    9|       m_axi|                              gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_RFIFONUM  |   in|   11|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RUSER     |   in|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RRESP     |   in|    2|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_BVALID    |   in|    1|       m_axi|                              gmem_y_train|       pointer|
@@ -213,7 +217,7 @@
 |m_axi_gmem_y_train_0_BRESP     |   in|    2|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_BID       |   in|    1|       m_axi|                              gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_BUSER     |   in|    1|       m_axi|                              gmem_y_train|       pointer|
-|sext_ln41_1                    |   in|   62|     ap_none|                               sext_ln41_1|        scalar|
+|y_train                        |   in|   64|     ap_none|                                   y_train|        scalar|
 |m_axi_gmem_x_test_0_AWVALID    |  out|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_AWREADY    |   in|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_AWADDR     |  out|   64|       m_axi|                               gmem_x_test|       pointer|
@@ -229,8 +233,8 @@
 |m_axi_gmem_x_test_0_AWUSER     |  out|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WVALID     |  out|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WREADY     |   in|    1|       m_axi|                               gmem_x_test|       pointer|
-|m_axi_gmem_x_test_0_WDATA      |  out|   64|       m_axi|                               gmem_x_test|       pointer|
-|m_axi_gmem_x_test_0_WSTRB      |  out|    8|       m_axi|                               gmem_x_test|       pointer|
+|m_axi_gmem_x_test_0_WDATA      |  out|   32|       m_axi|                               gmem_x_test|       pointer|
+|m_axi_gmem_x_test_0_WSTRB      |  out|    4|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WLAST      |  out|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WID        |  out|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WUSER      |  out|    1|       m_axi|                               gmem_x_test|       pointer|
@@ -249,7 +253,7 @@
 |m_axi_gmem_x_test_0_ARUSER     |  out|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RVALID     |   in|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RREADY     |  out|    1|       m_axi|                               gmem_x_test|       pointer|
-|m_axi_gmem_x_test_0_RDATA      |   in|   64|       m_axi|                               gmem_x_test|       pointer|
+|m_axi_gmem_x_test_0_RDATA      |   in|   32|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RLAST      |   in|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RID        |   in|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RFIFONUM   |   in|    9|       m_axi|                               gmem_x_test|       pointer|
@@ -260,7 +264,7 @@
 |m_axi_gmem_x_test_0_BRESP      |   in|    2|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_BID        |   in|    1|       m_axi|                               gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_BUSER      |   in|    1|       m_axi|                               gmem_x_test|       pointer|
-|sext_ln52                      |   in|   61|     ap_none|                                 sext_ln52|        scalar|
+|sext_ln52                      |   in|   62|     ap_none|                                 sext_ln52|        scalar|
 |m_axi_gmem_x_train_0_AWVALID   |  out|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_AWREADY   |   in|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_AWADDR    |  out|   64|       m_axi|                              gmem_x_train|       pointer|
@@ -276,8 +280,8 @@
 |m_axi_gmem_x_train_0_AWUSER    |  out|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WVALID    |  out|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WREADY    |   in|    1|       m_axi|                              gmem_x_train|       pointer|
-|m_axi_gmem_x_train_0_WDATA     |  out|   64|       m_axi|                              gmem_x_train|       pointer|
-|m_axi_gmem_x_train_0_WSTRB     |  out|    8|       m_axi|                              gmem_x_train|       pointer|
+|m_axi_gmem_x_train_0_WDATA     |  out|   32|       m_axi|                              gmem_x_train|       pointer|
+|m_axi_gmem_x_train_0_WSTRB     |  out|    4|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WLAST     |  out|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WID       |  out|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WUSER     |  out|    1|       m_axi|                              gmem_x_train|       pointer|
@@ -296,7 +300,7 @@
 |m_axi_gmem_x_train_0_ARUSER    |  out|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RVALID    |   in|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RREADY    |  out|    1|       m_axi|                              gmem_x_train|       pointer|
-|m_axi_gmem_x_train_0_RDATA     |   in|   64|       m_axi|                              gmem_x_train|       pointer|
+|m_axi_gmem_x_train_0_RDATA     |   in|   32|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RLAST     |   in|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RID       |   in|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RFIFONUM  |   in|    9|       m_axi|                              gmem_x_train|       pointer|
@@ -307,6 +311,6 @@
 |m_axi_gmem_x_train_0_BRESP     |   in|    2|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_BID       |   in|    1|       m_axi|                              gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_BUSER     |   in|    1|       m_axi|                              gmem_x_train|       pointer|
-|sext_ln41                      |   in|   61|     ap_none|                                 sext_ln41|        scalar|
+|sext_ln41                      |   in|   62|     ap_none|                                 sext_ln41|        scalar|
 +-------------------------------+-----+-----+------------+------------------------------------------+--------------+
 

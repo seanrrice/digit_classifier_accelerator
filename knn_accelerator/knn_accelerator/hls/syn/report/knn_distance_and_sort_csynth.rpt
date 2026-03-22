@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort'
 ================================================================
-* Date:           Sat Mar 21 23:51:30 2026
+* Date:           Sun Mar 22 01:03:46 2026
 
 * Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        knn_accelerator
@@ -25,23 +25,23 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    12029|    12389|  0.120 ms|  0.124 ms|  12029|  12389|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     3851|     4067|  38.510 us|  40.670 us|  3851|  4067|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
 
     + Detail: 
         * Instance: 
-        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |                                                      |                                           |  Latency (cycles) |   Latency (absolute)  |    Interval   | Pipeline|
-        |                       Instance                       |                   Module                  |   min   |   max   |    min    |    max    |  min  |  max  |   Type  |
-        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
-        |grp_knn_distance_and_sort_Outline_init_top_k_fu_190   |knn_distance_and_sort_Outline_init_top_k   |        4|        4|  40.000 ns|  40.000 ns|      4|      4|       no|
-        |grp_knn_distance_and_sort_Outline_train_loop_fu_200   |knn_distance_and_sort_Outline_train_loop   |    11941|    11941|   0.119 ms|   0.119 ms|  11941|  11941|       no|
-        |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215  |knn_distance_and_sort_Outline_sort_loop_i  |       64|      424|   0.640 us|   4.240 us|     64|    424|       no|
-        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+-------+-------+---------+
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |                                                      |                                           |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+        |                       Instance                       |                   Module                  |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
+        |grp_knn_distance_and_sort_Outline_init_top_k_fu_182   |knn_distance_and_sort_Outline_init_top_k   |        4|        4|  40.000 ns|  40.000 ns|     4|     4|       no|
+        |grp_knn_distance_and_sort_Outline_train_loop_fu_192   |knn_distance_and_sort_Outline_train_loop   |     3781|     3781|  37.810 us|  37.810 us|  3781|  3781|       no|
+        |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_207  |knn_distance_and_sort_Outline_sort_loop_i  |       46|      262|   0.460 us|   2.620 us|    46|   262|       no|
+        +------------------------------------------------------+-------------------------------------------+---------+---------+-----------+-----------+------+------+---------+
 
         * Loop: 
         +--------------+---------+---------+----------+-----------+-----------+------+----------+
@@ -63,16 +63,16 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|     93|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|   14|    1722|   2729|    -|
-|Memory           |        0|    -|     136|     11|    0|
+|Instance         |        -|    4|    3804|   9392|    -|
+|Memory           |        0|    -|      70|      6|    0|
 |Multiplexer      |        -|    -|       0|    604|    -|
-|Register         |        -|    -|     221|      -|    -|
+|Register         |        -|    -|     161|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|   14|    2079|   3437|    0|
+|Total            |        0|    4|    4035|  10095|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    6|       1|      6|    0|
+|Utilization (%)  |        0|    1|       3|     18|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -80,25 +80,25 @@
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
     |                       Instance                       |                   Module                  | BRAM_18K| DSP|  FF  |  LUT | URAM|
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
-    |grp_knn_distance_and_sort_Outline_init_top_k_fu_190   |knn_distance_and_sort_Outline_init_top_k   |        0|   0|     4|    43|    0|
-    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215  |knn_distance_and_sort_Outline_sort_loop_i  |        0|   0|   180|   340|    0|
-    |grp_knn_distance_and_sort_Outline_train_loop_fu_200   |knn_distance_and_sort_Outline_train_loop   |        0|  14|  1538|  2346|    0|
+    |grp_knn_distance_and_sort_Outline_init_top_k_fu_182   |knn_distance_and_sort_Outline_init_top_k   |        0|   0|     4|    43|    0|
+    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_207  |knn_distance_and_sort_Outline_sort_loop_i  |        0|   0|    50|   217|    0|
+    |grp_knn_distance_and_sort_Outline_train_loop_fu_192   |knn_distance_and_sort_Outline_train_loop   |        0|   4|  3750|  9132|    0|
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
-    |Total                                                 |                                           |        0|  14|  1722|  2729|    0|
+    |Total                                                 |                                           |        0|   4|  3804|  9392|    0|
     +------------------------------------------------------+-------------------------------------------+---------+----+------+------+-----+
 
     * DSP: 
     N/A
 
     * Memory: 
-    +-------------+-----------------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
-    |    Memory   |                     Module                    | BRAM_18K|  FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
-    +-------------+-----------------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
-    |distances_U  |knn_distance_and_sort_distances_RAM_AUTO_1R1W  |        0|  128|  10|    0|    10|   64|     1|          640|
-    |labels_U     |knn_distance_and_sort_labels_RAM_AUTO_1R1W     |        0|    8|   1|    0|    10|    4|     1|           40|
-    +-------------+-----------------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
-    |Total        |                                               |        0|  136|  11|    0|    20|   68|     2|          680|
-    +-------------+-----------------------------------------------+---------+-----+----+-----+------+-----+------+-------------+
+    +-------------+-----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |    Memory   |                     Module                    | BRAM_18K| FF | LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +-------------+-----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |distances_U  |knn_distance_and_sort_distances_RAM_AUTO_1R1W  |        0|  62|   5|    0|    10|   31|     1|          310|
+    |labels_U     |knn_distance_and_sort_labels_RAM_AUTO_1R1W     |        0|   8|   1|    0|    10|    4|     1|           40|
+    +-------------+-----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
+    |Total        |                                               |        0|  70|   6|    0|    20|   35|     2|          350|
+    +-------------+-----------------------------------------------+---------+----+----+-----+------+-----+------+-------------+
 
     * FIFO: 
     N/A
@@ -107,9 +107,9 @@
     +---------------------+----------+----+---+----+------------+------------+
     |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +---------------------+----------+----+---+----+------------+------------+
-    |add_ln41_fu_280_p2   |         +|   0|  0|  71|          64|          64|
-    |add_ln82_fu_306_p2   |         +|   0|  0|  10|           2|           1|
-    |icmp_ln82_fu_300_p2  |      icmp|   0|  0|  10|           2|           2|
+    |add_ln41_fu_258_p2   |         +|   0|  0|  71|          64|          64|
+    |add_ln82_fu_284_p2   |         +|   0|  0|  10|           2|           1|
+    |icmp_ln82_fu_278_p2  |      icmp|   0|  0|  10|           2|           2|
     |ap_block_state3_io   |        or|   0|  0|   2|           1|           1|
     +---------------------+----------+----+---+----+------------+------------+
     |Total                |          |   0|  0|  93|          69|          68|
@@ -123,12 +123,12 @@
     |distances_address0             |  14|          3|    4|         12|
     |distances_ce0                  |  14|          3|    1|          3|
     |distances_ce1                  |   9|          2|    1|          2|
-    |distances_d0                   |  14|          3|   64|        192|
+    |distances_d0                   |  14|          3|   31|         93|
     |distances_we0                  |  14|          3|    1|          3|
     |distances_we1                  |   9|          2|    1|          2|
     |gmem_x_train_blk_n_AR          |   9|          2|    1|          2|
     |gmem_y_train_blk_n_AR          |   9|          2|    1|          2|
-    |i_5_fu_104                     |   9|          2|    2|          4|
+    |i_6_fu_96                      |   9|          2|    2|          4|
     |labels_address0                |  14|          3|    4|         12|
     |labels_ce0                     |  14|          3|    1|          3|
     |labels_ce1                     |   9|          2|    1|          2|
@@ -168,28 +168,27 @@
     |top_k_labels_2                 |  14|          3|    4|         12|
     |top_k_labels_2_ap_vld          |  14|          3|    1|          3|
     +-------------------------------+----+-----------+-----+-----------+
-    |Total                          | 604|        131|  348|       1000|
+    |Total                          | 604|        131|  315|        901|
     +-------------------------------+----+-----------+-----+-----------+
 
     * Register: 
     +-------------------------------------------------------------------+----+----+-----+-----------+
     |                                Name                               | FF | LUT| Bits| Const Bits|
     +-------------------------------------------------------------------+----+----+-----+-----------+
-    |add_ln82_reg_367                                                   |   2|   0|    2|          0|
+    |add_ln82_reg_345                                                   |   2|   0|    2|          0|
     |ap_CS_fsm                                                          |  16|   0|   16|          0|
-    |grp_knn_distance_and_sort_Outline_init_top_k_fu_190_ap_start_reg   |   1|   0|    1|          0|
-    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_215_ap_start_reg  |   1|   0|    1|          0|
-    |grp_knn_distance_and_sort_Outline_train_loop_fu_200_ap_start_reg   |   1|   0|    1|          0|
-    |i_5_fu_104                                                         |   2|   0|    2|          0|
-    |i_reg_360                                                          |   2|   0|    2|          0|
+    |grp_knn_distance_and_sort_Outline_init_top_k_fu_182_ap_start_reg   |   1|   0|    1|          0|
+    |grp_knn_distance_and_sort_Outline_sort_loop_i_fu_207_ap_start_reg  |   1|   0|    1|          0|
+    |grp_knn_distance_and_sort_Outline_train_loop_fu_192_ap_start_reg   |   1|   0|    1|          0|
+    |i_6_fu_96                                                          |   2|   0|    2|          0|
+    |i_reg_338                                                          |   2|   0|    2|          0|
     |top_k_labels_0_reg                                                 |   4|   0|    4|          0|
     |top_k_labels_1_reg                                                 |   4|   0|    4|          0|
     |top_k_labels_2_reg                                                 |   4|   0|    4|          0|
-    |trunc_ln1_reg_355                                                  |  61|   0|   61|          0|
-    |trunc_ln41_1_reg_345                                               |  62|   0|   62|          0|
-    |trunc_ln_reg_335                                                   |  61|   0|   61|          0|
+    |trunc_ln2_reg_333                                                  |  62|   0|   62|          0|
+    |trunc_ln_reg_318                                                   |  62|   0|   62|          0|
     +-------------------------------------------------------------------+----+----+-----+-----------+
-    |Total                                                              | 221|   0|  221|          0|
+    |Total                                                              | 161|   0|  161|          0|
     +-------------------------------------------------------------------+----+----+-----+-----------+
 
 
@@ -222,8 +221,8 @@
 |m_axi_gmem_x_test_0_AWUSER     |  out|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WVALID     |  out|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WREADY     |   in|    1|       m_axi|            gmem_x_test|       pointer|
-|m_axi_gmem_x_test_0_WDATA      |  out|   64|       m_axi|            gmem_x_test|       pointer|
-|m_axi_gmem_x_test_0_WSTRB      |  out|    8|       m_axi|            gmem_x_test|       pointer|
+|m_axi_gmem_x_test_0_WDATA      |  out|   32|       m_axi|            gmem_x_test|       pointer|
+|m_axi_gmem_x_test_0_WSTRB      |  out|    4|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WLAST      |  out|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WID        |  out|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_WUSER      |  out|    1|       m_axi|            gmem_x_test|       pointer|
@@ -242,7 +241,7 @@
 |m_axi_gmem_x_test_0_ARUSER     |  out|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RVALID     |   in|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RREADY     |  out|    1|       m_axi|            gmem_x_test|       pointer|
-|m_axi_gmem_x_test_0_RDATA      |   in|   64|       m_axi|            gmem_x_test|       pointer|
+|m_axi_gmem_x_test_0_RDATA      |   in|   32|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RLAST      |   in|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RID        |   in|    1|       m_axi|            gmem_x_test|       pointer|
 |m_axi_gmem_x_test_0_RFIFONUM   |   in|    9|       m_axi|            gmem_x_test|       pointer|
@@ -269,8 +268,8 @@
 |m_axi_gmem_x_train_0_AWUSER    |  out|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WVALID    |  out|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WREADY    |   in|    1|       m_axi|           gmem_x_train|       pointer|
-|m_axi_gmem_x_train_0_WDATA     |  out|   64|       m_axi|           gmem_x_train|       pointer|
-|m_axi_gmem_x_train_0_WSTRB     |  out|    8|       m_axi|           gmem_x_train|       pointer|
+|m_axi_gmem_x_train_0_WDATA     |  out|   32|       m_axi|           gmem_x_train|       pointer|
+|m_axi_gmem_x_train_0_WSTRB     |  out|    4|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WLAST     |  out|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WID       |  out|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_WUSER     |  out|    1|       m_axi|           gmem_x_train|       pointer|
@@ -289,7 +288,7 @@
 |m_axi_gmem_x_train_0_ARUSER    |  out|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RVALID    |   in|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RREADY    |  out|    1|       m_axi|           gmem_x_train|       pointer|
-|m_axi_gmem_x_train_0_RDATA     |   in|   64|       m_axi|           gmem_x_train|       pointer|
+|m_axi_gmem_x_train_0_RDATA     |   in|   32|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RLAST     |   in|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RID       |   in|    1|       m_axi|           gmem_x_train|       pointer|
 |m_axi_gmem_x_train_0_RFIFONUM  |   in|    9|       m_axi|           gmem_x_train|       pointer|
@@ -316,8 +315,8 @@
 |m_axi_gmem_y_train_0_AWUSER    |  out|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WVALID    |  out|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WREADY    |   in|    1|       m_axi|           gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_WDATA     |  out|   32|       m_axi|           gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_WSTRB     |  out|    4|       m_axi|           gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_WDATA     |  out|    8|       m_axi|           gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_WSTRB     |  out|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WLAST     |  out|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WID       |  out|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_WUSER     |  out|    1|       m_axi|           gmem_y_train|       pointer|
@@ -336,10 +335,10 @@
 |m_axi_gmem_y_train_0_ARUSER    |  out|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RVALID    |   in|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RREADY    |  out|    1|       m_axi|           gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_RDATA     |   in|   32|       m_axi|           gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_RDATA     |   in|    8|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RLAST     |   in|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RID       |   in|    1|       m_axi|           gmem_y_train|       pointer|
-|m_axi_gmem_y_train_0_RFIFONUM  |   in|    9|       m_axi|           gmem_y_train|       pointer|
+|m_axi_gmem_y_train_0_RFIFONUM  |   in|   11|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RUSER     |   in|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_RRESP     |   in|    2|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_BVALID    |   in|    1|       m_axi|           gmem_y_train|       pointer|

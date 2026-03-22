@@ -16,12 +16,9 @@ using namespace std;
 #define NUM_TEST_SAMPLES 10  
 
 // --- Hardware Data Types ---
-// typedef ap_uint<4> label_t;
-// typedef ap_fixed<28,8> pixel_t;
-// typedef ap_fixed<42,22> dist_t;
-typedef int label_t;
-typedef double pixel_t;
-typedef double dist_t;
+typedef ap_uint<4> label_t;
+typedef ap_fixed<28,8> pixel_t;
+typedef ap_fixed<42,22> dist_t;
 
 // --- Function Prototypes ---
 void knn_accelerator(
