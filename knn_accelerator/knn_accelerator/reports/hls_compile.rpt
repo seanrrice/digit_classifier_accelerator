@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'knn_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Sun Mar 22 01:13:42 2026
+    * Date:           Sun Mar 22 01:55:01 2026
     * Version:        2025.2 (Build 6295257 on Nov 14 2025)
     * Project:        knn_accelerator
     * Solution:       hls (Vivado IP Flow Target)
