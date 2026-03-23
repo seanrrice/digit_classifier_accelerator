@@ -12,8 +12,9 @@ using namespace std;
 #define K_NEIGHBORS 3
 
 // --- Simulation Scaling ---
-#define NUM_TRAIN_SAMPLES 10 
-#define NUM_TEST_SAMPLES 10  
+#define NUM_TRAIN_SAMPLES 1500 
+#define NUM_TEST_SAMPLES 1000  
+
 
 // --- Hardware Data Types ---
 typedef ap_uint<4> label_t;

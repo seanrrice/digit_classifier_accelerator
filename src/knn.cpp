@@ -53,8 +53,11 @@ void knn_distance_and_sort(
     // --------------------------------------------------------
     // Iterates NUM_TRAIN_SAMPLES times.    
     /* YOUR CODE HERE */
+    
+    
+    
     train_loop: for( int i = 0; i < NUM_TRAIN_SAMPLES; i++){
-        #pragma HLS PIPELINE II = 1
+        #pragma HLS PIPELINE II = NUM_FEATURES
       
 
     // --------------------------------------------------------
@@ -62,26 +65,27 @@ void knn_distance_and_sort(
     // --------------------------------------------------------
     // Calculate the distance between the 'test_point' and the current 'X_train' row.   
     /* YOUR CODE HERE */
+        
         dist_t sum = 0.0;
-
+    
         feature_loop: for (int j = 0; j < NUM_FEATURES; j++){
-            #pragma HLS unroll factor=2
-            pixel_t diff = test_local[j] - X_train[i * NUM_FEATURES + j];
+            #pragma HLS unroll
+            pixel_t diff = test_local[j] - X_train[i*NUM_FEATURES + j];
             sum += diff * diff;
         }
         //distances[i] = sum;
         //labels[i] = y_train[i];
+        dist_t bubble_dist = sum;
+        label_t bubble_label = y_train[i];
         sort_loop: for(int j=0;j < K_NEIGHBORS; j++){
             #pragma HLS unroll
-            if(sum<top_k_dist[j]){
-                sort_cascade_loop: for(int k=K_NEIGHBORS-1;k>j;k--){
-                    #pragma HLS unroll
-                    top_k_dist[k] = top_k_dist[k-1];
-                    top_k_labels[k] = top_k_labels[k-1];
-                }
-                top_k_dist[j] = sum;
-                top_k_labels[j] = y_train[i];
-                break;
+            if(bubble_dist < top_k_dist[j]){
+                dist_t tmp_d = top_k_dist[j];
+                label_t tmp_l = top_k_labels[j];
+                top_k_dist[j] = bubble_dist;
+                top_k_labels[j] = bubble_label;
+                bubble_dist = tmp_d;
+                bubble_label = tmp_l;
             }
         }
     }

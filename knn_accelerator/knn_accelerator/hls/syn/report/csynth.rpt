@@ -4,30 +4,29 @@
 == Synthesis Summary Report of 'knn_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Sun Mar 22 21:53:46 2026
-    * Version:        2025.1 (Build 6135595 on May 21 2025)
+    * Date:           Mon Mar 23 16:29:04 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
     * Project:        knn_accelerator
     * Solution:       hls (Vivado IP Flow Target)
     * Product family: zynq
     * Target device:  xc7z020-clg400-1
     
 
-+ Performance & Resource Estimates: 
-    
-    PS: '+' for module; 'o' for loop; '*' for dataflow
-    +-----------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
-    |                       Modules                       |  Issue  |       |       Latency       | Iteration|         | Trip |          |        |        |             |             |     |
-    |                       & Loops                       |   Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM  |   DSP  |      FF     |     LUT     | URAM|
-    +-----------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
-    |+ knn_accelerator                                    |   Timing|  -1.02|     8487|  8.487e+04|         -|     8488|     -|        no|  6 (2%)|  8 (3%)|  13928 (13%)|  16357 (30%)|    -|
-    | o test_data                                         |        -|   7.30|     8480|  8.480e+04|       848|        -|    10|        no|       -|       -|            -|            -|    -|
-    |  + knn_distance_and_sort                            |   Timing|  -1.02|      838|  8.380e+03|         -|      838|     -|        no|       -|  8 (3%)|   10507 (9%)|  11870 (22%)|    -|
-    |   + knn_distance_and_sort_Pipeline_load_test_local  |        -|   0.00|       52|    520.000|         -|       50|     -|    rewind|       -|       -|     64 (~0%)|    150 (~0%)|    -|
-    |    o load_test_local                                |        -|   7.30|       50|    500.000|         3|        1|    49|       yes|       -|       -|            -|            -|    -|
-    |   o train_loop                                      |        -|   7.30|      770|  7.700e+03|        77|        -|    10|        no|       -|       -|            -|            -|    -|
-    |    o sort_cascade_loop                              |        -|   7.30|        2|     20.000|         1|        -|     2|        no|       -|       -|            -|            -|    -|
-    |  + knn_majority_vote                                |        -|   0.12|        5|     50.000|         -|        5|     -|        no|       -|       -|     72 (~0%)|     832 (1%)|    -|
-    +-----------------------------------------------------+---------+-------+---------+-----------+----------+---------+------+----------+--------+--------+-------------+-------------+-----+
+* Performance & Resource Estimates: 
++-----------------------------------------------------+--------+---------------+----------+----------+------+----------+----------+-----------+-------+--------+--------+-------------+-------------+-----+
+|                       Modules                       |  Issue |               | Iteration|          | Trip |          |        Latency       |       |        |        |             |             |     |
+|                       & Loops                       |  Type  | Violation Type|  Latency | Interval | Count| Pipelined| (cycles) |    (ns)   | Slack |  BRAM  |   DSP  |      FF     |     LUT     | URAM|
++-----------------------------------------------------+--------+---------------+----------+----------+------+----------+----------+-----------+-------+--------+--------+-------------+-------------+-----+
+|+ knn_accelerator                                    |  Timing|              -|         -|  73596008|     -|        no|  73596007|  7.360e+08|  -1.02|  6 (2%)|  4 (1%)|  13950 (13%)|  17200 (32%)|    -|
+| o test_data                                         |       -|              -|     73596|         -|  1000|        no|  73596000|  7.360e+08|   7.30|       -|       -|            -|            -|    -|
+|  + knn_distance_and_sort                            |  Timing|              -|         -|     73586|     -|        no|     73586|  7.359e+05|  -1.02|       -|  4 (1%)|   10510 (9%)|  12704 (23%)|    -|
+|   + knn_distance_and_sort_Pipeline_load_test_local  |       -|              -|         -|         -|     -|       yes|        52|    520.000|   0.00|       -|       -|     64 (~0%)|    150 (~0%)|    -|
+|    o load_test_local                                |       -|              -|         3|         1|    49|       yes|        50|    500.000|   7.30|       -|       -|            -|            -|    -|
+|   + knn_distance_and_sort_Pipeline_train_loop       |  Timing|              -|         -|         -|     -|       yes|     73517|  7.352e+05|  -1.02|       -|  4 (1%)|    8600 (8%)|  11574 (21%)|    -|
+|    o train_loop                                     |       -|              -|        65|        49|  1500|       yes|     73515|  7.352e+05|   7.30|       -|       -|            -|            -|    -|
+|  + knn_majority_vote                                |       -|              -|         -|         5|     -|        no|         5|     50.000|   0.12|       -|       -|     72 (~0%)|     832 (1%)|    -|
++-----------------------------------------------------+--------+---------------+----------+----------+------+----------+----------+-----------+-------+--------+--------+-------------+-------------+-----+
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
 
 
 ================================================================
@@ -85,14 +84,14 @@
 == SW I/O Information
 ================================================================
 * Top Function Arguments
-+----------+-----------+--------------------------------------+
-| Argument | Direction | Datatype                             |
-+----------+-----------+--------------------------------------+
-| X_test   | in        | ap_fixed<28, 8, AP_TRN, AP_WRAP, 0>* |
-| X_train  | in        | ap_fixed<28, 8, AP_TRN, AP_WRAP, 0>* |
-| y_train  | in        | ap_uint<4>*                          |
-| y_test   | out       | ap_uint<4>*                          |
-+----------+-----------+--------------------------------------+
++----------+-----------+-------------------------------------------------+
+| Argument | Direction | Datatype                                        |
++----------+-----------+-------------------------------------------------+
+| X_test   | in        | ap_fixed<28, 8, (ap_q_mode)5, (ap_o_mode)3, 0>* |
+| X_train  | in        | ap_fixed<28, 8, (ap_q_mode)5, (ap_o_mode)3, 0>* |
+| y_train  | in        | ap_uint<4>*                                     |
+| y_test   | out       | ap_uint<4>*                                     |
++----------+-----------+-------------------------------------------------+
 
 * SW-to-HW Mapping
 +----------+--------------------+-----------+----------+-------------------------------------+
@@ -119,26 +118,28 @@
  Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
 
 * Inferred Burst Summary
-+-------------------+-----------+--------+-------+-----------------+-----------------------+
-| HW Interface      | Direction | Length | Width | Loop            | Loop Location         |
-+-------------------+-----------+--------+-------+-----------------+-----------------------+
-| m_axi_gmem_x_test | read      | 49     | 32    | load_test_local | ../src/knn.cpp:31:18  |
-| m_axi_gmem_y_test | write     | 10     | 8     | test_data       | ../src/knn.cpp:168:13 |
-+-------------------+-----------+--------+-------+-----------------+-----------------------+
++--------------------+-----------+--------+-------+-----------------+-----------------------+
+| HW Interface       | Direction | Length | Width | Loop            | Loop Location         |
++--------------------+-----------+--------+-------+-----------------+-----------------------+
+| m_axi_gmem_x_test  | read      | 49     | 32    | load_test_local | ../src/knn.cpp:31:21  |
+| m_axi_gmem_y_test  | write     | 1000   | 8     | test_data       | ../src/knn.cpp:172:16 |
+| m_axi_gmem_y_train | read      | 1500   | 8     | train_loop      | ../src/knn.cpp:59:17  |
++--------------------+-----------+--------+-------+-----------------+-----------------------+
 
 * All M_AXI Variable Accesses
 +--------------------+------------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
 | HW Interface       | Variable   | Access Location       | Direction | Burst Status | Length | Loop            | Loop Location         | Resolution | Problem                                                                                               |
 +--------------------+------------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
-| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:33:16  | read      | Widen Fail   |        | load_test_local | ../src/knn.cpp:31:18  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
-| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:33:16  | read      | Inferred     | 49     | load_test_local | ../src/knn.cpp:31:18  |            |                                                                                                       |
-| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:69:31  | read      | Fail         |        | train_loop      | ../src/knn.cpp:56:17  | 214-230    | Stride is incompatible                                                                                |
-| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:173:19 | write     | Widen Fail   |        | test_data       | ../src/knn.cpp:168:13 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
-| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:173:19 | write     | Inferred     | 10     | test_data       | ../src/knn.cpp:168:13 |            |                                                                                                       |
-| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:83:33  | read      | Fail         |        | train_loop      | ../src/knn.cpp:56:17  | 214-232    | Access load is in the conditional branch                                                              |
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:33:23  | read      | Widen Fail   |        | load_test_local | ../src/knn.cpp:31:21  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem_x_test  | test_point | ../src/knn.cpp:33:23  | read      | Inferred     | 49     | load_test_local | ../src/knn.cpp:31:21  |            |                                                                                                       |
+| m_axi_gmem_x_train | X_train    | ../src/knn.cpp:73:42  | read      | Fail         |        | train_loop      | ../src/knn.cpp:59:17  | 214-230    | Stride is incompatible                                                                                |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:177:19 | write     | Widen Fail   |        | test_data       | ../src/knn.cpp:172:16 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:177:19 | write     | Inferred     | 1000   | test_data       | ../src/knn.cpp:172:16 |            |                                                                                                       |
+| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:79:32  | read      | Widen Fail   |        | train_loop      | ../src/knn.cpp:59:17  | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem_y_train | y_train    | ../src/knn.cpp:79:32  | read      | Inferred     | 1500   | train_loop      | ../src/knn.cpp:59:17  |            |                                                                                                       |
 +--------------------+------------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
 
-    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2025.1%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+    * Resolution URL: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
 
 ================================================================
 == Bind Op Report
@@ -146,321 +147,321 @@
 +----------------------------------------------------+-----+--------+----------------+-----------+--------------------------+---------+
 | Name                                               | DSP | Pragma | Variable       | Op        | Impl                     | Latency |
 +----------------------------------------------------+-----+--------+----------------+-----------+--------------------------+---------+
-| + knn_accelerator                                  | 8   |        |                |           |                          |         |
-|   icmp_ln168_fu_197_p2                             |     |        | icmp_ln168     | seteq     | auto                     | 0       |
-|   add_ln168_fu_203_p2                              |     |        | add_ln168      | add       | fabric                   | 0       |
-|   add_ln170_fu_234_p2                              |     |        | add_ln170      | add       | fabric                   | 0       |
-|  + knn_distance_and_sort                           | 8   |        |                |           |                          |         |
-|    add_ln31_fu_925_p2                              |     |        | add_ln31       | add       | fabric                   | 0       |
-|    add_ln56_1_fu_1007_p2                           |     |        | add_ln56_1     | add       | fabric                   | 0       |
-|    icmp_ln56_fu_1013_p2                            |     |        | icmp_ln56      | seteq     | auto                     | 0       |
-|    add_ln56_fu_1019_p2                             |     |        | add_ln56       | add       | fabric                   | 0       |
-|    add_ln69_fu_1029_p2                             |     |        | add_ln69       | add       | fabric                   | 0       |
-|    diff_fu_1385_p2                                 |     |        | diff           | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70       | mul       | auto                     | 2       |
-|    add_ln69_1_fu_1075_p2                           |     |        | add_ln69_1     | add       | fabric                   | 0       |
-|    add_ln69_2_fu_1084_p2                           |     |        | add_ln69_2     | add       | fabric                   | 0       |
-|    diff_1_fu_1427_p2                               |     |        | diff_1         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U11                          | 4   |        | mul_ln70_1     | mul       | auto                     | 2       |
-|    add_ln70_fu_1639_p2                             |     |        | add_ln70       | add       | fabric                   | 0       |
-|    add_ln69_3_fu_1109_p2                           |     |        | add_ln69_3     | add       | fabric                   | 0       |
-|    add_ln69_4_fu_1118_p2                           |     |        | add_ln69_4     | add       | fabric                   | 0       |
-|    diff_2_fu_1479_p2                               |     |        | diff_2         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_2     | mul       | auto                     | 2       |
-|    add_ln70_1_fu_1717_p2                           |     |        | add_ln70_1     | add       | fabric                   | 0       |
-|    add_ln69_5_fu_1143_p2                           |     |        | add_ln69_5     | add       | fabric                   | 0       |
-|    add_ln69_6_fu_1152_p2                           |     |        | add_ln69_6     | add       | fabric                   | 0       |
-|    diff_3_fu_1526_p2                               |     |        | diff_3         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_3     | mul       | auto                     | 2       |
-|    add_ln70_2_fu_1791_p2                           |     |        | add_ln70_2     | add       | fabric                   | 0       |
-|    add_ln69_7_fu_1177_p2                           |     |        | add_ln69_7     | add       | fabric                   | 0       |
-|    add_ln69_8_fu_1186_p2                           |     |        | add_ln69_8     | add       | fabric                   | 0       |
-|    diff_4_fu_1583_p2                               |     |        | diff_4         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_4     | mul       | auto                     | 2       |
-|    add_ln70_3_fu_1869_p2                           |     |        | add_ln70_3     | add       | fabric                   | 0       |
-|    add_ln69_9_fu_1211_p2                           |     |        | add_ln69_9     | add       | fabric                   | 0       |
-|    add_ln69_10_fu_1220_p2                          |     |        | add_ln69_10    | add       | fabric                   | 0       |
-|    diff_5_fu_1660_p2                               |     |        | diff_5         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_5     | mul       | auto                     | 2       |
-|    add_ln70_4_fu_1943_p2                           |     |        | add_ln70_4     | add       | fabric                   | 0       |
-|    add_ln69_11_fu_1245_p2                          |     |        | add_ln69_11    | add       | fabric                   | 0       |
-|    add_ln69_12_fu_1254_p2                          |     |        | add_ln69_12    | add       | fabric                   | 0       |
-|    diff_6_fu_1738_p2                               |     |        | diff_6         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_6     | mul       | auto                     | 2       |
-|    add_ln70_5_fu_2017_p2                           |     |        | add_ln70_5     | add       | fabric                   | 0       |
-|    add_ln69_13_fu_1279_p2                          |     |        | add_ln69_13    | add       | fabric                   | 0       |
-|    add_ln69_14_fu_1288_p2                          |     |        | add_ln69_14    | add       | fabric                   | 0       |
-|    diff_7_fu_1812_p2                               |     |        | diff_7         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_7     | mul       | auto                     | 2       |
-|    add_ln70_6_fu_2091_p2                           |     |        | add_ln70_6     | add       | fabric                   | 0       |
-|    add_ln69_15_fu_1313_p2                          |     |        | add_ln69_15    | add       | fabric                   | 0       |
-|    add_ln69_16_fu_1322_p2                          |     |        | add_ln69_16    | add       | fabric                   | 0       |
-|    diff_8_fu_1890_p2                               |     |        | diff_8         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_8     | mul       | auto                     | 2       |
-|    add_ln70_7_fu_2169_p2                           |     |        | add_ln70_7     | add       | fabric                   | 0       |
-|    add_ln69_17_fu_1351_p2                          |     |        | add_ln69_17    | add       | fabric                   | 0       |
-|    add_ln69_18_fu_1360_p2                          |     |        | add_ln69_18    | add       | fabric                   | 0       |
-|    diff_9_fu_1964_p2                               |     |        | diff_9         | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_9     | mul       | auto                     | 2       |
-|    add_ln70_8_fu_2243_p2                           |     |        | add_ln70_8     | add       | fabric                   | 0       |
-|    add_ln69_19_fu_1393_p2                          |     |        | add_ln69_19    | add       | fabric                   | 0       |
-|    add_ln69_20_fu_1402_p2                          |     |        | add_ln69_20    | add       | fabric                   | 0       |
-|    diff_10_fu_2038_p2                              |     |        | diff_10        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_10    | mul       | auto                     | 2       |
-|    add_ln70_9_fu_2317_p2                           |     |        | add_ln70_9     | add       | fabric                   | 0       |
-|    add_ln69_21_fu_1435_p2                          |     |        | add_ln69_21    | add       | fabric                   | 0       |
-|    add_ln69_22_fu_1444_p2                          |     |        | add_ln69_22    | add       | fabric                   | 0       |
-|    diff_11_fu_2112_p2                              |     |        | diff_11        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_11    | mul       | auto                     | 2       |
-|    add_ln70_10_fu_2391_p2                          |     |        | add_ln70_10    | add       | fabric                   | 0       |
-|    add_ln69_23_fu_1487_p2                          |     |        | add_ln69_23    | add       | fabric                   | 0       |
-|    add_ln69_24_fu_1496_p2                          |     |        | add_ln69_24    | add       | fabric                   | 0       |
-|    diff_12_fu_2190_p2                              |     |        | diff_12        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_12    | mul       | auto                     | 2       |
-|    add_ln70_11_fu_2465_p2                          |     |        | add_ln70_11    | add       | fabric                   | 0       |
-|    add_ln69_25_fu_1534_p2                          |     |        | add_ln69_25    | add       | fabric                   | 0       |
-|    add_ln69_26_fu_1543_p2                          |     |        | add_ln69_26    | add       | fabric                   | 0       |
-|    diff_13_fu_2264_p2                              |     |        | diff_13        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_13    | mul       | auto                     | 2       |
-|    add_ln70_12_fu_2539_p2                          |     |        | add_ln70_12    | add       | fabric                   | 0       |
-|    add_ln69_27_fu_1591_p2                          |     |        | add_ln69_27    | add       | fabric                   | 0       |
-|    add_ln69_28_fu_1600_p2                          |     |        | add_ln69_28    | add       | fabric                   | 0       |
-|    diff_14_fu_2338_p2                              |     |        | diff_14        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_14    | mul       | auto                     | 2       |
-|    add_ln70_13_fu_2613_p2                          |     |        | add_ln70_13    | add       | fabric                   | 0       |
-|    add_ln69_29_fu_1668_p2                          |     |        | add_ln69_29    | add       | fabric                   | 0       |
-|    add_ln69_30_fu_1677_p2                          |     |        | add_ln69_30    | add       | fabric                   | 0       |
-|    diff_15_fu_2412_p2                              |     |        | diff_15        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_15    | mul       | auto                     | 2       |
-|    add_ln70_14_fu_2687_p2                          |     |        | add_ln70_14    | add       | fabric                   | 0       |
-|    add_ln69_31_fu_1746_p2                          |     |        | add_ln69_31    | add       | fabric                   | 0       |
-|    add_ln69_32_fu_1755_p2                          |     |        | add_ln69_32    | add       | fabric                   | 0       |
-|    diff_16_fu_2486_p2                              |     |        | diff_16        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_16    | mul       | auto                     | 2       |
-|    add_ln70_15_fu_2765_p2                          |     |        | add_ln70_15    | add       | fabric                   | 0       |
-|    add_ln69_33_fu_1820_p2                          |     |        | add_ln69_33    | add       | fabric                   | 0       |
-|    add_ln69_34_fu_1829_p2                          |     |        | add_ln69_34    | add       | fabric                   | 0       |
-|    diff_17_fu_2560_p2                              |     |        | diff_17        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_17    | mul       | auto                     | 2       |
-|    add_ln70_16_fu_2839_p2                          |     |        | add_ln70_16    | add       | fabric                   | 0       |
-|    add_ln69_35_fu_1898_p2                          |     |        | add_ln69_35    | add       | fabric                   | 0       |
-|    add_ln69_36_fu_1907_p2                          |     |        | add_ln69_36    | add       | fabric                   | 0       |
-|    diff_18_fu_2634_p2                              |     |        | diff_18        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_18    | mul       | auto                     | 2       |
-|    add_ln70_17_fu_2913_p2                          |     |        | add_ln70_17    | add       | fabric                   | 0       |
-|    add_ln69_37_fu_1972_p2                          |     |        | add_ln69_37    | add       | fabric                   | 0       |
-|    add_ln69_38_fu_1981_p2                          |     |        | add_ln69_38    | add       | fabric                   | 0       |
-|    diff_19_fu_2708_p2                              |     |        | diff_19        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_19    | mul       | auto                     | 2       |
-|    add_ln70_18_fu_2987_p2                          |     |        | add_ln70_18    | add       | fabric                   | 0       |
-|    add_ln69_39_fu_2046_p2                          |     |        | add_ln69_39    | add       | fabric                   | 0       |
-|    add_ln69_40_fu_2055_p2                          |     |        | add_ln69_40    | add       | fabric                   | 0       |
-|    diff_20_fu_2786_p2                              |     |        | diff_20        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_20    | mul       | auto                     | 2       |
-|    add_ln70_19_fu_3061_p2                          |     |        | add_ln70_19    | add       | fabric                   | 0       |
-|    add_ln69_41_fu_2120_p2                          |     |        | add_ln69_41    | add       | fabric                   | 0       |
-|    add_ln69_42_fu_2129_p2                          |     |        | add_ln69_42    | add       | fabric                   | 0       |
-|    diff_21_fu_2860_p2                              |     |        | diff_21        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_21    | mul       | auto                     | 2       |
-|    add_ln70_20_fu_3135_p2                          |     |        | add_ln70_20    | add       | fabric                   | 0       |
-|    add_ln69_43_fu_2198_p2                          |     |        | add_ln69_43    | add       | fabric                   | 0       |
-|    add_ln69_44_fu_2207_p2                          |     |        | add_ln69_44    | add       | fabric                   | 0       |
-|    diff_22_fu_2934_p2                              |     |        | diff_22        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_22    | mul       | auto                     | 2       |
-|    add_ln70_21_fu_3209_p2                          |     |        | add_ln70_21    | add       | fabric                   | 0       |
-|    add_ln69_45_fu_2272_p2                          |     |        | add_ln69_45    | add       | fabric                   | 0       |
-|    add_ln69_46_fu_2281_p2                          |     |        | add_ln69_46    | add       | fabric                   | 0       |
-|    diff_23_fu_3008_p2                              |     |        | diff_23        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_23    | mul       | auto                     | 2       |
-|    add_ln70_22_fu_3283_p2                          |     |        | add_ln70_22    | add       | fabric                   | 0       |
-|    add_ln69_47_fu_2346_p2                          |     |        | add_ln69_47    | add       | fabric                   | 0       |
-|    add_ln69_48_fu_2355_p2                          |     |        | add_ln69_48    | add       | fabric                   | 0       |
-|    diff_24_fu_3082_p2                              |     |        | diff_24        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_24    | mul       | auto                     | 2       |
-|    add_ln70_23_fu_3357_p2                          |     |        | add_ln70_23    | add       | fabric                   | 0       |
-|    add_ln69_49_fu_2420_p2                          |     |        | add_ln69_49    | add       | fabric                   | 0       |
-|    add_ln69_50_fu_2429_p2                          |     |        | add_ln69_50    | add       | fabric                   | 0       |
-|    diff_25_fu_3156_p2                              |     |        | diff_25        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_25    | mul       | auto                     | 2       |
-|    add_ln70_24_fu_3431_p2                          |     |        | add_ln70_24    | add       | fabric                   | 0       |
-|    add_ln69_51_fu_2494_p2                          |     |        | add_ln69_51    | add       | fabric                   | 0       |
-|    add_ln69_52_fu_2503_p2                          |     |        | add_ln69_52    | add       | fabric                   | 0       |
-|    diff_26_fu_3230_p2                              |     |        | diff_26        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_26    | mul       | auto                     | 2       |
-|    add_ln70_25_fu_3505_p2                          |     |        | add_ln70_25    | add       | fabric                   | 0       |
-|    add_ln69_53_fu_2568_p2                          |     |        | add_ln69_53    | add       | fabric                   | 0       |
-|    add_ln69_54_fu_2577_p2                          |     |        | add_ln69_54    | add       | fabric                   | 0       |
-|    diff_27_fu_3304_p2                              |     |        | diff_27        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_27    | mul       | auto                     | 2       |
-|    add_ln70_26_fu_3579_p2                          |     |        | add_ln70_26    | add       | fabric                   | 0       |
-|    add_ln69_55_fu_2642_p2                          |     |        | add_ln69_55    | add       | fabric                   | 0       |
-|    add_ln69_56_fu_2651_p2                          |     |        | add_ln69_56    | add       | fabric                   | 0       |
-|    diff_28_fu_3378_p2                              |     |        | diff_28        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_28    | mul       | auto                     | 2       |
-|    add_ln70_27_fu_3653_p2                          |     |        | add_ln70_27    | add       | fabric                   | 0       |
-|    add_ln69_57_fu_2716_p2                          |     |        | add_ln69_57    | add       | fabric                   | 0       |
-|    add_ln69_58_fu_2725_p2                          |     |        | add_ln69_58    | add       | fabric                   | 0       |
-|    diff_29_fu_3452_p2                              |     |        | diff_29        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_29    | mul       | auto                     | 2       |
-|    add_ln70_28_fu_3727_p2                          |     |        | add_ln70_28    | add       | fabric                   | 0       |
-|    add_ln69_59_fu_2794_p2                          |     |        | add_ln69_59    | add       | fabric                   | 0       |
-|    add_ln69_60_fu_2803_p2                          |     |        | add_ln69_60    | add       | fabric                   | 0       |
-|    diff_30_fu_3526_p2                              |     |        | diff_30        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_30    | mul       | auto                     | 2       |
-|    add_ln70_29_fu_3801_p2                          |     |        | add_ln70_29    | add       | fabric                   | 0       |
-|    add_ln69_61_fu_2868_p2                          |     |        | add_ln69_61    | add       | fabric                   | 0       |
-|    add_ln69_62_fu_2877_p2                          |     |        | add_ln69_62    | add       | fabric                   | 0       |
-|    diff_31_fu_3600_p2                              |     |        | diff_31        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_31    | mul       | auto                     | 2       |
-|    add_ln70_30_fu_3875_p2                          |     |        | add_ln70_30    | add       | fabric                   | 0       |
-|    add_ln69_63_fu_2942_p2                          |     |        | add_ln69_63    | add       | fabric                   | 0       |
-|    add_ln69_64_fu_2951_p2                          |     |        | add_ln69_64    | add       | fabric                   | 0       |
-|    diff_32_fu_3674_p2                              |     |        | diff_32        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_32    | mul       | auto                     | 2       |
-|    add_ln70_31_fu_3953_p2                          |     |        | add_ln70_31    | add       | fabric                   | 0       |
-|    add_ln69_65_fu_3016_p2                          |     |        | add_ln69_65    | add       | fabric                   | 0       |
-|    add_ln69_66_fu_3025_p2                          |     |        | add_ln69_66    | add       | fabric                   | 0       |
-|    diff_33_fu_3748_p2                              |     |        | diff_33        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_33    | mul       | auto                     | 2       |
-|    add_ln70_32_fu_4095_p2                          |     |        | add_ln70_32    | add       | fabric                   | 0       |
-|    add_ln69_67_fu_3090_p2                          |     |        | add_ln69_67    | add       | fabric                   | 0       |
-|    add_ln69_68_fu_3099_p2                          |     |        | add_ln69_68    | add       | fabric                   | 0       |
-|    diff_34_fu_3822_p2                              |     |        | diff_34        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_34    | mul       | auto                     | 2       |
-|    add_ln70_33_fu_4135_p2                          |     |        | add_ln70_33    | add       | fabric                   | 0       |
-|    add_ln69_69_fu_3164_p2                          |     |        | add_ln69_69    | add       | fabric                   | 0       |
-|    add_ln69_70_fu_3173_p2                          |     |        | add_ln69_70    | add       | fabric                   | 0       |
-|    diff_35_fu_3896_p2                              |     |        | diff_35        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_35    | mul       | auto                     | 2       |
-|    add_ln70_34_fu_4175_p2                          |     |        | add_ln70_34    | add       | fabric                   | 0       |
-|    add_ln69_71_fu_3238_p2                          |     |        | add_ln69_71    | add       | fabric                   | 0       |
-|    add_ln69_72_fu_3247_p2                          |     |        | add_ln69_72    | add       | fabric                   | 0       |
-|    diff_36_fu_3974_p2                              |     |        | diff_36        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_36    | mul       | auto                     | 2       |
-|    add_ln70_35_fu_4215_p2                          |     |        | add_ln70_35    | add       | fabric                   | 0       |
-|    add_ln69_73_fu_3312_p2                          |     |        | add_ln69_73    | add       | fabric                   | 0       |
-|    add_ln69_74_fu_3321_p2                          |     |        | add_ln69_74    | add       | fabric                   | 0       |
-|    diff_37_fu_4116_p2                              |     |        | diff_37        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_37    | mul       | auto                     | 2       |
-|    add_ln70_36_fu_4255_p2                          |     |        | add_ln70_36    | add       | fabric                   | 0       |
-|    add_ln69_75_fu_3386_p2                          |     |        | add_ln69_75    | add       | fabric                   | 0       |
-|    add_ln69_76_fu_3395_p2                          |     |        | add_ln69_76    | add       | fabric                   | 0       |
-|    diff_38_fu_4156_p2                              |     |        | diff_38        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_38    | mul       | auto                     | 2       |
-|    add_ln70_37_fu_4295_p2                          |     |        | add_ln70_37    | add       | fabric                   | 0       |
-|    add_ln69_77_fu_3460_p2                          |     |        | add_ln69_77    | add       | fabric                   | 0       |
-|    add_ln69_78_fu_3469_p2                          |     |        | add_ln69_78    | add       | fabric                   | 0       |
-|    diff_39_fu_4196_p2                              |     |        | diff_39        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_39    | mul       | auto                     | 2       |
-|    add_ln70_38_fu_4335_p2                          |     |        | add_ln70_38    | add       | fabric                   | 0       |
-|    add_ln69_79_fu_3534_p2                          |     |        | add_ln69_79    | add       | fabric                   | 0       |
-|    add_ln69_80_fu_3543_p2                          |     |        | add_ln69_80    | add       | fabric                   | 0       |
-|    diff_40_fu_4236_p2                              |     |        | diff_40        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_40    | mul       | auto                     | 2       |
-|    add_ln70_39_fu_4375_p2                          |     |        | add_ln70_39    | add       | fabric                   | 0       |
-|    add_ln69_81_fu_3608_p2                          |     |        | add_ln69_81    | add       | fabric                   | 0       |
-|    add_ln69_82_fu_3617_p2                          |     |        | add_ln69_82    | add       | fabric                   | 0       |
-|    diff_41_fu_4276_p2                              |     |        | diff_41        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_41    | mul       | auto                     | 2       |
-|    add_ln70_40_fu_4415_p2                          |     |        | add_ln70_40    | add       | fabric                   | 0       |
-|    add_ln69_83_fu_3682_p2                          |     |        | add_ln69_83    | add       | fabric                   | 0       |
-|    add_ln69_84_fu_3691_p2                          |     |        | add_ln69_84    | add       | fabric                   | 0       |
-|    diff_42_fu_4316_p2                              |     |        | diff_42        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_42    | mul       | auto                     | 2       |
-|    add_ln70_41_fu_4455_p2                          |     |        | add_ln70_41    | add       | fabric                   | 0       |
-|    add_ln69_85_fu_3756_p2                          |     |        | add_ln69_85    | add       | fabric                   | 0       |
-|    add_ln69_86_fu_3765_p2                          |     |        | add_ln69_86    | add       | fabric                   | 0       |
-|    diff_43_fu_4356_p2                              |     |        | diff_43        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_43    | mul       | auto                     | 2       |
-|    add_ln70_42_fu_4495_p2                          |     |        | add_ln70_42    | add       | fabric                   | 0       |
-|    add_ln69_87_fu_3830_p2                          |     |        | add_ln69_87    | add       | fabric                   | 0       |
-|    add_ln69_88_fu_3839_p2                          |     |        | add_ln69_88    | add       | fabric                   | 0       |
-|    diff_44_fu_4396_p2                              |     |        | diff_44        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_44    | mul       | auto                     | 2       |
-|    add_ln70_43_fu_4535_p2                          |     |        | add_ln70_43    | add       | fabric                   | 0       |
-|    add_ln69_89_fu_3904_p2                          |     |        | add_ln69_89    | add       | fabric                   | 0       |
-|    add_ln69_90_fu_3913_p2                          |     |        | add_ln69_90    | add       | fabric                   | 0       |
-|    diff_45_fu_4436_p2                              |     |        | diff_45        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_45    | mul       | auto                     | 2       |
-|    add_ln70_44_fu_4571_p2                          |     |        | add_ln70_44    | add       | fabric                   | 0       |
-|    add_ln69_91_fu_3982_p2                          |     |        | add_ln69_91    | add       | fabric                   | 0       |
-|    add_ln69_92_fu_3991_p2                          |     |        | add_ln69_92    | add       | fabric                   | 0       |
-|    diff_46_fu_4476_p2                              |     |        | diff_46        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_46    | mul       | auto                     | 2       |
-|    add_ln70_45_fu_4603_p2                          |     |        | add_ln70_45    | add       | fabric                   | 0       |
-|    add_ln69_93_fu_4016_p2                          |     |        | add_ln69_93    | add       | fabric                   | 0       |
-|    add_ln69_94_fu_4025_p2                          |     |        | add_ln69_94    | add       | fabric                   | 0       |
-|    diff_47_fu_4516_p2                              |     |        | diff_47        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_47    | mul       | auto                     | 2       |
-|    add_ln70_46_fu_4630_p2                          |     |        | add_ln70_46    | add       | fabric                   | 0       |
-|    add_ln69_95_fu_4050_p2                          |     |        | add_ln69_95    | add       | fabric                   | 0       |
-|    add_ln69_96_fu_4059_p2                          |     |        | add_ln69_96    | add       | fabric                   | 0       |
-|    diff_48_fu_4556_p2                              |     |        | diff_48        | sub       | fabric                   | 0       |
-|    mul_28s_28s_56_3_1_U10                          | 4   |        | mul_ln70_48    | mul       | auto                     | 2       |
-|    add_ln70_47_fu_4657_p2                          |     |        | add_ln70_47    | add       | fabric                   | 0       |
-|    icmp_ln76_fu_4676_p2                            |     |        | icmp_ln76      | setlt     | auto                     | 0       |
-|    icmp_ln76_1_fu_4681_p2                          |     |        | icmp_ln76_1    | setlt     | auto                     | 0       |
-|    icmp_ln76_2_fu_4686_p2                          |     |        | icmp_ln76_2    | setlt     | auto                     | 0       |
-|    icmp_ln77_fu_4695_p2                            |     |        | icmp_ln77      | setgt     | auto                     | 0       |
-|    add_ln79_fu_4706_p2                             |     |        | add_ln79       | add       | fabric                   | 0       |
-|    icmp_ln79_1_fu_4712_p2                          |     |        | icmp_ln79_1    | seteq     | auto                     | 0       |
-|    top_k_dist_3_fu_4718_p3                         |     |        | top_k_dist_3   | select    | auto_sel                 | 0       |
-|    icmp_ln79_fu_4726_p2                            |     |        | icmp_ln79      | seteq     | auto                     | 0       |
-|    select_ln80_fu_4732_p3                          |     |        | select_ln80    | select    | auto_sel                 | 0       |
-|    select_ln79_fu_4740_p3                          |     |        | select_ln79    | select    | auto_sel                 | 0       |
-|    select_ln79_1_fu_4748_p3                        |     |        | select_ln79_1  | select    | auto_sel                 | 0       |
-|    top_k_dist_5_fu_4756_p3                         |     |        | top_k_dist_5   | select    | auto_sel                 | 0       |
-|    top_k_dist_4_fu_4764_p3                         |     |        | top_k_dist_4   | select    | auto_sel                 | 0       |
-|    select_ln79_4_fu_4772_p3                        |     |        | select_ln79_4  | select    | auto_sel                 | 0       |
-|    add_ln83_fu_4805_p2                             |     |        | add_ln83       | add       | fabric                   | 0       |
+| + knn_accelerator                                  | 4   |        |                |           |                          |         |
+|   icmp_ln172_fu_203_p2                             |     |        | icmp_ln172     | seteq     | auto                     | 0       |
+|   add_ln172_fu_209_p2                              |     |        | add_ln172      | add       | fabric                   | 0       |
+|   add_ln174_fu_243_p2                              |     |        | add_ln174      | add       | fabric                   | 0       |
+|  + knn_distance_and_sort                           | 4   |        |                |           |                          |         |
+|    add_ln31_fu_722_p2                              |     |        | add_ln31       | add       | fabric                   | 0       |
 |   + knn_distance_and_sort_Pipeline_load_test_local | 0   |        |                |           |                          |         |
-|     icmp_ln31_fu_223_p2                            |     |        | icmp_ln31      | seteq     | auto                     | 0       |
-|     add_ln31_fu_229_p2                             |     |        | add_ln31       | add       | fabric                   | 0       |
-|     add_ln31_1_fu_298_p2                           |     |        | add_ln31_1     | add       | fabric                   | 0       |
-|     add_ln31_2_fu_255_p2                           |     |        | add_ln31_2     | add       | fabric                   | 0       |
-|     icmp_ln31_1_fu_261_p2                          |     |        | icmp_ln31_1    | seteq     | auto                     | 0       |
-|     select_ln31_fu_267_p3                          |     |        | select_ln31    | select    | auto_sel                 | 0       |
+|     icmp_ln31_fu_225_p2                            |     |        | icmp_ln31      | seteq     | auto                     | 0       |
+|     add_ln31_fu_231_p2                             |     |        | add_ln31       | add       | fabric                   | 0       |
+|     add_ln31_1_fu_300_p2                           |     |        | add_ln31_1     | add       | fabric                   | 0       |
+|     add_ln31_2_fu_257_p2                           |     |        | add_ln31_2     | add       | fabric                   | 0       |
+|     icmp_ln31_1_fu_263_p2                          |     |        | icmp_ln31_1    | seteq     | auto                     | 0       |
+|     select_ln31_fu_269_p3                          |     |        | select_ln31    | select    | auto_sel                 | 0       |
+|   + knn_distance_and_sort_Pipeline_train_loop      | 4   |        |                |           |                          |         |
+|     icmp_ln59_fu_762_p2                            |     |        | icmp_ln59      | seteq     | auto                     | 0       |
+|     add_ln59_fu_768_p2                             |     |        | add_ln59       | add       | fabric                   | 0       |
+|     add_ln73_97_fu_783_p2                          |     |        | add_ln73_97    | add       | fabric                   | 0       |
+|     add_ln73_fu_793_p2                             |     |        | add_ln73       | add       | fabric                   | 0       |
+|     diff_fu_1139_p2                                |     |        | diff           | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74       | mul       | auto                     | 2       |
+|     add_ln73_1_fu_829_p2                           |     |        | add_ln73_1     | add       | fabric                   | 0       |
+|     add_ln73_2_fu_838_p2                           |     |        | add_ln73_2     | add       | fabric                   | 0       |
+|     diff_1_fu_1186_p2                              |     |        | diff_1         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_1     | mul       | auto                     | 2       |
+|     add_ln74_fu_1394_p2                            |     |        | add_ln74       | add       | fabric                   | 0       |
+|     add_ln73_3_fu_863_p2                           |     |        | add_ln73_3     | add       | fabric                   | 0       |
+|     add_ln73_4_fu_872_p2                           |     |        | add_ln73_4     | add       | fabric                   | 0       |
+|     diff_2_fu_1233_p2                              |     |        | diff_2         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_2     | mul       | auto                     | 2       |
+|     add_ln74_1_fu_1472_p2                          |     |        | add_ln74_1     | add       | fabric                   | 0       |
+|     add_ln73_5_fu_897_p2                           |     |        | add_ln73_5     | add       | fabric                   | 0       |
+|     add_ln73_6_fu_906_p2                           |     |        | add_ln73_6     | add       | fabric                   | 0       |
+|     diff_3_fu_1290_p2                              |     |        | diff_3         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_3     | mul       | auto                     | 2       |
+|     add_ln74_2_fu_1546_p2                          |     |        | add_ln74_2     | add       | fabric                   | 0       |
+|     add_ln73_7_fu_931_p2                           |     |        | add_ln73_7     | add       | fabric                   | 0       |
+|     add_ln73_8_fu_940_p2                           |     |        | add_ln73_8     | add       | fabric                   | 0       |
+|     diff_4_fu_1337_p2                              |     |        | diff_4         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_4     | mul       | auto                     | 2       |
+|     add_ln74_3_fu_1624_p2                          |     |        | add_ln74_3     | add       | fabric                   | 0       |
+|     add_ln73_9_fu_965_p2                           |     |        | add_ln73_9     | add       | fabric                   | 0       |
+|     add_ln73_10_fu_974_p2                          |     |        | add_ln73_10    | add       | fabric                   | 0       |
+|     diff_5_fu_1415_p2                              |     |        | diff_5         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_5     | mul       | auto                     | 2       |
+|     add_ln74_4_fu_1698_p2                          |     |        | add_ln74_4     | add       | fabric                   | 0       |
+|     add_ln73_11_fu_999_p2                          |     |        | add_ln73_11    | add       | fabric                   | 0       |
+|     add_ln73_12_fu_1008_p2                         |     |        | add_ln73_12    | add       | fabric                   | 0       |
+|     diff_6_fu_1493_p2                              |     |        | diff_6         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_6     | mul       | auto                     | 2       |
+|     add_ln74_5_fu_1772_p2                          |     |        | add_ln74_5     | add       | fabric                   | 0       |
+|     add_ln73_13_fu_1033_p2                         |     |        | add_ln73_13    | add       | fabric                   | 0       |
+|     add_ln73_14_fu_1042_p2                         |     |        | add_ln73_14    | add       | fabric                   | 0       |
+|     diff_7_fu_1567_p2                              |     |        | diff_7         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_7     | mul       | auto                     | 2       |
+|     add_ln74_6_fu_1846_p2                          |     |        | add_ln74_6     | add       | fabric                   | 0       |
+|     add_ln73_15_fu_1067_p2                         |     |        | add_ln73_15    | add       | fabric                   | 0       |
+|     add_ln73_16_fu_1076_p2                         |     |        | add_ln73_16    | add       | fabric                   | 0       |
+|     diff_8_fu_1645_p2                              |     |        | diff_8         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_8     | mul       | auto                     | 2       |
+|     add_ln74_7_fu_1924_p2                          |     |        | add_ln74_7     | add       | fabric                   | 0       |
+|     add_ln73_17_fu_1105_p2                         |     |        | add_ln73_17    | add       | fabric                   | 0       |
+|     add_ln73_18_fu_1114_p2                         |     |        | add_ln73_18    | add       | fabric                   | 0       |
+|     diff_9_fu_1719_p2                              |     |        | diff_9         | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_9     | mul       | auto                     | 2       |
+|     add_ln74_8_fu_1998_p2                          |     |        | add_ln74_8     | add       | fabric                   | 0       |
+|     add_ln73_19_fu_1147_p2                         |     |        | add_ln73_19    | add       | fabric                   | 0       |
+|     add_ln73_20_fu_1156_p2                         |     |        | add_ln73_20    | add       | fabric                   | 0       |
+|     diff_10_fu_1793_p2                             |     |        | diff_10        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_10    | mul       | auto                     | 2       |
+|     add_ln74_9_fu_2072_p2                          |     |        | add_ln74_9     | add       | fabric                   | 0       |
+|     add_ln73_21_fu_1194_p2                         |     |        | add_ln73_21    | add       | fabric                   | 0       |
+|     add_ln73_22_fu_1203_p2                         |     |        | add_ln73_22    | add       | fabric                   | 0       |
+|     diff_11_fu_1867_p2                             |     |        | diff_11        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_11    | mul       | auto                     | 2       |
+|     add_ln74_10_fu_2146_p2                         |     |        | add_ln74_10    | add       | fabric                   | 0       |
+|     add_ln73_23_fu_1241_p2                         |     |        | add_ln73_23    | add       | fabric                   | 0       |
+|     add_ln73_24_fu_1250_p2                         |     |        | add_ln73_24    | add       | fabric                   | 0       |
+|     diff_12_fu_1945_p2                             |     |        | diff_12        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_12    | mul       | auto                     | 2       |
+|     add_ln74_11_fu_2220_p2                         |     |        | add_ln74_11    | add       | fabric                   | 0       |
+|     add_ln73_25_fu_1298_p2                         |     |        | add_ln73_25    | add       | fabric                   | 0       |
+|     add_ln73_26_fu_1307_p2                         |     |        | add_ln73_26    | add       | fabric                   | 0       |
+|     diff_13_fu_2019_p2                             |     |        | diff_13        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_13    | mul       | auto                     | 2       |
+|     add_ln74_12_fu_2294_p2                         |     |        | add_ln74_12    | add       | fabric                   | 0       |
+|     add_ln73_27_fu_1345_p2                         |     |        | add_ln73_27    | add       | fabric                   | 0       |
+|     add_ln73_28_fu_1354_p2                         |     |        | add_ln73_28    | add       | fabric                   | 0       |
+|     diff_14_fu_2093_p2                             |     |        | diff_14        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_14    | mul       | auto                     | 2       |
+|     add_ln74_13_fu_2368_p2                         |     |        | add_ln74_13    | add       | fabric                   | 0       |
+|     add_ln73_29_fu_1423_p2                         |     |        | add_ln73_29    | add       | fabric                   | 0       |
+|     add_ln73_30_fu_1432_p2                         |     |        | add_ln73_30    | add       | fabric                   | 0       |
+|     diff_15_fu_2167_p2                             |     |        | diff_15        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_15    | mul       | auto                     | 2       |
+|     add_ln74_14_fu_2442_p2                         |     |        | add_ln74_14    | add       | fabric                   | 0       |
+|     add_ln73_31_fu_1501_p2                         |     |        | add_ln73_31    | add       | fabric                   | 0       |
+|     add_ln73_32_fu_1510_p2                         |     |        | add_ln73_32    | add       | fabric                   | 0       |
+|     diff_16_fu_2241_p2                             |     |        | diff_16        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_16    | mul       | auto                     | 2       |
+|     add_ln74_15_fu_2520_p2                         |     |        | add_ln74_15    | add       | fabric                   | 0       |
+|     add_ln73_33_fu_1575_p2                         |     |        | add_ln73_33    | add       | fabric                   | 0       |
+|     add_ln73_34_fu_1584_p2                         |     |        | add_ln73_34    | add       | fabric                   | 0       |
+|     diff_17_fu_2315_p2                             |     |        | diff_17        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_17    | mul       | auto                     | 2       |
+|     add_ln74_16_fu_2594_p2                         |     |        | add_ln74_16    | add       | fabric                   | 0       |
+|     add_ln73_35_fu_1653_p2                         |     |        | add_ln73_35    | add       | fabric                   | 0       |
+|     add_ln73_36_fu_1662_p2                         |     |        | add_ln73_36    | add       | fabric                   | 0       |
+|     diff_18_fu_2389_p2                             |     |        | diff_18        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_18    | mul       | auto                     | 2       |
+|     add_ln74_17_fu_2668_p2                         |     |        | add_ln74_17    | add       | fabric                   | 0       |
+|     add_ln73_37_fu_1727_p2                         |     |        | add_ln73_37    | add       | fabric                   | 0       |
+|     add_ln73_38_fu_1736_p2                         |     |        | add_ln73_38    | add       | fabric                   | 0       |
+|     diff_19_fu_2463_p2                             |     |        | diff_19        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_19    | mul       | auto                     | 2       |
+|     add_ln74_18_fu_2742_p2                         |     |        | add_ln74_18    | add       | fabric                   | 0       |
+|     add_ln73_39_fu_1801_p2                         |     |        | add_ln73_39    | add       | fabric                   | 0       |
+|     add_ln73_40_fu_1810_p2                         |     |        | add_ln73_40    | add       | fabric                   | 0       |
+|     diff_20_fu_2541_p2                             |     |        | diff_20        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_20    | mul       | auto                     | 2       |
+|     add_ln74_19_fu_2816_p2                         |     |        | add_ln74_19    | add       | fabric                   | 0       |
+|     add_ln73_41_fu_1875_p2                         |     |        | add_ln73_41    | add       | fabric                   | 0       |
+|     add_ln73_42_fu_1884_p2                         |     |        | add_ln73_42    | add       | fabric                   | 0       |
+|     diff_21_fu_2615_p2                             |     |        | diff_21        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_21    | mul       | auto                     | 2       |
+|     add_ln74_20_fu_2890_p2                         |     |        | add_ln74_20    | add       | fabric                   | 0       |
+|     add_ln73_43_fu_1953_p2                         |     |        | add_ln73_43    | add       | fabric                   | 0       |
+|     add_ln73_44_fu_1962_p2                         |     |        | add_ln73_44    | add       | fabric                   | 0       |
+|     diff_22_fu_2689_p2                             |     |        | diff_22        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_22    | mul       | auto                     | 2       |
+|     add_ln74_21_fu_2964_p2                         |     |        | add_ln74_21    | add       | fabric                   | 0       |
+|     add_ln73_45_fu_2027_p2                         |     |        | add_ln73_45    | add       | fabric                   | 0       |
+|     add_ln73_46_fu_2036_p2                         |     |        | add_ln73_46    | add       | fabric                   | 0       |
+|     diff_23_fu_2763_p2                             |     |        | diff_23        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_23    | mul       | auto                     | 2       |
+|     add_ln74_22_fu_3038_p2                         |     |        | add_ln74_22    | add       | fabric                   | 0       |
+|     add_ln73_47_fu_2101_p2                         |     |        | add_ln73_47    | add       | fabric                   | 0       |
+|     add_ln73_48_fu_2110_p2                         |     |        | add_ln73_48    | add       | fabric                   | 0       |
+|     diff_24_fu_2837_p2                             |     |        | diff_24        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_24    | mul       | auto                     | 2       |
+|     add_ln74_23_fu_3112_p2                         |     |        | add_ln74_23    | add       | fabric                   | 0       |
+|     add_ln73_49_fu_2175_p2                         |     |        | add_ln73_49    | add       | fabric                   | 0       |
+|     add_ln73_50_fu_2184_p2                         |     |        | add_ln73_50    | add       | fabric                   | 0       |
+|     diff_25_fu_2911_p2                             |     |        | diff_25        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_25    | mul       | auto                     | 2       |
+|     add_ln74_24_fu_3186_p2                         |     |        | add_ln74_24    | add       | fabric                   | 0       |
+|     add_ln73_51_fu_2249_p2                         |     |        | add_ln73_51    | add       | fabric                   | 0       |
+|     add_ln73_52_fu_2258_p2                         |     |        | add_ln73_52    | add       | fabric                   | 0       |
+|     diff_26_fu_2985_p2                             |     |        | diff_26        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_26    | mul       | auto                     | 2       |
+|     add_ln74_25_fu_3260_p2                         |     |        | add_ln74_25    | add       | fabric                   | 0       |
+|     add_ln73_53_fu_2323_p2                         |     |        | add_ln73_53    | add       | fabric                   | 0       |
+|     add_ln73_54_fu_2332_p2                         |     |        | add_ln73_54    | add       | fabric                   | 0       |
+|     diff_27_fu_3059_p2                             |     |        | diff_27        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_27    | mul       | auto                     | 2       |
+|     add_ln74_26_fu_3334_p2                         |     |        | add_ln74_26    | add       | fabric                   | 0       |
+|     add_ln73_55_fu_2397_p2                         |     |        | add_ln73_55    | add       | fabric                   | 0       |
+|     add_ln73_56_fu_2406_p2                         |     |        | add_ln73_56    | add       | fabric                   | 0       |
+|     diff_28_fu_3133_p2                             |     |        | diff_28        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_28    | mul       | auto                     | 2       |
+|     add_ln74_27_fu_3408_p2                         |     |        | add_ln74_27    | add       | fabric                   | 0       |
+|     add_ln73_57_fu_2471_p2                         |     |        | add_ln73_57    | add       | fabric                   | 0       |
+|     add_ln73_58_fu_2480_p2                         |     |        | add_ln73_58    | add       | fabric                   | 0       |
+|     diff_29_fu_3207_p2                             |     |        | diff_29        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_29    | mul       | auto                     | 2       |
+|     add_ln74_28_fu_3482_p2                         |     |        | add_ln74_28    | add       | fabric                   | 0       |
+|     add_ln73_59_fu_2549_p2                         |     |        | add_ln73_59    | add       | fabric                   | 0       |
+|     add_ln73_60_fu_2558_p2                         |     |        | add_ln73_60    | add       | fabric                   | 0       |
+|     diff_30_fu_3281_p2                             |     |        | diff_30        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_30    | mul       | auto                     | 2       |
+|     add_ln74_29_fu_3556_p2                         |     |        | add_ln74_29    | add       | fabric                   | 0       |
+|     add_ln73_61_fu_2623_p2                         |     |        | add_ln73_61    | add       | fabric                   | 0       |
+|     add_ln73_62_fu_2632_p2                         |     |        | add_ln73_62    | add       | fabric                   | 0       |
+|     diff_31_fu_3355_p2                             |     |        | diff_31        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_31    | mul       | auto                     | 2       |
+|     add_ln74_30_fu_3630_p2                         |     |        | add_ln74_30    | add       | fabric                   | 0       |
+|     add_ln73_63_fu_2697_p2                         |     |        | add_ln73_63    | add       | fabric                   | 0       |
+|     add_ln73_64_fu_2706_p2                         |     |        | add_ln73_64    | add       | fabric                   | 0       |
+|     diff_32_fu_3429_p2                             |     |        | diff_32        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_32    | mul       | auto                     | 2       |
+|     add_ln74_31_fu_3708_p2                         |     |        | add_ln74_31    | add       | fabric                   | 0       |
+|     add_ln73_65_fu_2771_p2                         |     |        | add_ln73_65    | add       | fabric                   | 0       |
+|     add_ln73_66_fu_2780_p2                         |     |        | add_ln73_66    | add       | fabric                   | 0       |
+|     diff_33_fu_3503_p2                             |     |        | diff_33        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_33    | mul       | auto                     | 2       |
+|     add_ln74_32_fu_3850_p2                         |     |        | add_ln74_32    | add       | fabric                   | 0       |
+|     add_ln73_67_fu_2845_p2                         |     |        | add_ln73_67    | add       | fabric                   | 0       |
+|     add_ln73_68_fu_2854_p2                         |     |        | add_ln73_68    | add       | fabric                   | 0       |
+|     diff_34_fu_3577_p2                             |     |        | diff_34        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_34    | mul       | auto                     | 2       |
+|     add_ln74_33_fu_3890_p2                         |     |        | add_ln74_33    | add       | fabric                   | 0       |
+|     add_ln73_69_fu_2919_p2                         |     |        | add_ln73_69    | add       | fabric                   | 0       |
+|     add_ln73_70_fu_2928_p2                         |     |        | add_ln73_70    | add       | fabric                   | 0       |
+|     diff_35_fu_3651_p2                             |     |        | diff_35        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_35    | mul       | auto                     | 2       |
+|     add_ln74_34_fu_3930_p2                         |     |        | add_ln74_34    | add       | fabric                   | 0       |
+|     add_ln73_71_fu_2993_p2                         |     |        | add_ln73_71    | add       | fabric                   | 0       |
+|     add_ln73_72_fu_3002_p2                         |     |        | add_ln73_72    | add       | fabric                   | 0       |
+|     diff_36_fu_3729_p2                             |     |        | diff_36        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_36    | mul       | auto                     | 2       |
+|     add_ln74_35_fu_3970_p2                         |     |        | add_ln74_35    | add       | fabric                   | 0       |
+|     add_ln73_73_fu_3067_p2                         |     |        | add_ln73_73    | add       | fabric                   | 0       |
+|     add_ln73_74_fu_3076_p2                         |     |        | add_ln73_74    | add       | fabric                   | 0       |
+|     diff_37_fu_3871_p2                             |     |        | diff_37        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_37    | mul       | auto                     | 2       |
+|     add_ln74_36_fu_4014_p2                         |     |        | add_ln74_36    | add       | fabric                   | 0       |
+|     add_ln73_75_fu_3141_p2                         |     |        | add_ln73_75    | add       | fabric                   | 0       |
+|     add_ln73_76_fu_3150_p2                         |     |        | add_ln73_76    | add       | fabric                   | 0       |
+|     diff_38_fu_3911_p2                             |     |        | diff_38        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_38    | mul       | auto                     | 2       |
+|     add_ln74_37_fu_4054_p2                         |     |        | add_ln74_37    | add       | fabric                   | 0       |
+|     add_ln73_77_fu_3215_p2                         |     |        | add_ln73_77    | add       | fabric                   | 0       |
+|     add_ln73_78_fu_3224_p2                         |     |        | add_ln73_78    | add       | fabric                   | 0       |
+|     diff_39_fu_3951_p2                             |     |        | diff_39        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_39    | mul       | auto                     | 2       |
+|     add_ln74_38_fu_4094_p2                         |     |        | add_ln74_38    | add       | fabric                   | 0       |
+|     add_ln73_79_fu_3289_p2                         |     |        | add_ln73_79    | add       | fabric                   | 0       |
+|     add_ln73_80_fu_3298_p2                         |     |        | add_ln73_80    | add       | fabric                   | 0       |
+|     diff_40_fu_3991_p2                             |     |        | diff_40        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_40    | mul       | auto                     | 2       |
+|     add_ln74_39_fu_4134_p2                         |     |        | add_ln74_39    | add       | fabric                   | 0       |
+|     add_ln73_81_fu_3363_p2                         |     |        | add_ln73_81    | add       | fabric                   | 0       |
+|     add_ln73_82_fu_3372_p2                         |     |        | add_ln73_82    | add       | fabric                   | 0       |
+|     diff_41_fu_4035_p2                             |     |        | diff_41        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_41    | mul       | auto                     | 2       |
+|     add_ln74_40_fu_4174_p2                         |     |        | add_ln74_40    | add       | fabric                   | 0       |
+|     add_ln73_83_fu_3437_p2                         |     |        | add_ln73_83    | add       | fabric                   | 0       |
+|     add_ln73_84_fu_3446_p2                         |     |        | add_ln73_84    | add       | fabric                   | 0       |
+|     diff_42_fu_4075_p2                             |     |        | diff_42        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_42    | mul       | auto                     | 2       |
+|     add_ln74_41_fu_4214_p2                         |     |        | add_ln74_41    | add       | fabric                   | 0       |
+|     add_ln73_85_fu_3511_p2                         |     |        | add_ln73_85    | add       | fabric                   | 0       |
+|     add_ln73_86_fu_3520_p2                         |     |        | add_ln73_86    | add       | fabric                   | 0       |
+|     diff_43_fu_4115_p2                             |     |        | diff_43        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_43    | mul       | auto                     | 2       |
+|     add_ln74_42_fu_4254_p2                         |     |        | add_ln74_42    | add       | fabric                   | 0       |
+|     add_ln73_87_fu_3585_p2                         |     |        | add_ln73_87    | add       | fabric                   | 0       |
+|     add_ln73_88_fu_3594_p2                         |     |        | add_ln73_88    | add       | fabric                   | 0       |
+|     diff_44_fu_4155_p2                             |     |        | diff_44        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_44    | mul       | auto                     | 2       |
+|     add_ln74_43_fu_4294_p2                         |     |        | add_ln74_43    | add       | fabric                   | 0       |
+|     add_ln73_89_fu_3659_p2                         |     |        | add_ln73_89    | add       | fabric                   | 0       |
+|     add_ln73_90_fu_3668_p2                         |     |        | add_ln73_90    | add       | fabric                   | 0       |
+|     diff_45_fu_4195_p2                             |     |        | diff_45        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_45    | mul       | auto                     | 2       |
+|     add_ln74_44_fu_4330_p2                         |     |        | add_ln74_44    | add       | fabric                   | 0       |
+|     add_ln73_91_fu_3737_p2                         |     |        | add_ln73_91    | add       | fabric                   | 0       |
+|     add_ln73_92_fu_3746_p2                         |     |        | add_ln73_92    | add       | fabric                   | 0       |
+|     diff_46_fu_4235_p2                             |     |        | diff_46        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_46    | mul       | auto                     | 2       |
+|     add_ln74_45_fu_4362_p2                         |     |        | add_ln74_45    | add       | fabric                   | 0       |
+|     add_ln73_93_fu_3771_p2                         |     |        | add_ln73_93    | add       | fabric                   | 0       |
+|     add_ln73_94_fu_3780_p2                         |     |        | add_ln73_94    | add       | fabric                   | 0       |
+|     diff_47_fu_4275_p2                             |     |        | diff_47        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_47    | mul       | auto                     | 2       |
+|     add_ln74_46_fu_4389_p2                         |     |        | add_ln74_46    | add       | fabric                   | 0       |
+|     add_ln73_95_fu_3805_p2                         |     |        | add_ln73_95    | add       | fabric                   | 0       |
+|     add_ln73_96_fu_3814_p2                         |     |        | add_ln73_96    | add       | fabric                   | 0       |
+|     diff_48_fu_4315_p2                             |     |        | diff_48        | sub       | fabric                   | 0       |
+|     mul_28s_28s_56_3_1_U10                         | 4   |        | mul_ln74_48    | mul       | auto                     | 2       |
+|     add_ln74_47_fu_4419_p2                         |     |        | add_ln74_47    | add       | fabric                   | 0       |
+|     icmp_ln82_fu_4435_p2                           |     |        | icmp_ln82      | setlt     | auto                     | 0       |
+|     select_ln82_fu_4450_p3                         |     |        | select_ln82    | select    | auto_sel                 | 0       |
+|     select_ln82_1_fu_4456_p3                       |     |        | select_ln82_1  | select    | auto_sel                 | 0       |
+|     select_ln82_2_fu_4461_p3                       |     |        | select_ln82_2  | select    | auto_sel                 | 0       |
+|     bubble_dist_1_fu_4467_p3                       |     |        | bubble_dist_1  | select    | auto_sel                 | 0       |
+|     select_ln82_4_fu_4472_p3                       |     |        | select_ln82_4  | select    | auto_sel                 | 0       |
+|     icmp_ln82_1_fu_4478_p2                         |     |        | icmp_ln82_1    | setlt     | auto                     | 0       |
+|     select_ln82_5_fu_4524_p3                       |     |        | select_ln82_5  | select    | auto_sel                 | 0       |
+|     select_ln82_6_fu_4484_p3                       |     |        | select_ln82_6  | select    | auto_sel                 | 0       |
+|     bubble_dist_2_fu_4492_p3                       |     |        | bubble_dist_2  | select    | auto_sel                 | 0       |
+|     select_ln82_8_fu_4530_p3                       |     |        | select_ln82_8  | select    | auto_sel                 | 0       |
+|     icmp_ln82_2_fu_4536_p2                         |     |        | icmp_ln82_2    | setlt     | auto                     | 0       |
+|     select_ln82_9_fu_4541_p3                       |     |        | select_ln82_9  | select    | auto_sel                 | 0       |
+|     select_ln82_10_fu_4549_p3                      |     |        | select_ln82_10 | select    | auto_sel                 | 0       |
 |  + knn_majority_vote                               | 0   |        |                |           |                          |         |
-|    sparsemux_21_4_1_1_1_U21                        |     |        | tmp_1          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_21_4_1_1_1_U76                        |     |        | tmp_1          | sparsemux | compactencoding_dontcare | 0       |
 |    counts_fu_1241_p3                               |     |        | counts         | select    | auto_sel                 | 0       |
-|    sparsemux_21_4_2_1_1_U22                        |     |        | tmp_2          | sparsemux | compactencoding_dontcare | 0       |
+|    sparsemux_21_4_2_1_1_U77                        |     |        | tmp_2          | sparsemux | compactencoding_dontcare | 0       |
 |    counts_1_fu_1320_p2                             |     |        | counts_1       | add       | fabric                   | 0       |
-|    icmp_ln135_fu_1349_p2                           |     |        | icmp_ln135     | setne     | auto                     | 0       |
-|    icmp_ln135_1_fu_1355_p2                         |     |        | icmp_ln135_1   | setgt     | auto                     | 0       |
+|    icmp_ln139_fu_1349_p2                           |     |        | icmp_ln139     | setne     | auto                     | 0       |
+|    icmp_ln139_1_fu_1355_p2                         |     |        | icmp_ln139_1   | setgt     | auto                     | 0       |
 |    max_1_fu_1361_p3                                |     |        | max_1          | select    | auto_sel                 | 0       |
-|    icmp_ln135_2_fu_1369_p2                         |     |        | icmp_ln135_2   | setgt     | auto                     | 0       |
+|    icmp_ln139_2_fu_1369_p2                         |     |        | icmp_ln139_2   | setgt     | auto                     | 0       |
 |    max_3_fu_1375_p3                                |     |        | max_3          | select    | auto_sel                 | 0       |
-|    icmp_ln135_3_fu_1383_p2                         |     |        | icmp_ln135_3   | setgt     | auto                     | 0       |
-|    select_ln135_fu_1452_p3                         |     |        | select_ln135   | select    | auto_sel                 | 0       |
+|    icmp_ln139_3_fu_1383_p2                         |     |        | icmp_ln139_3   | setgt     | auto                     | 0       |
+|    select_ln139_fu_1452_p3                         |     |        | select_ln139   | select    | auto_sel                 | 0       |
 |    max_4_fu_1389_p3                                |     |        | max_4          | select    | auto_sel                 | 0       |
-|    or_ln130_fu_1459_p2                             |     |        | or_ln130       | or        | auto                     | 0       |
-|    select_ln130_fu_1463_p3                         |     |        | select_ln130   | select    | auto_sel                 | 0       |
-|    icmp_ln135_4_fu_1395_p2                         |     |        | icmp_ln135_4   | setgt     | auto                     | 0       |
+|    or_ln134_fu_1459_p2                             |     |        | or_ln134       | or        | auto                     | 0       |
+|    select_ln134_fu_1463_p3                         |     |        | select_ln134   | select    | auto_sel                 | 0       |
+|    icmp_ln139_4_fu_1395_p2                         |     |        | icmp_ln139_4   | setgt     | auto                     | 0       |
 |    max_6_fu_1401_p3                                |     |        | max_6          | select    | auto_sel                 | 0       |
-|    icmp_ln135_5_fu_1409_p2                         |     |        | icmp_ln135_5   | setgt     | auto                     | 0       |
-|    select_ln135_3_fu_1475_p3                       |     |        | select_ln135_3 | select    | auto_sel                 | 0       |
+|    icmp_ln139_5_fu_1409_p2                         |     |        | icmp_ln139_5   | setgt     | auto                     | 0       |
+|    select_ln139_3_fu_1475_p3                       |     |        | select_ln139_3 | select    | auto_sel                 | 0       |
 |    max_7_fu_1415_p3                                |     |        | max_7          | select    | auto_sel                 | 0       |
-|    icmp_ln135_6_fu_1423_p2                         |     |        | icmp_ln135_6   | setgt     | auto                     | 0       |
+|    icmp_ln139_6_fu_1423_p2                         |     |        | icmp_ln139_6   | setgt     | auto                     | 0       |
 |    max_9_fu_1428_p3                                |     |        | max_9          | select    | auto_sel                 | 0       |
-|    icmp_ln135_7_fu_1435_p2                         |     |        | icmp_ln135_7   | setgt     | auto                     | 0       |
-|    select_ln135_8_fu_1482_p3                       |     |        | select_ln135_8 | select    | auto_sel                 | 0       |
+|    icmp_ln139_7_fu_1435_p2                         |     |        | icmp_ln139_7   | setgt     | auto                     | 0       |
+|    select_ln139_8_fu_1482_p3                       |     |        | select_ln139_8 | select    | auto_sel                 | 0       |
 |    max_10_fu_1441_p3                               |     |        | max_10         | select    | auto_sel                 | 0       |
-|    or_ln130_1_fu_1489_p2                           |     |        | or_ln130_1     | or        | auto                     | 0       |
-|    select_ln130_1_fu_1493_p3                       |     |        | select_ln130_1 | select    | auto_sel                 | 0       |
-|    icmp_ln135_8_fu_1505_p2                         |     |        | icmp_ln135_8   | setgt     | auto                     | 0       |
+|    or_ln134_1_fu_1489_p2                           |     |        | or_ln134_1     | or        | auto                     | 0       |
+|    select_ln134_1_fu_1493_p3                       |     |        | select_ln134_1 | select    | auto_sel                 | 0       |
+|    icmp_ln139_8_fu_1505_p2                         |     |        | icmp_ln139_8   | setgt     | auto                     | 0       |
 |    max_12_fu_1510_p3                               |     |        | max_12         | select    | auto_sel                 | 0       |
-|    icmp_ln135_9_fu_1517_p2                         |     |        | icmp_ln135_9   | setgt     | auto                     | 0       |
-|    select_ln135_9_fu_1523_p3                       |     |        | select_ln135_9 | select    | auto_sel                 | 0       |
-|    or_ln143_fu_1531_p2                             |     |        | or_ln143       | or        | auto                     | 0       |
-|    select_ln143_fu_1537_p3                         |     |        | select_ln143   | select    | auto_sel                 | 0       |
-|    or_ln143_1_fu_1545_p2                           |     |        | or_ln143_1     | or        | auto                     | 0       |
-|    or_ln143_2_fu_1551_p2                           |     |        | or_ln143_2     | or        | auto                     | 0       |
-|    or_ln143_3_fu_1555_p2                           |     |        | or_ln143_3     | or        | auto                     | 0       |
+|    icmp_ln139_9_fu_1517_p2                         |     |        | icmp_ln139_9   | setgt     | auto                     | 0       |
+|    select_ln139_9_fu_1523_p3                       |     |        | select_ln139_9 | select    | auto_sel                 | 0       |
+|    or_ln147_fu_1531_p2                             |     |        | or_ln147       | or        | auto                     | 0       |
+|    select_ln147_fu_1537_p3                         |     |        | select_ln147   | select    | auto_sel                 | 0       |
+|    or_ln147_1_fu_1545_p2                           |     |        | or_ln147_1     | or        | auto                     | 0       |
+|    or_ln147_2_fu_1551_p2                           |     |        | or_ln147_2     | or        | auto                     | 0       |
+|    or_ln147_3_fu_1555_p2                           |     |        | or_ln147_3     | or        | auto                     | 0       |
 |    max_label_fu_1561_p3                            |     |        | max_label      | select    | auto_sel                 | 0       |
-|    or_ln143_4_fu_1569_p2                           |     |        | or_ln143_4     | or        | auto                     | 0       |
-|    or_ln143_5_fu_1575_p2                           |     |        | or_ln143_5     | or        | auto                     | 0       |
-|    or_ln143_6_fu_1579_p2                           |     |        | or_ln143_6     | or        | auto                     | 0       |
-|    ap_return                                       |     |        | select_ln143_2 | select    | auto_sel                 | 0       |
+|    or_ln147_4_fu_1569_p2                           |     |        | or_ln147_4     | or        | auto                     | 0       |
+|    or_ln147_5_fu_1575_p2                           |     |        | or_ln147_5     | or        | auto                     | 0       |
+|    or_ln147_6_fu_1579_p2                           |     |        | or_ln147_6     | or        | auto                     | 0       |
+|    ap_return                                       |     |        | select_ln147_2 | select    | auto_sel                 | 0       |
 +----------------------------------------------------+-----+--------+----------------+-----------+--------------------------+---------+
 
 
@@ -492,39 +493,31 @@
 ================================================================
 == Pragma Report
 ================================================================
-* Inferred Pragmas
-+--------------+---------+-----------------------------------------------------------------------------------+-------------------------------+
-| Type         | Options | Location                                                                          | Inferred From                 |
-+--------------+---------+-----------------------------------------------------------------------------------+-------------------------------+
-| LOOP_FLATTEN | 0       | loop train_loop (../src/knn.cpp:56:17) in knn_distance_and_sort ../src/knn.cpp:56 | performance ../src/knn.cpp:56 |
-+--------------+---------+-----------------------------------------------------------------------------------+-------------------------------+
-
 * Valid Pragma Syntax
-+-----------------+-----------------------------------------------------------------+----------------------------------------------------------+
-| Type            | Options                                                         | Location                                                 |
-+-----------------+-----------------------------------------------------------------+----------------------------------------------------------+
-| INLINE          | off                                                             | ../src/knn.cpp:15 in knn_distance_and_sort               |
-| ARRAY_PARTITION | variable=top_k_dist complete                                    | ../src/knn.cpp:26 in knn_distance_and_sort, top_k_dist   |
-| ARRAY_PARTITION | variable=top_k_labels complete                                  | ../src/knn.cpp:27 in knn_distance_and_sort, top_k_labels |
-| ARRAY_PARTITION | variable=test_local cyclic factor=7                             | ../src/knn.cpp:28 in knn_distance_and_sort, test_local   |
-| PIPELINE        | II = 1                                                          | ../src/knn.cpp:32 in knn_distance_and_sort               |
-| UNROLL          |                                                                 | ../src/knn.cpp:44 in knn_distance_and_sort               |
-| PIPELINE        | II = 1                                                          | ../src/knn.cpp:57 in knn_distance_and_sort               |
-| UNROLL          | factor=2                                                        | ../src/knn.cpp:68 in knn_distance_and_sort               |
-| UNROLL          |                                                                 | ../src/knn.cpp:75 in knn_distance_and_sort               |
-| UNROLL          |                                                                 | ../src/knn.cpp:78 in knn_distance_and_sort               |
-| INLINE          | off                                                             | ../src/knn.cpp:94 in knn_majority_vote                   |
-| ARRAY_PARTITION | variable = top_k_labels complete                                | ../src/knn.cpp:98 in knn_majority_vote                   |
-| ARRAY_PARTITION | variable = counts complete                                      | ../src/knn.cpp:99 in knn_majority_vote                   |
-| UNROLL          |                                                                 | ../src/knn.cpp:107 in knn_majority_vote                  |
-| UNROLL          |                                                                 | ../src/knn.cpp:119 in knn_majority_vote                  |
-| UNROLL          |                                                                 | ../src/knn.cpp:134 in knn_majority_vote                  |
-| INTERFACE       | m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*10 | ../src/knn.cpp:155 in knn_accelerator, X_train           |
-| INTERFACE       | m_axi port=y_train offset=slave bundle=gmem_y_train depth=10    | ../src/knn.cpp:156 in knn_accelerator, y_train           |
-| INTERFACE       | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*10   | ../src/knn.cpp:157 in knn_accelerator, X_test            |
-| INTERFACE       | m_axi port=y_test offset=slave bundle=gmem_y_test depth=10      | ../src/knn.cpp:158 in knn_accelerator, y_test            |
-| INTERFACE       | s_axilite port=return bundle=control                            | ../src/knn.cpp:161 in knn_accelerator, return            |
-| ARRAY_PARTITION | variable = top_k_labels complete                                | ../src/knn.cpp:166 in knn_accelerator                    |
-+-----------------+-----------------------------------------------------------------+----------------------------------------------------------+
++-----------------+-------------------------------------------------------------------+----------------------------------------------+
+| Type            | Options                                                           | Location                                     |
++-----------------+-------------------------------------------------------------------+----------------------------------------------+
+| INLINE          | off                                                               | in knn_distance_and_sort (../src/knn.cpp:15) |
+| ARRAY_PARTITION | variable=top_k_dist complete                                      | in knn_distance_and_sort (../src/knn.cpp:26) |
+| ARRAY_PARTITION | variable=top_k_labels complete                                    | in knn_distance_and_sort (../src/knn.cpp:27) |
+| ARRAY_PARTITION | variable=test_local cyclic factor=7                               | in knn_distance_and_sort (../src/knn.cpp:28) |
+| PIPELINE        | II = 1                                                            | in knn_distance_and_sort (../src/knn.cpp:32) |
+| UNROLL          |                                                                   | in knn_distance_and_sort (../src/knn.cpp:44) |
+| PIPELINE        | II = 49                                                           | in knn_distance_and_sort (../src/knn.cpp:60) |
+| UNROLL          |                                                                   | in knn_distance_and_sort (../src/knn.cpp:72) |
+| UNROLL          |                                                                   | in knn_distance_and_sort (../src/knn.cpp:81) |
+| INLINE          | off                                                               | in knn_majority_vote (../src/knn.cpp:98)     |
+| ARRAY_PARTITION | variable = top_k_labels complete                                  | in knn_majority_vote (../src/knn.cpp:102)    |
+| ARRAY_PARTITION | variable = counts complete                                        | in knn_majority_vote (../src/knn.cpp:103)    |
+| UNROLL          |                                                                   | in knn_majority_vote (../src/knn.cpp:111)    |
+| UNROLL          |                                                                   | in knn_majority_vote (../src/knn.cpp:123)    |
+| UNROLL          |                                                                   | in knn_majority_vote (../src/knn.cpp:138)    |
+| INTERFACE       | m_axi port=X_train offset=slave bundle=gmem_x_train depth=49*1500 | in knn_accelerator (../src/knn.cpp:159)      |
+| INTERFACE       | m_axi port=y_train offset=slave bundle=gmem_y_train depth=1500    | in knn_accelerator (../src/knn.cpp:160)      |
+| INTERFACE       | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*1000   | in knn_accelerator (../src/knn.cpp:161)      |
+| INTERFACE       | m_axi port=y_test offset=slave bundle=gmem_y_test depth=1000      | in knn_accelerator (../src/knn.cpp:162)      |
+| INTERFACE       | s_axilite port=return bundle=control                              | in knn_accelerator (../src/knn.cpp:165)      |
+| ARRAY_PARTITION | variable = top_k_labels complete                                  | in knn_accelerator (../src/knn.cpp:170)      |
++-----------------+-------------------------------------------------------------------+----------------------------------------------+
 
 
