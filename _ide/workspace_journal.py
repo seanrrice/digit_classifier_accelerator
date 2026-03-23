@@ -31,3 +31,31 @@ comp.run(operation="PACKAGE")
 
 comp.run(operation="IMPLEMENTATION")
 
+comp.run(operation="C_SIMULATION")
+
+comp.run(operation="SYNTHESIS")
+
+comp.run(operation="SYNTHESIS")
+
+comp.run(operation="CO_SIMULATION")
+
+comp.run(operation="PACKAGE")
+
+comp.run(operation="IMPLEMENTATION")
+
+comp.run(operation="IMPLEMENTATION")
+
+comp.run(operation="PACKAGE")
+
+comp.run(operation="IMPLEMENTATION")
+
+comp.run(operation="PACKAGE")
+
+comp.run(operation="SYNTHESIS")
+
+comp.run(operation="PACKAGE")
+
+comp.run(operation="IMPLEMENTATION")
+
+comp.run(operation="CO_SIMULATION")
+

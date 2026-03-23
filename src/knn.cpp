@@ -29,6 +29,7 @@ void knn_distance_and_sort(
 
     //copy test_point for local storage
     load_test_local:for (int i = 0; i < NUM_FEATURES; i++){
+        #pragma HLS PIPELINE II = 1
         test_local[i] = test_point[i];
     }
 
@@ -40,7 +41,6 @@ void knn_distance_and_sort(
     // distance (e.g., 0xFFFFFFFF) and top_k_labels to 0.
     /* YOUR CODE HERE */
     init_top_k: for (int i = 0; i < K_NEIGHBORS; i++){
-        #pragma HLS PIPELINE OFF
         #pragma HLS unroll          
         top_k_dist[i] = 0x1FFFFF;
         
@@ -54,7 +54,7 @@ void knn_distance_and_sort(
     // Iterates NUM_TRAIN_SAMPLES times.    
     /* YOUR CODE HERE */
     train_loop: for( int i = 0; i < NUM_TRAIN_SAMPLES; i++){
-        #pragma HLS PIPELINE OFF
+        #pragma HLS PIPELINE II = 1
       
 
     // --------------------------------------------------------
@@ -65,19 +65,16 @@ void knn_distance_and_sort(
         dist_t sum = 0.0;
 
         feature_loop: for (int j = 0; j < NUM_FEATURES; j++){
-            #pragma HLS PIPELINE OFF
-            #pragma HLS unroll factor=7
+            #pragma HLS unroll factor=2
             pixel_t diff = test_local[j] - X_train[i * NUM_FEATURES + j];
             sum += diff * diff;
         }
         //distances[i] = sum;
         //labels[i] = y_train[i];
         sort_loop: for(int j=0;j < K_NEIGHBORS; j++){
-            #pragma HLS PIPELINE OFF
             #pragma HLS unroll
             if(sum<top_k_dist[j]){
                 sort_cascade_loop: for(int k=K_NEIGHBORS-1;k>j;k--){
-                    #pragma HLS PIPELINE OFF
                     #pragma HLS unroll
                     top_k_dist[k] = top_k_dist[k-1];
                     top_k_labels[k] = top_k_labels[k-1];
@@ -107,7 +104,6 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     // Initialize all elements in the 'counts' array to 0.    
     /* YOUR CODE HERE */
     count_init_loop: for (int i = 0; i < NUM_CLASSES; i++) {
-        #pragma HLS PIPELINE OFF
         #pragma HLS unroll
         counts[i] = 0;
     }
@@ -120,7 +116,6 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     // corresponding index in your 'counts' array.
     /* YOUR CODE HERE */
     set_counts_loop: for (int i = 0; i < K_NEIGHBORS; i++) {
-        #pragma HLS PIPELINE OFF
         #pragma HLS unroll
         label_t idx = top_k_labels[i];
         counts[idx] ++;
@@ -136,7 +131,6 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     label_t max_label;
 
     max_count_loop: for (int i = 0; i < NUM_CLASSES; i++) {
-        #pragma HLS PIPELINE OFF
         #pragma HLS unroll
         if (counts[i] > max) {
             max = counts[i];
@@ -172,7 +166,6 @@ void knn_accelerator(
     #pragma HLS ARRAY_PARTITION variable = top_k_labels complete
     
     test_data: for (int i = 0; i < NUM_TEST_SAMPLES; i++) {
-        #pragma HLS PIPELINE OFF
         // 1. Calculate distances and identify the K-Nearest neighbors
         knn_distance_and_sort(X_test+i*NUM_FEATURES, X_train, y_train, top_k_labels);
         

@@ -35,7 +35,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../src/knn.cpp:125</SourceLocation>
+<SourceLocation>../src/knn.cpp:120</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
