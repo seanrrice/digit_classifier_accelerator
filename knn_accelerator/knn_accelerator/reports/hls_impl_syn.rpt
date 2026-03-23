@@ -2,8 +2,8 @@
 == Vivado RTL Synthesis Results
 ================================================================
 + General Information:
-    * Date:            Sun Mar 22 22:07:51 -0700 2026
-    * Version:         2025.1 (Build 6135595 on May 21 2025)
+    * Date:            Mon Mar 23 09:39:07 -0700 2026
+    * Version:         2025.2 (Build 6295257 on Nov 14 2025)
     * Project:         knn_accelerator
     * Solution:        hls (Vivado IP Flow Target)
     * Product family:  zynq
@@ -29,12 +29,12 @@
 ================================================================
 == RTL Synthesis Resource Summary
 ================================================================
-LUT:              9576
-FF:               14297
+LUT:              9737
+FF:               14530
 DSP:              8
 BRAM:             3
 URAM:             0
-SRL:              401
+SRL:              404
 
 
 ================================================================
@@ -45,37 +45,37 @@ SRL:              401
 | Timing         | Period (ns) |
 +----------------+-------------+
 | Target         | 10.000      |
-| Post-Synthesis | 7.056       |
+| Post-Synthesis | 6.456       |
 +----------------+-------------+
 
 
 ================================================================
 == RTL Synthesis Resources
 ================================================================
-+----------------------------------------+------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
-| Name                                   | LUT  | FF    | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
-+----------------------------------------+------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
-| inst                                   | 9576 | 14297 | 8   | 3    |      |     |        |      |         |          |        |
-|   (inst)                               | 14   | 304   |     |      |      |     |        |      |         |          |        |
-|   control_r_s_axi_U                    | 211  | 297   |     |      |      |     |        |      |         |          |        |
-|   control_s_axi_U                      |      |       |     |      |      |     |        |      |         |          |        |
-|   gmem_x_test_m_axi_U                  | 514  | 756   |     | 1    |      |     |        |      |         |          |        |
-|   gmem_x_train_m_axi_U                 | 637  | 742   |     | 1    |      |     |        |      |         |          |        |
-|   gmem_y_test_m_axi_U                  | 910  | 1175  |     |      |      |     |        |      |         |          |        |
-|   gmem_y_train_m_axi_U                 | 594  | 836   |     | 1    |      |     |        |      |         |          |        |
-|   grp_knn_distance_and_sort_fu_156     | 6540 | 10090 | 8   |      |      |     |        |      |         |          |        |
-|     (grp_knn_distance_and_sort_fu_156) | 5331 | 9599  |     |      |      |     |        |      |         |          |        |
-|     mul_28s_28s_56_3_1_U10             | 708  | 18    | 4   |      |      |     |        |      |         |          |        |
-|     mul_28s_28s_56_3_1_U11             | 68   | 18    | 4   |      |      |     |        |      |         |          |        |
-|     test_local_1_U                     | 56   | 56    |     |      |      |     |        |      |         |          |        |
-|     test_local_2_U                     | 56   | 56    |     |      |      |     |        |      |         |          |        |
-|     test_local_3_U                     | 56   | 56    |     |      |      |     |        |      |         |          |        |
-|     test_local_4_U                     | 56   | 56    |     |      |      |     |        |      |         |          |        |
-|     test_local_5_U                     | 56   | 56    |     |      |      |     |        |      |         |          |        |
-|     test_local_6_U                     | 57   | 56    |     |      |      |     |        |      |         |          |        |
-|     test_local_U                       | 58   | 56    |     |      |      |     |        |      |         |          |        |
-|   grp_knn_majority_vote_fu_170         | 128  | 72    |     |      |      |     |        |      |         |          |        |
-+----------------------------------------+------+-------+-----+------+------+-----+--------+------+---------+----------+--------+
++------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                                                       | LUT | FF | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                                                       |     |    |     |      |      | 404 |        |      |         |          |        |
+|   (inst)                                                   |     |    |     |      |      | 6   |        |      |         |          |        |
+|   control_r_s_axi_U                                        |     |    |     |      |      |     |        |      |         |          |        |
+|   control_s_axi_U                                          |     |    |     |      |      |     |        |      |         |          |        |
+|   gmem_x_test_m_axi_U                                      |     |    |     |      |      | 68  |        |      |         |          |        |
+|   gmem_x_train_m_axi_U                                     |     |    |     |      |      | 63  |        |      |         |          |        |
+|   gmem_y_test_m_axi_U                                      |     |    |     |      |      | 198 |        |      |         |          |        |
+|   gmem_y_train_m_axi_U                                     |     |    |     |      |      | 69  |        |      |         |          |        |
+|   grp_knn_accelerator_Pipeline_load_test_local_fu_2199     |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_knn_accelerator_Pipeline_load_test_local_fu_2199) |     |    |     |      |      |     |        |      |         |          |        |
+|     flow_control_loop_pipe_sequential_init_U               |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_28s_28s_56_3_1_U10                                   |     |    |     |      |      |     |        |      |         |          |        |
+|   mul_28s_28s_56_3_1_U11                                   |     |    |     |      |      |     |        |      |         |          |        |
+|   test_local_1_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   test_local_2_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   test_local_3_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   test_local_4_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   test_local_5_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   test_local_6_U                                           |     |    |     |      |      |     |        |      |         |          |        |
+|   test_local_U                                             |     |    |     |      |      |     |        |      |         |          |        |
++------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
 
 
 ================================================================
@@ -84,18 +84,18 @@ SRL:              401
 +-----------------------------------------------------------+-----------+--------+--------+
 | Criteria                                                  | Guideline | Actual | Status |
 +-----------------------------------------------------------+-----------+--------+--------+
-| LUT                                                       | 70%       | 18.00% | OK     |
-| FD                                                        | 50%       | 13.44% | OK     |
-| LUTRAM+SRL                                                | 25%       | 4.56%  | OK     |
-| MUXF7                                                     | 15%       | 0.18%  | OK     |
+| LUT                                                       | 70%       | 18.30% | OK     |
+| FD                                                        | 50%       | 13.66% | OK     |
+| LUTRAM+SRL                                                | 25%       | 4.57%  | OK     |
+| MUXF7                                                     | 15%       | 0.15%  | OK     |
 | DSP                                                       | 80%       | 3.64%  | OK     |
 | RAMB/FIFO                                                 | 80%       | 1.07%  | OK     |
 | DSP+RAMB+URAM (Avg)                                       | 70%       | 2.35%  | OK     |
 | BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
-| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 8      | REVIEW |
 | MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
-| Control Sets                                              | 998       | 268    | OK     |
-| Average Fanout for modules > 100k cells                   | 4         | 2.45   | OK     |
+| Control Sets                                              | 998       | 271    | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.47   | OK     |
 | Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
 | Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
 +-----------------------------------------------------------+-----------+--------+--------+
@@ -114,261 +114,88 @@ SRL:              401
 == RTL Synthesis Timing Paths
 ================================================================
 * Timing was met
-+-------+-------+------------------------------------------------------+--------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path  | SLACK | STARTPOINT PIN                                       | ENDPOINT PIN                                                 | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
-|       |       |                                                      |                                                              |              |            |                |          DELAY |        DELAY |
-+-------+-------+------------------------------------------------------+--------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path1 | 2.944 | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]/D |            7 |        193 |          7.081 |          2.283 |        4.798 |
-| Path2 | 2.950 | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]/D |            7 |        193 |          7.075 |          2.277 |        4.798 |
-| Path3 | 3.025 | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]/D |            7 |        193 |          7.000 |          2.202 |        4.798 |
-| Path4 | 3.049 | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]/D |            7 |        193 |          6.976 |          2.178 |        4.798 |
-| Path5 | 3.195 | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]/D |            6 |        193 |          6.830 |          2.041 |        4.789 |
-+-------+-------+------------------------------------------------------+--------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
++-------+-------+---------------------+-----------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN      | ENDPOINT PIN                                                                | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                     |                                                                             |              |            |                |          DELAY |        DELAY |
++-------+-------+---------------------+-----------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 3.544 | ap_CS_fsm_reg[54]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]/D                |            8 |        254 |          6.481 |          2.407 |        4.074 |
+| Path2 | 3.550 | ap_CS_fsm_reg[54]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]/D                |            8 |        254 |          6.475 |          2.401 |        4.074 |
+| Path3 | 3.625 | ap_CS_fsm_reg[54]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]/D                |            8 |        254 |          6.400 |          2.326 |        4.074 |
+| Path4 | 3.649 | ap_CS_fsm_reg[54]/C | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]/D                |            8 |        254 |          6.376 |          2.302 |        4.074 |
+| Path5 | 3.674 | ap_CS_fsm_reg[46]/C | gmem_x_train_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/mem_reg[5][25]_srl6/D |            5 |        216 |          6.198 |          1.309 |        4.889 |
++-------+-------+---------------------+-----------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path1 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]                     | FLOP_LATCH.flop.FDRE |
-    +--------------------------------------------------------------------------------+----------------------+
+    +-------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                             | Primitive Type       |
+    +-------------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[54]                                                       | FLOP_LATCH.flop.FDRE |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_23           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/reg_2221[55]_i_20 | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_12           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_3            | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4      | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6__0           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1__1       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2__0       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]              | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path2 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]                     | FLOP_LATCH.flop.FDRE |
-    +--------------------------------------------------------------------------------+----------------------+
+    +-------------------------------------------------------------------------+----------------------+
+    | Path2 Cells                                                             | Primitive Type       |
+    +-------------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[54]                                                       | FLOP_LATCH.flop.FDRE |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_23           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/reg_2221[55]_i_20 | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_12           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_3            | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4      | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6__0           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1__1       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2__0       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]              | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path3 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]                     | FLOP_LATCH.flop.FDRE |
-    +--------------------------------------------------------------------------------+----------------------+
+    +-------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                             | Primitive Type       |
+    +-------------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[54]                                                       | FLOP_LATCH.flop.FDRE |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_23           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/reg_2221[55]_i_20 | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_12           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_3            | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4      | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6__0           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1__1       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2__0       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]              | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path4 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]                     | FLOP_LATCH.flop.FDRE |
-    +--------------------------------------------------------------------------------+----------------------+
+    +-------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                             | Primitive Type       |
+    +-------------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[54]                                                       | FLOP_LATCH.flop.FDRE |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_23           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/reg_2221[55]_i_20 | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_12           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_3            | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4      | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6__0           | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1__1       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2__0       | CARRY.others.CARRY4  |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]              | FLOP_LATCH.flop.FDRE |
+    +-------------------------------------------------------------------------+----------------------+
 
-    +--------------------------------------------------------------------------------+----------------------+
-    | Path5 Cells                                                                    | Primitive Type       |
-    +--------------------------------------------------------------------------------+----------------------+
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[6]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[7]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[8]_i_2                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[5]                     | FLOP_LATCH.flop.FDRE |
-    | grp_knn_distance_and_sort_fu_156/ap_CS_fsm_reg[45]                             | FLOP_LATCH.flop.FDRE |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][0]_srl6_i_37            | LUT.others.LUT3      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_12 | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg[5][0]_srl6_i_3  | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg_i_4__0          | LUT.others.LUT4      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr[4]_i_6                     | LUT.others.LUT6      |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]_i_1                 | CARRY.others.CARRY4  |
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mOutPtr_reg[4]                     | FLOP_LATCH.flop.FDRE |
-    +--------------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                               | Primitive Type       |
+    +---------------------------------------------------------------------------+----------------------+
+    | ap_CS_fsm_reg[46]                                                         | FLOP_LATCH.flop.FDRE |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/reg_2221[55]_i_15             | LUT.others.LUT3      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][25]_srl6_i_21      | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][25]_srl6_i_9       | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][25]_srl6_i_2       | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/mem_reg[5][25]_srl6_i_1       | LUT.others.LUT6      |
+    | gmem_x_train_m_axi_U/load_unit_0/fifo_rreq/U_fifo_srl/mem_reg[5][25]_srl6 | DMEM.srl.SRL16E      |
+    +---------------------------------------------------------------------------+----------------------+
 
 
 ================================================================

@@ -12,7 +12,7 @@ void knn_distance_and_sort(
     label_t *y_train,
     label_t top_k_labels[K_NEIGHBORS]
 ) {
-#pragma HLS INLINE off
+#pragma HLS INLINE
 
     //dist_t distances[NUM_TRAIN_SAMPLES];
     //label_t labels[NUM_TRAIN_SAMPLES];
@@ -91,7 +91,7 @@ void knn_distance_and_sort(
 // KERNEL 2: Majority Vote
 // =========================================================
 label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {    
-#pragma HLS INLINE off
+#pragma HLS INLINE
     int counts[NUM_CLASSES];
 
     //Partition arrays
