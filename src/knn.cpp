@@ -23,9 +23,9 @@ void knn_distance_and_sort(
 
 
     //partition arrays
-    #pragma HLS partition variable=top_k_dist complete
-    #pragma HLS partition variable=top_k_labels complete
-    #pragma HLS partition variable=test_local cyclic factor=7
+    #pragma HLS ARRAY_PARTITION variable=top_k_dist complete
+    #pragma HLS ARRAY_PARTITION variable=top_k_labels complete
+    #pragma HLS ARRAY_PARTITION variable=test_local cyclic factor=7
 
     //copy test_point for local storage
     load_test_local:for (int i = 0; i < NUM_FEATURES; i++){
@@ -122,7 +122,7 @@ label_t knn_majority_vote(label_t top_k_labels[K_NEIGHBORS]) {
     set_counts_loop: for (int i = 0; i < K_NEIGHBORS; i++) {
         #pragma HLS PIPELINE OFF
         #pragma HLS unroll
-        int idx = top_k_labels[i];
+        label_t idx = top_k_labels[i];
         counts[idx] ++;
     }
 

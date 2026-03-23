@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "03/22/26 16:40:10",
- "timestampMillis": "1774222810449",
+ "dateTimestamp": "03/22/26 17:54:00",
+ "timestampMillis": "1774227240746",
  "buildStep": {
-  "cmdId": "e589eaba-0cc2-40b5-85c9-9cbac72109e3",
+  "cmdId": "afcd314f-937d-46a9-8fda-219a6da25689",
   "name": "vitis-run",
   "logFile": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\logs\\knn_accelerator.steps.log",
   "commandLine": "C:/Xilinx/2025.1/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config C:\\Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\hls_config.cfg --work_dir knn_accelerator ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/22/26 16:40:10",
- "timestampMillis": "1774222810450",
+ "dateTimestamp": "03/22/26 17:54:00",
+ "timestampMillis": "1774227240748",
  "status": {
-  "cmdId": "e589eaba-0cc2-40b5-85c9-9cbac72109e3",
+  "cmdId": "afcd314f-937d-46a9-8fda-219a6da25689",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817948",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248404",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -81,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817950",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248406",
  "buildStep": {
-  "cmdId": "f8a10793-5a3d-44e4-99ea-ed6d9791c03c",
+  "cmdId": "8c6aa009-32c0-4acf-86ba-4fcd9b6a17eb",
   "name": "",
   "logFile": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls\\hls.log",
   "commandLine": "",
@@ -97,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817951",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248407",
  "status": {
-  "cmdId": "f8a10793-5a3d-44e4-99ea-ed6d9791c03c",
+  "cmdId": "8c6aa009-32c0-4acf-86ba-4fcd9b6a17eb",
   "state": "CS_RUNNING"
  }
 }
@@ -108,8 +108,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817953",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248409",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls\\impl\\verilog",
   "name": "",
@@ -122,8 +122,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817954",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248410",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_syn.rpt",
   "name": "",
@@ -136,8 +136,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817955",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248411",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_syn.xml",
   "name": "",
@@ -150,8 +150,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817957",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248411",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls\\impl\\verilog",
   "name": "",
@@ -164,8 +164,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817958",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248412",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_impl.rpt",
   "name": "",
@@ -178,8 +178,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:40:17",
- "timestampMillis": "1774222817959",
+ "dateTimestamp": "03/22/26 17:54:08",
+ "timestampMillis": "1774227248413",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_impl.xml",
   "name": "",
@@ -192,8 +192,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:49:23",
- "timestampMillis": "1774223363217",
+ "dateTimestamp": "03/22/26 18:04:15",
+ "timestampMillis": "1774227855474",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls",
   "name": "",
@@ -206,8 +206,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:49:23",
- "timestampMillis": "1774223363269",
+ "dateTimestamp": "03/22/26 18:04:15",
+ "timestampMillis": "1774227855516",
  "report": {
   "path": "C:/Users\\seanr\\vitis_projects\\Lab2_digit_classifier_accel\\knn_accelerator\\knn_accelerator\\hls",
   "name": "",
@@ -220,10 +220,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/22/26 16:49:23",
- "timestampMillis": "1774223363270",
+ "dateTimestamp": "03/22/26 18:04:15",
+ "timestampMillis": "1774227855517",
  "status": {
-  "cmdId": "f8a10793-5a3d-44e4-99ea-ed6d9791c03c",
+  "cmdId": "8c6aa009-32c0-4acf-86ba-4fcd9b6a17eb",
   "state": "CS_PASSED"
  }
 }
@@ -231,10 +231,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/22/26 16:49:24",
- "timestampMillis": "1774223364298",
+ "dateTimestamp": "03/22/26 18:04:16",
+ "timestampMillis": "1774227856422",
  "status": {
-  "cmdId": "e589eaba-0cc2-40b5-85c9-9cbac72109e3",
+  "cmdId": "afcd314f-937d-46a9-8fda-219a6da25689",
   "state": "CS_PASSED"
  }
 }
@@ -242,8 +242,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:49:24",
- "timestampMillis": "1774223364315",
+ "dateTimestamp": "03/22/26 18:04:16",
+ "timestampMillis": "1774227856436",
  "report": {
   "path": "",
   "name": "",
@@ -256,8 +256,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/22/26 16:49:24",
- "timestampMillis": "1774223364315",
+ "dateTimestamp": "03/22/26 18:04:16",
+ "timestampMillis": "1774227856437",
  "report": {
   "path": "",
   "name": "",

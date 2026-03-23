@@ -3407,7 +3407,7 @@ window.onload = function () { addSorting(); }
 <center><h1>Design Guidance Report</h1></center><center><table class="header" border="0">
 <tr><td><b>Copyright</b></td><td>Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.</td></tr>
 <tr><td><b>Tool Version</b></td><td>xcd v.2025.1 (win64) Build 0 </td></tr>
-<tr><td><b>Date</b></td><td>Sun Mar 22 16:09:59 2026</td></tr>
+<tr><td><b>Date</b></td><td>Sun Mar 22 17:48:26 2026</td></tr>
 <tr><td><b>Host</b></td><td>LAPTOP-L6H807T2 running 64-bit major release  (build 9200)</td></tr>
 <tr><td><b>Command</b></td><td>C:/Xilinx/2025.1/Vitis/bin/unwrapped/win64.o/v++.exe  -c --mode hls --config C:\Users\seanr\vitis_projects\Lab2_digit_classifier_accel\knn_accelerator\hls_config.cfg --work_dir knn_accelerator </td></tr>
 </table></center><br>
@@ -3440,18 +3440,7 @@ window.onload = function () { addSorting(); }
 <td align="left"><undefined></td>
 <td align="left">HLS Kernel Related</td>
 <td align="left">Accelerator.knn_accelerator.Kernel</td>
-<td align="left">**** Estimated Fmax: 119.18 MHz
-</td>
-<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
-</tr>
-<tr>
-<td align="left">4</td>
-<td align="left">Interface</td>
-<td align="left">ADVISORY</td>
-<td align="left"><undefined></td>
-<td align="left">HLS Interface Related</td>
-<td align="left">Accelerator.knn_accelerator.Interface</td>
-<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+<td align="left">**** Estimated Fmax: 120.21 MHz
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
@@ -3478,6 +3467,17 @@ window.onload = function () { addSorting(); }
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
+<td align="left">1</td>
+<td align="left">Interface</td>
+<td align="left">ADVISORY</td>
+<td align="left"><undefined></td>
+<td align="left">HLS Interface Related</td>
+<td align="left">Accelerator.knn_accelerator.Interface</td>
+<td align="left">Multiple burst reads of length 49 and bit width 32 in loop 'load_test_local'(<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=31">knn.cpp</a>) has been inferred on bundle 'gmem_x_test'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=31">knn.cpp</a>)
+</td>
+<td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
+</tr>
+<tr>
 <td align="left">3</td>
 <td align="left">Throughput</td>
 <td align="left">ADVISORY</td>
@@ -3489,13 +3489,13 @@ window.onload = function () { addSorting(); }
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
 <tr>
-<td align="left">1</td>
+<td align="left">4</td>
 <td align="left">Interface</td>
 <td align="left">ADVISORY</td>
 <td align="left"><undefined></td>
 <td align="left">HLS Interface Related</td>
 <td align="left">Accelerator.knn_accelerator.Interface</td>
-<td align="left">Multiple burst reads of length 49 and bit width 32 in loop 'load_test_local'(<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=31">knn.cpp</a>) has been inferred on bundle 'gmem_x_test'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (<a href="file:///C:/Users/seanr/vitis_projects/Lab2_digit_classifier_accel/knn_accelerator\../src/knn.cpp#line=31">knn.cpp</a>)
+<td align="left">Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
 </td>
 <td align="left"><a href="http:///docs.xilinx.com/access/sources/dita/map?Doc_Version=2025.1%20English&url=ug1399-vitis-hls">Vitis HLS User Guide (UG1399)</a></td>
 </tr>
