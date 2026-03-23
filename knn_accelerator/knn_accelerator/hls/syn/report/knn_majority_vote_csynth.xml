@@ -1,7 +1,7 @@
 <profile>
 
 <ReportVersion>
-<Version>2025.1</Version>
+<Version>2025.2</Version>
 </ReportVersion>
 
 <UserAssignments>
@@ -35,7 +35,7 @@
 <SummaryOfViolations>
 <IssueType>-</IssueType>
 <ViolationType>-</ViolationType>
-<SourceLocation>../src/knn.cpp:120</SourceLocation>
+<SourceLocation>../src/knn.cpp:124</SourceLocation>
 </SummaryOfViolations>
 </PerformanceEstimates>
 
