@@ -9,10 +9,10 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "03/23/26 16:33:57",
- "timestampMillis": "1774308837519",
+ "dateTimestamp": "03/23/26 17:07:49",
+ "timestampMillis": "1774310869700",
  "buildStep": {
-  "cmdId": "f68ec239-bd44-4c1d-832a-4946695a827e",
+  "cmdId": "08a245ba-c7dc-4911-9c88-9b176e2251a5",
   "name": "vitis-run",
   "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\logs\\knn_accelerator.steps.log",
   "commandLine": "T:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --impl --config Z:\\Labs\\clab\\knn_accelerator\\hls_config.cfg --work_dir knn_accelerator ",
@@ -33,10 +33,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:33:57",
- "timestampMillis": "1774308837520",
+ "dateTimestamp": "03/23/26 17:07:49",
+ "timestampMillis": "1774310869701",
  "status": {
-  "cmdId": "f68ec239-bd44-4c1d-832a-4946695a827e",
+  "cmdId": "08a245ba-c7dc-4911-9c88-9b176e2251a5",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842681",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875350",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -81,10 +81,10 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842682",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875351",
  "buildStep": {
-  "cmdId": "e7a12a30-ef90-4c01-af2d-7dff49fbcf1f",
+  "cmdId": "ea1aee8d-aa11-4443-9220-1789ce86311f",
   "name": "",
   "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\hls.log",
   "commandLine": "",
@@ -97,10 +97,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842683",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875352",
  "status": {
-  "cmdId": "e7a12a30-ef90-4c01-af2d-7dff49fbcf1f",
+  "cmdId": "ea1aee8d-aa11-4443-9220-1789ce86311f",
   "state": "CS_RUNNING"
  }
 }
@@ -108,8 +108,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842685",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875354",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\verilog",
   "name": "",
@@ -122,8 +122,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842686",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875355",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_syn.rpt",
   "name": "",
@@ -136,8 +136,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842686",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875355",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_syn.xml",
   "name": "",
@@ -150,8 +150,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842687",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875356",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\verilog",
   "name": "",
@@ -164,8 +164,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842687",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875356",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_impl.rpt",
   "name": "",
@@ -178,8 +178,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:34:02",
- "timestampMillis": "1774308842688",
+ "dateTimestamp": "03/23/26 17:07:55",
+ "timestampMillis": "1774310875357",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\impl\\report\\verilog\\export_impl.xml",
   "name": "",
@@ -192,8 +192,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:45:07",
- "timestampMillis": "1774309507674",
+ "dateTimestamp": "03/23/26 17:18:16",
+ "timestampMillis": "1774311496293",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
   "name": "",
@@ -206,8 +206,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:45:07",
- "timestampMillis": "1774309507674",
+ "dateTimestamp": "03/23/26 17:18:16",
+ "timestampMillis": "1774311496295",
  "report": {
   "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
   "name": "",
@@ -220,10 +220,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:45:07",
- "timestampMillis": "1774309507675",
+ "dateTimestamp": "03/23/26 17:18:16",
+ "timestampMillis": "1774311496296",
  "status": {
-  "cmdId": "e7a12a30-ef90-4c01-af2d-7dff49fbcf1f",
+  "cmdId": "ea1aee8d-aa11-4443-9220-1789ce86311f",
   "state": "CS_PASSED"
  }
 }
@@ -231,10 +231,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:45:07",
- "timestampMillis": "1774309507901",
+ "dateTimestamp": "03/23/26 17:18:16",
+ "timestampMillis": "1774311496534",
  "status": {
-  "cmdId": "f68ec239-bd44-4c1d-832a-4946695a827e",
+  "cmdId": "08a245ba-c7dc-4911-9c88-9b176e2251a5",
   "state": "CS_PASSED"
  }
 }
@@ -242,8 +242,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:45:07",
- "timestampMillis": "1774309507905",
+ "dateTimestamp": "03/23/26 17:18:16",
+ "timestampMillis": "1774311496538",
  "report": {
   "path": "",
   "name": "",
@@ -256,8 +256,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:45:07",
- "timestampMillis": "1774309507906",
+ "dateTimestamp": "03/23/26 17:18:16",
+ "timestampMillis": "1774311496538",
  "report": {
   "path": "",
   "name": "",

@@ -12,8 +12,8 @@ using namespace std;
 #define K_NEIGHBORS 3
 
 // --- Simulation Scaling ---
-#define NUM_TRAIN_SAMPLES 1500 
-#define NUM_TEST_SAMPLES 1000  
+#define NUM_TRAIN_SAMPLES 10 
+#define NUM_TEST_SAMPLES 10  
 
 
 // --- Hardware Data Types ---

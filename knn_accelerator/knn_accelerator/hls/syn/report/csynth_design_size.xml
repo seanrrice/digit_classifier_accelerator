@@ -33,8 +33,8 @@
             <header size="7" col0="Function" col1="Location" col2="Compile/Link" col3="Unroll/Inline" col4="Array/Struct" col5="Performance" col6="HW Transforms"/>
             <rows>
                 <row id="0" col0="knn_accelerator" col1="knn.cpp:152" col2="1336" col3="1115" col4="1184" col5="1181" col6="1345">
-                    <row id="2" col0="knn_distance_and_sort" col1="knn.cpp:9" col2="1205" col3="983" col4="1033" col5="1030" col6="1188"/>
-                    <row id="1" col0="knn_majority_vote" col1="knn.cpp:97" col2="94" col3="102" col4="116" col5="113" col6="114"/>
+                    <row id="1" col0="knn_distance_and_sort" col1="knn.cpp:9" col2="1205" col3="983" col4="1033" col5="1030" col6="1188"/>
+                    <row id="2" col0="knn_majority_vote" col1="knn.cpp:97" col2="94" col3="102" col4="116" col5="113" col6="114"/>
                 </row>
             </rows>
             <notes/>

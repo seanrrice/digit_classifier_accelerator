@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'knn_distance_and_sort'
 ================================================================
-* Date:           Mon Mar 23 16:29:03 2026
+* Date:           Mon Mar 23 17:01:28 2026
 
 * Version:        2025.2 (Build 6295257 on Nov 14 2025)
 * Project:        knn_accelerator
@@ -25,12 +25,12 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    73586|    73586|  0.736 ms|  0.736 ms|  73586|  73586|       no|
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      576|      576|  5.760 us|  5.760 us|  576|  576|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
@@ -38,8 +38,8 @@
         |                                                           |                                                |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
         |                          Instance                         |                     Module                     |   min   |   max   |    min   |    max   | min | max |        Type       |
         +-----------------------------------------------------------+------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
-        |grp_knn_distance_and_sort_Pipeline_load_test_local_fu_619  |knn_distance_and_sort_Pipeline_load_test_local  |       52|       52|  0.520 us|  0.520 us|    0|    0|  loop pipeline stp|
-        |grp_knn_distance_and_sort_Pipeline_train_loop_fu_633       |knn_distance_and_sort_Pipeline_train_loop       |    73517|    73517|  0.735 ms|  0.735 ms|    0|    0|  loop pipeline stp|
+        |grp_knn_distance_and_sort_Pipeline_load_test_local_fu_617  |knn_distance_and_sort_Pipeline_load_test_local  |       52|       52|  0.520 us|  0.520 us|    0|    0|  loop pipeline stp|
+        |grp_knn_distance_and_sort_Pipeline_train_loop_fu_631       |knn_distance_and_sort_Pipeline_train_loop       |      507|      507|  5.070 us|  5.070 us|    0|    0|  loop pipeline stp|
         +-----------------------------------------------------------+------------------------------------------------+---------+---------+----------+----------+-----+-----+-------------------+
 
         * Loop: 
@@ -57,16 +57,16 @@
 |DSP              |        -|    -|       -|      -|    -|
 |Expression       |        -|    -|       0|     73|    -|
 |FIFO             |        -|    -|       -|      -|    -|
-|Instance         |        -|    4|    8664|  11722|    -|
+|Instance         |        -|    4|    8641|  11038|    -|
 |Memory           |        0|    -|     392|     28|    0|
 |Multiplexer      |        -|    -|       0|    879|    -|
 |Register         |        -|    -|    1454|      -|    -|
 +-----------------+---------+-----+--------+-------+-----+
-|Total            |        0|    4|   10510|  12702|    0|
+|Total            |        0|    4|   10487|  12018|    0|
 +-----------------+---------+-----+--------+-------+-----+
 |Available        |      280|  220|  106400|  53200|    0|
 +-----------------+---------+-----+--------+-------+-----+
-|Utilization (%)  |        0|    1|       9|     23|    0|
+|Utilization (%)  |        0|    1|       9|     22|    0|
 +-----------------+---------+-----+--------+-------+-----+
 
 + Detail: 
@@ -74,10 +74,10 @@
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+-------+-----+
     |                          Instance                         |                     Module                     | BRAM_18K| DSP|  FF  |  LUT  | URAM|
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+-------+-----+
-    |grp_knn_distance_and_sort_Pipeline_load_test_local_fu_619  |knn_distance_and_sort_Pipeline_load_test_local  |        0|   0|    64|    150|    0|
-    |grp_knn_distance_and_sort_Pipeline_train_loop_fu_633       |knn_distance_and_sort_Pipeline_train_loop       |        0|   4|  8600|  11572|    0|
+    |grp_knn_distance_and_sort_Pipeline_load_test_local_fu_617  |knn_distance_and_sort_Pipeline_load_test_local  |        0|   0|    64|    150|    0|
+    |grp_knn_distance_and_sort_Pipeline_train_loop_fu_631       |knn_distance_and_sort_Pipeline_train_loop       |        0|   4|  8577|  10888|    0|
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+-------+-----+
-    |Total                                                      |                                                |        0|   4|  8664|  11722|    0|
+    |Total                                                      |                                                |        0|   4|  8641|  11038|    0|
     +-----------------------------------------------------------+------------------------------------------------+---------+----+------+-------+-----+
 
     * DSP: 
@@ -105,7 +105,7 @@
     +--------------------+----------+----+---+----+------------+------------+
     |    Variable Name   | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------+----------+----+---+----+------------+------------+
-    |add_ln31_fu_722_p2  |         +|   0|  0|  71|          64|          64|
+    |add_ln31_fu_720_p2  |         +|   0|  0|  71|          64|          64|
     |ap_block_state2_io  |        or|   0|  0|   2|           1|           1|
     +--------------------+----------+----+---+----+------------+------------+
     |Total               |          |   0|  0|  73|          65|          65|
@@ -188,58 +188,58 @@
     |                                  Name                                  | FF | LUT| Bits| Const Bits|
     +------------------------------------------------------------------------+----+----+-----+-----------+
     |ap_CS_fsm                                                               |  18|   0|   18|          0|
-    |grp_knn_distance_and_sort_Pipeline_load_test_local_fu_619_ap_start_reg  |   1|   0|    1|          0|
-    |grp_knn_distance_and_sort_Pipeline_train_loop_fu_633_ap_start_reg       |   1|   0|    1|          0|
-    |test_local_1_load_1_reg_1036                                            |  28|   0|   28|          0|
-    |test_local_1_load_2_reg_1071                                            |  28|   0|   28|          0|
-    |test_local_1_load_3_reg_1176                                            |  28|   0|   28|          0|
-    |test_local_1_load_4_reg_1211                                            |  28|   0|   28|          0|
-    |test_local_1_load_5_reg_1251                                            |  28|   0|   28|          0|
-    |test_local_1_load_6_reg_1286                                            |  28|   0|   28|          0|
-    |test_local_1_load_reg_931                                               |  28|   0|   28|          0|
-    |test_local_2_load_1_reg_1041                                            |  28|   0|   28|          0|
-    |test_local_2_load_2_reg_1076                                            |  28|   0|   28|          0|
-    |test_local_2_load_3_reg_1181                                            |  28|   0|   28|          0|
-    |test_local_2_load_4_reg_1216                                            |  28|   0|   28|          0|
-    |test_local_2_load_5_reg_1256                                            |  28|   0|   28|          0|
-    |test_local_2_load_6_reg_1291                                            |  28|   0|   28|          0|
-    |test_local_2_load_reg_936                                               |  28|   0|   28|          0|
-    |test_local_3_load_1_reg_1046                                            |  28|   0|   28|          0|
-    |test_local_3_load_2_reg_1081                                            |  28|   0|   28|          0|
-    |test_local_3_load_3_reg_1186                                            |  28|   0|   28|          0|
-    |test_local_3_load_4_reg_1221                                            |  28|   0|   28|          0|
-    |test_local_3_load_5_reg_1261                                            |  28|   0|   28|          0|
-    |test_local_3_load_6_reg_1296                                            |  28|   0|   28|          0|
-    |test_local_3_load_reg_941                                               |  28|   0|   28|          0|
-    |test_local_4_load_1_reg_1051                                            |  28|   0|   28|          0|
-    |test_local_4_load_2_reg_1086                                            |  28|   0|   28|          0|
-    |test_local_4_load_3_reg_1191                                            |  28|   0|   28|          0|
-    |test_local_4_load_4_reg_1226                                            |  28|   0|   28|          0|
-    |test_local_4_load_5_reg_1266                                            |  28|   0|   28|          0|
-    |test_local_4_load_6_reg_1301                                            |  28|   0|   28|          0|
-    |test_local_4_load_reg_946                                               |  28|   0|   28|          0|
-    |test_local_5_load_1_reg_1056                                            |  28|   0|   28|          0|
-    |test_local_5_load_2_reg_1091                                            |  28|   0|   28|          0|
-    |test_local_5_load_3_reg_1196                                            |  28|   0|   28|          0|
-    |test_local_5_load_4_reg_1231                                            |  28|   0|   28|          0|
-    |test_local_5_load_5_reg_1271                                            |  28|   0|   28|          0|
-    |test_local_5_load_6_reg_1306                                            |  28|   0|   28|          0|
-    |test_local_5_load_reg_951                                               |  28|   0|   28|          0|
-    |test_local_6_load_1_reg_1061                                            |  28|   0|   28|          0|
-    |test_local_6_load_2_reg_1096                                            |  28|   0|   28|          0|
-    |test_local_6_load_3_reg_1201                                            |  28|   0|   28|          0|
-    |test_local_6_load_4_reg_1236                                            |  28|   0|   28|          0|
-    |test_local_6_load_5_reg_1276                                            |  28|   0|   28|          0|
-    |test_local_6_load_6_reg_1311                                            |  28|   0|   28|          0|
-    |test_local_6_load_reg_956                                               |  28|   0|   28|          0|
-    |test_local_load_1_reg_1031                                              |  28|   0|   28|          0|
-    |test_local_load_2_reg_1066                                              |  28|   0|   28|          0|
-    |test_local_load_3_reg_1171                                              |  28|   0|   28|          0|
-    |test_local_load_4_reg_1206                                              |  28|   0|   28|          0|
-    |test_local_load_5_reg_1246                                              |  28|   0|   28|          0|
-    |test_local_load_6_reg_1281                                              |  28|   0|   28|          0|
-    |test_local_load_reg_926                                                 |  28|   0|   28|          0|
-    |trunc_ln_reg_800                                                        |  62|   0|   62|          0|
+    |grp_knn_distance_and_sort_Pipeline_load_test_local_fu_617_ap_start_reg  |   1|   0|    1|          0|
+    |grp_knn_distance_and_sort_Pipeline_train_loop_fu_631_ap_start_reg       |   1|   0|    1|          0|
+    |test_local_1_load_1_reg_1034                                            |  28|   0|   28|          0|
+    |test_local_1_load_2_reg_1069                                            |  28|   0|   28|          0|
+    |test_local_1_load_3_reg_1174                                            |  28|   0|   28|          0|
+    |test_local_1_load_4_reg_1209                                            |  28|   0|   28|          0|
+    |test_local_1_load_5_reg_1249                                            |  28|   0|   28|          0|
+    |test_local_1_load_6_reg_1284                                            |  28|   0|   28|          0|
+    |test_local_1_load_reg_929                                               |  28|   0|   28|          0|
+    |test_local_2_load_1_reg_1039                                            |  28|   0|   28|          0|
+    |test_local_2_load_2_reg_1074                                            |  28|   0|   28|          0|
+    |test_local_2_load_3_reg_1179                                            |  28|   0|   28|          0|
+    |test_local_2_load_4_reg_1214                                            |  28|   0|   28|          0|
+    |test_local_2_load_5_reg_1254                                            |  28|   0|   28|          0|
+    |test_local_2_load_6_reg_1289                                            |  28|   0|   28|          0|
+    |test_local_2_load_reg_934                                               |  28|   0|   28|          0|
+    |test_local_3_load_1_reg_1044                                            |  28|   0|   28|          0|
+    |test_local_3_load_2_reg_1079                                            |  28|   0|   28|          0|
+    |test_local_3_load_3_reg_1184                                            |  28|   0|   28|          0|
+    |test_local_3_load_4_reg_1219                                            |  28|   0|   28|          0|
+    |test_local_3_load_5_reg_1259                                            |  28|   0|   28|          0|
+    |test_local_3_load_6_reg_1294                                            |  28|   0|   28|          0|
+    |test_local_3_load_reg_939                                               |  28|   0|   28|          0|
+    |test_local_4_load_1_reg_1049                                            |  28|   0|   28|          0|
+    |test_local_4_load_2_reg_1084                                            |  28|   0|   28|          0|
+    |test_local_4_load_3_reg_1189                                            |  28|   0|   28|          0|
+    |test_local_4_load_4_reg_1224                                            |  28|   0|   28|          0|
+    |test_local_4_load_5_reg_1264                                            |  28|   0|   28|          0|
+    |test_local_4_load_6_reg_1299                                            |  28|   0|   28|          0|
+    |test_local_4_load_reg_944                                               |  28|   0|   28|          0|
+    |test_local_5_load_1_reg_1054                                            |  28|   0|   28|          0|
+    |test_local_5_load_2_reg_1089                                            |  28|   0|   28|          0|
+    |test_local_5_load_3_reg_1194                                            |  28|   0|   28|          0|
+    |test_local_5_load_4_reg_1229                                            |  28|   0|   28|          0|
+    |test_local_5_load_5_reg_1269                                            |  28|   0|   28|          0|
+    |test_local_5_load_6_reg_1304                                            |  28|   0|   28|          0|
+    |test_local_5_load_reg_949                                               |  28|   0|   28|          0|
+    |test_local_6_load_1_reg_1059                                            |  28|   0|   28|          0|
+    |test_local_6_load_2_reg_1094                                            |  28|   0|   28|          0|
+    |test_local_6_load_3_reg_1199                                            |  28|   0|   28|          0|
+    |test_local_6_load_4_reg_1234                                            |  28|   0|   28|          0|
+    |test_local_6_load_5_reg_1274                                            |  28|   0|   28|          0|
+    |test_local_6_load_6_reg_1309                                            |  28|   0|   28|          0|
+    |test_local_6_load_reg_954                                               |  28|   0|   28|          0|
+    |test_local_load_1_reg_1029                                              |  28|   0|   28|          0|
+    |test_local_load_2_reg_1064                                              |  28|   0|   28|          0|
+    |test_local_load_3_reg_1169                                              |  28|   0|   28|          0|
+    |test_local_load_4_reg_1204                                              |  28|   0|   28|          0|
+    |test_local_load_5_reg_1244                                              |  28|   0|   28|          0|
+    |test_local_load_6_reg_1279                                              |  28|   0|   28|          0|
+    |test_local_load_reg_924                                                 |  28|   0|   28|          0|
+    |trunc_ln_reg_798                                                        |  62|   0|   62|          0|
     +------------------------------------------------------------------------+----+----+-----+-----------+
     |Total                                                                   |1454|   0| 1454|          0|
     +------------------------------------------------------------------------+----+----+-----+-----------+
@@ -403,6 +403,6 @@
 |m_axi_gmem_y_train_0_BID       |   in|    1|       m_axi|           gmem_y_train|       pointer|
 |m_axi_gmem_y_train_0_BUSER     |   in|    1|       m_axi|           gmem_y_train|       pointer|
 |y_train                        |   in|   64|     ap_none|                y_train|        scalar|
-|idx                            |   in|   16|     ap_none|                    idx|        scalar|
+|idx                            |   in|    9|     ap_none|                    idx|        scalar|
 +-------------------------------+-----+-----+------------+-----------------------+--------------+
 

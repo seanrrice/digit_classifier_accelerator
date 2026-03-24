@@ -2,7 +2,7 @@
 == Vivado Place & Route Results
 ================================================================
 + General Information:
-    * Date:            Mon Mar 23 16:45:07 -0700 2026
+    * Date:            Mon Mar 23 17:18:16 -0700 2026
     * Version:         2025.2 (Build 6295257 on Nov 14 2025)
     * Project:         knn_accelerator
     * Solution:        hls (Vivado IP Flow Target)
@@ -33,12 +33,12 @@
 ================================================================
 == Place & Route Resource Summary
 ================================================================
-LUT:              9941
-FF:               14533
+LUT:              9469
+FF:               14452
 DSP:              4
 BRAM:             3
 URAM:             0
-SRL:              235
+SRL:              228
 
 
 ================================================================
@@ -49,8 +49,8 @@ SRL:              235
 | Timing         | Period (ns) |
 +----------------+-------------+
 | Target         | 10.000      |
-| Post-Synthesis | 6.792       |
-| Post-Route     | 9.708       |
+| Post-Synthesis | 6.856       |
+| Post-Route     | 9.605       |
 +----------------+-------------+
 
 
@@ -60,21 +60,21 @@ SRL:              235
 +-------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
 | Name                                                              | LUT | FF | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
 +-------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
-| inst                                                              |     |    |     |      |      | 235 |        |      |         |          |        |
+| inst                                                              |     |    |     |      |      | 228 |        |      |         |          |        |
 |   (inst)                                                          |     |    |     |      |      | 3   |        |      |         |          |        |
 |   control_r_s_axi_U                                               |     |    |     |      |      |     |        |      |         |          |        |
 |   control_s_axi_U                                                 |     |    |     |      |      |     |        |      |         |          |        |
 |   gmem_x_test_m_axi_U                                             |     |    |     |      |      | 34  |        |      |         |          |        |
 |   gmem_x_train_m_axi_U                                            |     |    |     |      |      | 33  |        |      |         |          |        |
-|   gmem_y_test_m_axi_U                                             |     |    |     |      |      | 123 |        |      |         |          |        |
-|   gmem_y_train_m_axi_U                                            |     |    |     |      |      | 42  |        |      |         |          |        |
-|   grp_knn_distance_and_sort_fu_162                                |     |    |     |      |      |     |        |      |         |          |        |
-|     (grp_knn_distance_and_sort_fu_162)                            |     |    |     |      |      |     |        |      |         |          |        |
-|     grp_knn_distance_and_sort_Pipeline_load_test_local_fu_619     |     |    |     |      |      |     |        |      |         |          |        |
-|       (grp_knn_distance_and_sort_Pipeline_load_test_local_fu_619) |     |    |     |      |      |     |        |      |         |          |        |
+|   gmem_y_test_m_axi_U                                             |     |    |     |      |      | 120 |        |      |         |          |        |
+|   gmem_y_train_m_axi_U                                            |     |    |     |      |      | 38  |        |      |         |          |        |
+|   grp_knn_distance_and_sort_fu_158                                |     |    |     |      |      |     |        |      |         |          |        |
+|     (grp_knn_distance_and_sort_fu_158)                            |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_knn_distance_and_sort_Pipeline_load_test_local_fu_617     |     |    |     |      |      |     |        |      |         |          |        |
+|       (grp_knn_distance_and_sort_Pipeline_load_test_local_fu_617) |     |    |     |      |      |     |        |      |         |          |        |
 |       flow_control_loop_pipe_sequential_init_U                    |     |    |     |      |      |     |        |      |         |          |        |
-|     grp_knn_distance_and_sort_Pipeline_train_loop_fu_633          |     |    |     |      |      |     |        |      |         |          |        |
-|       (grp_knn_distance_and_sort_Pipeline_train_loop_fu_633)      |     |    |     |      |      |     |        |      |         |          |        |
+|     grp_knn_distance_and_sort_Pipeline_train_loop_fu_631          |     |    |     |      |      |     |        |      |         |          |        |
+|       (grp_knn_distance_and_sort_Pipeline_train_loop_fu_631)      |     |    |     |      |      |     |        |      |         |          |        |
 |       flow_control_loop_pipe_sequential_init_U                    |     |    |     |      |      |     |        |      |         |          |        |
 |       mul_28s_28s_56_3_1_U10                                      |     |    |     |      |      |     |        |      |         |          |        |
 |     test_local_1_U                                                |     |    |     |      |      |     |        |      |         |          |        |
@@ -84,7 +84,7 @@ SRL:              235
 |     test_local_5_U                                                |     |    |     |      |      |     |        |      |         |          |        |
 |     test_local_6_U                                                |     |    |     |      |      |     |        |      |         |          |        |
 |     test_local_U                                                  |     |    |     |      |      |     |        |      |         |          |        |
-|   grp_knn_majority_vote_fu_176                                    |     |    |     |      |      |     |        |      |         |          |        |
+|   grp_knn_majority_vote_fu_172                                    |     |    |     |      |      |     |        |      |         |          |        |
 +-------------------------------------------------------------------+-----+----+-----+------+------+-----+--------+------+---------+----------+--------+
 
 
@@ -94,9 +94,9 @@ SRL:              235
 +-----------------------------------------------------------+-----------+--------+--------+
 | Criteria                                                  | Guideline | Actual | Status |
 +-----------------------------------------------------------+-----------+--------+--------+
-| LUT                                                       | 70%       | 18.69% | OK     |
-| FD                                                        | 50%       | 13.66% | OK     |
-| LUTRAM+SRL                                                | 25%       | 2.48%  | OK     |
+| LUT                                                       | 70%       | 17.80% | OK     |
+| FD                                                        | 50%       | 13.58% | OK     |
+| LUTRAM+SRL                                                | 25%       | 2.44%  | OK     |
 | MUXF7                                                     | 15%       | 0.16%  | OK     |
 | DSP                                                       | 80%       | 1.82%  | OK     |
 | RAMB/FIFO                                                 | 80%       | 1.07%  | OK     |
@@ -105,7 +105,7 @@ SRL:              235
 | DONT_TOUCH (cells/nets)                                   | 0         | 8      | REVIEW |
 | MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
 | Control Sets                                              | 998       | 306    | OK     |
-| Average Fanout for modules > 100k cells                   | 4         | 2.42   | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 2.49   | OK     |
 | Max Average Fanout for modules > 100k cells               | 4         | 0      | OK     |
 | Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
 +-----------------------------------------------------------+-----------+--------+--------+
@@ -124,51 +124,109 @@ SRL:              235
 == Place & Route Timing Paths
 ================================================================
 * Timing was met
-+-------+-------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path  | SLACK | STARTPOINT PIN                                                           | ENDPOINT PIN                                                                                                           | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
-|       |       |                                                                          |                                                                                                                        |              |            |                |          DELAY |        DELAY |
-+-------+-------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
-| Path1 | 0.292 | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_6_reg_5125_reg[15]/D  |            0 |         49 |          9.563 |          2.454 |        7.109 |
-| Path2 | 0.330 | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_38_reg_5552_reg[10]/D |            0 |         49 |          9.491 |          2.454 |        7.037 |
-| Path3 | 0.349 | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_52_reg_5741_reg[10]/D |            0 |         49 |          9.472 |          2.454 |        7.018 |
-| Path4 | 0.351 | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_48_reg_5687_reg[10]/D |            0 |         49 |          9.534 |          2.454 |        7.080 |
-| Path5 | 0.362 | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_48_reg_5687_reg[15]/D |            0 |         49 |          9.526 |          2.454 |        7.072 |
-+-------+-------+--------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
++-------+-------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                                                                                                          | ENDPOINT PIN                                                                                                                  | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                                                                                                         |                                                                                                                               |              |            |                |          DELAY |        DELAY |
++-------+-------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.395 | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]/C | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[62]/D |           15 |        200 |          9.630 |          2.882 |        6.748 |
+| Path2 | 0.465 | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg/CLKARDCLK                                                | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/trunc_ln73_20_reg_5307_reg[1]/D         |            0 |         49 |          9.358 |          2.454 |        6.904 |
+| Path3 | 0.499 | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]/C | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[60]/D |           15 |        200 |          9.526 |          2.778 |        6.748 |
+| Path4 | 0.512 | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]/C | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[57]/D |           14 |        200 |          9.513 |          2.765 |        6.748 |
+| Path5 | 0.520 | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]/C | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[59]/D |           14 |        200 |          9.505 |          2.757 |        6.748 |
++-------+-------+-------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path1 Cells                                                                                                                     | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]           | FLOP_LATCH.flop.FDRE |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339[11]_i_2     | LUT.others.LUT6      |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[11]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[15]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[19]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[23]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[27]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[31]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[35]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[39]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[43]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[47]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[51]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[55]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[59]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[62]_i_2 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[62]     | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
 
     +---------------------------------------------------------------------------------------------------------------------+----------------------+
-    | Path1 Cells                                                                                                         | Primitive Type       |
+    | Path2 Cells                                                                                                         | Primitive Type       |
     +---------------------------------------------------------------------------------------------------------------------+----------------------+
     | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg                                                      | BMEM.bram.RAMB18E1   |
-    | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_6_reg_5125_reg[15] | FLOP_LATCH.flop.FDRE |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/trunc_ln73_20_reg_5307_reg[1] | FLOP_LATCH.flop.FDRE |
     +---------------------------------------------------------------------------------------------------------------------+----------------------+
 
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | Path2 Cells                                                                                                          | Primitive Type       |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg                                                       | BMEM.bram.RAMB18E1   |
-    | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_38_reg_5552_reg[10] | FLOP_LATCH.flop.FDRE |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path3 Cells                                                                                                                     | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]           | FLOP_LATCH.flop.FDRE |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339[11]_i_2     | LUT.others.LUT6      |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[11]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[15]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[19]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[23]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[27]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[31]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[35]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[39]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[43]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[47]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[51]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[55]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[59]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[62]_i_2 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[60]     | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
 
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | Path3 Cells                                                                                                          | Primitive Type       |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg                                                       | BMEM.bram.RAMB18E1   |
-    | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_52_reg_5741_reg[10] | FLOP_LATCH.flop.FDRE |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path4 Cells                                                                                                                     | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]           | FLOP_LATCH.flop.FDRE |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339[11]_i_2     | LUT.others.LUT6      |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[11]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[15]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[19]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[23]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[27]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[31]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[35]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[39]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[43]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[47]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[51]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[55]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[59]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[57]     | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
 
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | Path4 Cells                                                                                                          | Primitive Type       |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg                                                       | BMEM.bram.RAMB18E1   |
-    | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_48_reg_5687_reg[10] | FLOP_LATCH.flop.FDRE |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | Path5 Cells                                                                                                          | Primitive Type       |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
-    | gmem_x_train_m_axi_U/load_unit_0/buff_rdata/U_fifo_mem/mem_reg                                                       | BMEM.bram.RAMB18E1   |
-    | grp_knn_distance_and_sort_fu_162/grp_knn_distance_and_sort_Pipeline_train_loop_fu_633/trunc_ln73_48_reg_5687_reg[15] | FLOP_LATCH.flop.FDRE |
-    +----------------------------------------------------------------------------------------------------------------------+----------------------+
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | Path5 Cells                                                                                                                     | Primitive Type       |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/phi_mul486_load_reg_4952_reg[4]           | FLOP_LATCH.flop.FDRE |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339[11]_i_2     | LUT.others.LUT6      |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[11]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[15]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[19]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[23]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[27]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[31]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[35]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[39]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[43]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[47]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[51]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[55]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[59]_i_1 | CARRY.others.CARRY4  |
+    | grp_knn_distance_and_sort_fu_158/grp_knn_distance_and_sort_Pipeline_train_loop_fu_631/gmem_x_train_addr_20_reg_5339_reg[59]     | FLOP_LATCH.flop.FDRE |
+    +---------------------------------------------------------------------------------------------------------------------------------+----------------------+
 
 
 ================================================================
