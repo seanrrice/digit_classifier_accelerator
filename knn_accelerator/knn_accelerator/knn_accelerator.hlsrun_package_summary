@@ -9,34 +9,34 @@
 <ENTRY>
 {
  "type": "ET_CmdStep",
- "dateTimestamp": "03/23/26 16:33:22",
- "timestampMillis": "1774308802105",
+ "dateTimestamp": "03/23/26 17:57:45",
+ "timestampMillis": "1774313865046",
  "buildStep": {
-  "cmdId": "4dffffba-ef60-4f40-ba35-e9481e937120",
+  "cmdId": "980af0e5-8f0b-4aad-9c80-daecc571ec5a",
   "name": "vitis-run",
   "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\logs\\knn_accelerator.steps.log",
-  "commandLine": "T:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config Z:\\Labs\\clab\\knn_accelerator\\hls_config.cfg --work_dir knn_accelerator ",
+  "commandLine": "T:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --package --config Z:\\Labs\\digit_classifier_accelerator\\knn_accelerator\\hls_config.cfg --work_dir knn_accelerator ",
   "args": [
    "--mode",
    "hls",
    "--package",
    "--config",
-   "Z:\\Labs\\clab\\knn_accelerator\\hls_config.cfg",
+   "Z:\\Labs\\digit_classifier_accelerator\\knn_accelerator\\hls_config.cfg",
    "--work_dir",
    "knn_accelerator"
   ],
   "iniFiles": [],
-  "cwd": "Z:\\Labs\\clab\\knn_accelerator"
+  "cwd": "Z:\\Labs\\digit_classifier_accelerator\\knn_accelerator"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:33:22",
- "timestampMillis": "1774308802106",
+ "dateTimestamp": "03/23/26 17:57:45",
+ "timestampMillis": "1774313865046",
  "status": {
-  "cmdId": "4dffffba-ef60-4f40-ba35-e9481e937120",
+  "cmdId": "980af0e5-8f0b-4aad-9c80-daecc571ec5a",
   "state": "CS_RUNNING"
  }
 }
@@ -44,8 +44,8 @@
 <ENTRY>
 {
  "type": "ET_FlowMetaData",
- "dateTimestamp": "03/23/26 16:33:27",
- "timestampMillis": "1774308807909",
+ "dateTimestamp": "03/23/26 17:57:50",
+ "timestampMillis": "1774313870300",
  "buildSummary": {
   "hardwarePlatform": "",
   "hardwareDsa": "",
@@ -81,26 +81,26 @@
 <ENTRY>
 {
  "type": "ET_SubCmdStep",
- "dateTimestamp": "03/23/26 16:33:27",
- "timestampMillis": "1774308807910",
+ "dateTimestamp": "03/23/26 17:57:50",
+ "timestampMillis": "1774313870301",
  "buildStep": {
-  "cmdId": "4fab9195-d3ed-47d0-b6d6-3f0ea7f1cbfc",
+  "cmdId": "9a7390b0-2f09-4e34-8fe8-445687f850d7",
   "name": "",
   "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\hls.log",
   "commandLine": "",
   "args": [],
   "iniFiles": [],
-  "cwd": "Z:\\Labs\\clab\\knn_accelerator"
+  "cwd": "Z:\\Labs\\digit_classifier_accelerator\\knn_accelerator"
  }
 }
 </ENTRY>
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:33:27",
- "timestampMillis": "1774308807911",
+ "dateTimestamp": "03/23/26 17:57:50",
+ "timestampMillis": "1774313870301",
  "status": {
-  "cmdId": "4fab9195-d3ed-47d0-b6d6-3f0ea7f1cbfc",
+  "cmdId": "9a7390b0-2f09-4e34-8fe8-445687f850d7",
   "state": "CS_RUNNING"
  }
 }
@@ -108,10 +108,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:33:47",
- "timestampMillis": "1774308827443",
+ "dateTimestamp": "03/23/26 17:58:05",
+ "timestampMillis": "1774313885265",
  "status": {
-  "cmdId": "4fab9195-d3ed-47d0-b6d6-3f0ea7f1cbfc",
+  "cmdId": "9a7390b0-2f09-4e34-8fe8-445687f850d7",
   "state": "CS_PASSED"
  }
 }
@@ -119,10 +119,10 @@
 <ENTRY>
 {
  "type": "ET_Status",
- "dateTimestamp": "03/23/26 16:33:47",
- "timestampMillis": "1774308827608",
+ "dateTimestamp": "03/23/26 17:58:05",
+ "timestampMillis": "1774313885390",
  "status": {
-  "cmdId": "4dffffba-ef60-4f40-ba35-e9481e937120",
+  "cmdId": "980af0e5-8f0b-4aad-9c80-daecc571ec5a",
   "state": "CS_PASSED"
  }
 }
@@ -130,8 +130,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:33:47",
- "timestampMillis": "1774308827609",
+ "dateTimestamp": "03/23/26 17:58:05",
+ "timestampMillis": "1774313885391",
  "report": {
   "path": "",
   "name": "",
@@ -144,8 +144,8 @@
 <ENTRY>
 {
  "type": "ET_Report",
- "dateTimestamp": "03/23/26 16:33:47",
- "timestampMillis": "1774308827610",
+ "dateTimestamp": "03/23/26 17:58:05",
+ "timestampMillis": "1774313885391",
  "report": {
   "path": "",
   "name": "",

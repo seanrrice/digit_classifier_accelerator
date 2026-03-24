@@ -4,7 +4,7 @@
 == Synthesis Summary Report of 'knn_accelerator'
 ================================================================
 + General Information: 
-    * Date:           Mon Mar 23 16:29:04 2026
+    * Date:           Mon Mar 23 17:43:31 2026
     * Version:        2025.2 (Build 6295257 on Nov 14 2025)
     * Project:        knn_accelerator
     * Solution:       hls (Vivado IP Flow Target)
@@ -17,7 +17,7 @@
 |                       Modules                       |  Issue |               | Iteration|          | Trip |          |        Latency       |       |        |        |             |             |     |
 |                       & Loops                       |  Type  | Violation Type|  Latency | Interval | Count| Pipelined| (cycles) |    (ns)   | Slack |  BRAM  |   DSP  |      FF     |     LUT     | URAM|
 +-----------------------------------------------------+--------+---------------+----------+----------+------+----------+----------+-----------+-------+--------+--------+-------------+-------------+-----+
-|+ knn_accelerator                                    |  Timing|              -|         -|  73596008|     -|        no|  73596007|  7.360e+08|  -1.02|  6 (2%)|  4 (1%)|  13950 (13%)|  17200 (32%)|    -|
+|+ knn_accelerator                                    |  Timing|              -|         -|  73596008|     -|        no|  73596007|  7.360e+08|  -1.02|  6 (2%)|  4 (1%)|  13920 (13%)|  17160 (32%)|    -|
 | o test_data                                         |       -|              -|     73596|         -|  1000|        no|  73596000|  7.360e+08|   7.30|       -|       -|            -|            -|    -|
 |  + knn_distance_and_sort                            |  Timing|              -|         -|     73586|     -|        no|     73586|  7.359e+05|  -1.02|       -|  4 (1%)|   10510 (9%)|  12704 (23%)|    -|
 |   + knn_distance_and_sort_Pipeline_load_test_local  |       -|              -|         -|         -|     -|       yes|        52|    520.000|   0.00|       -|       -|     64 (~0%)|    150 (~0%)|    -|
@@ -44,30 +44,29 @@
 +--------------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
 
 * S_AXILITE Interfaces
-+-----------------+------------+---------------+--------+----------+
-| Interface       | Data Width | Address Width | Offset | Register |
-+-----------------+------------+---------------+--------+----------+
-| s_axi_control   | 32         | 4             |        |          |
-| s_axi_control_r | 32         | 6             | 16     | 0        |
-+-----------------+------------+---------------+--------+----------+
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
 
 * S_AXILITE Registers
-+-----------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| Interface       | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
-+-----------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
-| s_axi_control   | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
-| s_axi_control   | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
-| s_axi_control   | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
-| s_axi_control   | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
-| s_axi_control_r | X_test_1  | 0x10   | 32    | W      | Data signal of X_test            |                                                                      |
-| s_axi_control_r | X_test_2  | 0x14   | 32    | W      | Data signal of X_test            |                                                                      |
-| s_axi_control_r | X_train_1 | 0x1c   | 32    | W      | Data signal of X_train           |                                                                      |
-| s_axi_control_r | X_train_2 | 0x20   | 32    | W      | Data signal of X_train           |                                                                      |
-| s_axi_control_r | y_train_1 | 0x28   | 32    | W      | Data signal of y_train           |                                                                      |
-| s_axi_control_r | y_train_2 | 0x2c   | 32    | W      | Data signal of y_train           |                                                                      |
-| s_axi_control_r | y_test_1  | 0x34   | 32    | W      | Data signal of y_test            |                                                                      |
-| s_axi_control_r | y_test_2  | 0x38   | 32    | W      | Data signal of y_test            |                                                                      |
-+-----------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register  | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL      | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER      | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER    | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR    | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | X_test_1  | 0x10   | 32    | W      | Data signal of X_test            |                                                                      |
+| s_axi_control | X_test_2  | 0x14   | 32    | W      | Data signal of X_test            |                                                                      |
+| s_axi_control | X_train_1 | 0x1c   | 32    | W      | Data signal of X_train           |                                                                      |
+| s_axi_control | X_train_2 | 0x20   | 32    | W      | Data signal of X_train           |                                                                      |
+| s_axi_control | y_train_1 | 0x28   | 32    | W      | Data signal of y_train           |                                                                      |
+| s_axi_control | y_train_2 | 0x2c   | 32    | W      | Data signal of y_train           |                                                                      |
+| s_axi_control | y_test_1  | 0x34   | 32    | W      | Data signal of y_test            |                                                                      |
+| s_axi_control | y_test_2  | 0x38   | 32    | W      | Data signal of y_test            |                                                                      |
++---------------+-----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
 
 * TOP LEVEL CONTROL
 +-----------+------------+-----------+
@@ -98,17 +97,17 @@
 | Argument | HW Interface       | HW Type   | HW Usage | HW Info                             |
 +----------+--------------------+-----------+----------+-------------------------------------+
 | X_test   | m_axi_gmem_x_test  | interface |          | channel=0                           |
-| X_test   | s_axi_control_r    | register  | offset   | name=X_test_1 offset=0x10 range=32  |
-| X_test   | s_axi_control_r    | register  | offset   | name=X_test_2 offset=0x14 range=32  |
+| X_test   | s_axi_control      | register  | offset   | name=X_test_1 offset=0x10 range=32  |
+| X_test   | s_axi_control      | register  | offset   | name=X_test_2 offset=0x14 range=32  |
 | X_train  | m_axi_gmem_x_train | interface |          | channel=0                           |
-| X_train  | s_axi_control_r    | register  | offset   | name=X_train_1 offset=0x1c range=32 |
-| X_train  | s_axi_control_r    | register  | offset   | name=X_train_2 offset=0x20 range=32 |
+| X_train  | s_axi_control      | register  | offset   | name=X_train_1 offset=0x1c range=32 |
+| X_train  | s_axi_control      | register  | offset   | name=X_train_2 offset=0x20 range=32 |
 | y_train  | m_axi_gmem_y_train | interface |          | channel=0                           |
-| y_train  | s_axi_control_r    | register  | offset   | name=y_train_1 offset=0x28 range=32 |
-| y_train  | s_axi_control_r    | register  | offset   | name=y_train_2 offset=0x2c range=32 |
+| y_train  | s_axi_control      | register  | offset   | name=y_train_1 offset=0x28 range=32 |
+| y_train  | s_axi_control      | register  | offset   | name=y_train_2 offset=0x2c range=32 |
 | y_test   | m_axi_gmem_y_test  | interface |          | channel=0                           |
-| y_test   | s_axi_control_r    | register  | offset   | name=y_test_1 offset=0x34 range=32  |
-| y_test   | s_axi_control_r    | register  | offset   | name=y_test_2 offset=0x38 range=32  |
+| y_test   | s_axi_control      | register  | offset   | name=y_test_1 offset=0x34 range=32  |
+| y_test   | s_axi_control      | register  | offset   | name=y_test_2 offset=0x38 range=32  |
 +----------+--------------------+-----------+----------+-------------------------------------+
 
 
@@ -122,7 +121,7 @@
 | HW Interface       | Direction | Length | Width | Loop            | Loop Location         |
 +--------------------+-----------+--------+-------+-----------------+-----------------------+
 | m_axi_gmem_x_test  | read      | 49     | 32    | load_test_local | ../src/knn.cpp:31:21  |
-| m_axi_gmem_y_test  | write     | 1000   | 8     | test_data       | ../src/knn.cpp:172:16 |
+| m_axi_gmem_y_test  | write     | 1000   | 8     | test_data       | ../src/knn.cpp:176:16 |
 | m_axi_gmem_y_train | read      | 1500   | 8     | train_loop      | ../src/knn.cpp:59:17  |
 +--------------------+-----------+--------+-------+-----------------+-----------------------+
 
@@ -133,8 +132,8 @@
 | m_axi_gmem_x_test  | test_point | ../src/knn.cpp:33:23  | read      | Widen Fail   |        | load_test_local | ../src/knn.cpp:31:21  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
 | m_axi_gmem_x_test  | test_point | ../src/knn.cpp:33:23  | read      | Inferred     | 49     | load_test_local | ../src/knn.cpp:31:21  |            |                                                                                                       |
 | m_axi_gmem_x_train | X_train    | ../src/knn.cpp:73:42  | read      | Fail         |        | train_loop      | ../src/knn.cpp:59:17  | 214-230    | Stride is incompatible                                                                                |
-| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:177:19 | write     | Widen Fail   |        | test_data       | ../src/knn.cpp:172:16 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
-| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:177:19 | write     | Inferred     | 1000   | test_data       | ../src/knn.cpp:172:16 |            |                                                                                                       |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:181:19 | write     | Widen Fail   |        | test_data       | ../src/knn.cpp:176:16 | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
+| m_axi_gmem_y_test  | y_test     | ../src/knn.cpp:181:19 | write     | Inferred     | 1000   | test_data       | ../src/knn.cpp:176:16 |            |                                                                                                       |
 | m_axi_gmem_y_train | y_train    | ../src/knn.cpp:79:32  | read      | Widen Fail   |        | train_loop      | ../src/knn.cpp:59:17  | 214-353    | Could not widen since type i8 size is greater than or equal to the max_widen_bitwidth threshold of 0  |
 | m_axi_gmem_y_train | y_train    | ../src/knn.cpp:79:32  | read      | Inferred     | 1500   | train_loop      | ../src/knn.cpp:59:17  |            |                                                                                                       |
 +--------------------+------------+-----------------------+-----------+--------------+--------+-----------------+-----------------------+------------+-------------------------------------------------------------------------------------------------------+
@@ -148,9 +147,9 @@
 | Name                                               | DSP | Pragma | Variable       | Op        | Impl                     | Latency |
 +----------------------------------------------------+-----+--------+----------------+-----------+--------------------------+---------+
 | + knn_accelerator                                  | 4   |        |                |           |                          |         |
-|   icmp_ln172_fu_203_p2                             |     |        | icmp_ln172     | seteq     | auto                     | 0       |
-|   add_ln172_fu_209_p2                              |     |        | add_ln172      | add       | fabric                   | 0       |
-|   add_ln174_fu_243_p2                              |     |        | add_ln174      | add       | fabric                   | 0       |
+|   icmp_ln176_fu_201_p2                             |     |        | icmp_ln176     | seteq     | auto                     | 0       |
+|   add_ln176_fu_207_p2                              |     |        | add_ln176      | add       | fabric                   | 0       |
+|   add_ln178_fu_241_p2                              |     |        | add_ln178      | add       | fabric                   | 0       |
 |  + knn_distance_and_sort                           | 4   |        |                |           |                          |         |
 |    add_ln31_fu_722_p2                              |     |        | add_ln31       | add       | fabric                   | 0       |
 |   + knn_distance_and_sort_Pipeline_load_test_local | 0   |        |                |           |                          |         |
@@ -474,7 +473,6 @@
 +--------------------------+--------------+-----------+------+------+--------+--------------+------+---------+------------------+
 | + knn_accelerator        |              |           | 6    | 0    |        |              |      |         |                  |
 |   control_s_axi_U        | interface    | s_axilite |      |      |        |              |      |         |                  |
-|   control_r_s_axi_U      | interface    | s_axilite |      |      |        |              |      |         |                  |
 |   gmem_x_test_m_axi_U    | interface    | m_axi     | 2    |      |        |              |      |         |                  |
 |   gmem_x_train_m_axi_U   | interface    | m_axi     | 2    |      |        |              |      |         |                  |
 |   gmem_y_test_m_axi_U    | interface    | m_axi     |      |      |        |              |      |         |                  |
@@ -517,7 +515,11 @@
 | INTERFACE       | m_axi port=X_test offset=slave bundle=gmem_x_test depth=49*1000   | in knn_accelerator (../src/knn.cpp:161)      |
 | INTERFACE       | m_axi port=y_test offset=slave bundle=gmem_y_test depth=1000      | in knn_accelerator (../src/knn.cpp:162)      |
 | INTERFACE       | s_axilite port=return bundle=control                              | in knn_accelerator (../src/knn.cpp:165)      |
-| ARRAY_PARTITION | variable = top_k_labels complete                                  | in knn_accelerator (../src/knn.cpp:170)      |
+| INTERFACE       | s_axilite port=X_test bundle=control                              | in knn_accelerator (../src/knn.cpp:166)      |
+| INTERFACE       | s_axilite port=X_train bundle=control                             | in knn_accelerator (../src/knn.cpp:167)      |
+| INTERFACE       | s_axilite port=y_train bundle=control                             | in knn_accelerator (../src/knn.cpp:168)      |
+| INTERFACE       | s_axilite port=y_test bundle=control                              | in knn_accelerator (../src/knn.cpp:169)      |
+| ARRAY_PARTITION | variable = top_k_labels complete                                  | in knn_accelerator (../src/knn.cpp:174)      |
 +-----------------+-------------------------------------------------------------------+----------------------------------------------+
 
 

@@ -162,7 +162,11 @@ void knn_accelerator(
     #pragma HLS INTERFACE m_axi port=y_test  offset=slave bundle=gmem_y_test  depth=NUM_TEST_SAMPLES
     
     // Map scalars and return values to AXI4-Lite for Python control
-    #pragma HLS INTERFACE s_axilite port=return bundle=control
+    #pragma HLS INTERFACE s_axilite port=return  bundle=control
+    #pragma HLS INTERFACE s_axilite port=X_test  bundle=control
+    #pragma HLS INTERFACE s_axilite port=X_train bundle=control
+    #pragma HLS INTERFACE s_axilite port=y_train bundle=control
+    #pragma HLS INTERFACE s_axilite port=y_test  bundle=control
     
     // Internal buffer connecting the two kernels
     label_t top_k_labels[K_NEIGHBORS];

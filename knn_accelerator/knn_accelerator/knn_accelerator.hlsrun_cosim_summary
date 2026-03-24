@@ -1,0 +1,227 @@
+<ENTRY>
+{
+ "thisFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\knn_accelerator.hlsrun_cosim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "03/23/26 17:44:20",
+ "timestampMillis": "1774313060311",
+ "buildStep": {
+  "cmdId": "42e40ebe-e4f6-4734-aa5f-1a14daab62ef",
+  "name": "vitis-run",
+  "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\logs\\knn_accelerator.steps.log",
+  "commandLine": "T:/AMDDesignTools/2025.2/Vitis/bin/unwrapped/win64.o/vitis-run.exe  --mode hls --cosim --config Z:\\Labs\\clab\\knn_accelerator\\hls_config.cfg --work_dir knn_accelerator ",
+  "args": [
+   "--mode",
+   "hls",
+   "--cosim",
+   "--config",
+   "Z:\\Labs\\clab\\knn_accelerator\\hls_config.cfg",
+   "--work_dir",
+   "knn_accelerator"
+  ],
+  "iniFiles": [],
+  "cwd": "Z:\\Labs\\clab\\knn_accelerator"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/23/26 17:44:20",
+ "timestampMillis": "1774313060311",
+ "status": {
+  "cmdId": "42e40ebe-e4f6-4734-aa5f-1a14daab62ef",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066079",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_RTL_COSIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "knn_accelerator",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "Z:/Labs\\digit_classifier_accelerator\\src\\knn.cpp",
+     "Z:/Labs\\digit_classifier_accelerator\\include\\knn.h"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066080",
+ "buildStep": {
+  "cmdId": "a98903ed-2676-4135-a978-face82c9c205",
+  "name": "",
+  "logFile": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "Z:\\Labs\\clab\\knn_accelerator"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066080",
+ "status": {
+  "cmdId": "a98903ed-2676-4135-a978-face82c9c205",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066081",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls\\sim\\report\\knn_accelerator_cosim.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "HLS_COSIMULATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066081",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_DATAFLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066081",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_FUNCTION_CALL_GRAPH_COSIM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066082",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_TIMELINE_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/23/26 17:44:26",
+ "timestampMillis": "1774313066083",
+ "report": {
+  "path": "Z:/Labs\\digit_classifier_accelerator\\knn_accelerator\\knn_accelerator\\hls",
+  "name": "",
+  "fileType": "DIR",
+  "reportType": "HLS_WAVE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/23/26 17:48:48",
+ "timestampMillis": "1774313328666",
+ "status": {
+  "cmdId": "a98903ed-2676-4135-a978-face82c9c205",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "03/23/26 17:48:48",
+ "timestampMillis": "1774313328864",
+ "status": {
+  "cmdId": "42e40ebe-e4f6-4734-aa5f-1a14daab62ef",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/23/26 17:48:48",
+ "timestampMillis": "1774313328868",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "03/23/26 17:48:48",
+ "timestampMillis": "1774313328869",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

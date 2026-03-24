@@ -6,11 +6,11 @@
 +---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
 | Phase         | Step                       | Instructions | Description                                                                            |
 +---------------+----------------------------+--------------+----------------------------------------------------------------------------------------+
-| Compile/Link  |                            | 1,336        | After all functions are compiled and linked into a single design                       |
+| Compile/Link  |                            | 1,340        | After all functions are compiled and linked into a single design                       |
 |               |                            |              |                                                                                        |
 | Unroll/Inline |                            |              | After user unroll and inline pragmas are applied                                       |
-|               | (1) unroll                 | 3,925        | user unroll pragmas are applied                                                        |
-|               | (2) simplification         | 1,183        | simplification of applied user unroll pragmas                                          |
+|               | (1) unroll                 | 3,929        | user unroll pragmas are applied                                                        |
+|               | (2) simplification         | 1,187        | simplification of applied user unroll pragmas                                          |
 |               | (3) inline                 | 1,125        | user inline pragmas are applied                                                        |
 |               | (4) simplification         | 1,115        | simplification of applied user inline pragmas                                          |
 |               |                            |              |                                                                                        |
@@ -36,7 +36,7 @@
 +--------------------------+-------------+--------------+---------------+--------------+-------------+---------------+
 | Function                 | Location    | Compile/Link | Unroll/Inline | Array/Struct | Performance | HW Transforms |
 +--------------------------+-------------+--------------+---------------+--------------+-------------+---------------+
-| + knn_accelerator        | knn.cpp:152 | 1,336        | 1,115         | 1,184        | 1,181       | 1,345         |
+| + knn_accelerator        | knn.cpp:152 | 1,340        | 1,115         | 1,184        | 1,181       | 1,345         |
 |    knn_distance_and_sort | knn.cpp:9   | 1,205        |  983          | 1,033        | 1,030       | 1,188         |
 |    knn_majority_vote     | knn.cpp:97  |   94         |  102          |  116         |  113        |  114          |
 +--------------------------+-------------+--------------+---------------+--------------+-------------+---------------+
